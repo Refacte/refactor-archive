@@ -1,0 +1,338 @@
+\section{Retain two coefficients}\label{sec:parameter}
+
+Begin with arithmetic modulo three: \(3=0\), \(2=-1\), and \(2\cdot2=1\). Now retain two coefficients at a time. Write the pair \((r,s)\) as
+\[
+ r+s\epsilon.
+\]
+Addition is component by component. For multiplication, expand the product and retain only its constant and linear terms in \(\epsilon\):
+\begin{align}
+ (r+s\epsilon)+(u+v\epsilon)&=(r+u)+(s+v)\epsilon,\\
+ (r+s\epsilon)(u+v\epsilon)&=ru+(rv+su)\epsilon.
+ \label{eq:two-coefficients}
+\end{align}
+The numerical coefficients are reduced modulo three. The rule \(\epsilon^2=0\) is shorthand for this multiplication: the discarded term is \(sv\epsilon^2\).
+
+The pair \((0,1)\), written \(\epsilon\), is not the zero pair. Equality requires both retained coefficients to agree. Thus
+\[
+ \epsilon\ne0,\qquad \epsilon^2=0.
+\]
+For example,
+\[
+ (1+\epsilon)(1-\epsilon)=1.
+\]
+Discarding \(\epsilon^2\) at an intermediate step is consistent with subsequent additions and multiplications. These operations cannot turn a term containing two copies of \(\epsilon\) into a constant or linear term.
+
+We will use \(x,y,t\) as input placeholders. They are separate from \(\epsilon\): their powers are not discarded. In particular, \(\epsilon x^2y\) is retained because its coefficient has only one copy of \(\epsilon\). Two expressions in \(x,y\) agree when every input monomial has the same retained coefficient. Checking only the three numerical inputs \(0,1,2\) would be a different test.
+
+\section{Let the interaction determine its correction}\label{sec:repair}
+
+Consider
+\begin{equation}\label{eq:family}
+ F_a(x,y)=x+y+a xy.
+\end{equation}
+The coefficient \(a\) may be an ordinary number modulo three or an expression handled by the rules above. At \(a=0\) we have addition. At \(a=1\),
+\[
+ (1+x)(1+y)=1+F_1(x,y),
+\]
+so this is multiplication written in terms of the displacements from one.
+
+The rule combines three inputs consistently. Expanding either grouping gives
+\begin{align*}
+ F_a(F_a(x,y),z)
+ &=x+y+z+a(xy+xz+yz)+a^2xyz\\
+ &=F_a(x,F_a(y,z)).
+\end{align*}
+Interchanging the inputs does not change it, and \(F_a(x,0)=x\). These facts follow by multiplication and do not require cancelling \(a\).
+
+We want a coordinate beginning with \(t\),
+\begin{equation}\label{eq:log-identity}
+ L(t)=t+c t^2+d t^3+\cdots,
+ \qquad L(F_a(x,y))=L(x)+L(y).
+\end{equation}
+The dots permit an unlimited list of coefficients. To calculate a fixed input degree after substitution, only finitely many entries contribute: every factor of \(F_a\) supplies at least one input letter. Equality is checked one coefficient at a time.
+
+Call the difference between the two sides the error:
+\[
+ \defect_L(x,y)=L(F_a(x,y))-L(x)-L(y).
+\]
+To find the first corrections, expand and retain input terms of total degree at most three:
+\begin{equation}\label{eq:first-coefficients}
+ \defect_L(x,y)
+ =(a+2c)xy+(2ac+3d)(x^2y+xy^2)
+ +\text{terms of degree at least four}.
+\end{equation}
+Here total degree counts the input letters: \(x^2y\) has degree three. In the square \(F_a^2\), the terms we need are \(2xy+2a(x^2y+xy^2)\). In the cube, they are \(3(x^2y+xy^2)\). This gives the displayed coefficients.
+
+Modulo three, the quadratic equation is \(a-c=0\). It forces \(c=a\). The cubic coefficient is then \(-a^2\), independently of \(d\). Use the forced correction first:
+\[
+ L_{a,2}(t)=t+at^2.
+\]
+Its entire error can be computed without a degree cutoff. Since
+\[
+ F_a(x,y)^2-x^2-y^2
+ =2xy+2a xy(x+y)+a^2x^2y^2,
+\]
+we obtain the exact identity
+\begin{equation}\label{eq:exact-char3-defect}
+ \begin{split}
+ &L_{a,2}(F_a(x,y))-L_{a,2}(x)-L_{a,2}(y)\\
+ &\hspace{3em}=-a^2xy(x+y)+a^3x^2y^2.
+ \end{split}
+\end{equation}
+
+Now choose \(a=\epsilon\) with the two-coefficient rule \(\epsilon^2=0\). Every coefficient on the right vanishes, so
+\begin{equation}\label{eq:dual-repair}
+ L(t)=t+\epsilon t^2,
+ \qquad L(F_\epsilon(x,y))=L(x)+L(y)
+\end{equation}
+is exact for all powers of the inputs. The interaction \(\epsilon xy\) itself is retained and nonzero.
+
+The inverse coordinate is equally explicit:
+\[
+ E(s)=s-\epsilon s^2.
+\]
+Expanding both compositions gives
+\begin{align*}
+ L(E(s))&=s-\epsilon s^2+\epsilon(s-\epsilon s^2)^2=s,\\
+ E(L(t))&=t+\epsilon t^2-\epsilon(t+\epsilon t^2)^2=t.
+\end{align*}
+Every extra term contains \(\epsilon^2\). We can therefore recover the original rule by
+\[
+ F_\epsilon(x,y)=E(L(x)+L(y)).
+\]
+The coordinate has removed a nonzero interaction by using exactly the coefficient arithmetic we specified.
+
+\section{Keep the quadratic coefficient too}\label{sec:next-order}
+
+Repeat the calculation while retaining three coefficients:
+\[
+ r+s\epsilon+w\epsilon^2.
+\]
+After ordinary expansion, keep the terms through \(\epsilon^2\). Multiplication is now
+\begin{equation}\label{eq:three-coefficients}
+ \begin{split}
+ &(r+s\epsilon+w\epsilon^2)(u+v\epsilon+z\epsilon^2)\\
+ &\quad=ru+(rv+su)\epsilon+(rz+sv+wu)\epsilon^2.
+ \end{split}
+\end{equation}
+The rule is \(\epsilon^3=0\), while \(\epsilon^2\) is the retained triple \((0,0,1)\) and is nonzero. For example, the product that was one before is now
+\[
+ (1+\epsilon)(1-\epsilon)=1-\epsilon^2.
+\]
+
+With this arithmetic, the same attempted coordinate has error
+\begin{equation}\label{eq:next-defect}
+ L_{\epsilon,2}(F_\epsilon)-L_{\epsilon,2}(x)-L_{\epsilon,2}(y)
+ =-\epsilon^2xy(x+y).
+\end{equation}
+The former cancellation has failed because its quadratic coefficient is now retained.
+
+Every coordinate beginning with \(t\) that removes the quadratic input term must still have coefficient \(\epsilon\) on \(t^2\), by \eqref{eq:first-coefficients}. Could adding \(d t^3\) remove the remaining error? Cubing modulo three introduces no mixed terms:
+\[
+ (u+v+w)^3=u^3+v^3+w^3.
+\]
+Consequently
+\[
+ F_\epsilon(x,y)^3-x^3-y^3=\epsilon^3x^3y^3=0.
+\]
+The cubic correction changes none of the error. A term \(t^n\) with \(n\ge4\) cannot contribute an input term of degree three: substituting an expression with no constant term leaves at least \(n\) input letters. No further correction can remove \eqref{eq:next-defect}.
+
+This proves nonexistence for coordinates with linear coefficient one. A coordinate with another invertible linear coefficient could be divided by that coefficient to obtain one beginning with \(t\), so it cannot succeed either.
+
+The calculation distinguishes two counts. The error uses two copies of the coefficient symbol \(\epsilon\), but three input letters. Retaining one more coefficient in \(\epsilon\) changes whether a cubic input error can be removed.
+
+\section{Count repeated addition}\label{sec:repeated}
+
+Now let \(p\) be any prime. Use ordinary arithmetic modulo \(p\), possibly with retained coefficient symbols as above. The coefficient rules obey the usual associative, commutative, and distributive rules, with \(p=0\). Fractions with denominator \(1,2,\ldots,p-1\) mean multiplication by the corresponding modular inverse. We never divide by the parameter \(a\).
+
+Write \([m]_{F_a}(t)\) for the result of combining \(m\) copies of \(t\) using \(F_a\), starting with \([0]_{F_a}(t)=0\). Direct induction gives
+\begin{equation}\label{eq:m-series}
+ [m]_{F_a}(t)=\sum_{j=1}^{m}\binom mj a^{j-1}t^j.
+\end{equation}
+For the induction step, use
+\[
+ [m+1]_{F_a}(t)=[m]_{F_a}(t)+t+a[m]_{F_a}(t)t.
+\]
+The coefficient of \(a^{j-1}t^j\) is the sum
+\[
+ \binom mj+\binom m{j-1}=\binom{m+1}j.
+\]
+The first and last coefficients also agree, and the case \(m=1\) starts the induction.
+
+When \(m=p\), all the interior binomial coefficients vanish modulo \(p\). To see this, \(p!\) has a factor \(p\), whereas \(j!(p-j)!\) has none for \(0<j<p\). Thus
+\begin{equation}\label{eq:p-series}
+ \boxed{\;[p]_{F_a}(t)=a^{p-1}t^p.\;}
+\end{equation}
+If a coordinate \(L\) makes \(F_a\) additive, combining \(p\) copies gives
+\[
+ L([p]_{F_a}(t))=pL(t)=0.
+\]
+For \(L(t)=t+\text{higher powers}\), the coefficient of \(t^p\) on the left is \(a^{p-1}\); every nonlinear term of \(L\) contributes only higher powers. Hence
+\begin{equation}\label{eq:necessary}
+ a^{p-1}=0
+\end{equation}
+is necessary. In the three-coefficient example, the test is \([3]_{F_\epsilon}(t)=\epsilon^2t^3\ne0\), confirming the failed cubic repair.
+
+\section{Construct an exact coordinate and its inverse}\label{sec:exact-theorem}
+
+The repeated-addition test gives the necessary condition. To construct a coordinate when it holds, first determine which coefficients the desired identity forces.
+
+Write \(L(t)=t+\ell_2t^2+\ell_3t^3+\cdots\), with \(\ell_1=1\). In each power of \(F_a=x+(1+ax)y\), choose the one factor containing \(y\). The coefficient of \(y\) in \(L(F_a)\) is therefore
+\[
+ (1+ax)\sum_{n\ge1}n\ell_nx^{n-1}.
+\]
+The coefficient of \(y\) in \(L(x)+L(y)\) is one. Comparing the coefficient of \(x^{n-1}\) gives
+\begin{equation}\label{eq:coefficient-recursion}
+ n\ell_n+a(n-1)\ell_{n-1}=0\quad(n\ge2).
+\end{equation}
+For \(n<p\), division by \(n\) is allowed, and these equations successively force
+\[
+ \ell_n=\frac{(-1)^{n+1}a^{n-1}}n.
+\]
+
+The inverse candidate can be found in the same way. It must turn addition back into \(F_a\), so ask for
+\[
+ E(s+h)=E(s)+E(h)+aE(s)E(h),\qquad
+ E(s)=s+e_2s^2+\cdots.
+\]
+For \(n\ge2\), the coefficient of \(s^{n-1}h\) is \(ne_n\) on the left and \(ae_{n-1}\) on the right, where \(e_1=1\). Thus
+\[
+ ne_n=ae_{n-1},\qquad e_n=\frac{a^{n-1}}{n!}\quad(1\le n<p).
+\]
+Assume now that \(a^{p-1}=0\). Use these forced coefficients below degree \(p\) and set the later coefficients to zero. This gives two finite candidates. The coefficient equations explain how to find them; the following proof checks their complete identities and that they are mutual inverses.
+
+\begin{theorem}[Exact repair for the parameter family]\label{thm:family}
+In commutative coefficient arithmetic modulo a prime \(p\), the operation \(F_a(x,y)=x+y+a xy\) can be made additive by an invertible coordinate if and only if \(a^{p-1}=0\). When this holds, define
+\begin{align}
+ L_a(t)&=\sum_{n=1}^{p-1}\frac{(-1)^{n+1}a^{n-1}}n\,t^n,
+ \label{eq:finite-log}\\
+ E_a(s)&=\sum_{n=1}^{p-1}\frac{a^{n-1}}{n!}\,s^n.
+ \label{eq:finite-exp}
+\end{align}
+These finite polynomials satisfy
+\begin{gather}
+ L_a(F_a(x,y))=L_a(x)+L_a(y),\label{eq:theorem-add}\\
+ L_a(E_a(s))=s,\qquad E_a(L_a(t))=t.\label{eq:theorem-inverse}
+\end{gather}
+\end{theorem}
+
+The coefficients in these formulas use only divisions by numbers smaller than \(p\). For example, modulo five \(1/2=3\), since \(2\cdot3=1\). When \(p=2\), the condition is \(a=0\) and both coordinates are the identity.
+
+\begin{proof}
+Necessity was proved by repeated addition. For sufficiency, assume \(a^{p-1}=0\).
+
+\emph{First count the parameter powers.} In a term from
+\[
+ a^{n-1}(x+y+a xy)^n,
+\]
+suppose \(k\) of the \(n\) factors contribute \(a xy\). The remaining factors contribute \(x\) or \(y\). Its total input degree is \(d=n+k\), and its coefficient contains
+\[
+ a^{n-1}a^k=a^{d-1}.
+\]
+Every term of degree \(d\ge p\) therefore vanishes. In particular, the error
+\[
+ D(x,y)=L_a(F_a(x,y))-L_a(x)-L_a(y)
+\]
+has degree at most \(p-1\). It has only mixed terms: setting either input to zero gives zero.
+
+\emph{Now cancel the remaining coefficients.} For this finite calculation, write
+\[
+ P'(t)=\sum_{n\ge1}n c_nt^{n-1}
+ \quad\text{when}\quad P(t)=\sum_{n\ge0}c_nt^n.
+\]
+This derivative is just coefficient bookkeeping. Expanding \(P(t+h)\), there are \(n\) choices for the one factor of \(h\) in \((t+h)^n\); their sum is \(P'(t)h\). For a substitution, retain the coefficient of \(h\) in two steps:
+\begin{align*}
+ Q(t+h)&=Q(t)+Q'(t)h+\text{terms containing }h^2,\\
+ P(Q(t+h))&=P(Q(t))+P'(Q(t))Q'(t)h
+ +\text{terms containing }h^2.
+\end{align*}
+This gives the chain rule used below by the same retained-coefficient calculation.
+
+For our finite sum,
+\[
+ L_a'(t)=1-at+a^2t^2-\cdots+(-at)^{p-2}.
+\]
+Multiplying by \(1+at\) cancels consecutive terms:
+\begin{equation}\label{eq:finite-geometric}
+ (1+at)L_a'(t)=1-(-at)^{p-1}=1.
+\end{equation}
+The final term vanishes by the assumption on \(a\). Also,
+\[
+ (1+ax)(1+ay)=1+aF_a(x,y).
+\]
+Differentiate the error with respect to \(y\), meaning multiply each coefficient of \(x^iy^j\) by \(j\) and reduce its \(y\)-exponent by one. The two identities give
+\begin{align*}
+ (1+ay)\frac{\partial D}{\partial y}
+ &=(1+aF_a)L_a'(F_a)-(1+ay)L_a'(y)\\
+ &=1-1=0.
+\end{align*}
+The finite geometric sum \(1-ay+\cdots+(-ay)^{p-2}\) is an inverse for \(1+ay\), so \(\partial D/\partial y=0\).
+
+Every mixed term of \(D\) has degree below \(p\), so its \(y\)-exponent lies between \(1\) and \(p-1\). Those numbers have inverses modulo \(p\). Thus every coefficient of \(D\) is zero. The degree bound is essential: we have not inferred that an arbitrary expression with derivative zero is constant.
+
+\emph{Finally check the inverse.} Directly differentiating the second finite sum gives
+\begin{equation}\label{eq:finite-exp-derivative}
+ E_a'(s)=1+aE_a(s).
+\end{equation}
+Both sides are \(1+as+a^2s^2/2!+\cdots+a^{p-2}s^{p-2}/(p-2)!\); the extra final term on the right contains \(a^{p-1}\).
+
+Substitute \(E_a(s)\) in \eqref{eq:finite-geometric} and use \eqref{eq:finite-exp-derivative}:
+\[
+ \frac{d}{ds}L_a(E_a(s))
+ =L_a'(E_a(s))E_a'(s)=1.
+\]
+This composition also has degree below \(p\). Indeed, a term of degree \(d\) in the composition has one outer factor \(a^{n-1}\) and \(n\) inner factors of the form \(a^{m_i-1}s^{m_i}\), giving total parameter power
+\[
+ (n-1)+\sum_{i=1}^{n}(m_i-1)=d-1.
+\]
+Terms with \(d\ge p\) vanish. The constant coefficient of \(L_a(E_a(s))\) is zero, and its derivative is one. Comparing the remaining coefficients, whose exponents are all smaller than \(p\), proves \(L_a(E_a(s))=s\).
+
+For the reverse composition, set \(U(t)=E_a(L_a(t))\). Then \(L_a(U(t))=L_a(t)\). If \(U(t)-t\) had its first nonzero coefficient in degree \(n\), that coefficient would pass unchanged into \(L_a(U(t))-L_a(t)\): the leading term of \(L_a\) is its input, while every higher power multiplies the difference by at least one further input letter. This is impossible. Hence \(E_a(L_a(t))=t\).
+\end{proof}
+
+For example, keep \(1,\epsilon,\epsilon^2,\epsilon^3\) modulo five and discard \(\epsilon^4\). The theorem gives the exact coordinate
+\[
+ L_\epsilon(t)=t-\frac{\epsilon}{2}t^2
+ +\frac{\epsilon^2}{3}t^3-\frac{\epsilon^3}{4}t^4
+ =t+2\epsilon t^2+2\epsilon^2t^3+\epsilon^3t^4.
+\]
+If we instead retain \(\epsilon^4\) and discard \(\epsilon^5\), the test \([5]_{F_\epsilon}(t)=\epsilon^4t^5\) rules out every coordinate. The input powers have not been truncated in either example; it is the retained coefficient list that changed.
+
+\section{Find the first failed coefficient}\label{sec:first-obstruction}
+
+We can locate the failure even when \(a^{p-1}\ne0\). Equation~\eqref{eq:coefficient-recursion} already forces every coordinate coefficient below degree \(p\), even when the requested identity is imposed only through degree \(p-1\). Call the resulting polynomial \(L_{a,<p}\); it is the sum in \eqref{eq:finite-log}.
+
+Use that polynomial without assuming \(a^{p-1}=0\), and again write its error as \(D\). The finite multiplication now gives
+\[
+ q(t):=(1+at)L_{a,<p}'(t)=1-a^{p-1}t^{p-1}.
+\]
+The sign has this form for every prime: \((-1)^{p-1}=1\) modulo \(p\), including \(p=2\). Exactly as before,
+\begin{equation}\label{eq:error-coefficient-identity}
+ (1+ay)\frac{\partial D}{\partial y}
+ =q(F_a)-q(y)
+ =-a^{p-1}\bigl(F_a^{p-1}-y^{p-1}\bigr).
+\end{equation}
+The right side has no term of degree below \(p-1\). Multiplying by \(1+ay\) leaves a lowest-degree term unchanged, so \(\partial D/\partial y\) has none below that degree either. Since all mixed exponents below degree \(p\) can be divided by modulo \(p\), the error \(D\) has no terms below degree \(p\).
+
+At the next degree, only the linear part \(x+y\) of \(F_a\) contributes on the right of \eqref{eq:error-coefficient-identity}. If \(e_i\) is the coefficient of \(x^iy^{p-i}\) in \(D\), comparison gives
+\[
+ (p-i)e_i=-a^{p-1}\binom{p-1}{i},\qquad 1\le i\le p-1.
+\]
+Every denominator here is still nonzero modulo \(p\). Thus the full degree-\(p\) error is
+\begin{equation}\label{eq:first-residual}
+ -a^{p-1}\sum_{i=1}^{p-1}
+ \frac{\binom{p-1}{i}}{p-i}\,x^iy^{p-i}.
+\end{equation}
+In particular, the coefficient of \(x^{p-1}y\) is \(-a^{p-1}\). If this is nonzero, the degree-\(p\) error is nonzero.
+
+An added term \(d t^p\) changes that degree by
+\[
+ d\bigl((x+y)^p-x^p-y^p\bigr)=0.
+\]
+Higher powers cannot affect degree \(p\). Since all the earlier coefficients were forced, this is the first failed repair for every possible coordinate.
+
+Modulo three the sum in \eqref{eq:first-residual} is \(x^2y+xy^2\); modulo five it is
+\[
+ x^4y+2x^3y^2+2x^2y^3+xy^4.
+\]
+This recovers the original cubic obstruction and shows exactly where its general-prime counterpart occurs.

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 260" role="img" aria-labelledby="title description">
+<title id="title">The first gcd filters primes</title>
+<desc id="description">On a number line, primes at most m are excluded by (m factorial) to the power m factorial minus one. Primes strictly between m and 2m are precisely the prime factors of d. Primes above 2m cannot divide (2m) factorial.</desc>
+<rect width="760" height="260" fill="white"/>
+<g stroke="#171717" stroke-width="1.3" fill="none">
+<path d="M65 35H705"/><path d="M705 35l-9-4v8z" fill="#171717"/>
+<path d="M65 29v12M330 29v12M595 29v12"/>
+<path d="M65 72q0 9 15 9h102q16 0 16 9q0-9 16-9h101q15 0 15-9"/>
+<path d="M330 146q0 9 15 9h102q16 0 16 9q0-9 16-9h101q15 0 15-9"/>
+<path d="M595 72q0 9 12 9h31q14 0 14 9q0-9 14-9h31q12 0 12-9"/>
+</g>
+<g fill="#171717" font-family="Georgia, 'Times New Roman', serif" font-size="22" text-anchor="middle">
+<text x="65" y="62">1</text><text x="330" y="62" font-style="italic">m</text><text x="595" y="62" font-style="italic">2m</text>
+<text x="198" y="113">primes here divide</text>
+<text x="198" y="140"><tspan font-style="italic">m</tspan>!, so they cannot</text>
+<text x="198" y="168">divide (<tspan font-style="italic">m</tspan>!)<tspan baseline-shift="super" font-size="15"><tspan font-style="italic">m</tspan>!</tspan><tspan baseline-shift="baseline"> − 1</tspan></text>
+<text x="463" y="190">these primes</text><text x="463" y="217">are exactly the</text><text x="463" y="244">prime factors of <tspan font-style="italic">d</tspan></text>
+<text x="652" y="114">too large</text><text x="652" y="141">for (2<tspan font-style="italic">m</tspan>)!</text>
+</g></svg>

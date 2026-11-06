@@ -1,0 +1,329 @@
+\section{Keep every possible cubic term}\label{sec:cubic-laws}
+
+Return to arithmetic modulo three, still allowing explicitly retained coefficient symbols. The quadratic interaction forced a cubic error in \(F_a\). Could a cubic term already present in the operation cancel that error? We now allow both coefficients to vary and calculate which combinations a coordinate change can remove.
+
+For the next three sections, retain all input terms of total degree at most three. Thus
+\[
+ x^2y\text{ is retained},\qquad
+ x^3y\text{ and }x^2y^2\text{ are discarded}.
+\]
+We write \(\equiv\) for agreement of the retained terms. Each input substituted into an expression has zero constant term, so a discarded term with four input letters can never contribute a term with only three. This is why we can discard it before continuing a calculation.
+
+Require the operation to return \(x\) when its second input is zero, to return \(y\) when its first input is zero, and to be unchanged when the inputs are interchanged. The first two requirements leave no constant term, fix the linear terms as \(x+y\), and exclude pure powers such as \(x^2\) or \(y^3\). Through degree three, the only remaining monomials are
+\[
+ xy,\qquad x^2y,\qquad xy^2.
+\]
+Interchanging \(x,y\) makes the last two coefficients equal. Consequently the most general retained expression is
+\begin{equation}\label{eq:general-jet}
+ F_{a,b}(x,y)\equiv x+y+a xy+bC(x,y),
+ \qquad C(x,y)=x^2y+xy^2.
+\end{equation}
+
+We must also check that grouping three inputs in either order gives the same retained terms. Expand \(F_{a,b}(F_{a,b}(x,y),z)\), keeping only three input letters. The outer quadratic term contributes
+\[
+ a(x+y)z+a^2xyz,
+\]
+and the outer cubic term contributes
+\[
+ b\bigl((x+y)^2z+(x+y)z^2\bigr).
+\]
+Together with the inner expression, this gives
+\begin{equation}\label{eq:common-cubic-expansion}
+ \begin{split}
+ x+y+z\;&+a(xy+xz+yz)\\
+ &+b(x^2y+xy^2+x^2z+xz^2+y^2z+yz^2)\\
+ &+(a^2+2b)xyz.
+ \end{split}
+\end{equation}
+Expanding \(F_{a,b}(x,F_{a,b}(y,z))\) gives exactly the same expression. Thus every choice of \(a,b\) satisfies the grouping requirement through degree three.
+
+The input that cancels \(t\), through the same degree, is
+\[
+ -t+at^2-a^2t^3.
+\]
+Substitute it as the second input: the quadratic and cubic terms of \(t+y+a ty\) cancel, and \(C(t,y)\equiv C(t,-t)=0\).
+
+All these statements concern the retained terms. Higher terms may be present in an actual operation and are left unspecified. Setting all those terms to zero need not produce a rule that groups consistently in every degree.
+
+\section{Calculate what every coordinate can change}\label{sec:coordinate-action}
+
+Allow every coordinate beginning with \(t\), through the same degree:
+\begin{equation}\label{eq:coordinate-jet}
+ H(t)\equiv t+ut^2+vt^3.
+\end{equation}
+Its inverse through degree three is
+\begin{equation}\label{eq:coordinate-inverse}
+ H^{-1}(t)\equiv t-ut^2+(2u^2-v)t^3.
+\end{equation}
+For example, substitution in \(H(H^{-1}(t))\) gives quadratic coefficient \(-u+u=0\) and cubic coefficient
+\[
+ (2u^2-v)-2u^2+v=0.
+\]
+The reverse substitution has the same cancellation.
+
+This inverse calculation continues in every degree if the higher coefficients of \(H\) are specified. In an unknown inverse \(K(t)=t+k_2t^2+k_3t^3+\cdots\), the coefficient of \(t^n\) in \(H(K(t))\) contains \(k_n\) once; every other term uses earlier coefficients. Solving for \(k_n\) recursively gives a right inverse. The same argument gives a left inverse. Substituting one into the other shows that they agree. Thus a series beginning with \(t\) is an invertible coordinate, with no division by a variable coefficient.
+
+If the new operation has retained coefficients \(a',b'\), we must have
+\begin{equation}\label{eq:coordinate-bridge}
+ H(F_{a,b}(x,y))\equiv F_{a',b'}(H(x),H(y)).
+\end{equation}
+The direction of this equation matters: first combine the old inputs and change coordinate, or first change each input and then combine them using the new rule.
+
+On the left, the required powers are
+\begin{align*}
+ F_{a,b}(x,y)^2&\equiv x^2+2xy+y^2+2aC(x,y),\\
+ F_{a,b}(x,y)^3&\equiv x^3+y^3.
+\end{align*}
+The second line follows by cubing modulo three. Hence the left side of \eqref{eq:coordinate-bridge} is
+\begin{equation*}
+ \begin{split}
+ x+y+u(x^2+y^2)+v(x^3+y^3)\;&+(a+2u)xy\\
+ &+(b+2au)C(x,y).
+ \end{split}
+\end{equation*}
+On the right,
+\[
+ H(x)H(y)\equiv xy+uC(x,y),\qquad
+ C(H(x),H(y))\equiv C(x,y).
+\]
+Its retained expression is therefore
+\begin{equation*}
+ \begin{split}
+ x+y+u(x^2+y^2)+v(x^3+y^3)\;&+a'xy\\
+ &+(a'u+b')C(x,y).
+ \end{split}
+\end{equation*}
+The pure terms already match. Equating the mixed coefficients gives
+\[
+ a'=a+2u=a-u,\qquad a'u+b'=b+2au.
+\]
+Substitute the first equation into the second:
+\begin{equation}\label{eq:coordinate-action}
+ \boxed{\quad a'=a-u,\qquad b'=b+au+u^2.\quad}
+\end{equation}
+These are the complete equations. The coefficient \(v\) disappears because \(v(x+y)^3=vx^3+vy^3\): it cannot change a mixed cubic term.
+
+\Needspace{14\baselineskip}
+\section{Compare two operations completely through degree three}\label{sec:classification}
+
+First ask for a coordinate that removes the quadratic term. Equation \eqref{eq:coordinate-action} forces \(u=a\), leaving cubic coefficient
+\[
+ b'=b+2a^2=b-a^2.
+\]
+This suggests retaining the single quantity
+\begin{equation}\label{eq:lambda}
+ \lambda=b-a^2.
+\end{equation}
+It survives every coordinate beginning with \(t\), since
+\begin{align*}
+ b'-(a')^2
+ &=b+au+u^2-(a-u)^2\\
+ &=b-a^2+3au=b-a^2.
+\end{align*}
+
+\begin{theorem}[Complete comparison through cubic terms]\label{thm:cubic}
+Work modulo three. Two retained operations
+\[
+ x+y+a xy+bC(x,y),\qquad x+y+a'xy+b'C(x,y)
+\]
+are related by a coordinate beginning with \(t\), through degree three, if and only if
+\begin{equation}\label{eq:classification-test}
+ b-a^2=b'-(a')^2.
+\end{equation}
+When they are, every possible coordinate has retained terms
+\begin{equation}\label{eq:all-witnesses}
+ H(t)\equiv t+(a-a')t^2+vt^3,
+ \qquad v\text{ arbitrary}.
+\end{equation}
+In particular, every operation reduces through degree three to
+\begin{equation}\label{eq:normal-jet}
+ x+y+\lambda(x^2y+xy^2),\qquad \lambda=b-a^2,
+\end{equation}
+and different values of \(\lambda\) cannot be related by such a coordinate.
+\end{theorem}
+
+\begin{proof}
+The calculation above proves that a coordinate can exist only when \eqref{eq:classification-test} holds. To prove that this test is sufficient, solve the coordinate equations rather than stopping at the obstruction.
+
+The first equation forces \(u=a-a'\). For this value the second gives
+\[
+ b+au+u^2=b+a(a-a')+(a-a')^2
+ =b-a^2+(a')^2=b'.
+\]
+This uses \(3=0\) and the assumed test. There is no condition on \(v\). Conversely, every coordinate must have this \(u\), and the displayed calculation shows that every \(v\) works at the retained degree. Formula \eqref{eq:coordinate-inverse} verifies that each choice is invertible.
+
+Setting \(a'=0\) leaves \(b'=\lambda\), giving \eqref{eq:normal-jet}. Since \(\lambda\) cannot change, two different reduced expressions cannot agree after a coordinate change.
+\end{proof}
+
+This gives both a test and a construction. Calculate the two values \(b-a^2\). If they differ, no permitted coordinate exists. If they agree, \eqref{eq:all-witnesses} supplies all the choices through degree three. In particular, the retained terms can be made additive exactly when \(b=a^2\). Higher coordinate coefficients cannot affect that test; later equations may constrain the free coefficient \(v\).
+
+\subsection{Allow a different linear coefficient}
+
+Suppose the linear coefficient \(c\) has a multiplicative inverse in the chosen arithmetic. Scaling by \(H(t)=ct\) changes the operation to
+\[
+ x+y+\frac acxy+\frac b{c^2}C(x,y).
+\]
+Thus its surviving coefficient becomes \(\lambda/c^2\). Every coordinate with linear coefficient \(c\) can be written as \(K(ct)\), where \(K\) begins with \(t\). The complete test with a variable linear coefficient is therefore
+\begin{equation}\label{eq:nonstrict}
+ \lambda'=\frac{\lambda}{c^2}
+ \quad\text{for some permitted }c\text{ with an inverse}.
+\end{equation}
+For a chosen such \(c\), all retained coordinates are
+\[
+ H(t)\equiv ct+(ca-c^2a')t^2+vt^3,
+ \qquad v\text{ arbitrary}.
+\]
+Indeed, after the initial scaling, the quadratic coefficient of \(K\) must be \(a/c-a'\), which becomes \(ca-c^2a'\) in \(K(ct)\). Its cubic coefficient remains arbitrary. The numerical value of \(\lambda\) depends on the linear scale, but whether it is zero does not.
+
+\section{Read the surviving coefficient by adding three copies}\label{sec:three-series}
+
+There is an independent check on \(\lambda\). Retaining through degree three,
+\[
+ F_{a,b}(t,t)\equiv-t+at^2-bt^3.
+\]
+Write this expression as \(s\). Substitution in the third addition gives
+\[
+ s+t\equiv at^2-bt^3,\qquad
+ a st\equiv-at^2+a^2t^3,
+\]
+while
+\[
+ b(s^2t+st^2)\equiv b(t^3-t^3)=0.
+\]
+Therefore
+\begin{equation}\label{eq:three-series}
+ \boxed{\;F_{a,b}(F_{a,b}(t,t),t)
+ \equiv(a^2-b)t^3=-\lambda t^3.\;}
+\end{equation}
+The coefficient left after coordinate repair is the coefficient produced by actually repeating the operation.
+
+This also checks its change under a linear scaling. Any coordinate preserving the operation preserves its repetition:
+\[
+ H([3]_F(t))\equiv[3]_{F'}(H(t)).
+\]
+For a coordinate with linear coefficient \(c\), the cubic coefficients are \(-c\lambda\) and \(-c^3\lambda'\). Their equality gives \(\lambda'=\lambda/c^2\), as before. When \(c=1\), \(\lambda\) is unchanged.
+
+For \(F_a=x+y+a xy\), the cubic coefficient \(b\) is zero, so \(\lambda=-a^2\). Equation \eqref{eq:three-series} gives \([3]_{F_a}(t)=a^2t^3\), agreeing with the exact repeated-addition calculation. Within this particular family, \(\lambda=0\) also guarantees an exact coordinate by Theorem~\ref{thm:family}. We next check why that conclusion needs the restriction to this family.
+
+\subsection{Keep the same quadratic term and change the outcome}
+
+With ordinary numbers modulo three, \(x+y+xy\) has \((a,b)=(1,0)\), so \(\lambda=-1\). It cannot be made additive. To construct an exactly repairable comparison, take \(H(t)=t+t^2\), construct its inverse coefficient by coefficient as in Section~\ref{sec:coordinate-action}, and define
+\begin{equation}\label{eq:pullback-example}
+ G(x,y)=H^{-1}(H(x)+H(y)).
+\end{equation}
+The identity \(H(G(x,y))=H(x)+H(y)\) holds in every degree. Combining three inputs in either order gives
+\[
+ H^{-1}(H(x)+H(y)+H(z)),
+\]
+so the grouping rule also holds exactly.
+
+The coordinate equations with \(u=1\), \(a'=b'=0\) force \(a=b=1\). Hence the retained terms of this exactly repairable operation are
+\[
+ G(x,y)\equiv x+y+xy+(x^2y+xy^2),\qquad\lambda=0.
+\]
+The two operations have the same quadratic interaction. Their cubic terms change whether the interaction can be removed.
+
+\section{Make the first failure occur at degree nine}\label{sec:later-obstruction}
+
+From now on, the displayed identities are exact unless a degree cutoff is stated. We will construct an operation whose cubic comparison agrees with addition but which cannot be made additive in every degree.
+
+Use coefficients of the form \(r+s\eta\), with numerical coefficients modulo three. Multiply as in \eqref{eq:two-coefficients}: retain \(\eta\ne0\) and set \(\eta^2=0\). The symbol \(\eta\) is part of the coefficient; the input powers remain unrestricted.
+
+To postpone the earlier cubic pattern, replace each input in \(C(x,y)=x^2y+xy^2\) by its cube. The first terms then have degree nine. Multiplying by \(\eta\) makes any product of two corrections vanish, while keeping the correction itself. Try
+\[
+ D(x,y)=x^6y^3+x^3y^6,
+ \qquad Q(x,y)=x+y+\eta D(x,y).
+\]
+We must check that the new operation really does combine three inputs consistently in every degree.
+
+First, cubing modulo three and using \(\eta^3=0\) gives
+\begin{equation}\label{eq:Q-cube}
+ Q(x,y)^3=x^3+y^3+\eta^3D(x,y)^3=x^3+y^3.
+\end{equation}
+Next, expand the two expressions
+\[
+ D(x,y)+D(x+y,z),\qquad D(y,z)+D(x,y+z).
+\]
+They both give
+\begin{equation}\label{eq:D-expanded}
+ \begin{split}
+ S(x,y,z)={}&x^6y^3+x^3y^6+x^6z^3+x^3z^6\\
+ &+y^6z^3+y^3z^6+2x^3y^3z^3.
+ \end{split}
+\end{equation}
+For example, \((x+y)^3=x^3+y^3\) and \((x+y)^6=x^6+2x^3y^3+y^6\), which supply exactly the terms in \eqref{eq:D-expanded}.
+
+Because \(D\) uses only cubes and their squares, \eqref{eq:Q-cube} also gives
+\[
+ D(Q(x,y),z)=D(x+y,z),\qquad
+ D(x,Q(y,z))=D(x,y+z).
+\]
+It follows by substitution that
+\begin{align*}
+ Q(Q(x,y),z)
+ &=x+y+z+\eta\bigl(D(x,y)+D(x+y,z)\bigr)\\
+ &=x+y+z+\eta S(x,y,z)\\
+ &=Q(x,Q(y,z)).
+\end{align*}
+No input terms have been discarded. The operation is also symmetric, has zero as identity, and cancels \(t\) with \(-t\), since
+\[
+ D(t,-t)=-t^9+t^9=0.
+\]
+
+Its quadratic and cubic coefficients are both zero. In fact it agrees with addition through degree eight. But two copies of \(t\) give
+\[
+ Q(t,t)=-t-\eta t^9.
+\]
+Put \(s=-t-\eta t^9\). Then \(s^3=-t^3\), \(s^6=t^6\), and
+\[
+ D(s,t)=s^6t^3+s^3t^6=t^9-t^9=0.
+\]
+The third copy therefore gives
+\begin{equation}\label{eq:later-three-series}
+ \boxed{\;Q(Q(t,t),t)=-\eta t^9\ne0.\;}
+\end{equation}
+If \(M\) made \(Q\) additive, three copies would require \(M(-\eta t^9)=3M(t)=0\). Dividing by its invertible linear coefficient, we may take \(M(t)=t+\text{higher powers}\). But then \(M(-\eta t^9)=-\eta t^9\): every higher term contains \(\eta^2\). This contradicts \eqref{eq:later-three-series}. There is no coordinate making the operation exactly additive.
+
+\subsection{Check every correction before degree nine}
+
+We can locate the first failure without relying only on repeated addition. Write every possible coordinate as
+\[
+ M(t)=t+m_2t^2+m_3t^3+\cdots.
+\]
+Before degree nine, replacing \(Q\) by \(x+y\) changes nothing. The coefficient \(m_n\) then contributes
+\[
+ m_n\bigl((x+y)^n-x^n-y^n\bigr),
+\]
+whose surviving terms all have degree \(n\). They cannot be cancelled by a coefficient with another index. The following selected mixed terms force all the indicated coefficients to vanish:
+
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+Index \(n\)&Selected mixed term&Its coefficient modulo three\\
+\midrule
+2&\(xy\)&\(2m_2\)\\
+4&\(x^3y\)&\(m_4\)\\
+5&\(x^4y\)&\(2m_5\)\\
+6&\(x^3y^3\)&\(2m_6\)\\
+7&\(x^6y\)&\(m_7\)\\
+8&\(x^7y\)&\(2m_8\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+At degree six, \(\binom63=20=2\) modulo three; the other entries use the corresponding first binomial coefficient. Since \(2\cdot2=1\), each equation forces its \(m_n\) to be zero even when that coefficient contains \(\eta\). The coefficient \(m_3\) remains free because \((x+y)^3=x^3+y^3\).
+
+Every candidate that has passed through degree eight therefore begins
+\[
+ M(t)=t+m_3t^3+m_9t^9+\text{terms of degree at least ten}.
+\]
+But \eqref{eq:Q-cube} and its cube give
+\[
+ Q(x,y)^3=x^3+y^3,\qquad Q(x,y)^9=x^9+y^9.
+\]
+Neither \(m_3\) nor \(m_9\) changes the error. Higher coordinate powers cannot affect degree nine. The unavoidable error at that degree is exactly
+\[
+ \eta x^6y^3+\eta x^3y^6.
+\]
+Both coefficients are the retained nonzero symbol \(\eta\). Thus degree nine is the first failed repair, after every lower-degree choice has been allowed.
+
+For \(x+y+a xy\) modulo three, the cubic test \(b-a^2=0\) guarantees an exact repair because \(b=0\) and Theorem~\ref{thm:family} applies. For a general operation, matching through degree three settles only the retained terms. The example above shows explicitly how a later coefficient can stop the repair.

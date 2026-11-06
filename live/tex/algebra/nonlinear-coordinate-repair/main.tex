@@ -1,0 +1,77 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=1in,top=.88in,bottom=.85in]{geometry}
+\usepackage{fontspec}
+\setmainfont{Georgia}
+\setsansfont{Segoe UI}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype,booktabs,array,tabularx,enumitem,xcolor,needspace}
+\usepackage{sectsty}
+\allsectionsfont{\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000}
+\definecolor{ink}{HTML}{25313C}
+\definecolor{link}{HTML}{345B70}
+\definecolor{accent}{HTML}{407666}
+\usepackage{hyperref,bookmark}
+\hypersetup{unicode=true,colorlinks=true,linkcolor=link,urlcolor=link,citecolor=link,
+ pdftitle={When a nonlinear law becomes additive},pdfauthor={Henry Shin},
+ pdfsubject={Explicit coefficient calculations and cubic classification},
+ bookmarksopen=true,bookmarksnumbered=true}
+\urlstyle{same}
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\textsc{When a nonlinear law becomes additive}}
+\fancyhead[R]{\small\textsc{Refactor}}
+\fancyfoot[L]{\scriptsize Refactor \textperiodcentered\ November 4, 2026}
+\fancyfoot[R]{\small\thepage}
+\setlength{\headheight}{16pt}
+\renewcommand{\headrulewidth}{.3pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{.48em}
+\linespread{1.07}
+\setlength{\emergencystretch}{2em}
+\clubpenalty=10000\widowpenalty=10000\displaywidowpenalty=10000
+\allowdisplaybreaks[1]
+\setcounter{tocdepth}{1}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}\newtheorem{example}[theorem]{Example}
+\newcommand{\defect}{\mathcal E}
+\begin{document}
+\color{ink}
+\thispagestyle{empty}
+{\sffamily\small\textcolor{accent}{REFACTOR \textperiodcentered\ COMPANION STUDY}\par}
+\vspace{.6em}
+{\LARGE\bfseries When a nonlinear law becomes additive\par}
+\vspace{.4em}
+{\large\itshape Retain the coefficients, calculate the repair, and find what survives\par}
+\vspace{.7em}
+{Henry Shin \hspace{.6em}\textperiodcentered\hspace{.6em} November 4, 2026\par}
+\vspace{.6em}
+
+Multiply two expressions, retain their constant and linear coefficients, and then repeat the calculation while retaining the quadratic coefficient as well. That extra coefficient can decide whether a change of coordinates exists.
+
+The operation we will study is
+\[
+ F_a(x,y)=x+y+a xy.
+\]
+With ordinary arithmetic modulo three and \(a=1\), its quadratic interaction can be repaired, but a cubic error remains. If the coefficient \(a\) is a retained symbol whose square is discarded, the same correction is exact. Keeping its square changes the answer again.
+
+We will calculate each of these cases, then prove the general rule in arithmetic modulo a prime \(p\): the operation becomes addition under an invertible coordinate exactly when \(a^{p-1}=0\). Both the coordinate and its inverse will be finite polynomials.
+
+Next, we allow every symmetric operation with zero as its identity, through degree three. We determine every possible coordinate change and the coefficient it cannot remove. A final example passes all the tests through degree eight and fails at degree nine.
+
+\textbf{Begin with:} polynomial multiplication and arithmetic modulo a prime. The rules for retained coefficients are defined explicitly. Equality means equality of coefficients after expansion; no limits or convergence are involved.
+
+\vspace{.3em}
+{\small This continues \href{https://refactor.press/refactors/coordinate-repair}{How far can a change of coordinates go?} The \href{https://refactor.press/refactors/first-order}{first-order companion} uses the same practice of deciding which coefficients to retain.}
+
+\clearpage
+\tableofcontents
+\clearpage
+\input{parameter-family}
+\input{cubic-classification}
+\appendix
+\input{coordinate-freedom}
+\input{sources}
+\end{document}

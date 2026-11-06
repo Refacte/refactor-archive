@@ -1,0 +1,66 @@
+# Refactor — Henry Shin
+
+Refactor — changing what becomes elementary. Mathematical writing about inventing objects, operations, and viewpoints that expose a mechanism and make a difficult step explicit. The current collection includes original research, nine mechanism calculi, five shorter worked examples, further notes, and essays. The research index connects original papers with readable case studies. Longer studies, research records, and dated editions are also preserved in the searchable Tensorgami archive.
+
+## Start here
+
+- [Start here](https://refactor.press/expositions#start-here) — Three reading routes with background guidance.
+- [Refactor — the approach](https://refactor.press/refactor) — What a refactor must construct and prove.
+- [Further constructions](https://refactor.press/calculi) — The current programme, with the operations and outputs of each construction.
+- [Refactor home](https://refactor.press/) — The research programme, a worked Taiko case, and routes into the writing.
+
+## Research
+
+- [Research](https://refactor.press/papers) — Original papers, explanations, source editions, publication status and corrections.
+- [The Taiko obstruction](https://refactor.press/papers/taiko-girth-obstruction) — A group-ring construction becomes a finite incidence problem; the required constraints cannot hold together.
+
+## Further constructions
+
+- [A matrix identity by cycle exchange](https://refactor.press/refactors/cayley-hamilton) — Invent a walk with reserved cycles, then exchange the first cycle that obstructs a simple disjoint walk. Output: A term-by-term cancellation proof of Cayley–Hamilton, and a finite description of the surviving shorter walks.
+- [Remove the tree, retain the circuits](https://refactor.press/calculi/tree-gauge) — Choose a root, propagate coordinate changes along a spanning tree, and read the remaining circuit products. Output: A constructive normal form with the residual conjugation made explicit.
+- [Make a hidden cubic appear](https://refactor.press/calculi/hidden-cubic) — Change variables, eliminate a relation, and carry the residual through successive coefficients. Output: The residual x³ and a finite coefficient test: every nonzero first-order direction fails at third order.
+- [Classify compatible couplings](https://refactor.press/calculi/coupled-operators) — Multiply block matrices, derive the compatibility map and the allowed gauge map, then row-reduce. Output: Parameters for the couplings, their automorphisms, and a coordinate-change certificate when two inputs agree.
+- [Construct every tensor chain](https://refactor.press/calculi/tensor-chains) — Build a lowering operator, solve its coefficient recurrence, and construct chains of every required length. Output: A chain basis and Jordan block sizes for a Kronecker sum, with ranks of all powers, in characteristic zero.
+- [Cancel the unwanted edge sets](https://refactor.press/calculi/broken-circuits) — Choose the least available edge and pair terms by an involution that reverses their signs. Output: Whitney’s broken-circuit formula, a reduced chromatic polynomial, and the first coefficients as counts of edges and triangles.
+- [Split a cyclic tuple into motion and remainder](https://refactor.press/calculi/cyclic-bar) — Separate the total sum from the remaining labels and calculate the face rules in those coordinates. Output: An explicit calculus inside a higher-algebraic construction, with its external identifications kept visible.
+- [Calculate the missing components](https://refactor.press/calculi/transporter) — Traverse the two-sided graph, retain both word labels, and calculate the intersection group attached to each component. Output: Double cosets, their intersection groups, and membership witnesses from the same finite input.
+- [Eliminate one integration variable](https://refactor.press/calculi/period-elimination) — Integrate a selected edge parameter, then track the rational or logarithmic expression left behind. Output: Exact rational and logarithmic elimination steps, with convergence assumptions and independence of the chosen affine chart.
+
+## Starting studies
+
+- [Find the quantity that moves on its own](https://refactor.press/refactors/recurrence) — Choose a weighted difference, derive the weight, and turn a coupled recurrence into a single update.
+- [A subgroup becomes a machine](https://refactor.press/refactors/words-to-machine) — Turn generators into loops, fold their shared moves, and read membership and intersections from paths.
+- [A determinant that counts trees](https://refactor.press/refactors/graph-calculation) — Build the incidence matrix and watch its minors select exactly the spanning trees.
+- [Make first order exact](https://refactor.press/refactors/first-order) — Choose an arithmetic in which first-order change is exact, then restore the next term to expose a lifting obstruction.
+- [How far can a change of coordinates go?](https://refactor.press/refactors/coordinate-repair) — Cancel a quadratic defect, calculate the next one, and see directly why every cubic repair fails.
+
+## Current expositions and working notes
+
+- [The library](https://refactor.press/expositions) — Current standalone mechanism calculi and further working notes. Older framework volumes are in the separate archive.
+- [When a Formal Logarithm Fails](https://refactor.press/notes/when-a-formal-logarithm-fails) — Change coordinates one degree at a time: a quadratic repair succeeds, but a cubic obstruction remains in characteristic three. A filtered complex identifies the precise failure.
+- [Divisibility of Separated Polynomials](https://refactor.press/notes/separated-polynomial-divisibility) — A free-module expansion and a diagonal remainder calculation expose when divisibility of polynomial differences forces composition through a common polynomial.
+- [IBM Ponder This July 2010](https://refactor.press/notes/ibm-ponder-this-2010) — Collect algebraic conjugates into an integer trace recurrence, then use a companion matrix to turn the rounding question into finite modular arithmetic.
+- [A Weighting Argument for Pointwise Convergence to Convergence in Measure](https://refactor.press/notes/pointwise-weighting-convergence-in-measure) — Choose a positive measurable weight that changes the scale at each point, turning almost-everywhere convergence into convergence in measure for the weighted sequence.
+- [Extracting the First Prime Greater than m](https://refactor.press/notes/extracting-first-prime) — Build a finite arithmetic selector for the first prime above a bound, using factorial congruences, greatest common divisors, and valuations.
+
+## Essays
+
+- [Essays](https://refactor.press/essays) — Understanding, explanation, authority, and the conditions of inquiry.
+- [AI research and the remaining human advantage](https://refactor.press/essays/ai-research-and-reliable-numerical-computation) — Why abstraction is no refuge, and a research programme in sparse numerical computation.
+- [Mathematical Life in the Age of AI](https://refactor.press/essays/mathematical-life-in-the-age-of-ai) — How people acquire and sustain the means to understand and pursue mathematics.
+
+## Tensorgami archive — earlier work
+
+- [Search the Tensorgami archive](https://refactor.press/archive) — Earlier research, full framework studies and original editions; separate from the current Refactor programme.
+- [Research records in the archive](https://refactor.press/archive?kind=papers) — Original scholarly status, versions, citations and corrections are retained.
+- [Dated editions](https://refactor.press/editions) — Preserved site snapshots and original source downloads.
+- [Earlier reading paths](https://refactor.press/mechanisms) — Archived guide to the full studies.
+- [Archive sitemap](https://refactor.press/sitemap-archive.xml)
+
+## Author, interests, and sources
+
+- [About Henry Shin](https://refactor.press/about)
+- [Interests](https://refactor.press/interests) — Cube patterns and games.
+- [Site map](https://refactor.press/site-map) — The current programme and the earlier collection.
+- [Supplementary sources](https://refactor.press/verification)
+- [Correspondence](mailto:hkshin@gmail.com)

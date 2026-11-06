@@ -1,0 +1,828 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=1in,top=.88in,bottom=.85in]{geometry}
+\usepackage{fontspec}
+\setmainfont{Georgia}
+\setsansfont{Segoe UI}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype,booktabs,array,tabularx,enumitem,xcolor,needspace}
+\usepackage{sectsty}
+\allsectionsfont{\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000}
+\definecolor{ink}{HTML}{25313C}
+\definecolor{link}{HTML}{345B70}
+\definecolor{accent}{HTML}{407666}
+\usepackage{hyperref,bookmark}
+\hypersetup{unicode=true,colorlinks=true,linkcolor=link,urlcolor=link,citecolor=link,
+ pdftitle={When a nonlinear law becomes additive},pdfauthor={Henry Shin},
+ pdfsubject={Explicit coefficient calculations and cubic classification},
+ bookmarksopen=true,bookmarksnumbered=true}
+\urlstyle{same}
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\textsc{When a nonlinear law becomes additive}}
+\fancyhead[R]{\small\textsc{Refactor}}
+\fancyfoot[L]{\scriptsize Refactor \textperiodcentered\ November 4, 2026}
+\fancyfoot[R]{\small\thepage}
+\setlength{\headheight}{16pt}
+\renewcommand{\headrulewidth}{.3pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{.48em}
+\linespread{1.07}
+\setlength{\emergencystretch}{2em}
+\clubpenalty=10000\widowpenalty=10000\displaywidowpenalty=10000
+\allowdisplaybreaks[1]
+\setcounter{tocdepth}{1}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}\newtheorem{example}[theorem]{Example}
+\newcommand{\defect}{\mathcal E}
+\begin{document}
+\color{ink}
+\thispagestyle{empty}
+{\sffamily\small\textcolor{accent}{REFACTOR \textperiodcentered\ COMPANION STUDY}\par}
+\vspace{.6em}
+{\LARGE\bfseries When a nonlinear law becomes additive\par}
+\vspace{.4em}
+{\large\itshape Retain the coefficients, calculate the repair, and find what survives\par}
+\vspace{.7em}
+{Henry Shin \hspace{.6em}\textperiodcentered\hspace{.6em} November 4, 2026\par}
+\vspace{.6em}
+
+Multiply two expressions, retain their constant and linear coefficients, and then repeat the calculation while retaining the quadratic coefficient as well. That extra coefficient can decide whether a change of coordinates exists.
+
+The operation we will study is
+\[
+ F_a(x,y)=x+y+a xy.
+\]
+With ordinary arithmetic modulo three and \(a=1\), its quadratic interaction can be repaired, but a cubic error remains. If the coefficient \(a\) is a retained symbol whose square is discarded, the same correction is exact. Keeping its square changes the answer again.
+
+We will calculate each of these cases, then prove the general rule in arithmetic modulo a prime \(p\): the operation becomes addition under an invertible coordinate exactly when \(a^{p-1}=0\). Both the coordinate and its inverse will be finite polynomials.
+
+Next, we allow every symmetric operation with zero as its identity, through degree three. We determine every possible coordinate change and the coefficient it cannot remove. A final example passes all the tests through degree eight and fails at degree nine.
+
+\textbf{Begin with:} polynomial multiplication and arithmetic modulo a prime. The rules for retained coefficients are defined explicitly. Equality means equality of coefficients after expansion; no limits or convergence are involved.
+
+\vspace{.3em}
+{\small This continues \href{https://refactor.press/refactors/coordinate-repair}{How far can a change of coordinates go?} The \href{https://refactor.press/refactors/first-order}{first-order companion} uses the same practice of deciding which coefficients to retain.}
+
+\clearpage
+\tableofcontents
+\clearpage
+
+% Begin parameter-family.tex
+\section{Retain two coefficients}\label{sec:parameter}
+
+Begin with arithmetic modulo three: \(3=0\), \(2=-1\), and \(2\cdot2=1\). Now retain two coefficients at a time. Write the pair \((r,s)\) as
+\[
+ r+s\epsilon.
+\]
+Addition is component by component. For multiplication, expand the product and retain only its constant and linear terms in \(\epsilon\):
+\begin{align}
+ (r+s\epsilon)+(u+v\epsilon)&=(r+u)+(s+v)\epsilon,\\
+ (r+s\epsilon)(u+v\epsilon)&=ru+(rv+su)\epsilon.
+ \label{eq:two-coefficients}
+\end{align}
+The numerical coefficients are reduced modulo three. The rule \(\epsilon^2=0\) is shorthand for this multiplication: the discarded term is \(sv\epsilon^2\).
+
+The pair \((0,1)\), written \(\epsilon\), is not the zero pair. Equality requires both retained coefficients to agree. Thus
+\[
+ \epsilon\ne0,\qquad \epsilon^2=0.
+\]
+For example,
+\[
+ (1+\epsilon)(1-\epsilon)=1.
+\]
+Discarding \(\epsilon^2\) at an intermediate step is consistent with subsequent additions and multiplications. These operations cannot turn a term containing two copies of \(\epsilon\) into a constant or linear term.
+
+We will use \(x,y,t\) as input placeholders. They are separate from \(\epsilon\): their powers are not discarded. In particular, \(\epsilon x^2y\) is retained because its coefficient has only one copy of \(\epsilon\). Two expressions in \(x,y\) agree when every input monomial has the same retained coefficient. Checking only the three numerical inputs \(0,1,2\) would be a different test.
+
+\section{Let the interaction determine its correction}\label{sec:repair}
+
+Consider
+\begin{equation}\label{eq:family}
+ F_a(x,y)=x+y+a xy.
+\end{equation}
+The coefficient \(a\) may be an ordinary number modulo three or an expression handled by the rules above. At \(a=0\) we have addition. At \(a=1\),
+\[
+ (1+x)(1+y)=1+F_1(x,y),
+\]
+so this is multiplication written in terms of the displacements from one.
+
+The rule combines three inputs consistently. Expanding either grouping gives
+\begin{align*}
+ F_a(F_a(x,y),z)
+ &=x+y+z+a(xy+xz+yz)+a^2xyz\\
+ &=F_a(x,F_a(y,z)).
+\end{align*}
+Interchanging the inputs does not change it, and \(F_a(x,0)=x\). These facts follow by multiplication and do not require cancelling \(a\).
+
+We want a coordinate beginning with \(t\),
+\begin{equation}\label{eq:log-identity}
+ L(t)=t+c t^2+d t^3+\cdots,
+ \qquad L(F_a(x,y))=L(x)+L(y).
+\end{equation}
+The dots permit an unlimited list of coefficients. To calculate a fixed input degree after substitution, only finitely many entries contribute: every factor of \(F_a\) supplies at least one input letter. Equality is checked one coefficient at a time.
+
+Call the difference between the two sides the error:
+\[
+ \defect_L(x,y)=L(F_a(x,y))-L(x)-L(y).
+\]
+To find the first corrections, expand and retain input terms of total degree at most three:
+\begin{equation}\label{eq:first-coefficients}
+ \defect_L(x,y)
+ =(a+2c)xy+(2ac+3d)(x^2y+xy^2)
+ +\text{terms of degree at least four}.
+\end{equation}
+Here total degree counts the input letters: \(x^2y\) has degree three. In the square \(F_a^2\), the terms we need are \(2xy+2a(x^2y+xy^2)\). In the cube, they are \(3(x^2y+xy^2)\). This gives the displayed coefficients.
+
+Modulo three, the quadratic equation is \(a-c=0\). It forces \(c=a\). The cubic coefficient is then \(-a^2\), independently of \(d\). Use the forced correction first:
+\[
+ L_{a,2}(t)=t+at^2.
+\]
+Its entire error can be computed without a degree cutoff. Since
+\[
+ F_a(x,y)^2-x^2-y^2
+ =2xy+2a xy(x+y)+a^2x^2y^2,
+\]
+we obtain the exact identity
+\begin{equation}\label{eq:exact-char3-defect}
+ \begin{split}
+ &L_{a,2}(F_a(x,y))-L_{a,2}(x)-L_{a,2}(y)\\
+ &\hspace{3em}=-a^2xy(x+y)+a^3x^2y^2.
+ \end{split}
+\end{equation}
+
+Now choose \(a=\epsilon\) with the two-coefficient rule \(\epsilon^2=0\). Every coefficient on the right vanishes, so
+\begin{equation}\label{eq:dual-repair}
+ L(t)=t+\epsilon t^2,
+ \qquad L(F_\epsilon(x,y))=L(x)+L(y)
+\end{equation}
+is exact for all powers of the inputs. The interaction \(\epsilon xy\) itself is retained and nonzero.
+
+The inverse coordinate is equally explicit:
+\[
+ E(s)=s-\epsilon s^2.
+\]
+Expanding both compositions gives
+\begin{align*}
+ L(E(s))&=s-\epsilon s^2+\epsilon(s-\epsilon s^2)^2=s,\\
+ E(L(t))&=t+\epsilon t^2-\epsilon(t+\epsilon t^2)^2=t.
+\end{align*}
+Every extra term contains \(\epsilon^2\). We can therefore recover the original rule by
+\[
+ F_\epsilon(x,y)=E(L(x)+L(y)).
+\]
+The coordinate has removed a nonzero interaction by using exactly the coefficient arithmetic we specified.
+
+\section{Keep the quadratic coefficient too}\label{sec:next-order}
+
+Repeat the calculation while retaining three coefficients:
+\[
+ r+s\epsilon+w\epsilon^2.
+\]
+After ordinary expansion, keep the terms through \(\epsilon^2\). Multiplication is now
+\begin{equation}\label{eq:three-coefficients}
+ \begin{split}
+ &(r+s\epsilon+w\epsilon^2)(u+v\epsilon+z\epsilon^2)\\
+ &\quad=ru+(rv+su)\epsilon+(rz+sv+wu)\epsilon^2.
+ \end{split}
+\end{equation}
+The rule is \(\epsilon^3=0\), while \(\epsilon^2\) is the retained triple \((0,0,1)\) and is nonzero. For example, the product that was one before is now
+\[
+ (1+\epsilon)(1-\epsilon)=1-\epsilon^2.
+\]
+
+With this arithmetic, the same attempted coordinate has error
+\begin{equation}\label{eq:next-defect}
+ L_{\epsilon,2}(F_\epsilon)-L_{\epsilon,2}(x)-L_{\epsilon,2}(y)
+ =-\epsilon^2xy(x+y).
+\end{equation}
+The former cancellation has failed because its quadratic coefficient is now retained.
+
+Every coordinate beginning with \(t\) that removes the quadratic input term must still have coefficient \(\epsilon\) on \(t^2\), by \eqref{eq:first-coefficients}. Could adding \(d t^3\) remove the remaining error? Cubing modulo three introduces no mixed terms:
+\[
+ (u+v+w)^3=u^3+v^3+w^3.
+\]
+Consequently
+\[
+ F_\epsilon(x,y)^3-x^3-y^3=\epsilon^3x^3y^3=0.
+\]
+The cubic correction changes none of the error. A term \(t^n\) with \(n\ge4\) cannot contribute an input term of degree three: substituting an expression with no constant term leaves at least \(n\) input letters. No further correction can remove \eqref{eq:next-defect}.
+
+This proves nonexistence for coordinates with linear coefficient one. A coordinate with another invertible linear coefficient could be divided by that coefficient to obtain one beginning with \(t\), so it cannot succeed either.
+
+The calculation distinguishes two counts. The error uses two copies of the coefficient symbol \(\epsilon\), but three input letters. Retaining one more coefficient in \(\epsilon\) changes whether a cubic input error can be removed.
+
+\section{Count repeated addition}\label{sec:repeated}
+
+Now let \(p\) be any prime. Use ordinary arithmetic modulo \(p\), possibly with retained coefficient symbols as above. The coefficient rules obey the usual associative, commutative, and distributive rules, with \(p=0\). Fractions with denominator \(1,2,\ldots,p-1\) mean multiplication by the corresponding modular inverse. We never divide by the parameter \(a\).
+
+Write \([m]_{F_a}(t)\) for the result of combining \(m\) copies of \(t\) using \(F_a\), starting with \([0]_{F_a}(t)=0\). Direct induction gives
+\begin{equation}\label{eq:m-series}
+ [m]_{F_a}(t)=\sum_{j=1}^{m}\binom mj a^{j-1}t^j.
+\end{equation}
+For the induction step, use
+\[
+ [m+1]_{F_a}(t)=[m]_{F_a}(t)+t+a[m]_{F_a}(t)t.
+\]
+The coefficient of \(a^{j-1}t^j\) is the sum
+\[
+ \binom mj+\binom m{j-1}=\binom{m+1}j.
+\]
+The first and last coefficients also agree, and the case \(m=1\) starts the induction.
+
+When \(m=p\), all the interior binomial coefficients vanish modulo \(p\). To see this, \(p!\) has a factor \(p\), whereas \(j!(p-j)!\) has none for \(0<j<p\). Thus
+\begin{equation}\label{eq:p-series}
+ \boxed{\;[p]_{F_a}(t)=a^{p-1}t^p.\;}
+\end{equation}
+If a coordinate \(L\) makes \(F_a\) additive, combining \(p\) copies gives
+\[
+ L([p]_{F_a}(t))=pL(t)=0.
+\]
+For \(L(t)=t+\text{higher powers}\), the coefficient of \(t^p\) on the left is \(a^{p-1}\); every nonlinear term of \(L\) contributes only higher powers. Hence
+\begin{equation}\label{eq:necessary}
+ a^{p-1}=0
+\end{equation}
+is necessary. In the three-coefficient example, the test is \([3]_{F_\epsilon}(t)=\epsilon^2t^3\ne0\), confirming the failed cubic repair.
+
+\section{Construct an exact coordinate and its inverse}\label{sec:exact-theorem}
+
+The repeated-addition test gives the necessary condition. To construct a coordinate when it holds, first determine which coefficients the desired identity forces.
+
+Write \(L(t)=t+\ell_2t^2+\ell_3t^3+\cdots\), with \(\ell_1=1\). In each power of \(F_a=x+(1+ax)y\), choose the one factor containing \(y\). The coefficient of \(y\) in \(L(F_a)\) is therefore
+\[
+ (1+ax)\sum_{n\ge1}n\ell_nx^{n-1}.
+\]
+The coefficient of \(y\) in \(L(x)+L(y)\) is one. Comparing the coefficient of \(x^{n-1}\) gives
+\begin{equation}\label{eq:coefficient-recursion}
+ n\ell_n+a(n-1)\ell_{n-1}=0\quad(n\ge2).
+\end{equation}
+For \(n<p\), division by \(n\) is allowed, and these equations successively force
+\[
+ \ell_n=\frac{(-1)^{n+1}a^{n-1}}n.
+\]
+
+The inverse candidate can be found in the same way. It must turn addition back into \(F_a\), so ask for
+\[
+ E(s+h)=E(s)+E(h)+aE(s)E(h),\qquad
+ E(s)=s+e_2s^2+\cdots.
+\]
+For \(n\ge2\), the coefficient of \(s^{n-1}h\) is \(ne_n\) on the left and \(ae_{n-1}\) on the right, where \(e_1=1\). Thus
+\[
+ ne_n=ae_{n-1},\qquad e_n=\frac{a^{n-1}}{n!}\quad(1\le n<p).
+\]
+Assume now that \(a^{p-1}=0\). Use these forced coefficients below degree \(p\) and set the later coefficients to zero. This gives two finite candidates. The coefficient equations explain how to find them; the following proof checks their complete identities and that they are mutual inverses.
+
+\begin{theorem}[Exact repair for the parameter family]\label{thm:family}
+In commutative coefficient arithmetic modulo a prime \(p\), the operation \(F_a(x,y)=x+y+a xy\) can be made additive by an invertible coordinate if and only if \(a^{p-1}=0\). When this holds, define
+\begin{align}
+ L_a(t)&=\sum_{n=1}^{p-1}\frac{(-1)^{n+1}a^{n-1}}n\,t^n,
+ \label{eq:finite-log}\\
+ E_a(s)&=\sum_{n=1}^{p-1}\frac{a^{n-1}}{n!}\,s^n.
+ \label{eq:finite-exp}
+\end{align}
+These finite polynomials satisfy
+\begin{gather}
+ L_a(F_a(x,y))=L_a(x)+L_a(y),\label{eq:theorem-add}\\
+ L_a(E_a(s))=s,\qquad E_a(L_a(t))=t.\label{eq:theorem-inverse}
+\end{gather}
+\end{theorem}
+
+The coefficients in these formulas use only divisions by numbers smaller than \(p\). For example, modulo five \(1/2=3\), since \(2\cdot3=1\). When \(p=2\), the condition is \(a=0\) and both coordinates are the identity.
+
+\begin{proof}
+Necessity was proved by repeated addition. For sufficiency, assume \(a^{p-1}=0\).
+
+\emph{First count the parameter powers.} In a term from
+\[
+ a^{n-1}(x+y+a xy)^n,
+\]
+suppose \(k\) of the \(n\) factors contribute \(a xy\). The remaining factors contribute \(x\) or \(y\). Its total input degree is \(d=n+k\), and its coefficient contains
+\[
+ a^{n-1}a^k=a^{d-1}.
+\]
+Every term of degree \(d\ge p\) therefore vanishes. In particular, the error
+\[
+ D(x,y)=L_a(F_a(x,y))-L_a(x)-L_a(y)
+\]
+has degree at most \(p-1\). It has only mixed terms: setting either input to zero gives zero.
+
+\emph{Now cancel the remaining coefficients.} For this finite calculation, write
+\[
+ P'(t)=\sum_{n\ge1}n c_nt^{n-1}
+ \quad\text{when}\quad P(t)=\sum_{n\ge0}c_nt^n.
+\]
+This derivative is just coefficient bookkeeping. Expanding \(P(t+h)\), there are \(n\) choices for the one factor of \(h\) in \((t+h)^n\); their sum is \(P'(t)h\). For a substitution, retain the coefficient of \(h\) in two steps:
+\begin{align*}
+ Q(t+h)&=Q(t)+Q'(t)h+\text{terms containing }h^2,\\
+ P(Q(t+h))&=P(Q(t))+P'(Q(t))Q'(t)h
+ +\text{terms containing }h^2.
+\end{align*}
+This gives the chain rule used below by the same retained-coefficient calculation.
+
+For our finite sum,
+\[
+ L_a'(t)=1-at+a^2t^2-\cdots+(-at)^{p-2}.
+\]
+Multiplying by \(1+at\) cancels consecutive terms:
+\begin{equation}\label{eq:finite-geometric}
+ (1+at)L_a'(t)=1-(-at)^{p-1}=1.
+\end{equation}
+The final term vanishes by the assumption on \(a\). Also,
+\[
+ (1+ax)(1+ay)=1+aF_a(x,y).
+\]
+Differentiate the error with respect to \(y\), meaning multiply each coefficient of \(x^iy^j\) by \(j\) and reduce its \(y\)-exponent by one. The two identities give
+\begin{align*}
+ (1+ay)\frac{\partial D}{\partial y}
+ &=(1+aF_a)L_a'(F_a)-(1+ay)L_a'(y)\\
+ &=1-1=0.
+\end{align*}
+The finite geometric sum \(1-ay+\cdots+(-ay)^{p-2}\) is an inverse for \(1+ay\), so \(\partial D/\partial y=0\).
+
+Every mixed term of \(D\) has degree below \(p\), so its \(y\)-exponent lies between \(1\) and \(p-1\). Those numbers have inverses modulo \(p\). Thus every coefficient of \(D\) is zero. The degree bound is essential: we have not inferred that an arbitrary expression with derivative zero is constant.
+
+\emph{Finally check the inverse.} Directly differentiating the second finite sum gives
+\begin{equation}\label{eq:finite-exp-derivative}
+ E_a'(s)=1+aE_a(s).
+\end{equation}
+Both sides are \(1+as+a^2s^2/2!+\cdots+a^{p-2}s^{p-2}/(p-2)!\); the extra final term on the right contains \(a^{p-1}\).
+
+Substitute \(E_a(s)\) in \eqref{eq:finite-geometric} and use \eqref{eq:finite-exp-derivative}:
+\[
+ \frac{d}{ds}L_a(E_a(s))
+ =L_a'(E_a(s))E_a'(s)=1.
+\]
+This composition also has degree below \(p\). Indeed, a term of degree \(d\) in the composition has one outer factor \(a^{n-1}\) and \(n\) inner factors of the form \(a^{m_i-1}s^{m_i}\), giving total parameter power
+\[
+ (n-1)+\sum_{i=1}^{n}(m_i-1)=d-1.
+\]
+Terms with \(d\ge p\) vanish. The constant coefficient of \(L_a(E_a(s))\) is zero, and its derivative is one. Comparing the remaining coefficients, whose exponents are all smaller than \(p\), proves \(L_a(E_a(s))=s\).
+
+For the reverse composition, set \(U(t)=E_a(L_a(t))\). Then \(L_a(U(t))=L_a(t)\). If \(U(t)-t\) had its first nonzero coefficient in degree \(n\), that coefficient would pass unchanged into \(L_a(U(t))-L_a(t)\): the leading term of \(L_a\) is its input, while every higher power multiplies the difference by at least one further input letter. This is impossible. Hence \(E_a(L_a(t))=t\).
+\end{proof}
+
+For example, keep \(1,\epsilon,\epsilon^2,\epsilon^3\) modulo five and discard \(\epsilon^4\). The theorem gives the exact coordinate
+\[
+ L_\epsilon(t)=t-\frac{\epsilon}{2}t^2
+ +\frac{\epsilon^2}{3}t^3-\frac{\epsilon^3}{4}t^4
+ =t+2\epsilon t^2+2\epsilon^2t^3+\epsilon^3t^4.
+\]
+If we instead retain \(\epsilon^4\) and discard \(\epsilon^5\), the test \([5]_{F_\epsilon}(t)=\epsilon^4t^5\) rules out every coordinate. The input powers have not been truncated in either example; it is the retained coefficient list that changed.
+
+\section{Find the first failed coefficient}\label{sec:first-obstruction}
+
+We can locate the failure even when \(a^{p-1}\ne0\). Equation~\eqref{eq:coefficient-recursion} already forces every coordinate coefficient below degree \(p\), even when the requested identity is imposed only through degree \(p-1\). Call the resulting polynomial \(L_{a,<p}\); it is the sum in \eqref{eq:finite-log}.
+
+Use that polynomial without assuming \(a^{p-1}=0\), and again write its error as \(D\). The finite multiplication now gives
+\[
+ q(t):=(1+at)L_{a,<p}'(t)=1-a^{p-1}t^{p-1}.
+\]
+The sign has this form for every prime: \((-1)^{p-1}=1\) modulo \(p\), including \(p=2\). Exactly as before,
+\begin{equation}\label{eq:error-coefficient-identity}
+ (1+ay)\frac{\partial D}{\partial y}
+ =q(F_a)-q(y)
+ =-a^{p-1}\bigl(F_a^{p-1}-y^{p-1}\bigr).
+\end{equation}
+The right side has no term of degree below \(p-1\). Multiplying by \(1+ay\) leaves a lowest-degree term unchanged, so \(\partial D/\partial y\) has none below that degree either. Since all mixed exponents below degree \(p\) can be divided by modulo \(p\), the error \(D\) has no terms below degree \(p\).
+
+At the next degree, only the linear part \(x+y\) of \(F_a\) contributes on the right of \eqref{eq:error-coefficient-identity}. If \(e_i\) is the coefficient of \(x^iy^{p-i}\) in \(D\), comparison gives
+\[
+ (p-i)e_i=-a^{p-1}\binom{p-1}{i},\qquad 1\le i\le p-1.
+\]
+Every denominator here is still nonzero modulo \(p\). Thus the full degree-\(p\) error is
+\begin{equation}\label{eq:first-residual}
+ -a^{p-1}\sum_{i=1}^{p-1}
+ \frac{\binom{p-1}{i}}{p-i}\,x^iy^{p-i}.
+\end{equation}
+In particular, the coefficient of \(x^{p-1}y\) is \(-a^{p-1}\). If this is nonzero, the degree-\(p\) error is nonzero.
+
+An added term \(d t^p\) changes that degree by
+\[
+ d\bigl((x+y)^p-x^p-y^p\bigr)=0.
+\]
+Higher powers cannot affect degree \(p\). Since all the earlier coefficients were forced, this is the first failed repair for every possible coordinate.
+
+Modulo three the sum in \eqref{eq:first-residual} is \(x^2y+xy^2\); modulo five it is
+\[
+ x^4y+2x^3y^2+2x^2y^3+xy^4.
+\]
+This recovers the original cubic obstruction and shows exactly where its general-prime counterpart occurs.
+
+% End parameter-family.tex
+
+
+% Begin cubic-classification.tex
+\section{Keep every possible cubic term}\label{sec:cubic-laws}
+
+Return to arithmetic modulo three, still allowing explicitly retained coefficient symbols. The quadratic interaction forced a cubic error in \(F_a\). Could a cubic term already present in the operation cancel that error? We now allow both coefficients to vary and calculate which combinations a coordinate change can remove.
+
+For the next three sections, retain all input terms of total degree at most three. Thus
+\[
+ x^2y\text{ is retained},\qquad
+ x^3y\text{ and }x^2y^2\text{ are discarded}.
+\]
+We write \(\equiv\) for agreement of the retained terms. Each input substituted into an expression has zero constant term, so a discarded term with four input letters can never contribute a term with only three. This is why we can discard it before continuing a calculation.
+
+Require the operation to return \(x\) when its second input is zero, to return \(y\) when its first input is zero, and to be unchanged when the inputs are interchanged. The first two requirements leave no constant term, fix the linear terms as \(x+y\), and exclude pure powers such as \(x^2\) or \(y^3\). Through degree three, the only remaining monomials are
+\[
+ xy,\qquad x^2y,\qquad xy^2.
+\]
+Interchanging \(x,y\) makes the last two coefficients equal. Consequently the most general retained expression is
+\begin{equation}\label{eq:general-jet}
+ F_{a,b}(x,y)\equiv x+y+a xy+bC(x,y),
+ \qquad C(x,y)=x^2y+xy^2.
+\end{equation}
+
+We must also check that grouping three inputs in either order gives the same retained terms. Expand \(F_{a,b}(F_{a,b}(x,y),z)\), keeping only three input letters. The outer quadratic term contributes
+\[
+ a(x+y)z+a^2xyz,
+\]
+and the outer cubic term contributes
+\[
+ b\bigl((x+y)^2z+(x+y)z^2\bigr).
+\]
+Together with the inner expression, this gives
+\begin{equation}\label{eq:common-cubic-expansion}
+ \begin{split}
+ x+y+z\;&+a(xy+xz+yz)\\
+ &+b(x^2y+xy^2+x^2z+xz^2+y^2z+yz^2)\\
+ &+(a^2+2b)xyz.
+ \end{split}
+\end{equation}
+Expanding \(F_{a,b}(x,F_{a,b}(y,z))\) gives exactly the same expression. Thus every choice of \(a,b\) satisfies the grouping requirement through degree three.
+
+The input that cancels \(t\), through the same degree, is
+\[
+ -t+at^2-a^2t^3.
+\]
+Substitute it as the second input: the quadratic and cubic terms of \(t+y+a ty\) cancel, and \(C(t,y)\equiv C(t,-t)=0\).
+
+All these statements concern the retained terms. Higher terms may be present in an actual operation and are left unspecified. Setting all those terms to zero need not produce a rule that groups consistently in every degree.
+
+\section{Calculate what every coordinate can change}\label{sec:coordinate-action}
+
+Allow every coordinate beginning with \(t\), through the same degree:
+\begin{equation}\label{eq:coordinate-jet}
+ H(t)\equiv t+ut^2+vt^3.
+\end{equation}
+Its inverse through degree three is
+\begin{equation}\label{eq:coordinate-inverse}
+ H^{-1}(t)\equiv t-ut^2+(2u^2-v)t^3.
+\end{equation}
+For example, substitution in \(H(H^{-1}(t))\) gives quadratic coefficient \(-u+u=0\) and cubic coefficient
+\[
+ (2u^2-v)-2u^2+v=0.
+\]
+The reverse substitution has the same cancellation.
+
+This inverse calculation continues in every degree if the higher coefficients of \(H\) are specified. In an unknown inverse \(K(t)=t+k_2t^2+k_3t^3+\cdots\), the coefficient of \(t^n\) in \(H(K(t))\) contains \(k_n\) once; every other term uses earlier coefficients. Solving for \(k_n\) recursively gives a right inverse. The same argument gives a left inverse. Substituting one into the other shows that they agree. Thus a series beginning with \(t\) is an invertible coordinate, with no division by a variable coefficient.
+
+If the new operation has retained coefficients \(a',b'\), we must have
+\begin{equation}\label{eq:coordinate-bridge}
+ H(F_{a,b}(x,y))\equiv F_{a',b'}(H(x),H(y)).
+\end{equation}
+The direction of this equation matters: first combine the old inputs and change coordinate, or first change each input and then combine them using the new rule.
+
+On the left, the required powers are
+\begin{align*}
+ F_{a,b}(x,y)^2&\equiv x^2+2xy+y^2+2aC(x,y),\\
+ F_{a,b}(x,y)^3&\equiv x^3+y^3.
+\end{align*}
+The second line follows by cubing modulo three. Hence the left side of \eqref{eq:coordinate-bridge} is
+\begin{equation*}
+ \begin{split}
+ x+y+u(x^2+y^2)+v(x^3+y^3)\;&+(a+2u)xy\\
+ &+(b+2au)C(x,y).
+ \end{split}
+\end{equation*}
+On the right,
+\[
+ H(x)H(y)\equiv xy+uC(x,y),\qquad
+ C(H(x),H(y))\equiv C(x,y).
+\]
+Its retained expression is therefore
+\begin{equation*}
+ \begin{split}
+ x+y+u(x^2+y^2)+v(x^3+y^3)\;&+a'xy\\
+ &+(a'u+b')C(x,y).
+ \end{split}
+\end{equation*}
+The pure terms already match. Equating the mixed coefficients gives
+\[
+ a'=a+2u=a-u,\qquad a'u+b'=b+2au.
+\]
+Substitute the first equation into the second:
+\begin{equation}\label{eq:coordinate-action}
+ \boxed{\quad a'=a-u,\qquad b'=b+au+u^2.\quad}
+\end{equation}
+These are the complete equations. The coefficient \(v\) disappears because \(v(x+y)^3=vx^3+vy^3\): it cannot change a mixed cubic term.
+
+\Needspace{14\baselineskip}
+\section{Compare two operations completely through degree three}\label{sec:classification}
+
+First ask for a coordinate that removes the quadratic term. Equation \eqref{eq:coordinate-action} forces \(u=a\), leaving cubic coefficient
+\[
+ b'=b+2a^2=b-a^2.
+\]
+This suggests retaining the single quantity
+\begin{equation}\label{eq:lambda}
+ \lambda=b-a^2.
+\end{equation}
+It survives every coordinate beginning with \(t\), since
+\begin{align*}
+ b'-(a')^2
+ &=b+au+u^2-(a-u)^2\\
+ &=b-a^2+3au=b-a^2.
+\end{align*}
+
+\begin{theorem}[Complete comparison through cubic terms]\label{thm:cubic}
+Work modulo three. Two retained operations
+\[
+ x+y+a xy+bC(x,y),\qquad x+y+a'xy+b'C(x,y)
+\]
+are related by a coordinate beginning with \(t\), through degree three, if and only if
+\begin{equation}\label{eq:classification-test}
+ b-a^2=b'-(a')^2.
+\end{equation}
+When they are, every possible coordinate has retained terms
+\begin{equation}\label{eq:all-witnesses}
+ H(t)\equiv t+(a-a')t^2+vt^3,
+ \qquad v\text{ arbitrary}.
+\end{equation}
+In particular, every operation reduces through degree three to
+\begin{equation}\label{eq:normal-jet}
+ x+y+\lambda(x^2y+xy^2),\qquad \lambda=b-a^2,
+\end{equation}
+and different values of \(\lambda\) cannot be related by such a coordinate.
+\end{theorem}
+
+\begin{proof}
+The calculation above proves that a coordinate can exist only when \eqref{eq:classification-test} holds. To prove that this test is sufficient, solve the coordinate equations rather than stopping at the obstruction.
+
+The first equation forces \(u=a-a'\). For this value the second gives
+\[
+ b+au+u^2=b+a(a-a')+(a-a')^2
+ =b-a^2+(a')^2=b'.
+\]
+This uses \(3=0\) and the assumed test. There is no condition on \(v\). Conversely, every coordinate must have this \(u\), and the displayed calculation shows that every \(v\) works at the retained degree. Formula \eqref{eq:coordinate-inverse} verifies that each choice is invertible.
+
+Setting \(a'=0\) leaves \(b'=\lambda\), giving \eqref{eq:normal-jet}. Since \(\lambda\) cannot change, two different reduced expressions cannot agree after a coordinate change.
+\end{proof}
+
+This gives both a test and a construction. Calculate the two values \(b-a^2\). If they differ, no permitted coordinate exists. If they agree, \eqref{eq:all-witnesses} supplies all the choices through degree three. In particular, the retained terms can be made additive exactly when \(b=a^2\). Higher coordinate coefficients cannot affect that test; later equations may constrain the free coefficient \(v\).
+
+\subsection{Allow a different linear coefficient}
+
+Suppose the linear coefficient \(c\) has a multiplicative inverse in the chosen arithmetic. Scaling by \(H(t)=ct\) changes the operation to
+\[
+ x+y+\frac acxy+\frac b{c^2}C(x,y).
+\]
+Thus its surviving coefficient becomes \(\lambda/c^2\). Every coordinate with linear coefficient \(c\) can be written as \(K(ct)\), where \(K\) begins with \(t\). The complete test with a variable linear coefficient is therefore
+\begin{equation}\label{eq:nonstrict}
+ \lambda'=\frac{\lambda}{c^2}
+ \quad\text{for some permitted }c\text{ with an inverse}.
+\end{equation}
+For a chosen such \(c\), all retained coordinates are
+\[
+ H(t)\equiv ct+(ca-c^2a')t^2+vt^3,
+ \qquad v\text{ arbitrary}.
+\]
+Indeed, after the initial scaling, the quadratic coefficient of \(K\) must be \(a/c-a'\), which becomes \(ca-c^2a'\) in \(K(ct)\). Its cubic coefficient remains arbitrary. The numerical value of \(\lambda\) depends on the linear scale, but whether it is zero does not.
+
+\section{Read the surviving coefficient by adding three copies}\label{sec:three-series}
+
+There is an independent check on \(\lambda\). Retaining through degree three,
+\[
+ F_{a,b}(t,t)\equiv-t+at^2-bt^3.
+\]
+Write this expression as \(s\). Substitution in the third addition gives
+\[
+ s+t\equiv at^2-bt^3,\qquad
+ a st\equiv-at^2+a^2t^3,
+\]
+while
+\[
+ b(s^2t+st^2)\equiv b(t^3-t^3)=0.
+\]
+Therefore
+\begin{equation}\label{eq:three-series}
+ \boxed{\;F_{a,b}(F_{a,b}(t,t),t)
+ \equiv(a^2-b)t^3=-\lambda t^3.\;}
+\end{equation}
+The coefficient left after coordinate repair is the coefficient produced by actually repeating the operation.
+
+This also checks its change under a linear scaling. Any coordinate preserving the operation preserves its repetition:
+\[
+ H([3]_F(t))\equiv[3]_{F'}(H(t)).
+\]
+For a coordinate with linear coefficient \(c\), the cubic coefficients are \(-c\lambda\) and \(-c^3\lambda'\). Their equality gives \(\lambda'=\lambda/c^2\), as before. When \(c=1\), \(\lambda\) is unchanged.
+
+For \(F_a=x+y+a xy\), the cubic coefficient \(b\) is zero, so \(\lambda=-a^2\). Equation \eqref{eq:three-series} gives \([3]_{F_a}(t)=a^2t^3\), agreeing with the exact repeated-addition calculation. Within this particular family, \(\lambda=0\) also guarantees an exact coordinate by Theorem~\ref{thm:family}. We next check why that conclusion needs the restriction to this family.
+
+\subsection{Keep the same quadratic term and change the outcome}
+
+With ordinary numbers modulo three, \(x+y+xy\) has \((a,b)=(1,0)\), so \(\lambda=-1\). It cannot be made additive. To construct an exactly repairable comparison, take \(H(t)=t+t^2\), construct its inverse coefficient by coefficient as in Section~\ref{sec:coordinate-action}, and define
+\begin{equation}\label{eq:pullback-example}
+ G(x,y)=H^{-1}(H(x)+H(y)).
+\end{equation}
+The identity \(H(G(x,y))=H(x)+H(y)\) holds in every degree. Combining three inputs in either order gives
+\[
+ H^{-1}(H(x)+H(y)+H(z)),
+\]
+so the grouping rule also holds exactly.
+
+The coordinate equations with \(u=1\), \(a'=b'=0\) force \(a=b=1\). Hence the retained terms of this exactly repairable operation are
+\[
+ G(x,y)\equiv x+y+xy+(x^2y+xy^2),\qquad\lambda=0.
+\]
+The two operations have the same quadratic interaction. Their cubic terms change whether the interaction can be removed.
+
+\section{Make the first failure occur at degree nine}\label{sec:later-obstruction}
+
+From now on, the displayed identities are exact unless a degree cutoff is stated. We will construct an operation whose cubic comparison agrees with addition but which cannot be made additive in every degree.
+
+Use coefficients of the form \(r+s\eta\), with numerical coefficients modulo three. Multiply as in \eqref{eq:two-coefficients}: retain \(\eta\ne0\) and set \(\eta^2=0\). The symbol \(\eta\) is part of the coefficient; the input powers remain unrestricted.
+
+To postpone the earlier cubic pattern, replace each input in \(C(x,y)=x^2y+xy^2\) by its cube. The first terms then have degree nine. Multiplying by \(\eta\) makes any product of two corrections vanish, while keeping the correction itself. Try
+\[
+ D(x,y)=x^6y^3+x^3y^6,
+ \qquad Q(x,y)=x+y+\eta D(x,y).
+\]
+We must check that the new operation really does combine three inputs consistently in every degree.
+
+First, cubing modulo three and using \(\eta^3=0\) gives
+\begin{equation}\label{eq:Q-cube}
+ Q(x,y)^3=x^3+y^3+\eta^3D(x,y)^3=x^3+y^3.
+\end{equation}
+Next, expand the two expressions
+\[
+ D(x,y)+D(x+y,z),\qquad D(y,z)+D(x,y+z).
+\]
+They both give
+\begin{equation}\label{eq:D-expanded}
+ \begin{split}
+ S(x,y,z)={}&x^6y^3+x^3y^6+x^6z^3+x^3z^6\\
+ &+y^6z^3+y^3z^6+2x^3y^3z^3.
+ \end{split}
+\end{equation}
+For example, \((x+y)^3=x^3+y^3\) and \((x+y)^6=x^6+2x^3y^3+y^6\), which supply exactly the terms in \eqref{eq:D-expanded}.
+
+Because \(D\) uses only cubes and their squares, \eqref{eq:Q-cube} also gives
+\[
+ D(Q(x,y),z)=D(x+y,z),\qquad
+ D(x,Q(y,z))=D(x,y+z).
+\]
+It follows by substitution that
+\begin{align*}
+ Q(Q(x,y),z)
+ &=x+y+z+\eta\bigl(D(x,y)+D(x+y,z)\bigr)\\
+ &=x+y+z+\eta S(x,y,z)\\
+ &=Q(x,Q(y,z)).
+\end{align*}
+No input terms have been discarded. The operation is also symmetric, has zero as identity, and cancels \(t\) with \(-t\), since
+\[
+ D(t,-t)=-t^9+t^9=0.
+\]
+
+Its quadratic and cubic coefficients are both zero. In fact it agrees with addition through degree eight. But two copies of \(t\) give
+\[
+ Q(t,t)=-t-\eta t^9.
+\]
+Put \(s=-t-\eta t^9\). Then \(s^3=-t^3\), \(s^6=t^6\), and
+\[
+ D(s,t)=s^6t^3+s^3t^6=t^9-t^9=0.
+\]
+The third copy therefore gives
+\begin{equation}\label{eq:later-three-series}
+ \boxed{\;Q(Q(t,t),t)=-\eta t^9\ne0.\;}
+\end{equation}
+If \(M\) made \(Q\) additive, three copies would require \(M(-\eta t^9)=3M(t)=0\). Dividing by its invertible linear coefficient, we may take \(M(t)=t+\text{higher powers}\). But then \(M(-\eta t^9)=-\eta t^9\): every higher term contains \(\eta^2\). This contradicts \eqref{eq:later-three-series}. There is no coordinate making the operation exactly additive.
+
+\subsection{Check every correction before degree nine}
+
+We can locate the first failure without relying only on repeated addition. Write every possible coordinate as
+\[
+ M(t)=t+m_2t^2+m_3t^3+\cdots.
+\]
+Before degree nine, replacing \(Q\) by \(x+y\) changes nothing. The coefficient \(m_n\) then contributes
+\[
+ m_n\bigl((x+y)^n-x^n-y^n\bigr),
+\]
+whose surviving terms all have degree \(n\). They cannot be cancelled by a coefficient with another index. The following selected mixed terms force all the indicated coefficients to vanish:
+
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+Index \(n\)&Selected mixed term&Its coefficient modulo three\\
+\midrule
+2&\(xy\)&\(2m_2\)\\
+4&\(x^3y\)&\(m_4\)\\
+5&\(x^4y\)&\(2m_5\)\\
+6&\(x^3y^3\)&\(2m_6\)\\
+7&\(x^6y\)&\(m_7\)\\
+8&\(x^7y\)&\(2m_8\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+At degree six, \(\binom63=20=2\) modulo three; the other entries use the corresponding first binomial coefficient. Since \(2\cdot2=1\), each equation forces its \(m_n\) to be zero even when that coefficient contains \(\eta\). The coefficient \(m_3\) remains free because \((x+y)^3=x^3+y^3\).
+
+Every candidate that has passed through degree eight therefore begins
+\[
+ M(t)=t+m_3t^3+m_9t^9+\text{terms of degree at least ten}.
+\]
+But \eqref{eq:Q-cube} and its cube give
+\[
+ Q(x,y)^3=x^3+y^3,\qquad Q(x,y)^9=x^9+y^9.
+\]
+Neither \(m_3\) nor \(m_9\) changes the error. Higher coordinate powers cannot affect degree nine. The unavoidable error at that degree is exactly
+\[
+ \eta x^6y^3+\eta x^3y^6.
+\]
+Both coefficients are the retained nonzero symbol \(\eta\). Thus degree nine is the first failed repair, after every lower-degree choice has been allowed.
+
+For \(x+y+a xy\) modulo three, the cubic test \(b-a^2=0\) guarantees an exact repair because \(b=0\) and Theorem~\ref{thm:family} applies. For a general operation, matching through degree three settles only the retained terms. The example above shows explicitly how a later coefficient can stop the repair.
+
+% End cubic-classification.tex
+
+\appendix
+
+% Begin coordinate-freedom.tex
+\section{Which coefficients remain free}\label{app:freedom}
+
+Throughout this appendix assume \(a^{p-1}=0\). The finite formula for \(L_a\) gives one working coordinate. We can also find every other coordinate beginning with \(t\).
+
+First solve a simpler coefficient problem: which expressions \(P(t)\), with no constant term, satisfy
+\[
+ P(x+y)=P(x)+P(y)
+\]
+in arithmetic modulo \(p\)? Write \(P(t)=\sum_{n\ge1}q_nt^n\). Comparing a mixed coefficient gives
+\begin{equation}\label{eq:additive-coefficients}
+ q_n\binom ni=0\qquad(0<i<n).
+\end{equation}
+If any interior binomial coefficient is nonzero modulo \(p\), it has a modular inverse and forces \(q_n=0\).
+
+The indices with no such mixed coefficient are precisely powers of \(p\). Here is a direct check. Write the base-\(p\) digits of \(n\) as
+\[
+ n=n_0+n_1p+n_2p^2+\cdots,\qquad0\le n_j<p.
+\]
+Repeatedly using \((u+v)^p=u^p+v^p\) gives the polynomial identity
+\[
+ (1+z)^n=\prod_j(1+z^{p^j})^{n_j}
+\]
+modulo \(p\). Let \(r\) be the least index with \(n_r\ne0\). The coefficient of \(z^{p^r}\) on the right is \(n_r\ne0\): it comes from choosing the linear term of \((1+z^{p^r})^{n_r}\). All other nonconstant choices have larger degree. Unless \(n=p^r\), this is an interior term, so \eqref{eq:additive-coefficients} forces \(q_n=0\). When \(n=p^r\), repeated cubing or, more generally, taking \(p\)-th powers shows that no mixed terms occur.
+
+Consequently all the expressions that preserve addition are exactly
+\[
+ P(t)=b_0t+b_1t^p+b_2t^{p^2}+\cdots.
+\]
+They begin with \(t\) when \(b_0=1\).
+
+Now let \(M\) be any coordinate beginning with \(t\) that makes \(F_a\) additive. Use the explicit inverse \(E_a\) and put \(P(s)=M(E_a(s))\). The inverse identities proved earlier give
+\[
+ E_a(x+y)=F_a(E_a(x),E_a(y)).
+\]
+Applying \(M\) to this equality proves \(P(x+y)=P(x)+P(y)\). Therefore every possible \(M\) is obtained by following \(L_a\) with one of the addition-preserving expressions above.
+
+The resulting formula simplifies. In each nonlinear term of \(L_a(t)\), the coefficient contains \(a^{n-1}\) with \(n\ge2\). Raising it to the \(p^r\)-th power gives a factor \(a^{(n-1)p^r}=0\), because \((n-1)p^r\ge p-1\). Thus
+\[
+ L_a(t)^{p^r}=t^{p^r}\qquad(r\ge1),
+\]
+and all the working coordinates beginning with \(t\) are
+\begin{equation}\label{eq:all-logarithms}
+ \boxed{\;M(t)=L_a(t)+b_1t^p+b_2t^{p^2}+\cdots,\;}
+\end{equation}
+with the \(b_r\) freely chosen in the coefficient arithmetic. Conversely, each expression in \eqref{eq:all-logarithms} works. For the added powers, expand directly:
+\[
+ F_a(x,y)^{p^r}
+ =x^{p^r}+y^{p^r}+a^{p^r}x^{p^r}y^{p^r}
+ =x^{p^r}+y^{p^r}.
+\]
+The last term vanishes because \(a^{p-1}=0\) and \(p^r\ge p-1\). Each added term therefore has zero error for this particular operation.
+
+An expression beginning with \(t\) always has an inverse as a series, by the recursive coefficient construction in Section~\ref{sec:coordinate-action}. That inverse need not stop after finitely many terms. For example, \(t+t^p\) over ordinary numbers modulo \(p\) cannot have a polynomial inverse: composing it with a nonconstant polynomial of degree \(d\) gives degree \(pd\), which cannot be one. The particular pair \(L_a,E_a\) has the stronger property that both expressions are finite polynomials.
+
+% End coordinate-freedom.tex
+
+
+% Begin sources.tex
+\clearpage
+\section*{Sources and further reading}
+\addcontentsline{toc}{section}{Sources and further reading}
+
+The proofs above use the displayed coefficient calculations. These references provide related examples and the wider background.
+
+\begin{enumerate}[leftmargin=*,label={[\arabic*]},itemsep=.65em]
+\item Henry Shin, \href{https://refactor.press/refactors/coordinate-repair}{\emph{How far can a change of coordinates go?}}, Refactor. The starting example \(x+y+xy\) in arithmetic modulo three. The companion \href{https://refactor.press/refactors/first-order}{\emph{Make first order exact}} develops the practice of retaining specified coefficients. The longer \href{https://refactor.press/notes/when-a-formal-logarithm-fails}{\emph{When a Formal Logarithm Fails}} follows the original coordinate-repair calculation further.
+
+\item Charles Rezk, \href{https://www.sas.rochester.edu/mth/sites/doug-ravenel/otherpapers/hopkins-miller-thm.pdf}{\emph{Notes on the Hopkins--Miller Theorem}}, \S3.1, printed p.~3, for coordinate changes of addition rules; \S3.5, printed pp.~3--4, for the information obtained by repeating an operation \(p\) times; \S5.1--5.3, printed pp.~7--8, for corrections with a square-zero coefficient and the polynomial patterns used in the degree-nine example.
+
+\item Ariane M\'ezard, Matthieu Romagny, and Dajano Tossici, \href{https://www.numdam.org/item/10.5802/jtnb.863.pdf}{\emph{Sekiguchi--Suwa theory revisited}}, Journal de Th\'eorie des Nombres de Bordeaux \textbf{26} (2014), 163--200, \S2.2, printed p.~167. Background on the family connecting addition with multiplication through a coefficient parameter. The exact repair criterion used here is proved in Section~\ref{sec:exact-theorem}.
+
+\item Jacob Lurie, \href{https://www.math.ias.edu/~lurie/252xnotes/Lecture13.pdf}{\emph{The Stratification of MFG}}, Lecture 13, April 27, 2010, printed p.~2, Remark~4. The comparison of leading coefficients after repeating an operation is the general background to the direct calculation \(\lambda'=\lambda/c^2\) in Sections~\ref{sec:classification}--\ref{sec:three-series}.
+\end{enumerate}
+
+% End sources.tex
+
+\end{document}

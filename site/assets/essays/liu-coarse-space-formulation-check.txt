@@ -1,0 +1,76 @@
+FORMULATION CHECK FOR REFERENCE [36]
+Henry Shin - Refactor - 4 November 2026
+
+Paper: Yucheng Liu, Tak Shing Au Yeung, Eric T. Chung, and Simon See,
+Graph-Based Meshfree Multi-scale Coarse Space Approximation for Two-Level
+Schwarz Methods, arXiv:2603.26149v1, 27 March 2026.
+https://arxiv.org/html/2603.26149v1
+
+Scope
+
+This note checks two printed formulations. It does not identify the formula
+used in the implementation, invalidate the numerical experiments, or disprove
+an intended corrected theorem. The projection issue has a plausible repair.
+
+1. Symmetry of the printed local preconditioner
+
+Equation (2) defines
+  M1_inverse = sum_i transpose(R_i) D_i inverse(A_i) R_i,
+  A_i = R_i A transpose(R_i),
+with positive diagonal weights satisfying
+  sum_i transpose(R_i) D_i R_i = identity.
+The introduction claims that the resulting two-level preconditioner is
+symmetric positive definite. In general the printed local formula is not
+symmetric, because D_i need not commute with inverse(A_i).
+
+An exact example on a two-dimensional grid follows. Let
+  T4 = [[2,-1,0,0],[-1,2,-1,0],[0,-1,2,-1],[0,0,-1,2]],
+  T2 = [[2,-1],[-1,2]],
+  A = T4 tensor I2 + I4 tensor T2.
+This is the positive-definite Dirichlet matrix on a 2-by-4 interior grid.
+Partition into the first and last two columns. One layer of overlap makes
+R1 select coordinates 1,...,6 and R2 select coordinates 3,...,8.
+The reciprocal-overlap weights are
+  D1 = diag(1,1,1/2,1/2,1/2,1/2),
+  D2 = diag(1/2,1/2,1/2,1/2,1,1).
+They satisfy the partition-of-unity identity. Direct rational calculation
+using equation (2) gives
+  M1_inverse[1,3] = 15/161,
+  M1_inverse[3,1] = 15/322.
+Thus M1_inverse is not symmetric. The coarse term in equation (4) is symmetric;
+adding it as in equation (5) cannot cancel the antisymmetric part.
+
+A smaller example uses A=T4, R1 selecting coordinates 1,2,3, R2 selecting
+2,3,4, D1=diag(1,1/2,1/2), and D2=diag(1/2,1/2,1). Equation (2) then gives
+  [[3/4, 1/2, 1/4,   0],
+   [1/4, 7/8, 1/2, 1/8],
+   [1/8, 1/2, 7/8, 1/4],
+   [  0, 1/4, 1/2, 3/4]].
+
+2. The metric of the projection in Lemma 3.3
+
+The lemma introduces Pi as an orthogonal projection onto K direct-sum I,
+but Pi_I as a Btilde-orthogonal projection onto I. If the first projection
+means Euclidean orthogonal projection, the stated equivalence is false.
+Choose
+  B = I2, Btilde = [[1,1/2],[1/2,1]], K={0}, I=span((1,0)), tau=3/2.
+Both matrices are positive definite, so the kernel conditions hold.
+The Euclidean and weighted projectors are respectively
+  P = [[1,0],[0,0]], Q = [[1,1/2],[0,0]].
+For every u=(x,y), the first inequality holds since
+  tau*u^T*Btilde*u - (u-Pu)^T*B*(u-Pu)
+    = (3/2)*(x+y/2)^2 + y^2/8 >= 0.
+For v=(-1/2,1), however, the second inequality reads 5/4 <= 9/8.
+
+This objection is repairable by specifying a different metric for Pi:
+use Btilde on its image and the Euclidean metric on its kernel, equivalently
+Btilde plus the Euclidean projector onto its kernel. Pi then agrees with Pi_I
+on the image. The surrounding weighted-inner-product context and the later
+theorem make this a plausible intended interpretation.
+
+Consequence for the essay
+
+The reported computational work remains an example worth examining. Its
+printed guarantee requires reconciliation of the local operator and projection
+definitions before it can serve as an established guarantee in the essay.
+These observations make no claim about a human advantage over AI.
