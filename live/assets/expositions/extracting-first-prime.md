@@ -297,7 +297,7 @@ For every real number \(x\geq1\),
 
 where the product is over primes \(p\leq x\).
 
-*Proof.* It suffices to prove the claim for positive integers \(x=N\), since replacing \(x\) by \(\lfloor x\rfloor\) can only decrease the left-hand side.
+*Proof.* It suffices to prove the claim for positive integers \(x=N\). The primes at most \(x\) are exactly those at most \(\lfloor x\rfloor\), and \(4^{\lfloor x\rfloor}\leq4^x\).
 
 We prove the integer case by strong induction on \(N\). The cases \(N=1,2\) are immediate. Suppose the result is known for all positive integers smaller than \(N\).
 

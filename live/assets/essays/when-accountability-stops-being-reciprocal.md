@@ -22,7 +22,7 @@ After David Shor’s expulsion from the Progressphiles professional network, cor
 
 A denial is not automatically persuasive. Neither is it automatically evidence of guilt. Testimony, context, and patterns of conduct can all support an accusation. The question is what they establish beyond the circular inference that resistance proves the charge, and whether relevant contrary evidence can change the conclusion. A judgment about harmful conduct may be warranted without proof of malicious intent; it still needs a defensible account of the conduct and the standard being applied.
 
-The obligation to answer also needs a scope. A person who limits how much explanatory work they will undertake may be accused of trying to dictate what the other person believes. In ordinary conversation, deciding when to stop speaking does not decide what anyone else must believe. Both parties can remain unconvinced. A pause alone should not manufacture a character verdict. Formal responsibilities are different: an employee or officeholder may owe specified answers within a legitimate process. But even that process needs a defined question and an endpoint. An indefinite obligation to establish one’s moral acceptability leaves a person permanently on the defensive without saying what would discharge the obligation.
+The obligation to answer depends on the authority being exercised. In ordinary conversation, a person may stop explaining while leaving the other person free to disagree. A character judgment requires evidence beyond that decision to stop. An employee or officeholder may owe specified answers within a legitimate process, especially when a decision affects someone else’s work or prospects. Those obligations need a defined question and an endpoint. An indefinite demand to establish moral acceptability keeps a person on the defensive without saying what would discharge the obligation.
 
 When an institution gives an interpretation official standing, the consequences can extend to employment, participation, or reputation. The quality of the procedure then matters independently of the sincerity of those involved.
 
@@ -66,7 +66,7 @@ Research on employee voice and silence supplies broader evidence that power, ant
 
 Comparable individual dispositions can produce unequal institutional effects when some participants have greater power to turn their interpretations into consequences. The prevailing outlook may then pass as a neutral baseline whose assumptions need no defense. Dissenters, including insiders who contest how shared commitments are applied, must defend both their position and their standing to question that baseline. This need not reflect a uniquely intolerant disposition. Honeycutt and Freberg’s faculty survey found greater hostility reported by conservatives alongside similar liberal and conservative stated willingness to disadvantage ideological opponents.<sup id="citation-12-1"><a href="#note-12" role="doc-noteref" aria-label="Note 12">[12]</a></sup> Waytz, Young, and Ginges found American partisans attributing more benevolent motives to their own side’s involvement in conflict than to the other’s.<sup id="citation-13-1"><a href="#note-13" role="doc-noteref" aria-label="Note 13">[13]</a></sup>
 
-Research on political expression supplies further context. A UW–Madison survey experiment found less favorable hypothetical hiring responses to particular conservative than liberal statements; content and perceived professional relevance remain possible explanations.<sup id="citation-14-1"><a href="#note-14" role="doc-noteref" aria-label="Note 14">[14]</a></sup> FIRE’s faculty surveys found greater reported concealment among conservatives, although low voluntary response limits generalization.<sup id="citation-15-1"><a href="#note-15" role="doc-noteref" aria-label="Note 15">[15]</a></sup><sup id="citation-16-1"><a href="#note-16" role="doc-noteref" aria-label="Note 16">[16]</a></sup> In a different setting, a correspondence experiment found no statistically significant partisan difference in replies to prospective graduate students mentioning work for Obama or McCain.<sup id="citation-17-1"><a href="#note-17" role="doc-noteref" aria-label="Note 17">[17]</a></sup> These studies do not directly test whether consequential judgments can be challenged or corrected.
+Different kinds of evidence illuminate the cost of political expression. A UW–Madison survey experiment found less favorable hypothetical hiring responses to particular conservative than liberal statements. Possible explanations include content and perceived professional relevance.<sup id="citation-14-1"><a href="#note-14" role="doc-noteref" aria-label="Note 14">[14]</a></sup> FIRE’s faculty surveys found greater reported concealment among conservatives, with low voluntary response limiting generalization.<sup id="citation-15-1"><a href="#note-15" role="doc-noteref" aria-label="Note 15">[15]</a></sup><sup id="citation-16-1"><a href="#note-16" role="doc-noteref" aria-label="Note 16">[16]</a></sup> A correspondence experiment found no statistically significant partisan difference in replies to prospective graduate students mentioning work for Obama or McCain.<sup id="citation-17-1"><a href="#note-17" role="doc-noteref" aria-label="Note 17">[17]</a></sup> These results concern responses to political expression. The question for institutional accountability remains how objections to a consequential decision are heard and resolved.
 
 The pressure need not make dissent literally unsayable. In his proposed preface to Animal Farm, “The Freedom of the Press,” Orwell examined voluntary censorship and prevailing orthodoxy within a society that retained substantial intellectual freedom.<sup id="citation-18-1"><a href="#note-18" role="doc-noteref" aria-label="Note 18">[18]</a></sup> The relevant question is what happens to people who use the freedom formally available to them.
 
@@ -88,7 +88,7 @@ These protections must work for complainants as well. People reporting abuse may
 
 Review also needs an endpoint. A reasoned adverse decision may stand after a fair opportunity to contest it; new evidence can justify reopening it. Where the institution finds that it made a consequential error, correction must address what the error did. A quiet amendment may be inadequate after a public accusation. The responsibility to account for a judgment includes repairing its avoidable effects as far as possible.
 
-Criticism of the institution is subject to the same requirements. It must identify the decision at issue, the grounds for finding fault, and what would count as an adequate correction. An allegation of institutional unfairness cannot exempt its author from giving reasons.
+Criticism of the institution also needs to identify the decision at issue, explain the fault and say what an adequate correction would involve. A critic who alleges institutional unfairness owes evidence and reasons for that allegation. Otherwise criticism of unanswerable authority becomes another request for deference.
 
 <a id="notes-and-sources"></a>
 
@@ -131,3 +131,21 @@ Criticism of the institution is subject to the same requirements. It must identi
 18. <a id="note-18"></a>George Orwell. “[The Freedom of the Press](<https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/the-freedom-of-the-press/>).” Proposed preface to Animal Farm; first published in the Times Literary Supplement, September 15, 1972. Reproduced by the Orwell Foundation. See the paragraphs beginning “Any fairminded person” and “Unpopular ideas can be silenced.” A historical argument about voluntary censorship, used here as an illuminating comparison rather than evidence of contemporary prevalence. <span class="citation-backlinks"><a href="#citation-18-1" role="doc-backlink" aria-label="Return to citation 18, occurrence 1">↩</a></span>
 
 19. <a id="note-19"></a>Jenny S. Martinez. “[Next Steps on Protests and Free Speech](<https://law.stanford.edu/wp-content/uploads/2023/03/Next-Steps-on-Protests-and-Free-Speech.pdf>).” Stanford Law School memorandum, March 22, 2023. P. 5 addresses administrators’ responsibilities; pp. 8–9 explain the decision against individual student discipline; p. 9 announces mandatory programming while preserving disagreement. The memorandum establishes announced reasoning and action, not a measured record of lasting institutional reform. <span class="citation-backlinks"><a href="#citation-19-1" role="doc-backlink" aria-label="Return to citation 19, occurrence 1">↩</a></span>
+
+## Related essays
+
+### [When a Description Becomes a Verdict](https://refactor.press/essays/when-a-description-becomes-a-verdict.html#reasons-for-stopping)
+
+The difference between ending an inquiry and establishing a claim about the work being judged.
+
+### [Mathematical Life in the Age of AI](https://refactor.press/essays/mathematical-life-in-the-age-of-ai.html#a-hearing-before-a-verdict)
+
+How a judgment about someone’s work shapes their opportunity to develop and explain it.
+
+### [The Performance of Depth](https://refactor.press/essays/the-performance-of-depth.html#how-recognition-reproduces-itself)
+
+How the institutions that judge work also shape the evidence of success they later rely on.
+
+### [Purity, Prestige, and Pettiness](https://refactor.press/essays/purity-prestige-and-pettiness.html#the-rejection-and-the-reason)
+
+Published editorial exchanges make the distinction between an adverse decision and its stated justification concrete.

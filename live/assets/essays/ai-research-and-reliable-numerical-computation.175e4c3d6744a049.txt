@@ -1,0 +1,775 @@
+Abstraction is no refuge from AI
+Reliable computation and the test of specialist advantage
+Henry Shin | 4 November 2026 | Revised 7 November 2026
+Text revision 1d596853affb
+
+AI already contributes proofs, organizing constructions, and connections in subjects once treated as a refuge for human conceptual work. For specialist-AI collaboration, I would favor sparse graph algorithms and numerical analysis over a strategy of seeking protection in deeper abstraction. Here a mathematical diagnosis can redirect an expensive investigation, and an economical representation can improve many later calculations. A continuing specialist advantage over increasingly capable agents remains a claim to test.
+
+1. What the evidence changes
+
+The old refuge in abstraction is over. I would no longer advise a mathematician to seek a durable human research advantage by moving further into algebraic geometry, representation theory, abstract algebra, or theoretical PDE. AI systems now contribute substantial proofs, useful organizing constructions, and connections between theories. The evidence reaches the conceptual work that was supposed to insulate these subjects. A presumption of human exclusivity at that level is no longer a credible basis for investing years of mathematical training. [1, 2, 3, 8, 16]
+
+My positive bet favors the intersection of sparse graph algorithms and numerical analysis for specialist-AI collaboration. I would choose this direction over moving further into abstraction in the hope of preserving a human role. The task is to close the gap between a useful representation and an affordable computation. Finite graph and matrix operators make the representation explicit. Preservation inequalities connect its retained information to the required answer. Independent error checks and measurements of construction, application, checking, and recovery costs expose whether an improvement works. Repeated solves can repay the discovery of a reusable method. This combination gives specialist knowledge concrete opportunities to change what an agent's investigation achieves. [20, 48, 59]
+
+A four-vertex graph already exposes the issue. Exchanging its strong and weak edge weights can leave the matrix size, sparsity pattern, diagonal, and eigenvalues unchanged while defeating the old coarse space. The missing information is the alignment between the new operator and the directions that the approximation retains. The calculation below makes that failure explicit, then asks what an inexpensive certificate can establish before paying for a repair.
+
+For a researcher choosing problems with measurable computational consequences, the recommendation rests on implemented gains as well as open questions. CAST's sampling changes and the studies of online solver configuration report reduced computational cost on their stated workloads. [48, 39, 62] These are gains from altering how a computation is represented or organized. They motivate collaboration in which mathematical diagnosis directs an agent's implementation and experiments toward changes that can pay for themselves. The further question is whether informative diagnoses and repairs can extend such gains affordably to fresh cases. Establishing a durable specialist advantage requires a further comparison with autonomous systems. The later experiment tests that claim after methods have been shared. The programme succeeds when it produces useful, justified methods at a worthwhile total cost, whoever supplies the decisive idea.
+
+
+2. Conceptual work is already being automated
+
+The Deligne-Drinfeld case reaches the heart of the structural objection. The conjecture identifies the rational Grothendieck-Teichmüller Lie algebra with a free graded Lie algebra on one generator in each odd degree 3, 5, 7, and so on. Willwacher attributes the missing dimension bound to OpenAI and gives a specialist-led, AI-assisted reconstruction of its proof. The crucial move is to work in characteristic two, rewrite the problem in new generators, and project away one generator. The defining equations permit reconstruction, so this apparent loss of information yields a bound on the entire solution space in every weight. This is a choice of mathematical representation with a proof that it retains what matters. It occurs inside the machinery of associators and Lie algebras, at the level where conceptual sophistication was supposed to provide insulation. [1]
+
+Markarian's November note develops the example further. It interprets the projection geometrically through the double covering that sends z to z² and the filling of a puncture, and makes the reconstruction explicit. This geometric interpretation is Markarian's contribution. Human explanation can follow a proof architecture attributed to a machine and develop it into further structural mathematics. The former division of labour has become an unreliable guide to where people must contribute. [2]
+
+Aletheia provides another kind of evidence. In Eigenweights for arithmetic Hirzebruch Proportionality, Tony Feng attributes the mathematical content to Aletheia and describes his role, apart from building the agent, as rewriting its output into a paper. The agent connected arithmetic eigenweights to symmetric-group representation theory through algebraic combinatorics and determined them for all classical groups. The accompanying report says the imported techniques were unfamiliar to the authors of the originating work. It also describes an independence-polynomial collaboration in which the agent supplied a broader roadmap and the human collaborators supplied the proofs. The report describes these autonomous milestones as relatively modest advances. They nevertheless establish useful cross-field organizing contributions. [3]
+
+OpenAI's larger catalogue is evidence of breadth, with a different evidential status. The 4 November snapshot lists 721 manuscripts in 373 related families and approximately 42 percent of principal stated results formalized, from a broader evaluation posing approximately 4,000 problems. These are not 721 independent breakthroughs, and 42 percent is not a success rate. The repository calls the material raw research data at different verification stages. Its history records three withdrawals after a shared sign error and repairs to other manuscripts. An unexamined entry cannot carry the weight of an independently reconstructed proof. The catalogue should widen the investigation, not replace it. [4]
+
+Modular representation theory supplies further examples of this breadth. OpenAI reports proofs of the blockwise Alperin weight conjecture for every finite group and prime, and of Donovan finiteness over fixed algebraically closed fields with bounded defect-group order. Central block-theoretic problems are now being attacked directly. These results are reported in preprints, and I have not located an independent specialist validation of either whole proof. The accompanying formalization records also cover the statement that rational Hodge classes on complex CM abelian varieties are algebraic, in every dimension and codimension, and specified Auslander-Reiten and Tachikawa counterexamples in homological algebra. These records do not establish that every surrounding conjecture is settled. Independent assessment would determine how far these reported proofs extend the reconstructed evidence above. [5, 6, 7]
+
+First Proof supplies a more bounded test. Thirty expert reviewers assessed anonymized solutions to ten research problems known to have solutions of at most twelve pages. Systems had 24 hours without human input during testing. The third batch reports 7/10 correct for GPT-6 Astra and 9/10 for ProofCouncil, with reported ten-problem batch costs of $36 and $1,888 respectively. Here, correct means an average correctness score of at least 0.5 under the report's rubric, which includes minor, repairable errors. Those figures exclude the cost of creating and reviewing the benchmark and do not price the whole research process. They make it untenable to assume that obtaining a substantial research proof must require a human researcher to construct it. Exposition and attribution remained weaker than correctness. [8]
+
+The June and October reports record lower reported batch costs alongside improved results. ProofCouncil rises from 7/10 to 9/10 correct, and the direct OpenAI entry from 5/10 to 7/10. The reports use fresh problem sets and changed testing conditions. They document successive capabilities without supplying a calibrated rate of progress. [8]
+
+TheoPhysEval assesses expert-contributed theoretical-physics calculations using an automated final-answer checker. Under that checker, GPT-6 Astra with Codex answered 49 of 50 problems correctly with web access and 46 without web search or the supplied background papers. Computational tools remained available. The authors report that the answers were unpublished at evaluation, but some contributors had used AI and data leakage could not be ruled out. The results demonstrate substantial capability on technically demanding calculations under these conditions. [9]
+
+
+3. A contribution has to earn its value
+
+One response locates human value in research taste and problem selection. Caltech's October 2026 announcement of a mathematical AI platform presents Yisong Yue's view of research taste as a quality developed through human experience that AI currently lacks. The announcement also assigns connection-finding, conjecture suggestions, and possible strategies to the proposed AI system. Its proposed human contribution concerns judgment among research directions. Taste and problem selection must earn their value through what they improve in a completed investigation, including the cost of producing and checking that judgment. [91]
+
+Preserving hypotheses remains a significant difficulty. Wang and collaborators test translations between mathematical framings and find that seven general-purpose models often fail to carry implicit hypotheses into a more general setting. On their held-out benchmark, 60.6 percent of abstracting rewrites widen the asserted domain. A translation must preserve the intended claim. A proposed generalization must justify any change to its hypotheses and scope. Preservation of hypotheses is therefore worth testing separately. The study evaluates specified rewriting protocols and older model snapshots. Its results identify a failure mechanism to test in stronger systems. [10]
+
+Human reconstruction of a machine proof remains mathematics. Detecting a lost hypothesis can be indispensable to a project. Those contributions establish their value through what they make possible. The same standard applies to numerical research. A difficult implementation or an interacting set of requirements creates a research problem, while the benefit of specialist participation still needs to be measured.
+
+Nor can graph theory inherit the protection that abstraction is losing. Das and Fox credit GPT-5.6 Sol with the Murty-Simon edge bound floor(n²/4) and the even-order equality case. The authors simplified the argument and supplied equality for odd order too. Oum's earlier exposition develops OpenAI's cycle-double-cover proof. Nagda, Raghavan, and Thakurta use AlphaEvolve to find combinatorial objects and reduction gadgets. Xu's cubic counterexample to the general Bilu-Linial signing conjecture and Lin-Zhou's revised spectral-signing work also report model contributions. The restricted Ramanujan-base question and efficient construction questions must be distinguished from the statements already addressed. [11, 12, 13, 14, 15]
+
+The same change reaches theoretical PDE. In First Proof's Darcy inverse problem, ProofCouncil removed the logarithmic loss in the human upper bound, with all three reviewers finding the mathematics essentially correct. OpenAI's October local-smoothing release asserts the Euclidean wave estimate in every spatial dimension at least two, with accompanying formalization records and related restriction and Kakeya statements. The former has expert benchmark review. The latter remains an attributed research release whose mathematical claims need independent assessment. Neither supports the assumption that sophisticated PDE analysis is inherently protected. [8, 16]
+
+Crouzeix's conjecture brings the warning into operator theory and numerical analysis. Townsend and Greenbaum report that they and Crouzeix checked Jin's AI-assisted proof and believe it correct. The decisive theorem emerged from an approximately sixteen-hour model run. Turning such a theorem into an economical numerical method is a further task, but it cannot be reserved for humans merely by calling it implementation. [17]
+
+Subtle algorithm design is exposed too. Alman and Vassilevska Williams credit Claude with an underlying algorithm that they understood, simplified, strengthened, and extended. For polynomially bounded integer inputs, their stated bounds include O(n^1.9992) for 3SUM and O(n^2.9995) for directed all-pairs shortest paths with polynomially bounded integer weights and no negative cycles. The exponents do not establish practical speedups. The contribution nevertheless rules out an easy fallback to 'machines cannot invent the subtle algorithm.' [18]
+
+SciPiVot supplies limited direct evidence about research decisions. It reconstructs 248 decisions from 26 scientific projects. Fresh PhD students and postdocs, with AI assistance available, selected the supported next step in 73.4 percent of cases, compared with 63.5 percent for the best tested model with access to the project record. Both candidate plans were supplied, and the cases were selected retrospectively from human corrections. This measures recognition of a better-supported correction and provides neither a matched-cost comparison nor a sparse-solver subgroup. It motivates testing researcher-led diagnosis under conditions that include its production cost. [61]
+
+Complete structural research also includes choosing definitions, connecting theories, finding obstructions, and deciding which formulation makes a problem tractable. A fair comparison of specialties would include all that work. The numerical direction proposed here needs its own affirmative case. That case begins with the computational value of a representation, including representations discovered by machines.
+
+
+4. Why compression still matters
+
+One important use of abstraction is to replace many difficult calculations with a compact method that can be reused. In his 1984 essay on the computer revolution, republished in 2016, Michael Atiyah argued that theoretical developments had often evolved to avoid large calculations because humans were poor at them. He also worried that computers, being good at calculation, would have less incentive to seek conceptual alternatives. His account identifies an important motive for theory. His prediction about machines is a further claim, open to evidence. [81]
+
+Algebra already shows how a framework can become computational equipment. Wilf-Zeilberger theory supplies certificate forms and verification arguments for suitable hypergeometric identities. Expressing an identity in the appropriate class permits a computer to search for a certificate and check its identity and boundary conditions. The framework makes a family of subsequent problems more systematic. Its intellectual value survives the automation of its use. [82]
+
+Machines also have reasons to seek compact structure. FunSearch searches for programs that construct mathematical objects. Its authors report that generated programs revealed parsimonious symmetries and supported further investigation. AlphaEvolve searches over candidate objects, constructor programs, and search algorithms, with different representations working better in different settings. A program that generates a useful family or narrows a search can repay the effort spent discovering it. [83, 44]
+
+Human manageability and computational economy are different benefits. AI can retrieve calculations and suggest constructions, reducing what a researcher must recall unaided. Executing, storing, communicating, and checking computations still consume resources. A representation remains useful when it reduces that work while preserving the information required by the task.
+
+A representation can preserve the relevant information exactly. In the Deligne-Drinfeld argument, reconstruction establishes that a projection retains the constrained solutions. My work on [Taiko product structures](https://refactor.press/papers/taiko-girth-obstruction) translates a specified group-ring construction into finite incidence geometry, where pressure and intersection constraints expose an obstruction missed by coarse counts. Sparse elimination begins with an exact energy identity and then permits approximation. In each case the mathematical obligation is to justify the passage back to the original problem. [1, 80, 58]
+
+For sparse computation, the resulting question is precise. How much information can be discarded while the retained representation controls the required answer at an affordable cost? The finite examples below show what such preservation requires.
+
+
+5. What a sparse representation must preserve
+
+Start with a finite weighted graph. Orient its edges, let B be the edge-vertex incidence matrix with -1 at each edge's tail and +1 at its head, and put its positive edge weights in the diagonal matrix W. The graph Laplacian L has the following quadratic form.
+
+L = B^T W B,     x^T L x = sum_{edges {i,j}} w_ij (x_i - x_j)^2.
+
+A constant vector has zero energy. For a connected graph this is the entire kernel. One can fix a vertex potential or work on the mean-zero subspace to obtain a positive-definite problem. A related class consists of symmetric diagonally dominant matrices with nonpositive off-diagonal entries, abbreviated SDDM here. Such a matrix has the form A = L + Gamma, where Gamma is nonnegative diagonal. It is positive definite when every connected component has a positive grounding term. The scope here is this concrete matrix class. [19, 26]
+
+Elimination makes the central difficulty visible. Suppose a vertex is joined to three neighbors by edges of weight one. For fixed neighbor values, minimize the energy over the central value. The minimizer is their average. Substitution leaves exactly the energy of a triangle on the three neighbors, each new edge having weight one third. For a star with positive incident-weight vector a, elimination gives the Schur complement below.
+
+S = diag(a) - a a^T / s,     s = sum_i a_i;     a = (1,1,1)^T gives triangle weights 1/3.
+
+Figure: Eliminating the center of a three-edge unit star produces a triangle with edge weights 1/3. For any fixed values at the three remaining vertices, the triangle has exactly the star's minimum energy over the eliminated central value. Both retain the constant-vector nullspace.
+
+Elimination preserves minimized energy exactly. Repeated elimination also couples previously unconnected variables, creating fill. Retaining every new interaction can destroy the economy of a sparse input. Discarding interactions changes the energy that made the elimination correct. Spectral sparsification seeks a much smaller graph whose energy approximates the original for every vector. Effective-resistance sampling assigns importance using the surrounding network as well as the edge weight. [19]
+
+A sharp sparsification theorem shows how quantitative this compression can be. Batson, Spielman, and Srivastava prove that, for 0 < epsilon < 1, a weighted graph on n vertices has a reweighted subgraph with at most ceil((n - 1)/ε²) edges whose energy lies between (1 - epsilon)² and (1 + epsilon)² times the original energy for every vector. The guarantee controls an entire family of calculations. Obtaining such a representation cheaply and using it in an efficient solver are additional algorithmic requirements. [84]
+
+A preconditioned iteration repeatedly applies an inexpensive approximation to the inverse, aiming to reduce the total work needed to solve the original system. Write that action as solving with an auxiliary matrix M. For symmetric positive-definite A and M, suppose positive constants alpha and beta satisfy the following inequalities for every vector x.
+
+alpha x^T M x <= x^T A x <= beta x^T M x.
+
+Then the generalized eigenvalues of A relative to M lie between alpha and beta, and the corresponding condition number is at most beta/alpha. For a fixed positive-definite preconditioner in exact arithmetic, this ratio controls the standard worst-case convergence bound for conjugate gradients. A smaller condition number alone need not produce fewer iterations on a particular problem, since the spectral distribution matters. The computational benefit depends on convergence together with the cost of constructing and applying M. For Laplacians the comparison is made on the orthogonal complement of their common kernel. [52, 75]
+
+Multigrid approaches the loss of information in another way. A cheap relaxation reduces some error components, and a coarse correction represents those that remain. Algebraically smooth error is error that the chosen relaxation struggles to remove. Its meaning depends on the operator and relaxation. Strongly connected regions joined by weak edges can move almost independently at low energy. A coarse representation must account for the resulting modes. The relevant objects are vectors, matrix blocks, graph partitions, and transfer operators. [20]
+
+Accuracy has a similar trap. In the following exact two-variable system, the second variable is weakly weighted.
+
+A = diag(1, 10^-8),  b = (1, 10^-8)^T,  x = (1,1)^T,  y = (1,0)^T.
+
+The relative residual in the infinity norm is 10^-8, while the relative forward error in the same norm is 1. The proposed answer loses the entire second component. Interpreting a residual therefore requires conditioning information and a specified error measure. LAPACK's error analysis makes that distinction explicit. [21]
+
+A more discriminating inexpensive observation exposes this particular failure. With r = b - A y and absolute values taken entrywise, the componentwise backward error is
+
+omega_c = max_i |r_i| / (|A| |y| + |b|)_i = 1.
+
+Its denominator is (2, 10^-8), so the lost second component remains visible. Computing this quantity needs a sparse matrix-vector product, without an inverse. Forward-error control still requires the appropriate conditioning information. The example shows why choosing the right observable can be more useful than refining an aggregate residual. [21]
+
+A spectral comparison holding for every vector can support every compatible right-hand side for the same operator. Its construction and justification can therefore serve many solves. The research problem is to obtain this control with a representation cheap enough to construct and apply, or to find affordable observations that justify retaining or repairing it after the operator changes. Approximate elimination and coarse spaces expose different versions of this problem. [20, 52, 58]
+
+
+6. Constructing, diagnosing, and repairing
+
+For Laplacians and positive-definite SDDM matrices, two concrete targets are sparsifying the interactions created by elimination and representing the error left by a cheap relaxation. Both require control of the resulting operator alongside the cost of constructing and applying it.
+
+The choices often concern elimination orders, sampled spanning trees, coarse vertices, aggregates, and sparse connection patterns. Matrix analysis supplies the criterion those choices must meet. A connected sample or an economical partition is useful only if the resulting operator retains the required quantitative control. The graph construction and the numerical guarantee are parts of the same problem. [20, 47]
+
+The Simons workshop report states related research problems. It asks for parameterized matrix families suitable for both practical evaluation and theoretical analysis, together with algorithms that are fast in both settings. Its multigrid problem combines an implicit inverse with uniform spectral control, near-linear construction, and linear application cost for a polynomially bounded subclass of the grounded SDDM matrices above. Its nonnormal-solver questions seek bounds describing the early behaviour of GMRES. These targets require the guarantee, its construction cost, and its predictive value to be considered together. [75]
+
+Approximate elimination and accumulated error
+
+Gao, Kyng, and Spielman's AC(k) work attaches a precise mathematical question to an implemented solver. Its approximate-Cholesky construction sparsifies the interactions created during elimination while maintaining connected sampled support among a removed variable's neighbors. The parameter controls the sampling effort. The experiments show favorable robustness and performance on broad SDDM workloads, alongside cases where established competitors are faster. These are existing effective solvers, not evidence that the matrix class has remained unsolved. [26]
+
+The economical AC(2) construction still lacks the global preconditioning guarantee the authors seek. Section 6 conjectures a relative condition number O(log^2 m), possibly O(log m), with high probability, where m is the input edge count. The construction has proved local and structural properties, but those properties do not supply the conjectured spectral bound. The question is how random distortions accumulate through a sequence of changing Schur complements. [26]
+
+Related algorithms show how local accuracy can control a complete solve. Kyng, Lee, Peng, Sachdeva, and Spielman analyze Schur-complement chains in which the global spectral distortion is bounded by twice the sum of the local error tolerances, in their exponential comparison convention, while application work is charged across the levels. The chain must control both the approximate Schur complements and the inverses used for eliminated blocks. The result applies to a different construction under different assumptions. It makes error allocation precise by relating local tolerances to a global accuracy budget and the work charged across levels. [58]
+
+A useful project could prove a restricted guarantee, find an obstruction to a proposed argument, or identify which graph structures require more sampling. A diagnosis should distinguish a deficient sampling rule from a poor ordering or a tolerance that is unnecessarily strict. Its repair might increase work locally while reducing fill or iterations elsewhere. The proof problem and the computational problem inform one another.
+
+Why the obvious invariants are insufficient
+
+An elementary example isolates the spectral obligation. Let L be the Laplacian of a triangle whose three edges have weight one. Choose an edge uniformly at random, give it weight 3 - 2 epsilon, and give the other two edges weight epsilon, with 0 < epsilon < 1. Every sampled graph remains connected and has the same constant-vector kernel. Each edge's expected weight is one, so the sampled Laplacian L_s has the stated expectation.
+
+E[L_s] = L,     but kappa(L_s relative to L on the mean-zero subspace) = (2 - epsilon)/epsilon.
+
+To check the second claim, suppose the heavy edge joins vertices 1 and 2. The vectors (1,1,-2) and (1,-1,0) are orthogonal eigenvectors of both L and L_s. Their generalized eigenvalues for L_s relative to L are epsilon and 2 - epsilon, respectively, and they span the mean-zero subspace. The relative condition number is therefore (2 - epsilon)/epsilon and becomes arbitrarily large. Connectivity and unbiasedness survive while spectral quality deteriorates. This is an original illustrative calculation, not a counterexample to AC(2), VAC, or CAST.
+
+Recent constructions already go well beyond those two elementary properties. Baumann, Kyng, and Zöcklein's VAC uses spanning-tree sampling to replace the clique arising at an elimination step, preserving the desired marginals and connectivity with efficient sequential and parallel sampling. Chaitanya, Musco, and Gionis's CAST develops a related tree construction, a local optimality characterization, and a tunable bound on the normalized local second moment. CAST explicitly separates these local guarantees from a worst-case spectral theorem for the complete factorization. Unbiasedness and connected support alone are therefore not new contributions. A new sampler must improve the construction, its cost, or a quantitative guarantee. Controlling accumulated distortion is a particularly direct target. [47, 48]
+
+CAST supplies a concrete example. Compared with AC, CAST-1 changes the local sampling rule while retaining the ordering, factor representation, and PCG path. Its mean per-system speedup ratios are 1.17 on 17 SuiteSparse matrices and 1.18 on 128 Chimera-IPM systems, with each factor reused for 250 right-hand sides. The relative performance of CAST-2 and AC(2) reverses across graph families. The authors connect that reversal to whether additional edges propagate through later elimination steps. Their CAST-1 elimination profile helps explain the regimes on the tested corpus, but obtaining it requires a first factorization, and they do not test it as an adaptive selection rule. A cheaper prediction of when additional sampling will repay its construction and fill costs could guide an adaptive method. A proposed rule must beat fixed settings and existing automatic selectors on unseen families after its own observation and setup costs are charged to the declared workload. [48]
+
+Retaining the difficult modes on a coarse level
+
+For a symmetric positive-definite matrix A, let the columns of a full-column-rank matrix P describe coarse corrections. The standard coarse matrix defines the exact coarse correction below.
+
+A_c = P^T A P,     x_new = x + P A_c^(-1) P^T (b - A x).
+
+For the error e = x_exact - x, the coarse correction alone has the error-propagation operator below. If P^T A v = 0, then E_c v = v; if v lies in the column space of P, then E_c v = 0. The surrounding smoother must reduce the errors that this projection leaves behind.
+
+e_new = E_c e,     E_c = I - P (P^T A P)^(-1) P^T A.
+
+This is finite-dimensional linear algebra. The hard design question is which columns and entries P needs. Global spectral information can identify useful coarse directions, but computing it may already be expensive. A dense P can also make P^T A P costly to form and solve. Local matrix information and graph aggregation offer cheaper approximations. Their adequacy depends on the relaxation they accompany and the modes they retain. A two-level result with an exact coarse solve is not automatically a theorem about a recursively applied multilevel implementation. [20]
+
+The literature supplies concrete constructions and limitations. Constrained local approximate ideal restriction combines local transfer construction with constraints on selected modes and uses aggressive coarsening to keep hierarchies economical. Optimal-transfer theory characterizes best choices for wider nonsymmetric and indefinite settings. Sparse and inexpensive realization requires additional work. Algebraic Schwarz methods construct coarse information from local generalized eigenproblems. In Al Daas, Jolivet, Nataf, and Tournier's published analysis, the theorem concerns SPD matrices and its bound is not fully independent of the number of subdomains. Broader matrix classes appear in experiments. These distinctions identify the assumptions and costs a new construction would have to address. [49, 50, 51]
+
+A bounded project can fix one matrix family and one baseline, then ask whether a smaller support, cheaper local eigensolve, or different partition preserves the relevant convergence behavior at lower total cost. If it cannot, a small counterexample may identify the missing mode and suggest a repair. These mechanisms already have automatic implementations: adaptive smoothed aggregation generates missing near-nullspace candidates, compatible relaxation helps assess coarse choices, and hierarchy-reuse methods update changing systems without repeating every setup operation. A new result must improve on these methods, not simply rename what they already do. [54, 76, 78, 79]
+
+Adaptation can also take place during a solve. Huh, Cartis, and Nakatsukasa's APLICUR starts from a small sketch and incrementally refines a CUR-based preconditioner, interleaving updates with LSQR phases. Its conditioning and convergence bounds require positive regularization, a CUR approximation error smaller than the regularization parameter, and the stated target-level condition. A small sketch alone supplies no uniform guarantee. The experiments examine when additional spectral correction repays its cost. This makes the timing of representation improvement an algorithmic variable. [87]
+
+A changed graph can defeat an unchanged coarse space
+
+Consider the four-cycle 1-2-3-4-1 with A = L + epsilon I, where 0 < epsilon < 1. Initially give edges 12 and 34 weight one, and edges 23 and 41 weight epsilon. Let P contain the indicator vectors of the two strong pairs, {1,2} and {3,4}. Now interchange the strong and weak weights and call the changed matrix A'. It has the same sparsity pattern, diagonal, and eigenvalues as A because a relabeling relates the two graphs. But the old coarse space has become misaligned with the strong connections. The diagram shows the retained aggregates and the signs of v = (1,-1,-1,1)^T. Each old aggregate contains opposite signs, while the new strong pairs each have one sign.
+
+Figure: The shaded regions retain the original aggregates {1,2} and {3,4}. Thick edges have weight 1 and thin edges weight epsilon. After the weights are exchanged, the missed vector has constant sign on the new strong pairs {1,4} and {2,3}, but opposite signs within each retained aggregate. The diagonal shift epsilon I is present in both operators.
+
+A' v = 3 epsilon v,     P^T A' v = 0.
+
+The exact coarse correction therefore leaves v untouched. The diagonal of A' is (1 + 2 epsilon) I, so a weighted Jacobi step multiplies this error by 1 - 3 omega epsilon/(1 + 2 epsilon). For a fixed admissible relaxation weight, that factor approaches one as epsilon decreases. Changing the aggregates to {1,4} and {2,3} puts v in the coarse space, and the exact coarse correction removes it. This is an elementary illustrative calculation, not a new multigrid result or a test of AI capability.
+
+The example identifies the missing information. Matrix size, sparsity, diagonal, and even the spectrum alone do not describe the relation between the current operator and the retained coarse directions. On a large graph, the research question is whether changed coefficients and observed smoothing behaviour can reveal this mismatch early enough to improve on existing reuse and enrichment policies after observation cost is charged. A useful rule could choose among reuse, different relaxation, local enrichment, and rebuilding. Automatic competitors must be allowed the same choices. The case matters especially when only one or a few solves remain, leaving little opportunity to recover the cost of unsuccessful experiments.
+
+Checking a retained preconditioner
+
+Some changes admit an inexpensive certificate. Let A = L(w) + μ I and A' = L(w') + μ I on the same graph, with positive edge weights and fixed μ > 0. Choose 0 < c <= 1 <= C so that every edge's new weight divided by its old weight lies between c and C. Comparing the edge energies and the common grounding term gives the first inequality below. For a fixed symmetric positive-definite preconditioner M with an already proved comparison alpha M <= A <= beta M, transitivity gives the second.
+
+c A <= A' <= C A,     c alpha M <= A' <= C beta M.
+
+This is an elementary consequence of the energy identity. In exact arithmetic, one pass through the edge weights computes admissible c and C. The unchanged preconditioner M then has a proved relative condition-number bound C beta/(c alpha) for A'. Comparing this bound with a declared condition-number limit checks the spectral requirement for reuse. Timing and setup costs determine whether reuse is economical. The bound can be conservative when global weight ratios obscure where changes occur. Sharper control would need to exploit more graph structure while retaining a worthwhile cost. A floating-point certificate also needs rounding control for these constants. Retaining transfer operators while updating level matrices or smoothers changes M and requires additional analysis. The pilot below tests these two policies separately. [19, 52]
+
+From matrix solvers to PDE applications
+
+Differential equations supply important sparse matrices, but the initial solver problem can be specified by the matrix, the right-hand side, and the required error measure. Graph incidence and finite matrix inequalities are enough to state it. Sobolev spaces and homological language are not universal prerequisites for this programme. A claim of accuracy for a continuous PDE also needs a valid approximation argument. For smooth finite-difference problems this can use Taylor expansion and a discrete maximum principle. More general settings benefit from other tools. [53]
+
+Compatible vector discretizations provide a demanding later application. Their edge and face incidences constrain the transfers, and their coefficient weights determine the energies. Shen and collaborators' three-dimensional H(curl) construction leaves a sparse multilevel realization open. Tuminaro and Glusa supply a different sparse construction with commuting constraints. The two papers vary coefficients in different terms, so one does not settle the other's robustness question. Auxiliary-space and GenEO methods remain substantive alternatives. Finite element exterior calculus explains a broad route from continuous structure to stable discretization, but that route need not organize the finite solver research itself. [22, 23, 24, 25, 43]
+
+What a useful method must deliver
+
+- A justified representation. Relate its retained interactions or directions to the original system and the required error measure.
+- An informative diagnosis. Distinguish inadequate representation from ineffective relaxation, poor scaling, arithmetic error, or excessive construction cost.
+- An effective repair. Explain which modification addresses the diagnosed failure and under which conditions it preserves the required property.
+- A transferable improvement. Test fresh instances and count the probes, rejected attempts, rebuilding, checking, and recovery needed to obtain the result.
+
+
+7. Agents already take part in this programme
+
+Automated diagnosis and method discovery already contribute to this programme. Their successes also set a baseline for any claim about what a specialist adds.
+
+Coding, benchmarking, and revising a solver are already being automated. Bader and collaborators report agents improving the tuned VieCut minimum-cut implementation by factors of 1.28 sequentially and 1.63 at 32 threads on the real-world k-core workload. All 23 accepted edits received human review, and the same 53-instance workload was used for threshold tuning and reported timing. This is productive algorithm engineering under the stated conditions. [28]
+
+LinearSolveBench brings the challenge closer to the proposed specialty. Its released C/HYPRE solvers were selected from 640 candidates per model using 96 magnetic-diffusion development cases. The best reported result is about a 1.85-fold speedup over GMRES(50) with BoomerAMG in the original measurements, with all 96 cases passing the specified checks. The timing includes solver creation, setup, and solve, but excludes discovery, compilation, and independent verification. Selection used the development set. The released verification record adds a fresh correctness check, while performance on an unseen workload remains to be measured. Even with those limits, they demonstrate actual sparse-solver optimization. [32]
+
+FrontierCS 2 brings that competition into recent research code. Its 4 November 18-system, 48-task snapshot includes 13 systems passing Clusterwise SpGEMM, eight passing the KAMI numerical-kernel task, and seven passing Polar Express. Each task uses its own correctness and performance criteria. They are nevertheless actual successes in sparse and numerical algorithm engineering. [69]
+
+The SVG-EAR case reaches the proposed diagnostic role directly. Astra introduced a probe that periodically compares sparse attention with exact attention on a small sample of queries, then chooses a per-head budget from the measured error, with a dense fallback when no tested budget passes. It also supplied a variance correction absent from the reference method. The final implementation reduced mean runtime by about 18 percent, improved all three mean fidelity measures, and passed 43 of 48 hidden checks. The diagnostic and correction were not separately ablated, and a passed probe did not ensure every final fidelity check passed. Its five fidelity failures also occurred in a separate exact-attention implementation, so they cannot simply be assigned to sparse approximation. The agent nevertheless performed the sequence of measurement, diagnosis, and adaptive repair. [70]
+
+ADSD provides a more targeted comparison. Across nine model/task comparisons, direct revision worsens error in five, whereas its combined diagnosis, literature-retrieval, and skill pipeline reports lower error throughout. Five rounds of direct revision on GOC-500 do not close the gap. Targeted numerical knowledge can therefore improve a search beyond simply requesting another attempt, and the diagnosis supplying it is already automated. Off-the-shelf solvers are excluded, and matching the final revision budget does not equalize the cost of constructing the pipeline. The result establishes a useful automated mechanism whose costs should be included in a comparison with specialist-led work. [30]
+
+SciCode-Verified supplies a related comparison after correcting defective specifications and tests. On its 64 main problems, expert-written background raises GPT-5.5 from 65.6 to 90.6 percent, Gemini 3.5 Flash from 51.6 to 87.5 percent, and Claude Opus 4.8 from 57.8 to 78.1 percent. These are single-run results under the paper's two-environment OR grading rule. They measure the value of supplied background, not a live specialist's advantage or the agent's inability to produce the same information. The background sometimes supplies a derivation or prevents substitution of a familiar formulation for the stated one. Knowledge can matter greatly while becoming reusable once expressed. [35]
+
+AlphaEvolve can search over constructors and algorithms and use multiple evaluation scores, including expensive accelerator measurements. TTT-Discover updates model weights while working on the current problem, using feedback from earlier attempts. Its reported method targets one high-performing result under a continuous reward, with applications in mathematical bounds, GPU kernels, and algorithm engineering. Transfer of the learned procedure to further problems is a separate question. A comparison should include agents that learn during the investigation. [44, 88]
+
+Agents can improve their research machinery too. AIDE2 reports seven accepted changes during an eight-day autonomous run, with gains transferring to four held-out benchmarks. Its comparison with a human-engineered production agent concerns two agent systems. It establishes a mechanism for improving the research process. [55]
+
+These cases establish that agents already perform parts of the proposed work and can alter the process used to discover methods.
+
+
+8. Guarantees at the cost of the complete calculation
+
+Evaluating their results requires tracing the preservation claim through the complete implementation. A learned component, its surrounding iteration, finite-precision arithmetic, and the final check can each change the conditions under which the method delivers its answer.
+
+Learned components and the operator they produce
+
+A research agent can discover a classical algorithm that uses no model when deployed. A neural component can predict a coarse space, a sparse correction, or a tuning decision. A surrogate can approximate a solution map. These are different mechanisms. For the finite programme, the central question is whether the resulting factor or hierarchy solves the original system at the required accuracy and total cost.
+
+Sparse approximate inverses illustrate why representation design and hardware belong in the same argument. Yang and collaborators replace triangular applications with sparse matrix-vector products and train the admissible entries. Their comparisons change across matrix families and CPU/GPU implementations. Default multigrid remains strong on diffusion examples. The research decision concerns which representation preserves enough spectral information at the cost the hardware can actually deliver. [77]
+
+Melchers, Dolean, and Abdelmalik compare four neural-operator coarse corrections while fixing the output coarse space. They vary input discretization and linear dependence on the right-hand side. Preserving right-hand-side linearity and matching the input projection to the output basis give the Neural Green's Operator a Galerkin-type coarse correction. The experiments connect these choices to spectral behaviour, stagnation, and compatibility with Krylov solvers. Their scope is specified two-dimensional problems and coarse bases, with most comparisons measuring iterations and a separate diffusion experiment measuring runtime. The contribution identifies structural relationships that guide the architecture of a learned component. [85]
+
+Bao, Cui, and Li learn coarse spaces from errors left behind by smoothing. Their objective compares subspaces independently of the basis used to express them. A perturbation analysis relates the discrepancy, including pre- and postsmoothing, to the resulting two-grid operator. The sharper quantity has a small Gram-matrix representation, but forming it requires solves with the original matrix, so it is used offline. The convergence bounds are conditional and the experiments concern stated parameterized families. The work exposes a concrete next problem of finding an informative, affordable test for when to reuse, enrich, or rebuild the learned space. [86]
+
+RAPNet learns sparse corrections to coarse and transfer operators within an algebraic multigrid hierarchy, with transfer from training subgraphs of about 4,000 nodes to million-node tests. For some graph families the training patches come from large graphs to expose relevant structures. Its setup comparison uses classical CPU execution and GPU RAPNet, counting transfers and inference. A general convergence guarantee for unrestricted corrections remains open. These results demonstrate meaningful transfer, with its scope set by the training graphs, hardware, and stated limitations. [37]
+
+AutoSpec learns short spectral recurrences, producing matrix polynomials for approximation, preconditioning, and filtering. Its comparisons include Chebyshev preconditioners supplied with the same spectral estimates and show both wins and losses. The tested operators are positive definite after the stated transformations. Some originally indefinite eigenproblems are squared, and some difficult linear systems also use incomplete Cholesky. Those details are part of what the results mean. Learning can thus return a compact executable numerical procedure with recognizable operations. An iteration-count improvement still needs a separate account of probe cost, training, and application time before becoming an end-to-end speedup. [38]
+
+Adaptation within a changing calculation is already a practical method. PCGBandit chooses among 33 preconditioner configurations during one OpenFOAM run without an offline training corpus. It counts learning and backstop costs. Its detailed analysis identifies costly early trials in Shercliff electric-potential solves, before enough evidence accumulates. The action set consists of 33 fixed configurations. Constructing a new coarse representation would extend that action space. This motivates better early diagnosis for workloads too short to amortize unsuccessful exploration. [62] He and collaborators also learn BoomerAMG hierarchy choices and within-solve relaxation online. Their 5,000-system sequences report total-runtime reductions of 36.1-43.3 percent for diffusion and 19.8-31.0 percent for diffusion-advection against the reference default. Repeated use can pay for information that is too expensive to acquire for one solve. [39]
+
+These examples expose different costs of missing information. A learned coarse space can approximate useful directions while its effect on the iteration remains expensive to assess. An online selector can spend too much on early trials after a change. The next examples show how a compressed preconditioner can save memory while requiring more iterations. In each case the target is an affordable observation tied to the relevant error or convergence behaviour, followed by a decision whose cost the remaining calculation can repay. A policy for selecting among solvers can be assessed through independently checked outcomes. A diagnostic that certifies an answer also needs a guarantee controlling the failures it may miss.
+
+Precision can change the mathematical construction
+
+Fast algebra and numerical stability can also be reconciled. Demmel, Dumitriu, and Holtz give normwise-stable algorithms for standard dense linear-algebra operations with essentially the matrix-multiplication exponent, under their stated arithmetic and stability assumptions. That result neither preserves arbitrary sparse structure nor establishes practical constants. A sparse implementation still needs control of its structure, accuracy, and application cost. [60]
+
+Mathematical control of implementation cost is also exposed. OpenAI's manuscript on exact Fourier transforms reports an asymptotic operation bound below n log n while explicitly accounting for scalar preparation, schedule construction, and indexing. Its construction preserves working width and restores borrowed registers. The result assumes exact complex arithmetic, supplied roots of unity, and unrestricted coefficients. A floating-point realization would need its own stability analysis. The proposed architecture reaches well beyond a bare existence theorem. [56] A separate OpenAI manuscript on integer multiplication explicitly propagates fixed-point errors and bounds the final coefficient error below one half so that rounding recovers the exact answer. Its asymptotic bit-complexity result comes with enormous constants, not a useful practical crossover. These are reported constructions, not independently certified here. These reports put finite-precision analysis among the tasks to include in a comparison with research agents. [57]
+
+Arithmetic precision is another resource to allocate. McCormick, Benzaken, and Tamstorf develop a purely algebraic mixed-precision multigrid analysis for sparse symmetric positive-definite systems. Residual evaluation, correction solves, and iterate updates contribute differently to the energy-error bound, and precision can vary across levels. This supplies an established framework for spending precision where it matters. Better adaptive rules must respect the convergence and rounding assumptions, as well as the costs of storing and applying the sparse operators. [59]
+
+Jang, Jolivet, and Mary identify a structural failure in mixed-precision GMRES-DR. Its derivation uses simplified relations from Arnoldi iteration and orthogonality whose finite-precision defects can make the method stagnate. Returning to a more general augmented formulation permits lower-precision inner work without those simplifications. The experiments retain precision-sensitive cases and defer hardware-specific timing. The example links a diagnosis to a mathematical repair of the formulation. [63]
+
+A more focused question is whether the memory saved by compressing a preconditioner outweighs the cost of extra iterations. Khan and Carson report a steam1 case with 21 GMRES iterations against 14 in uniform precision, while storage falls to 74.9 or 42.6 percent of the uniform version under two thresholds. Those figures do not decide runtime: reduced traffic competes with extra iterations and other work. The authors leave predicting favorable matrices as further research. Meanwhile doubly adaptive GMRES already combines iteration-dependent and entry-dependent precision automatically, with an author-reported maximum 1.6-fold speedup. The research target is a better, transferable prediction of when these precision choices repay their cost. [64, 65]
+
+A finite error bound that can be used in a computation
+
+Suppose A and M are symmetric positive definite and a proved lower comparison gives alpha M <= A for alpha > 0. For an approximate solution y to A x = b, form the residual r = b - A y. In exact arithmetic the squared energy error has the following bound:
+
+||x - y||_A^2 = r^T A^(-1) r <= (1/alpha) r^T M^(-1) r.
+
+This follows by reversing the positive-definite matrix inequality under inversion. If M is inexpensive to solve with and alpha is useful, the bound turns a residual into an energy-error certificate. For the weight-change example above, use c alpha in place of alpha and recompute the residual against A'. The comparison obtained from edge weights can therefore support a check on the final answer. For Laplacians it applies on the subspace where the common kernel has been removed. Support theory is one established algebraic framework for bounding such comparisons. [52]
+
+To use this bound, the lower comparison alpha must hold for the actual construction. Spectral probes require an argument connecting them to that bound. If M is solved only approximately, that error needs its own control. A rigorous floating-point certificate must also account for rounding in the residual and quadratic form. The cost of certification must be justified by the required assurance and the declared workload. A sharper bound or a cheaper valid check can itself be a research result. [21]
+
+The shifted-Laplacian pilot also admits a conservative check independent of the preconditioner. Since A' >= μ I, any validated upper bound ρ on the Euclidean norm of r = b - A' y gives
+
+||x - y||_A' <= ||r||_2 / sqrt(mu) <= rho / sqrt(mu).
+
+Thus ρ/sqrt(μ) <= τ certifies a declared absolute energy-error tolerance τ. It requires no estimate of the hierarchy's quality. Residual evaluation and the norm bound still need rounding control. This separates accepting a computed answer from proving that a reused or updated preconditioner will reach it efficiently. The dependence on μ also makes the potential conservatism explicit. [21, 52]
+
+The conservatism can itself be measured. For nonzero residual r and e = x - y, the ratio R between the exact-residual bound and the true energy error satisfies the identity below. On an eigenmode of A' with eigenvalue λ, R = sqrt(λ/μ). In the four-cycle's missed mode, λ = 3 epsilon and μ = epsilon, so R is exactly sqrt(3), independently of the contrast. Higher-energy directions can produce much larger overestimates. Using a validated upper bound ρ adds the separate factor ρ/||r||_2. Reference cases can reveal both sources of extra work.
+
+R^2 = (r^T r)/(mu r^T A'^(-1) r),     1 <= R <= sqrt(lambda_max(A')/mu).
+
+A PDE application introduces an additional error between the continuous solution and the exact solution of the discrete system. Certified reduced-basis methods and adaptive finite-element estimators address that further layer under explicit assumptions. Yano's complementary-energy construction, for example, requires symmetric coercivity, affine parameter dependence, and specialized offline work. The p-robust adaptive analysis cited here has a computable contraction criterion and a stated Poisson setting. These are application-specific extensions, not prerequisites for studying the finite matrix algorithm. [27, 46]
+
+Nonnormal matrices and affordable diagnostics
+
+Crouzeix points to an adjacent programme in nonnormal matrix computation. For a function f holomorphic near the numerical range W(A), the reported resolution gives the following bound.
+
+||f(A)||_2 <= 2 max_{z in W(A)} |f(z)|.
+
+For normal matrices the spectral theorem already supplies a constant-one bound. The new direction concerns operators for which eigenvalues alone give an incomplete account, including nonsymmetric systems and some directed-graph problems. Crouzeix and Greenbaum use the new result to improve bounds on other spectral regions and apply them to GMRES and rational Krylov methods. Choosing a useful region, approximation, and inner-solve accuracy is a further design problem. A numerical-range bound containing zero can fail to certify GMRES contraction. A valid cutout that excludes zero without surrounding it may help, but requires additional information about the inverse. [66]
+
+The direction of the approximation matters when estimating a spectral region. For an orthonormal Krylov basis V, W(V* A V) lies inside W(A). This projected set is an inner approximation, while a certificate based on an outer enclosure needs a bound in the other direction. An ordinary largest Ritz value of a Hermitian support matrix is a lower estimate. An outer support line needs an upper bound. Chen and Urschel quantify Krylov approximation of numerical ranges and its limitations in exact arithmetic. A floating-point certificate requires further control. This identifies the information a cheap diagnostic must obtain before its estimate can support a rigorous guarantee. [67]
+
+Verified sparse solving also has established automatic methods. Rump develops entrywise error bounds for real and complex sparse systems, using inexpensive bounds first and stronger residual-based work when needed. Different factorizations and fill patterns can change verification cost sharply. A new certificate must therefore improve an existing procedure, or apply where its assumptions fail, rather than claim that rigorous checking has not yet been automated. [68]
+
+The common requirement is a representation together with the relationships that justify using it. A coarse space must represent errors left by its smoother. A learned correction must fit the surrounding iteration. An arithmetic shortcut must retain the identities on which its derivation depends, and a residual must control the requested error. Diagnosis is useful when it identifies which relationship has failed. A repair advances the computation when it restores enough control at a cost the workload can support. [20, 85, 63, 21]
+
+Count the full cost and the failed cases
+
+Performance claims need a stated workload and an account of failures. Chillón and collaborators' learned smoother makes the point sharply. On fine unstructured three-dimensional canonical-flow tests, the fraction of successful solves averages 67.7 percent across ten trained models. A separate evaluation selects the best complete-data model and tests it on 1,000 AirfRANS systems. It converges on 99.9 percent of those systems, uses about 27 percent fewer V-cycles, and gives only about a 4 percent solve-time speedup. The baseline is relaxed Jacobi, with relative tolerance 10^-4 and a 500-cycle cap. [40]
+
+The network predicts coefficients during setup. Applying the resulting sparse smoother costs more per cycle than diagonal Jacobi, absorbing much of the iteration saving. The two evaluations use different tests and aggregations. Together they show why iteration savings, model selection, and the cost of applying the learned operator must all be reported. They do not establish a general limit on learned smoothers. [40]
+
+The distinction between a research agent and a solution surrogate also matters economically. Huang and Stuart's comparisons of neural operators with classical solvers depend on accuracy and on amortized training and data costs. The plateau they observe for particular Darcy surrogates is not evidence that an agent cannot discover a better sparse solver. For the present programme, the relevant comparison is the final matrix algorithm, its construction costs, and the workload over which those costs are recovered. [41]
+
+Zhang, Li, and Saad test a learned multilevel preconditioner on 867 real non-SPD SuiteSparse matrices. Median per-matrix setup/training time is 135.77 seconds against 0.18 for the tested AMG. Median solve time is 8.08 against 1.31 seconds. These separate medians cannot be added to obtain a paired comparison of total time. The paper also reports useful cross-matrix transfer. Its convergence win shares are conditional on compared methods producing valid runs. Construction reliability, solution accuracy, and convergence speed are different outcomes, and a method intended for one solve faces different economics from a reusable trained construction. [42]
+
+For a fixed workload of N comparable queries, include setup, recurring diagnosis, the initial solve attempt, checking, and expected recovery in the time model. Recovery includes additional failed attempts and the specified fallback. Fix timeout and fallback rules before estimating these costs, and report the fraction of queries that remain unresolved. An average restricted to successful runs omits part of the workload.
+
+T(N) = T_setup + N (T_diagnose + T_solve + T_check + E[T_recovery]).
+
+On this expected-time model, a method with extra setup cost ΔS and a net saving d > 0 per query reaches expected break-even at N >= ΔS/d. Rebuilding after a coefficient change and correlated failures affect the costs and risks. Report their distribution alongside the mean. Discovery has its own accounting. Charge the research, training, validation, and transfer costs over the declared family of later uses, allowing every competitor the same amortization horizon. A costly investigation can produce an inexpensive method used millions of times, while a short deployment may justify very little exploratory work.
+
+The checker must evaluate the supplied problem independently of the submitted answer. For a matrix task, fix the operator, right-hand side, gauge, and required components before running the candidate. Reject nonfinite outputs on those components. The FEniCSx scorer illustrates the importance of that independence. Its joint NaN-exclusion mask can omit points where a prediction is NaN, although missing reference values can legitimately indicate locations outside a physical domain. The checked domain and the treatment of missing reference values must therefore be defined independently of the candidate, with coverage reported. [33]
+
+These costs also explain the collaboration I would pursue. An agent can implement variants, construct counterexamples, compare predictions, and search for proofs. A specialist can try to increase the return on that work by identifying the missing relationship, choosing an observation that distinguishes competing failures, or proposing a repair whose scope can be justified. The gain would be a better sequence of investigations as well as a better final solver. When trials are costly, replacing repeated exploration with a transferable diagnosis can itself save work. I expect these problems to offer especially productive combinations of specialist knowledge and agent capacity. The next section specifies how to test what the specialist adds on declared numerical workloads, charging for the intervention and comparing what the whole collaboration achieves. [48, 62, 63, 86]
+
+
+9. Test the method, then the specialist contribution
+
+First assess what a construction delivers at the required accuracy and total cost on its stated workload. Test transfer on withheld families and assess a claimed theorem under its stated assumptions. These are distinct accomplishments. A uniform bound can clarify a method while leaving its computational economy unresolved. The following pilot gives the proposed programme a concrete test.
+
+Different claims require different evidence; success in one row does not establish the others.
+Claim | Required evidence
+Better performance on a stated workload | Independent measurements at the same accuracy, including setup, checking, and recovery.
+Transfer beyond development cases | Withheld families with meaningful changes in geometry, coefficients, topology, or other relevant structure.
+A uniform mathematical guarantee | A valid argument covering the stated class, with its assumptions and parameter dependence explicit.
+
+A method to test
+
+A first pilot can use shifted grid Laplacians A(w) = L(w) + μ I, with positive edge weights and fixed μ > 0. Build an initial hierarchy with one fixed multigrid implementation. Each trial starts from that initial operator and hierarchy, then makes one weight change and compares three policies. Weight-ratio certificates always refer to the initial weights. In every policy the outer iteration solves the changed system A' x = b. [76, 78, 79]
+
+This first pilot tests economical selection among established actions. The elimination and coarse-space projects below also admit new representations, repair rules, and guarantees. Each project must assess the particular improvement it produces.
+
+Separate reuse policies: only F retains the preconditioner covered by the weight-ratio certificate.
+Policy | Operation after a weight change
+F: fixed | Retain the entire old preconditioner, including every old level matrix, smoother, transfer, and coarse factorization.
+U: updated | Retain the transfers; recompute Galerkin operators and the corresponding smoothers and coarse factorization.
+R: rebuilt | Rebuild the hierarchy using the same fixed setup procedure.
+
+Before running the comparison, record the implementation and version, precision, hardware, smoother, coarsening and coarse solve, grid sizes, μ, weight ranges, change generators, budgets, and stopping rules. Each preconditioned-CG run requires a fixed linear symmetric positive-definite applied cycle. The F certificate requires proved alpha and beta for that actual baseline; spectral estimates alone do not supply them. If those bounds are unavailable, label the policy comparison empirical and use the independent μ-based error check above to certify its answers. An accepted answer under U does not prove a uniform quality bound for its updated hierarchy.
+
+Begin with manufactured solutions normalized to unit A'-energy, including directions aligned with the modes missed after a weight change, localized patterns, and generic patterns. Form their right-hand sides consistently and account for construction error. Normalization gives the prescribed absolute energy tolerance a comparable scale across the controlled tests. Then test unknown solutions with a declared right-hand-side normalization and the same prescribed absolute energy tolerance τ. Use four right-hand sides as the primary short workload, with one and a prespecified longer horizon as sensitivity cases. Hold out coefficient-change regimes and larger sizes.
+
+Keep manufactured reference solutions and exact-error measurements within the independent checker, outside the information supplied to the candidate solver or policy selector. On reference cases, record the first iteration at which the actual energy error and the certified bound each reach the prescribed tolerance. Their difference counts the additional iterations associated with the conservative stopping rule. Measure the corresponding solve time and deployed checking cost separately. Report inflation from validated residual evaluation separately.
+
+Obtain reference-error measurements in separate calibration runs. Match the timed runs' inputs, initial states, arithmetic, random seeds, and algorithmic decisions, and compare their residual histories and iteration counts. If the trajectories diverge, attribute the calibration to its own trajectory. Keep the deployed acceptance checker active in timed runs and charge it to solution cost. Account for reference instrumentation and replay under research and validation, identifying shared benchmark costs and costs incurred by each group.
+
+Compare a diagnostic selecting among F, U, and R with each fixed policy and an existing adaptive or reuse policy. Charge probes, transfers of data, updates, coarse factorizations, setup, solves, independent checks, failed attempts, and fallback. On failed acceptance, rebuild and retry within a fixed budget; report any remaining unresolved case. Before evaluation, fix the worthwhile cost-improvement margin, uncertainty rule, and allowable failure rate. Report paired total times and outcome distributions at the same accuracy, so a benefit over a long reuse horizon cannot stand in for success on four solves.
+
+An elimination project can use AC(2) with a fixed implementation, including its arithmetic, randomization, and input class. Compare any repair with unmodified AC(2), approximate-elimination alternatives such as CAST, and strong multigrid or direct-solver baselines for the declared workload. Reserve graph families as well as seeds, including weakly joined clusters, long narrow connections, graded weights, degree variation, and larger instances. Report fill, peak memory, setup, factor application, convergence, independent error checks, failures, and fallback costs. Separate a single unfamiliar matrix, a short sequence after a structural change, and a long related sequence. A diagnosis should predict which regime repays its cost. [26, 48, 62]
+
+Broader coarse-space work should include adaptive smoothed aggregation, compatible-relaxation or bootstrap constructions, and hierarchy-reuse policies on a declared SPD family. Compare with online configuration methods and well-chosen fixed settings, not only library defaults. On manageable sizes include an expensive spectral reference. Charge candidate generation, probes, local eigensolves, rejected attempts, rebuilding, and checking. Measure coarse dimension, transfer nonzeros, hierarchy size, memory, and total time. All groups may change support or aggregation and invent alternatives. An exact-coarse-solve theorem must be assessed separately from its recursive implementation. [20, 39, 54, 76, 78, 79]
+
+A high-probability theorem must state its input assumptions, randomization, and failure-probability dependence. Practical predictions also require the relevant constants. Keep exact small-instance calculations, large-instance estimates, and validated proofs distinct. Independently recompute residuals against the original operator and check the declared kernel and positivity assumptions.
+
+Across these projects, retain final evaluation cases outside development and record exploratory discoveries separately. Assess a proposed checker correction against the original mathematical requirement. An added application requirement defines a further task. [45]
+
+What a specialist adds
+
+To measure a specialist contribution, compare an autonomous agent, a specialist using that agent, and a mathematically capable generalist using it. Give them the same matrix interface, grounding convention, accuracy requirement, baseline source, development cases, and papers. All may change representations, prove lemmas, construct adversarial inputs, and improve their search procedures. Record human time, model use, computation, checking, and failed attempts. Use several participants and repeated seeds, with independent final assessment. Assess relevant competence before the experiment, fix participant eligibility and model and harness versions, and declare the primary budget-accounting rule. Report equal-time and equal-cost comparisons.
+
+Before each evaluation round, define the primary outcome for the computational-discovery comparison as the probability of producing, within the declared research budget, a method that independently passes the accuracy and reliability requirements and delivers the prespecified worthwhile cost improvement on the evaluation workload. Distinguish that method-acceptance threshold from δ, the minimum worthwhile increase in discovery success probability. Estimate the specialist's advantage over the autonomous agent and over the generalist-assisted agent separately. Assess theorems and obstructions as additional mathematical outcomes.
+
+Report person-hours, elapsed time, model expenditure, computation, and deployment costs separately. For combined economic comparisons, prespecify a human-hour price and the number of deployments over which discovery costs are amortized, then report sensitivity across declared alternative prices and horizons. Define the sampled projects or problem families and the population to which the comparison applies. Account for paired project comparisons, repeated participation, and multiple runs within a project. Additional seeds improve estimates of within-project variation. Claims across projects require sampling at that level.
+
+Ju and collaborators report a useful precedent in structural algebra. From the same formalization checkpoint, Archon had three remaining unique-factorization obligations. The branch given a human proof blueprint finished in 2 hours 12 minutes, compared with 3 hours 43 minutes for the autonomous branch. The agent retained its own proof route while using intermediate observations from the blueprint. This is one reported comparison, with blueprint preparation uncharged and no generalist arm. It demonstrates how an intervention can be isolated, while leaving its full economic value and repeatability unresolved. [90]
+
+Human participation alone does not establish independent judgment. In a randomized study, fifty professional analysts using agents followed deliberately assigned agent preferences on 86 percent of four analytical choices. The alternatives were defensible, so this is influence evidence rather than an accuracy ranking. Record a participant's initial diagnosis before revealing the agent's recommendation, retain the proposed test, and measure whether the intervention improves the final evidence. An approving signature is not the contribution being claimed. [74]
+
+Allow every group to improve its search procedure, diagnostic tools, and evaluation harness within the same budget. Specify in advance how decision points will be selected for intervention tests, and retain unsuccessful interventions. At a selected checkpoint, freeze the solver, evidence, agent context, and any learned model state before introducing the proposed diagnosis or repair. Compare repeated continuations with and without that intervention under equal remaining compute budgets, charging its production cost to the group that supplied it and allowing the controls to generate their own alternatives. Record the diagnosis and its prediction before opening the reserved cases. These continuations estimate what the intervention changes at those particular points. The full-project comparison, including the cost of reaching those states and producing the intervention, tests the broader specialist advantage.
+
+After each completed round, add useful procedures, counterexamples, and diagnostic rules to a shared archive before testing fresh cases. Measure whether making an artifact available improves subsequent verified work, including retrieval and application costs. Separately ask whether a specialist still adds value once all groups have that equipment. Distinguish the cost of discovering a useful intervention from the gains after it becomes available to everyone.
+
+Accumulation alone does not establish useful reuse. Berlot-Attwell and collaborators re-examine three LLM library-learning systems and find that claimed advantages often disappear or reverse against prompting baselines with comparable computational resources. Their detailed analysis finds no direct reuse of LEGO-Prover's learned lemmas and evidence against the proposed indirect mechanism. These findings concern the studied systems. They motivate a behavioural test of whether an acquired abstraction or procedure actually improves later work enough to repay its cost. [89]
+
+Fix the sample size and stopping rule, or use a prespecified sequential procedure with valid coverage under repeated inspection. Use confidence bounds that account for the two specialist comparisons and the dependence in the design. For either contrast, a lower bound above δ supports a worthwhile specialist premium. An upper bound below δ supports setting that premium aside for the tested scope, budgets, and agent versions. An interval spanning δ leaves the claim unresolved. A nonsignificant difference from zero alone cannot settle it. New agent versions can motivate a further declared round while retaining the completed comparison's result. [92]
+
+Repeat the comparison as agents improve, keeping the application scope and acceptance rules fixed and using fresh cases selected before the comparative results are known. A continuing specialist premium must survive both better agents and shared discoveries. The numerical programme succeeds when it yields reliable methods whose benefits repay their costs, including methods that agents later discover or use unaided.
+
+A ranking of specialties would require corresponding complete structural projects, including definition and conjecture formation, imported theory, counterexamples, proof construction, and independent assessment. The proposed experiment answers the narrower question of what works on its declared numerical workload and who improves its discovery.
+
+
+10. Where to concentrate research effort
+
+In choosing a programme of mathematical research, I regard the strategy of seeking protection in deeper abstraction as spent. Algebraic geometry, representation theory, abstract algebra, and theoretical PDE offer no exemption because their objects are remote or their arguments sophisticated. The demonstrated machine contributions reach the conceptual level invoked to justify that exemption.
+
+My positive recommendation is to invest specialist-AI work in the connection between graph structure, numerical error, and computational cost. A sparse construction can preserve some local properties while losing spectral quality. A coarse space can miss a mode even when familiar summaries of the matrix are unchanged. An informative operator defect can cost too much to evaluate during a solve. These gaps identify mathematical work with consequences for repeated computation. [26, 48, 86]
+
+Progress may take the form of a bound, an obstruction, a construction, or a diagnostic. A claim of computational improvement must also show that the intended workload repays its costs. A successful method can then serve further calculations after it becomes shared knowledge. I favor this programme for centaur work because it joins consequential mathematical problems to repeated uses that can repay their solution, while giving specialist steering a precise outcome to improve. Observability makes that judgment accountable. The participant comparisons would determine how much a specialist adds to the progress. The case for choosing the programme rests on the mathematical control and computational savings it can deliver.
+
+Notes and sources
+The original evidence review is dated 4 November 2026. The revision of 7 November adds the historical and methodological sources identified in the notes, the four-cycle calculation and diagram, and the proposed experiment's outcome, cost, and decision rules. Dated repository and benchmark snapshots retain their original cutoffs. Reference numbers are retained across revisions.
+
+[1] Thomas Willwacher. The Deligne-Drinfeld conjecture after OpenAI. 2026. arXiv v4, 28 October 2026
+https://arxiv.org/abs/2610.15592v4
+Specialist reconstruction and simplification of the proof; cited as evidence of substantive mathematical engagement, not as certification of the entire OpenAI catalogue.
+
+[2] Nikita Markarian. A remark on the AI proof of the Deligne-Drinfeld conjecture. 2026. arXiv v1, 1 November 2026
+https://arxiv.org/html/2611.01745v1
+Abstract, introduction and sections 3-5: geometric interpretation through a double covering and filling a puncture, reconstruction on the image, and comparison with the characteristic-two proof. This is subsequent human interpretation of the model-produced architecture.
+
+[3] Tony Feng. Eigenweights for arithmetic Hirzebruch Proportionality. 2026. arXiv v2, 2 February 2026
+https://arxiv.org/html/2601.23245v2
+Opening attribution, abstract and section 2 assign the mathematical content to Aletheia and paper rewriting to the human author. The accompanying report, sections 3.1-3.2, gives the cross-field and independence-polynomial accounts; its autonomous milestones are not claimed as major mathematical advances.
+Aletheia research report, v3: https://arxiv.org/html/2602.10177v3
+
+[4] OpenAI. Mathematics research repository and release history. 2026. Pinned snapshot, checked 4 November 2026
+https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/README.md
+README catalogue totals and stated verification limits; history records the 6 October release, 7 October withdrawals and repairs, and later additions. Totals are dated observations, not an independent audit of every result.
+Release history: https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/history.md
+Current repository: https://github.com/openai/math
+
+[5] OpenAI. The Blockwise Alperin Weight Conjecture; Donovan's Conjecture over Algebraically Closed Fields. 2026. Manuscripts dated 23 and 24 September; pinned repository checked 4 November
+https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/The-Blockwise-Alperin-Weight-Conjecture-September-23-2026/paper.pdf
+Source-reported modular representation results. The numerical blockwise weight statement is asserted for every finite group and prime; fixed-field Morita finiteness allows bounded defect order, nonabelian defects and characteristic two. No independent whole-proof certification is claimed here; neither family carried a Lean link in the checked catalogue.
+Alperin manuscript record: https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/The-Blockwise-Alperin-Weight-Conjecture-September-23-2026/README.md
+Donovan manuscript: https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/Donovans-Conjecture-over-Algebraic-Closures-of-Prime-Fields-September-24-2026/main.pdf
+Donovan manuscript record: https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/Donovans-Conjecture-over-Algebraic-Closures-of-Prime-Fields-September-24-2026/README.md
+
+[6] OpenAI. The rational Hodge conjecture for CM abelian varieties: selected formalization scope. 2026. Pinned scope document checked 4 November 2026
+https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/docs/032.md
+Selected statement: rational Hodge classes on complex CM abelian varieties are algebraic in every dimension and codimension. This is not the full Hodge conjecture for arbitrary varieties. The source excludes later Tate and Hodge-standard consequences from this selected scope. The formalization was not independently replayed in this review.
+
+[7] OpenAI. Auslander-Reiten and Tachikawa counterexamples: selected formalization scope. 2026. Pinned scope document checked 4 November 2026
+https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/docs/199.md
+Specified nonprojective modules with the stated Ext-vanishing properties supply the reported counterexamples. The source distinguishes these targets from later endomorphism-algebra and homological consequences. This review inspected the scope rather than independently replaying the formal proofs.
+
+[8] Mohammed Abouzaid, Nikhil Srivastava, Rachel Ward, and Lauren Williams. First Proof Third Batch. 2026. 14 October 2026 report
+https://hexagonmath.org/pdf/2610.00244v1
+Protocol and aggregate correctness assessments; Table 2 counts average correctness scores of at least 0.5, and the rubric gives 0.5 for minor, readily corrected errors. Section 5.2, PDF pages 29-30, covers the Darcy inverse problem. Exposition and attribution are assessed separately. June-to-October comparisons use new problem sets and changed testing conditions, including permitted human proof length; they are not a calibrated longitudinal benchmark.
+Third batch press release: https://1stproof.org/third-batch-press-release.html
+Second-batch report, June 2026: https://1stproof.org/assets/docs/report.pdf
+
+[9] A. Ramesh Chandra, Aaghaz Mahajan, Ainesh Sanyal, et al. TheoPhysEval: Assessing AI agents at autonomous theoretical physics problem solving. 2026. arXiv v1, 9 October 2026
+https://arxiv.org/html/2610.16733v1
+Sections I, III and IV.1 describe problem provenance and automated final-answer evaluation. The authors report that answers were unpublished at evaluation, but some contributors used AI and data leakage cannot be ruled out. The isolated track removes web search and supplied background papers while retaining computational tools. The 50 problems are not presented as breakthrough open problems. The full benchmark ran once per agent per track.
+Abstract and full author list: https://arxiv.org/abs/2610.16733v1
+
+[10] Yanli Wang, Suijin Wang, Xiaopeng Yuan, and Haohan Wang. Objects Without Morphisms: What LLMs for Mathematics Do Not Represent. 2026. arXiv v1, 2 October 2026
+https://arxiv.org/html/2610.03551v1
+Sections 3-4 study mathematical rewriting across framings. The 60.6 percent figure is the held-out pooled abstracting condition, not a failure rate for research proofs. Seven model snapshots are tested; neither the October internal OpenAI proof system nor GPT-6 is among them. The seven-model comparison is cross-sectional. Mean item-level correlation 0.503 describes shared susceptibility, not a temporal plateau. The 89.2 percent promotion result belongs to a single-model instruction experiment, distinct from the pooled 60.6 percent scope-widening result.
+
+[11] Sanjana Das and Jacob Fox. A proof of the Murty-Simon conjecture on diameter-2-critical graphs. 2026. arXiv v1, 28 October 2026
+https://arxiv.org/abs/2610.39032v1
+Theorem 1.1 and AI statement: model contribution includes the edge bound and even-order equality; authors simplify and extend equality to odd order.
+Full text: https://arxiv.org/html/2610.39032v1
+
+[12] Sang-il Oum. A proof of the cycle double cover conjecture by OpenAI: An exposition. 2026. arXiv v3, 1 August 2026
+https://arxiv.org/abs/2607.16356v3
+Exposition with modifications for accessibility; the original proof precedes the October release. The source attributes contributions and revisions separately.
+
+[13] Ansh Nagda, Prabhakar Raghavan, and Abhradeep Thakurta. Reinforced Generation of Combinatorial Structures: Hardness of Approximation. 2026. arXiv v7, 9 March 2026; first submitted 2025
+https://arxiv.org/html/2509.18057v7
+AlphaEvolve constructions and reduction gadgets, including metric-TSP hardness; human-designed objectives and reconstruction of mathematical guarantees remain part of the reported workflow.
+
+[14] Zhiqiang Xu. A 3-regular counterexample to the Bilu-Linial signing conjecture. 2026. arXiv v4, 29 September 2026
+https://arxiv.org/html/2609.15591v4
+The finite connected simple cubic base graph is not Ramanujan. The restricted question for Ramanujan base graphs remains distinct. AI assistance is stated by the author, who takes responsibility for checking.
+
+[15] Fangfang Lin and Hong Zhou. Improved Bounds for the Bilu-Linial Conjecture via Spectral Recovery from Mixed Determinantal Polynomials. 2026. arXiv v2, 14 October 2026
+https://arxiv.org/html/2609.15715v2
+Revised version acknowledges the counterexample; the bound is existential and the remaining algorithmic question concerns polynomial-time construction satisfying the mixed-root condition. AI statement gives the specific model contributions.
+
+[16] OpenAI. Local smoothing for the Euclidean wave equation: release and formalization scope. 2026. 26 October release; scope checked 4 November
+https://openai.com/index/building-scientific-understanding-with-academic-communities/
+The source asserts a half-wave local-smoothing bound for n >= 2, with the specified positive Sobolev loss, and lists related formalization targets. It labels the manuscripts raw research data. This concerns theoretical PDE, not the construction or testing of a numerical PDE solver.
+Pinned formalization scope: https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/docs/079.md
+Pinned manuscript record: https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/Local-smoothing-for-the-Euclidean-wave-equation-October-25-2026/README.md
+
+[17] Alex Townsend and Anne Greenbaum. The Neurosurgery Resident Who Proved Crouzeix's Conjecture. 2026. SIAM News, 2 November 2026
+https://www.siam.org/publications/siam-news/articles/the-neurosurgery-resident-who-proved-crouzeix-s-conjecture/
+Attributed report that Townsend, Greenbaum and Michel Crouzeix checked Shanmu Jin's manuscript and believe it correct; account of the approximately sixteen-hour model run. The cited preprint and independent proof provide mathematical source material, not a claim of journal peer review.
+Jin manuscript: https://www.preprints.org/manuscript/202607.1919
+Independent proof by Lorist and Schwenninger: https://arxiv.org/abs/2608.03841v2
+Jin manuscript, pinned v4: https://github.com/jinshanmu/CrouzeixConjecture/blob/f9d5c8d39bece41ceedf6346ef50ad1fb393260e/preprint/the_numerical_range_is_a_2_spectral_set_v4.pdf
+
+[18] Josh Alman and Virginia Vassilevska Williams. Truly Subquadratic 3SUM and Truly Subcubic APSP via Triangles in Sparse Lopsided Graphs. 2026. arXiv v1, 5 October 2026
+https://arxiv.org/html/2610.06783v1
+Abstract and Theorem 22 specify the integer-input bounds and APSP assumptions. Acknowledgments and methodology distinguish the model's discovery from human simplification and extension. These exponents alone do not establish practical speedups.
+
+[19] Daniel A. Spielman and Nikhil Srivastava. Graph Sparsification by Effective Resistances. 2009. arXiv v4, 18 November 2009
+https://arxiv.org/html/0803.0929v4
+Quadratic-form preservation and sampling by the edge-weight/effective-resistance product. The unit-star elimination calculation in this essay is an elementary exact example.
+
+[20] Jinchao Xu and Ludmil Zikatanov. Algebraic Multigrid Methods. 2016. arXiv v2, 10 November 2016
+https://arxiv.org/html/1611.01917v2
+In particular section 5, on optimal coarse spaces and the lower spectrum associated with the smoother. Algebraic smoothness is operator-relative.
+
+[21] E. Anderson et al. LAPACK Users' Guide: Further Details - Error Bounds for Linear Equation Solving. 1999. Online third-edition guide
+https://netlib.org/lapack/lug/node81.html
+Distinguishes normwise and componentwise backward error, conditioning and forward error; gives the componentwise residual formula used here. The diagonal two-variable example and shifted-Laplacian residual bound in this essay are elementary illustrations, not reported LAPACK experiments.
+
+[22] Douglas N. Arnold, Richard S. Falk, and Ragnar Winther. Finite element exterior calculus: from Hodge theory to numerical stability. 2009. arXiv v2, 12 August 2009
+https://arxiv.org/html/0906.4325v2
+Sections 3.3-3.4, especially Theorems 3.8-3.9, relate suitable subcomplexes and uniformly bounded cochain projections to stability and error estimates. Sections 4-6 develop differential complexes, boundary conditions and finite elements. The framework requires quantitative bounds and approximation properties; a discrete incidence identity alone is insufficient. This is mathematical support for the proposed specialism, not an experiment establishing a human advantage.
+
+[23] Taoli Shen, James Brannick, Robert Falgout, Karsten Kahl, and Jacob Schroder. Nodal Coarsening and Approximate Ideal Interpolation for H(curl) in Algebraic Multigrid. 2026. arXiv v2, 23 October 2026
+https://arxiv.org/html/2602.23613v2
+Sections 2.1, 3.2 and 3.3 specify model, two-grid assumptions and unshifted commuting relation. Section 5.5, PDF Table 5.7 on printed page 24, gives the 7,690-unknown checkerboard smoothing diagnostic: Ref 3.311 to 4105; Alg 3.189 to 4002 as the minimum coefficient falls to 10^-6. The larger case is not that diagnostic. Dense 3D interpolation is a limitation of the particular construction, not a consequence proved from CG=0. Smoothing estimates and observed iteration counts are different quantities.
+Versioned PDF: https://arxiv.org/pdf/2602.23613v2
+
+[24] Ralf Hiptmair and Jinchao Xu. Nodal Auxiliary Space Preconditioning in H(curl) and H(div) Spaces. 2007. SIAM Journal on Numerical Analysis 45(6), 2483-2509
+https://epubs.siam.org/doi/10.1137/060660588
+Auxiliary-space construction using discrete decompositions and Poisson-type solvers. No stronger blanket coefficient/topology guarantee is claimed here.
+Author technical report (2006): https://www.sam.math.ethz.ch/sam_reports/reports_final/reports2006/2006-09.pdf
+
+[25] Niall Bootland, Victorita Dolean, Frédéric Nataf, and Pierre-Henri Tournier. A robust and adaptive GenEO-type domain decomposition preconditioner for H(curl) problems in three-dimensional general topologies. 2025. arXiv v3, 16 May 2025
+https://arxiv.org/html/2311.18783v3
+Adaptive two-level additive-Schwarz/GenEO work for positive Maxwell-type systems, including nontrivial topologies. It is not cited as a result for indefinite time-harmonic Maxwell.
+
+[26] Yuan Gao, Rasmus Kyng, and Daniel A. Spielman. AC(k): Robust Solution of Laplacian Equations by Randomized Approximate Cholesky Factorization. 2026. Author manuscript; published SISC 48(3), A1643-A1684
+https://rasmuskyng.com/papers/GKS25.pdf
+Author manuscript section 6, printed pages 25-26, states the AC(2) condition-number conjecture. The author manuscript and journal version have different pagination. Experimental robustness is not a proof of the conjecture.
+Published article: https://epubs.siam.org/doi/10.1137/24M1673577
+
+[27] Théophile Chaumont-Frelet, Zhaonan Dong, Gregor Gantner, and Martin Vohralík. On p-robust convergence and optimality of adaptive FEM driven by equilibrated-flux estimators. 2026. arXiv v2, 10 September 2026
+https://arxiv.org/html/2603.08887v2
+Algorithm 3.1 and Theorems 3.4/3.7 concern fixed-p h-adaptive conforming Poisson FEM and the specified right-hand side. Condition (3.2) and the marking condition are material; experiments do not make their satisfaction unconditional.
+
+[28] David Bader, Adil Chhabra, Ernestine Großmann, Monika Henzinger, Alexander Noe, and Christian Schulz. Agentic Algorithm Engineering: Improving Shared-Memory Exact Minimum Cuts. 2026. arXiv v1, 7 September 2026
+https://arxiv.org/html/2609.07204v1
+Section 4 and conclusion: 44 experiments, 23 accepted human-reviewed changes; reported speedups use the same 53-instance workload used for tuning, with matched cut results. Real-world k-core gains are 1.28× sequential and 1.63× at 32 threads.
+
+[30] Peter Chen and Wotao Yin. Training Numerical Intelligence via Auto-Diagnosis and Skill Discovery. 2026. arXiv v1, 2 October 2026
+https://arxiv.org/html/2610.03872v1
+Sections 3 and 4.5: automated diagnosis, literature retrieval, and skill construction are ablated together. Direct revision worsens five of nine comparisons. Off-the-shelf solvers are excluded; final-generation budget matching is not whole-pipeline cost matching. No human specialist comparison.
+
+[32] LinearSolveBench contributors. LinearSolveBench: discovered FLASH solvers and benchmark specification. 2026. Pinned release commit 9322e8193e0425d149ae36e793af34ac26b695b3, 29 September 2026; checked 4 November
+https://github.com/hgarud/LinearSolveBench/blob/9322e8193e0425d149ae36e793af34ac26b695b3/discovered_solvers/magnetic_diffusion_flash/README.md
+Four released C/HYPRE solvers; 640 candidates per model and selection on 96 development cases, not 96 independent matrices or an unseen test set. The reported 1.8504555 ratio is summed reference runtime divided by summed candidate runtime for the Fable 5.1 winner. Timings include creation, setup and solve, excluding discovery, compilation and verification. The import reports 96/96 local macOS correctness checks without a new Linux/Modal performance run. The original timing record was independently summed for this review. These results demonstrate solver optimization without establishing a longitudinal rate or superiority across problem classes.
+Pinned benchmark specification: https://github.com/hgarud/LinearSolveBench/blob/9322e8193e0425d149ae36e793af34ac26b695b3/BENCHMARK.md
+Original per-case timing record: https://www.autodidakt.ai/benchmarks/flash-runtime-speedups-20260928.json
+
+[33] Haoming Luo. GPT-6 FEniCSx Single-Attempt Pass Rate and Solver Corpus. 2026. Dataset snapshot and count audit prepared for this essay, 4 November 2026
+https://huggingface.co/datasets/HaomingLuo/GPT-6-FEniCSx-Single-Attempt-Pass-Rate
+Advertised total 496/644 evaluated passes and one reference failure among 645 requested tasks. Counts recomputed from pinned raw records: Stokes 20/60; reaction-diffusion 59/64; 68/496 passes (13.71%) with partially finite reference arrays; 69 execution failures without a coverage assessment. Many partially finite cases have nonrectangular geometry, so a mask may legitimately exclude points outside the domain. These counts are not evidence of wrong solutions. The pinned scorer excludes NaNs in either array; interpreting coverage requires the domain details. Proposed stronger protocol: an independent required-domain mask, finite predictions at every required point, and coverage reported beside error.
+Pinned raw records: https://huggingface.co/datasets/HaomingLuo/GPT-6-FEniCSx-Single-Attempt-Pass-Rate/blob/9888f0bae20d568ee43b443aa268ed7c57f5e39a/results.jsonl
+Pinned upstream scorer, lines 32-62: https://github.com/YusanX/pde-agent-bench/blob/0ba9853f82a78196796fa4eeaf0951eb4c000a00/pdebench/metrics/universal.py
+
+[35] Sihan Hu, Lyuhan Huang, Youjin Deng, and Kun Chen. SciCode-Verified: How Benchmark Defects Underestimated the Scientific-Coding Ability of Language Models. 2026. arXiv v1, 5 August 2026
+https://arxiv.org/html/2608.04975v1
+Section 3, Table 2: expert-background ablations on 64 corrected main problems, single runs with two-environment OR grading. They measure supplied-context effects, not human-versus-agent productivity. Table 1 separately gives GPT-5.6 Sol 92.2 percent with background; benchmark repair is not longitudinal model improvement.
+
+[37] Yali Fink, Ido Ben-Yair, Lars Ruthotto, and Eran Treister. RAPNet: Accelerating Algebraic Multigrid with Learned Sparse Corrections. 2026. ICML 2026, PMLR 306, 31125-31145
+https://proceedings.mlr.press/v306/fink26a.html
+Corrections concern coarse and transfer operators. Published limitations state the absence of a general convergence guarantee. Table 2 compares CPU classical setup with GPU RAPNet, counting aggregation, transfer, inference and augmentation; solve-iteration timings are not reported there. The model carries latent state across successive level pairs, and experiments include nonsymmetric three-dimensional advection-diffusion. No supplied general convergence theorem does not imply an impossibility theorem for local learning.
+Published full text: https://raw.githubusercontent.com/mlresearch/v306/main/assets/fink26a/fink26a.pdf
+
+[38] Zihang Liu, Oleg Balabanov, Yaoqing Yang, and Michael Mahoney. Learning to Discover Iterative Spectral Algorithms. 2026. arXiv v1, 10 February 2026
+https://arxiv.org/html/2602.09530v1
+Section 5 and Appendix E use positive-definite test operators after stated transformations. Comparisons with Chebyshev use the same spectral probes and include wins and losses. Exact degree matching is not asserted here.
+
+[39] Xudong He, Ruiyu Wang, Yilang Ding, Rui Peng Li, and Yuanzhe Xi. Online Autotuning of Algebraic Multigrid via Contextual Bandits and Reinforcement Learning. 2026. arXiv v1, 31 October 2026
+https://arxiv.org/html/2611.01193v1
+Sections 5.1-5.2 and Table 4: 5,000-system online totals, including learner costs and retries. Separate frozen tests must not be merged with these totals. Failure comparisons use different retry allowances. Section 5.6 includes an informed periodic policy slightly faster on SPD diffusion.
+
+[40] Eric Chillón, Artur Lidtke, Nguyen Anh Khoa Doan, and Bernat Font. Acceleration of an algebraic multigrid pressure solver using graph neural networks. 2026. arXiv v1; checked 4 November 2026
+https://arxiv.org/html/2606.19251v1
+Section 4.2.1/Table 3 gives the ten-model mean on fine 3D tests; section 4.2.3/Figure 6 concerns the selected model on 1,000 AirfRANS systems. Relaxed Jacobi baseline, 10^-4 tolerance, 500-cycle cap. The preprint's arXiv stamp and displayed manuscript date differ. Section 3.4/Algorithm 1 predicts coefficients and constructs the sparse smoother before iteration. The higher per-cycle cost in section 4.2.3 is application of that smoother, not per-cycle GNN message passing.
+
+[41] Daniel Zhengyu Huang and Andrew Stuart. Cost-Accuracy Trade-offs: Neural Operator vs Classical Numerical Solver. 2026. arXiv v1, 21 September 2026
+https://arxiv.org/html/2609.24021v1
+Training/data are assumed amortized. Accuracy and workload affect the comparison; section 4.1.3 reports a limited empirical test-error plateau. Some wall-clock comparisons use different hardware allocations. This does not measure a general AI-research capability plateau. Section 4.1.3/Table 3: fixed-architecture errors at N=1000/2000/4000/8000 are 9.18/6.82/5.56/4.91 times 10^-3; largest tested architecture at N=8000 gives 4.70 times 10^-3. This is scaling within a specified surrogate experiment, not calendar-time stagnation in AI research.
+
+[42] Zechen Zhang, Rui Peng Li, and Yousef Saad. Graph Neural Multilevel Preconditioners for Iterative Solvers. 2026. arXiv v1, 30 July 2026
+https://arxiv.org/html/2607.28456v1
+Sections 4.1-4.3 report 867 real non-SPD matrices, per-matrix training, construction and solution failures, and setup/solve timings. Table 5 reports three-way win shares for convergence efficiency among matrices where all compared methods produce valid runs; these are not overall solve-success fractions. Main large-set results are principally two-level; deeper hierarchy tests use 100 matrices. Cross-matrix transfer is examined separately. The depth-selection experiment reports a 4-7 percentage-point win-rate increase against GNP on a 100-matrix subset; this is not a 4 percent runtime or convergence-rate improvement.
+
+[43] Raymond S. Tuminaro and Christian Glusa. A structure preserving H-curl algebraic multigrid method for the eddy current equations. 2025. arXiv v1, 9 June 2025
+https://arxiv.org/html/2506.08284v1
+Sections 3-4 construct edge interpolation using energy minimization with sparsity and commuting constraints. Feasibility matters; arbitrary sparsity patterns are not guaranteed. The model varies conductivity in the mass term, not the curl-curl coefficient targeted by Shen et al. This provides an important baseline, not a resolution of that distinct problem.
+
+[44] Alexander Novikov et al. AlphaEvolve: A coding agent for scientific and algorithmic discovery. 2025. arXiv v1, 16 June 2025
+https://arxiv.org/html/2506.13131v1
+Table 1 and sections 2.1-2.4 describe multiple evaluation metrics, evaluation cascades, and lengthy accelerator evaluations. The reported loop takes an evaluation mechanism as input. This does not establish that agents cannot design or improve evaluators.
+
+[45] Cynthia Dwork, Vitaly Feldman, Moritz Hardt, Toniann Pitassi, Omer Reingold, and Aaron Roth. Generalization in Adaptive Data Analysis and Holdout Reuse. 2015. NeurIPS 2015; arXiv v2, 25 September 2015
+https://arxiv.org/abs/1506.02629v2
+Adaptive reuse can overfit validation data; the paper supplies methods preserving statistical validity. It does not prove inevitable search failure or give a theorem covering arbitrary PDE distribution shifts. Withholding meaningful problem families is the experimental application proposed here.
+
+[46] Masayuki Yano. A Reduced Basis Method with Exact-Solution Certificates for Steady Symmetric Coercive Equations. 2015. Computer Methods in Applied Mechanics and Engineering 287, 290-309
+https://doi.org/10.1016/j.cma.2015.01.003
+Sections 2.2-2.3, Propositions 1-3: primal and complementary variational bounds on exact weak-solution energy, algebraic dual feasibility, and an energy-norm error certificate from the bound gap. The method requires symmetric coercivity, affine parameter dependence, and exactly represented piecewise-polynomial data. Specialized offline dual solves and a potentially large online expansion remain costs; online complexity is independent of finite-element dimension.
+Author manuscript: https://arrow.utias.utoronto.ca/~myano/papers/yano_2015_ecrb.pdf
+
+[47] Yves Baumann, Rasmus Kyng, and Gernot Zöcklein. VAC: A Volume-sampling-based Elimination Rule for Approximate Cholesky Factorization. 2026. arXiv v2, 24 September 2026
+https://arxiv.org/html/2609.20241v2
+Spanning-tree sampling on the product clique arising in elimination; preserves the stated marginals and connectivity, with linear sequential work and logarithmic-depth sampling. These are local construction guarantees, not a global AC(2) condition-number theorem.
+
+[48] Meher Chaitanya, Cameron Musco, and Aristides Gionis. CAST: Canonical Approximate Schur Tree for Approximate Cholesky on Graphs. 2026. arXiv v1, 8 September 2026
+https://arxiv.org/html/2609.09255v1
+Sections 3-4 give local guarantees, not a global factorization bound. Section 5 and Table 1 report paired 250-right-hand-side workloads. The proposed explanation of configuration preference is not tested as an adaptive selection rule.
+
+[49] Ahsan Ali, James Brannick, Karsten Kahl, Oliver Krzysik, Jacob Schroder, and Ben Southworth. Constrained Local Approximate Ideal Restriction for Advection-Diffusion Problems. 2024. SIAM Journal on Scientific Computing 46, S96-S122; published online 2 May 2024
+https://epubs.siam.org/doi/10.1137/23M1583442
+Local approximate ideal restriction combined with mode constraints; aggressive coarsening controls hierarchy complexity. The advection-diffusion and nonsymmetric setting is distinct from the proposed initial SPD matrix class.
+Author preprint: https://arxiv.org/html/2307.00229v2
+
+[50] Oliver A. Krzysik, Ben S. Southworth, Golo A. Wimmer, Ahsan Ali, James Brannick, and Karsten Kahl. Optimal Transfer Operators in Algebraic Two-Level Methods for Nonsymmetric and Indefinite Problems. 2026. SIAM Journal on Matrix Analysis and Applications 47(2), 824-851; author preprint v2, 11 September 2025
+https://epubs.siam.org/doi/10.1137/25M179436X
+Finite-dimensional generalized eigenvector characterization and sharp two-level convergence results, including real-valued transfers. Optimality of the specified operators does not establish a sparse, cheap, recursively implemented hierarchy.
+Author preprint: https://arxiv.org/html/2505.05598v2
+
+[51] Hussam Al Daas, Pierre Jolivet, Frédéric Nataf, and Pierre-Henri Tournier. A Robust Algebraic Two-Level Schwarz Preconditioner for Sparse Matrices. 2025. SIAM Journal on Scientific Computing 47(4), A2378-A2402; published online 18 August 2025
+https://epubs.siam.org/doi/10.1137/24M1629882
+Matrix-based local spectral coarse spaces. The proved scope is SPD; the published condition-number bound is not fully independent of the number of subdomains. Nonsymmetric and saddle-point cases are also tested numerically, which does not extend the SPD theorem.
+Earlier author preprint: https://arxiv.org/html/2401.03915v1
+
+[52] Erik G. Boman and Bruce Hendrickson. Support Theory for Preconditioning. 2003. SIAM Journal on Matrix Analysis and Applications 25(3), 694-717
+https://epubs.siam.org/doi/10.1137/S0895479801390637
+Algebraic techniques for spectral comparisons and preconditioning. The energy-error identity and inverse-order inequality displayed in this essay are elementary exact-arithmetic consequences, not claims of an implemented floating-point certificate.
+
+[53] Richard S. Falk. Math 575: Finite Difference Methods, Stability and Error Estimates. 2012. Rutgers lecture notes, lectures 1-3
+https://sites.math.rutgers.edu/~falk/math575/lecture-notes12.html
+A classical route to finite-difference error estimates for smooth Poisson problems through truncation error, stability, and a discrete maximum principle. This shows that a PDE approximation argument need not universally use Sobolev-space machinery; it does not replace weak-solution analysis in every setting.
+
+[54] PyAMG developers. PyAMG: Algebraic Multigrid Solvers in Python. 2026. Documentation inspected 4 November 2026
+https://pyamg.readthedocs.io/en/latest/
+Matrix-based hierarchy, graph, and diagnostic components. adaptive_sa_solver generates candidates when none are known or matrix changes invalidate them. Available algorithms are not a uniform robustness guarantee for every sparse input.
+Adaptive aggregation documentation: https://pyamg.readthedocs.io/en/latest/generated/pyamg.aggregation.html
+
+[55] Dhruv Srikanth, Bingchen Zhao, Dixing Xu, Yuxiang Wu, and Zhengyao Jiang. Recursive self-improvement of AI research agents. 2026. arXiv v1, 22 September 2026
+https://arxiv.org/html/2609.26457v1
+Sections 2-3: eight-day autonomous optimization of a research-agent harness, seven accepted improvements, and four held-out benchmarks. The human-engineered production agent is an agent baseline, not a live human comparison; no sparse-solver specialist premium is measured.
+
+[56] OpenAI. An explicit power saving for the exact discrete Fourier transform. 2026. 25 September 2026 manuscript; repository snapshot 4eaee87548250b2682affda7d05d947c05554bae
+https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/An-explicit-power-saving-for-the-exact-discrete-Fourier-transform-September-25-2026/main.pdf
+Introduction and construction: exact complex arithmetic, prescribed roots, unrestricted coefficients; preparation and indexing are charged. No floating-point stability or useful crossover claim. The formalization excludes the synthesis appendix; this review did not rerun Lean.
+Introduction and model assumptions: https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/An-explicit-power-saving-for-the-exact-discrete-Fourier-transform-September-25-2026/build/sections/introduction.tex
+Formalization scope: https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/docs/130.md
+
+[57] OpenAI. Integer multiplication below n log n. 2026. 23 September 2026 manuscript
+https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/Integer-multiplication-below-n-log-n-September-23-2026/paper.pdf
+Section 8: fixed-point error propagation and exact recovery after a strict error bound below one half. Claimed finite-tape bit complexity with enormous constants; not independently certified here.
+Precision and recovery source: https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/Integer-multiplication-below-n-log-n-September-23-2026/build/sections/08-assembly.tex
+
+[58] Rasmus Kyng, Yin Tat Lee, Richard Peng, Sushant Sachdeva, and Daniel A. Spielman. Sparsified Cholesky and Multigrid Solvers for Connection Laplacians. 2016. STOC 2016, pp. 842-850; author preprint arXiv:1512.01892v1
+https://arxiv.org/pdf/1512.01892v1
+Definition 3.2 and Lemma 3.3: exponential spectral distortion at most twice the sum of local tolerances, controlling both Schur approximations and eliminated-block inverses. Application work sums over levels. Not an AC(2) theorem.
+Published article: https://doi.org/10.1145/2897518.2897640
+
+[59] Stephen F. McCormick, Joseph Benzaken, and Rasmus Tamstorf. Algebraic Error Analysis for Mixed-Precision Multigrid Solvers. 2021. SIAM Journal on Scientific Computing 43(5), S392-S419
+https://media.disneyanimation.com/technology/publications/2021/algebraic-error-analysis-for-mixed-precision-multigrid-solvers/ALGEBRAIC.pdf
+Theorems 4.1 and 8.1: sparse-SPD rounding and contraction analysis with level-dependent precision. Applies to the specified iterative-refinement and multigrid constructions.
+Published article: https://doi.org/10.1137/20M1348571
+
+[60] James Demmel, Ioana Dumitriu, and Olga Holtz. Fast Linear Algebra Is Stable. 2007. Numerische Mathematik 108, 59-91
+https://people.eecs.berkeley.edu/~demmel/Demmel_pubs_07_11_final/J79_Fast_Linear_Algebra_is_Stable.pdf
+Normwise stability with essentially the matrix-multiplication exponent under stated algorithmic and precision assumptions. No claim of sparse-structure preservation or practical speed.
+
+[61] Youran Sun, Xingyu Ren, Chugang Yi, et al.. SciPiVot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents. 2026. arXiv v1, 15 October
+https://arxiv.org/html/2610.21082v1
+Sections 2-4 and Appendices A-D. Thirteen fresh researchers, with AI assistance available; retrospective model-filtered corrections. No matched time/cost, unaided-human arm, or sparse-solver subgroup. Repeated option orders are not independent cases.
+Pinned results: https://github.com/AutoResearch-Factory/SciPIvot/blob/7756ba0ed2212f2a459b4664456695c527178c94/results/all_model_scores.csv
+
+[62] Mikhail Khodak, Min Ki Jung, Brian Wynne, Edmond Chow, and Egemen Kolemen. One-shot acceleration of transient PDE solvers via online-learned preconditioners. 2026. Computer Physics Communications 327, 110304; manuscript v4
+https://arxiv.org/html/2509.08765v4
+Six fluid/MHD cases, ten trials each; 33 configurations. Learning and backstop costs included. Section 4.2 identifies costly early exploration. The motivating regret comparator is the best fixed configuration, not a newly invented representation.
+Published article: https://doi.org/10.1016/j.cpc.2026.110304
+
+[63] Yongseok Jang, Pierre Jolivet, and Théo Mary. Mixed Precision Augmented GMRES. 2026. Numerical Linear Algebra with Applications 33(4), e70117
+https://onlinelibrary.wiley.com/doi/full/10.1002/nla.70117
+Sections 4-6 explain finite-precision defects in GMRES-DR simplifications and test the augmented formulation. Sparse and CFD examples include remaining precision sensitivity. Hardware-specific timing is deferred; this is not a human-agent comparison.
+Author manuscript: https://tmary.perso.lip6.fr/doc/MixedAugGMRES.pdf
+
+[64] Noaman Khan and Erin Carson. Mixed precision iterative refinement with adaptive precision sparse approximate inverse preconditioning. 2025. Engineering with Computers 41, 3833-3846
+https://link.springer.com/article/10.1007/s00366-025-02187-z
+Section 4 and conclusion. steam1 storage fractions and iteration counts are not wall-clock speedups. The authors identify prediction of favorable matrix cases and large-scale timing as further work.
+
+[65] Emmanuel Agullo, Luc Giraud, Pierre Jolivet, Théo Mary, and Alexandre Tabouret. Doubly adaptive precision restarted GMRES. 2026. HAL v1, submitted 2 June
+https://hal.science/hal-05640635v1
+Official HAL abstract describes temporal error relaxation and spatial precision assignment, plus an author-reported maximum speedup. Full PDF was inaccessible in this review; the numerical tables were not independently inspected.
+
+[66] Michel Crouzeix and Anne Greenbaum. Update to: Spectral sets: numerical range and beyond. 2026. arXiv v2, 23 September
+https://arxiv.org/html/2609.22460v2
+Uses Lorist-Schwenninger to obtain 2-spectral annuli under the stated norm assumptions, and 4-spectral convex regions with holes or cutouts. Sections 4-5 state the extra inverse/numerical-radius information and GMRES/rational-Krylov applications. A useful region is not obtained for free.
+
+[67] Cecilia Chen and John Urschel. Estimating the numerical range with a Krylov subspace. 2024. arXiv:2411.19165
+https://arxiv.org/abs/2411.19165
+Quantitative approximation and limitations of projected numerical ranges. Orthonormal compression gives an inner set. The analysis excludes floating-point implementation; no general cheap outer certificate is asserted.
+Author manuscript: https://math.mit.edu/~urschel/preprints/numrange.pdf
+
+[68] Siegfried M. Rump. Verified Error Bounds for Sparse Systems Part I: The Splitting of a Matrix into Two Factors. 2026. SIAM Journal on Matrix Analysis and Applications 47(4), 1739-1784; online 8 October
+https://doi.org/10.1137/25M1722573
+General real/complex sparse systems; entrywise verified error bounds, factorization/fill effects and adaptive use of stronger bounds. Published 8 October. Existing verification is a baseline, not evidence of an unoccupied human role.
+Author final manuscript: https://www.tuhh.de/ti3/paper/rump/sparselss_I_final.pdf
+
+[69] FrontierCS 2 Team. FrontierCS 2: A Benchmark for Computer Science R&D, current task records. 2026. Live asset checked 4 November 2026
+https://frontier-cs.org/task/
+Live asset checked 4 November: 18 systems, 48 tasks, one main run each. SpGEMM, KAMI and Polar Express have different evaluators. The October paper has 12 systems; completion-time curves do not regrade intermediate methods or independently vary budgets. The 6 November update adds systems and reports judge repairs in Glenside, RAGEN, SCOPE and Parallel DBSCAN, plus shared evaluation infrastructure. It does not identify the three numerical cases cited here as affected. Counts and scores are evaluation-version dependent; the text retains its dated 4 November snapshot.
+Pinned benchmark source: https://github.com/FrontierCS/FrontierCS-2/tree/1e6dfa12210043c394c392a4f9168dca68e97aaa
+Data asset: https://frontier-cs.org/assets/js/fcs2-data.js?v=1793842044
+6 November evaluation update: https://frontier-cs.org/blog/frontiercs-2-update/
+
+[70] FrontierCS 2 Team. SVG-EAR: The Baseline No Model Could Beat. 2026. 19 October
+https://frontier-cs.org/blog/svg-ear-measured-error/
+First-party twelve-system case study. Astra's budget and variance-correction contributions are not separately ablated. Exact attention misses the same five fidelity checks and one additional check. No all-checks pass does not mean no algorithmic improvement.
+
+[74] Amaç Herdağdelen, Hailey Joren, and Alex Tamkin. How AI agents shape experts' judgment calls. 2026. 27 October
+https://www.anthropic.com/research/agents-judgment-calls
+Fifty agent-using professional analysts, Opus 4.8, randomized and deliberately strengthened preferences. Defensible analytical choices, not correctness labels. The self-selected nonuser group does not support a causal AI-versus-no-AI accuracy comparison.
+
+[75] Noah Amsel, Yves Baumann, Paul Beckman, et al.. Linear Systems and Eigenvalue Problems: Open Questions from a Simons Workshop. 2026. arXiv v1, 5 February
+https://arxiv.org/html/2602.05394v1
+Sections 2.1, 2.2 and 2.5. Problems 2.1-2.2 concern parameterized families and fast algorithms. Problem 2.3 specifies polynomially bounded SWCDDM matrices, constant inverse spectral comparison, near-linear construction and linear application. The preconditioning discussion distinguishes worst-case bounds from observed convergence. Restored and rechecked in the 7 November review.
+
+[76] Majid Rasouli, Vidhi Zala, Robert M. Kirby, and Hari Sundar. Scalable Lazy-update Multigrid Preconditioners. 2019. IEEE HPEC
+https://users.cs.utah.edu/~kirby/Publications/HPEC19.pdf
+Existing hierarchy reuse, coarse-operator updates, and local update strategies for changing systems. Shows why reuse-versus-rebuild is an established algorithmic problem; no universally optimal policy is claimed.
+Published article: https://doi.org/10.1109/HPEC.2019.8916504
+
+[77] Zherui Yang, Zhehao Li, Kangbo Lyu, Yixuan Li, Tao Du, and Ligang Liu. Learning Sparse Approximate Inverse Preconditioners for Conjugate Gradient Solvers on GPUs. 2025. NeurIPS 2025
+https://arxiv.org/html/2510.27517v1
+Replaces triangular applications with sparse matrix-vector products. Appendix D includes CPU/GPU and default AMG comparisons; the winner depends on hardware and matrix family. Fixed support, SPD systems, single-GPU scope.
+
+[78] Marian Brezina, Robert Falgout, Scott MacLachlan, Thomas Manteuffel, Steve McCormick, and John Ruge. Adaptive Smoothed Aggregation (alphaSA) Multigrid. 2005. SIAM Review 47(2), 317-346
+https://doi.org/10.1137/050626272
+Adaptive generation of near-kernel candidates and adjustment of coarse construction. Missing-mode discovery is an established automatic method, not a new human-exclusive task.
+Author manuscript: https://www.math.mun.ca/~smaclachlan/research/aSA2.pdf
+
+[79] James Brannick, Fei Cao, Karsten Kahl, Robert Falgout, and Xiaozhe Hu. Optimal Interpolation and Compatible Relaxation in Classical Algebraic Multigrid. 2018. SIAM Journal on Scientific Computing 40(3), A1473-A1493
+https://doi.org/10.1137/17M1123456
+Coarse-space quality, compatible relaxation, and sparse bootstrap interpolation. Optimal-characterization results and practical estimates must be distinguished from cheap certificates for arbitrary recursive hierarchies.
+Preprint: https://arxiv.org/pdf/1703.10240
+
+[80] Henry Shin. A global girth obstruction for Garg-Mineyev taiko product structures. 2026. arXiv:2607.01716v1, 2 July 2026
+https://arxiv.org/html/2607.01716v1
+An exact incidence-geometric example of strengthening an insufficient description. The principal structural theorem closes the specified triple-girth assembly route; the sharper frontier uses a separate finite certificate. This illustrates the mathematical practice, not an empirical human advantage over AI.
+Worked explanation at Refactor: https://refactor.press/papers/taiko-girth-obstruction
+
+[81] Michael Atiyah. Mathematics and the computer revolution. 1984 / 2016. 1984 essay reprinted with a new introduction, Izvestiya: Mathematics 80(4), 637-646 (2016)
+https://www.mathnet.ru/php/getFT.phtml?jrnid=im&paperid=8512&what=fullteng
+Page 644 connects theoretical development with avoiding large human calculations and predicts that computers may lack the same incentive. The historical interpretation is distinguished from that prediction. Added in the 7 November review.
+
+[82] Herbert S. Wilf and Doron Zeilberger. Rational functions certify combinatorial identities. 1990. Journal of the American Mathematical Society 3(1), 147-158
+https://sites.math.rutgers.edu/~zeilberg/mamarim/mamarimPDF/rational.pdf
+Certificate identities and verification for the stated hypergeometric setting. Used as an example of mathematical structure enabling systematic computer proof. Added in the 7 November review.
+
+[83] Bernardino Romera-Paredes et al.. Mathematical discoveries from program search with large language models. 2024. Nature 625, 468-475; published online 14 December 2023
+https://www.nature.com/articles/s41586-023-06924-6
+FunSearch searches for constructor programs within a supplied evaluator and program structure. The authors discuss interpretable, parsimonious, symmetric constructions and their role in subsequent investigation. Added in the 7 November review.
+
+[84] Joshua Batson, Daniel A. Spielman, and Nikhil Srivastava. Twice-Ramanujan Sparsifiers. 2014. SIAM Review 56(2), 315-334
+https://epubs.siam.org/doi/10.1137/130949117
+The stated reweighted-edge bound controls every quadratic form with factors (1 ± epsilon)². The deterministic construction is polynomial time, without a claim here that its original implementation gives a practical fast solver. Added in the 7 November review.
+Author manuscript: https://cs-www.cs.yale.edu/homes/spielman/PAPERS/sirev56-2_315.pdf
+
+[85] Hugo Melchers, Victorita Dolean, and Michael Abdelmalik. When can a neural operator replace a coarse solve? Architectural principles for two-level preconditioning. 2026. arXiv v3, 15 July 2026
+https://arxiv.org/html/2605.19867v3
+Sections 3.2 and 4.5. Input-output basis matching and right-hand-side linearity are tested on specified two-dimensional problems. A low-rank coarse map alone is not positive definite on the entire fine space. Iteration and runtime claims are distinguished. Added in the 7 November review.
+Architectural analysis: https://arxiv.org/html/2605.19867v3#S3.SS2
+
+[86] Chenglong Bao, Chen Cui, and Ruohua Li. Learning Coarse Spaces for Two-Grid Methods from Smoothed Errors with Applications to High-Contrast Porous Media Flow. 2026. arXiv v1, 4 November 2026
+https://arxiv.org/html/2611.05837v1
+Basis-invariant learning and conditional discrete perturbation analysis. Forming the sharper Gram-matrix diagnostic requires solves with the original operator and is performed offline. Tests on specified parameter families do not establish a uniform guarantee for trained outputs. Added in the 7 November review.
+Operator perturbation analysis: https://arxiv.org/html/2611.05837v1#S5.SS2
+
+[87] Jung Eun Huh, Coralia Cartis, and Yuji Nakatsukasa. Adaptive LSQR Preconditioning from One Small Sketch. 2026. arXiv v1, 6 April 2026
+https://arxiv.org/html/2604.05065v1
+Sections 4.1-4.2 require positive regularization, CUR approximation error smaller than that parameter, and the target-level condition. The error condition is needed in each phase of the multiphase bound. Updates also access selected matrix rows and columns. Added in the 7 November review.
+
+[88] Mert Yuksekgonul et al.. Learning to Discover at Test Time. 2026. arXiv v2, 5 February 2026
+https://arxiv.org/html/2601.16175v2
+TTT-Discover updates weights on the current target with a supplied continuous reward. Its objective is one strong artifact. General transfer and complete training/inference/evaluation cost parity require separate evidence. Added in the 7 November review.
+
+[89] Ian Berlot-Attwell, Tobias Sesterhenn, Frank Rudzicz, and Xujie Si. Is This LLM Library Learning? Evaluation Must Account For Compute and Behaviour. 2026. Proceedings of EACL 2026
+https://aclanthology.org/2026.eacl-long.163/
+Re-examines LEGO-Prover, TroVE, and AgentOptimizer under stronger compute controls. The behavioural investigation concerns actual reuse of LEGO-Prover's learned lemmas. The findings are scoped to the systems studied. Added in the 7 November review.
+
+[90] Haocheng Ju et al.. Automated Conjecture Resolution with Formal Verification. 2026. arXiv:2604.03789v2
+https://arxiv.org/html/2604.03789v2
+Section 4.4 compares two continuations from one checkpoint with three UFD obligations. Blueprint production cost, replication across projects and a generalist comparison are absent. The agent retained its Kaplansky route while drawing on the supplied blueprint. Added in the 7 November review.
+Formalization and intervention comparison: https://arxiv.org/html/2604.03789v2#S4.SS4
+
+[91] Kimm Fesenmaier. Caltech and AIM Build AI Platform with Mathematicians for Mathematicians. 2026. Caltech announcement, 7 October 2026
+https://www.caltech.edu/about/news/caltech-and-aim-build-ai-platform-with-mathematicians-for-mathematicians
+Documents the announced platform and the account of research taste attributed to Yisong Yue. It supports the existence of this proposed division of labour, not a measured or permanent human advantage. Added in the 7 November dossier review.
+
+[92] Daniël Lakens. Equivalence Tests: A Practical Primer for t Tests, Correlations, and Meta-Analyses. 2017. Social Psychological and Personality Science 8(4), 355-362
+https://journals.sagepub.com/doi/10.1177/1948550617697177
+Supports prespecifying the smallest effect of interest and distinguishing evidence against a worthwhile effect from nonsignificance. The proposed study requires confidence procedures appropriate to its binary success outcome, dependence, two contrasts, and stopping rule. Added in the 7 November dossier review.
+Publisher PDF at the author’s institution: https://pure.tue.nl/ws/portalfiles/portal/80918653/lakeequi2017.pdf

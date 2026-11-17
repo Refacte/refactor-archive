@@ -20,7 +20,7 @@
 \pagestyle{fancy}\fancyhf{}
 \fancyhead[L]{\small\textsc{When a nonlinear law becomes additive}}
 \fancyhead[R]{\small\textsc{Refactor}}
-\fancyfoot[L]{\scriptsize Refactor \textperiodcentered\ November 4, 2026}
+\fancyfoot[L]{\scriptsize Refactor \textperiodcentered\ Revised November 6, 2026}
 \fancyfoot[R]{\small\thepage}
 \setlength{\headheight}{16pt}
 \renewcommand{\headrulewidth}{.3pt}
@@ -46,7 +46,7 @@
 \vspace{.4em}
 {\large\itshape Retain the coefficients, calculate the repair, and find what survives\par}
 \vspace{.7em}
-{Henry Shin \hspace{.6em}\textperiodcentered\hspace{.6em} November 4, 2026\par}
+{Henry Shin \hspace{.6em}\textperiodcentered\hspace{.6em} November 4, 2026; revised November 6, 2026\par}
 \vspace{.6em}
 
 Multiply two expressions, retain their constant and linear coefficients, and then repeat the calculation while retaining the quadratic coefficient as well. That extra coefficient can decide whether a change of coordinates exists.
@@ -57,7 +57,7 @@ The operation we will study is
 \]
 With ordinary arithmetic modulo three and \(a=1\), its quadratic interaction can be repaired, but a cubic error remains. If the coefficient \(a\) is a retained symbol whose square is discarded, the same correction is exact. Keeping its square changes the answer again.
 
-We will calculate each of these cases, then prove the general rule in arithmetic modulo a prime \(p\): the operation becomes addition under an invertible coordinate exactly when \(a^{p-1}=0\). Both the coordinate and its inverse will be finite polynomials.
+We will calculate each of these cases, then prove the general rule in arithmetic modulo a prime \(p\): this parameter family becomes addition under an invertible coordinate exactly when \(a^{p-1}=0\). When the condition holds, we construct one coordinate and its inverse as finite polynomials. Other working coordinates can have infinite tails; the appendix determines all the remaining freedom.
 
 Next, we allow every symmetric operation with zero as its identity, through degree three. We determine every possible coordinate change and the coefficient it cannot remove. A final example passes all the tests through degree eight and fails at degree nine.
 

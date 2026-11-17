@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1440" viewBox="0 0 2560 1440">
+  <rect width="2560" height="1440" fill="#08141b"/>
+  <path d="M300 480H2260M300 960H2260" stroke="#263c45" stroke-width="2"/>
+  <path d="M568 538H638M568 538V608M1992 902H1922M1992 902V832" fill="none" stroke="#c8edb3" stroke-width="3"/>
+  <text x="656" y="593" font-family="Arial,sans-serif" font-size="30" letter-spacing="5" fill="#aabbbf">HENRY SHIN</text>
+  <text x="648" y="755" font-family="Georgia,serif" font-size="164" letter-spacing="-5" fill="#f0eee5">Refactor<tspan fill="#c8edb3">.</tspan></text>
+  <text x="656" y="835" font-family="Georgia,serif" font-size="44" fill="#f0eee5">Changing what becomes elementary.</text>
+  <text x="1710" y="887" font-family="Arial,sans-serif" font-size="29" letter-spacing="2" fill="#aabbbf">refactor.press</text>
+  <g transform="translate(1644 535) scale(1.65)"><path d="M53 154V38H94C124 38 141 52 141 75C141 94 129 107 110 112C114 117 119 123 125 130L147 154H130L99 119C95 114 91 112 85 112H67V154Z M67 51V99H93C114 99 127 91 127 75C127 59 116 51 94 51Z" fill="#f0eee5" fill-rule="evenodd"/><path d="M148.75 28.5H153.25V35.75H160.5V40.25H153.25V47.5H148.75V40.25H141.5V35.75H148.75Z" fill="#c8edb3"/></g>
+</svg>

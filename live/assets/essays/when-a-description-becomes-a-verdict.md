@@ -22,7 +22,7 @@ This gives a test: if a description determines an answer, cases it cannot distin
 
 A description can also provide evidence for an answer without determining it. Its force then depends on how reliably the retained features bear on the question. The strength of the judgment should reflect what remains uncertain.
 
-“No new theorem” can answer a legitimate question about a paper’s results. It leaves open whether the paper offers a better explanation, a usable procedure, or a connection between existing arguments. Those gains need demonstration. Their presence may justify a place in a textbook while remaining insufficient for a research journal.
+“No new theorem” can answer a legitimate question about a paper’s results. It leaves open whether a different argument [provides a search procedure, a stronger estimate, or an error calculation](https://refactor.press/essays/what-a-new-proof-makes-possible.html#from-existence-to-a-procedure). Those gains need demonstration. Their presence may justify a place in a textbook while remaining insufficient for a research journal.
 
 ## 3. What the arrangement does
 
@@ -64,7 +64,7 @@ The distinction is between having enough reason to act and having enough reason 
 
 Mathematical publishing guidelines differ on whether editors owe reasons for nonacceptance.[^4] Whenever a substantive reason is given, its scope can remain precise: “The claimed theorem follows from this result under these hypotheses”; or “The comparison is informative, but the journal requires new research results.”
 
-Correcting a claim of redundancy may leave the decision unchanged while withdrawing an unsupported description of the work. The contribution has not been shown absent merely because it was insufficient for that venue.
+When a claim of redundancy fails, the correction belongs in the account of the work even if the publication decision stands. A venue’s reason for declining a contribution and a description of what that contribution contains must each answer to its own evidence.
 
 ## 6. Keeping the boundary visible
 
@@ -72,7 +72,7 @@ A useful assessment locates the claim, identifies the comparison, and makes clea
 
 An assessment can state what was checked: the hypotheses of a cited theorem, the equivalence between two constructions, or the behavior of a proposed procedure on a counterexample. That makes the scope of the conclusion available to another reader.
 
-A decision to decline further review can then remain distinct from a finding that the claimed result fails or follows from known work.
+An assessment becomes a status practice when an evaluator’s standing carries a conclusion that the examination did not establish. The [accounts of premature triviality](https://refactor.press/essays/purity-prestige-and-pettiness.html#triviality-before-understanding) make the cost concrete. A researcher must supply the missing comparison and repair an impression already treated as a judgment.
 
 ## Notes and sources
 
@@ -83,3 +83,33 @@ A decision to decline further review can then remain distinct from a finding tha
 [^3]: Daniel Kahneman and Gary Klein, “[Conditions for Intuitive Expertise: A Failure to Disagree](https://bear.warrington.ufl.edu/brenner/mar7588/Papers/kahneman-klein-2009.pdf),” American Psychologist 64 (2009), 515–526, especially pp. 520–524. Their synthesis concerns conditions for intuitive skill and its limits; it supplies no direct measurement of mathematical refereeing.
 
 [^4]: Compare IMU/CEIC, [Best Current Practices for Mathematics Journals](https://www.mathunion.org/fileadmin/CEIC/bestpractice/Best_Current_Practices_for_Journals.pdf) (June 2021), §§1.1.1–1.1.2 and 1.3.2, with the appendix to the [AMS Guidelines for Journal Editors](https://www.ams.org/sec-guidelines-jrl-editors). IMU recommends communicating grounds and permits brief editorial justifications; the AMS appendix does not oblige editors to give a rationale for nonacceptance. These recommendations do not settle a universal procedural entitlement.
+
+## Related essays
+
+### [What a New Proof Makes Possible](https://refactor.press/essays/what-a-new-proof-makes-possible.html#what-the-connection-between-proofs-reveals)
+
+A comparison of two proofs that identifies an approximation, its error and the conditions for equality.
+
+### [Mathematical Life in the Age of AI](https://refactor.press/essays/mathematical-life-in-the-age-of-ai.html#a-hearing-before-a-verdict)
+
+The consequences of allowing an early assessment to decide how much of a contribution will be heard.
+
+### [When Accountability Stops Being Reciprocal](https://refactor.press/essays/when-accountability-stops-being-reciprocal.html#making-judgment-answerable)
+
+From what warrants a judgment to the conditions under which people can contest its use.
+
+### [Abstraction is no refuge from AI](https://refactor.press/essays/ai-research-and-reliable-numerical-computation.html#earning-reliability)
+
+Why a computed residual, a learned approximation and an error guarantee answer different questions.
+
+### [Purity, Prestige, and Pettiness](https://refactor.press/essays/purity-prestige-and-pettiness.html#triviality-before-understanding)
+
+Premature triviality and the cost of letting professional standing outrun the comparison actually made.
+
+## Further mathematical reading
+
+Tensorgami archive · optional further reading
+
+### [Fourier, Symmetry, and Reconstruction](https://refactor.press/notes/fourier-symmetry-and-reconstruction.html#section-12-3)
+
+Continue the identity-and-shear example into the circle transform, where a thickened spectral point records the nilpotent action concealed by equal eigenvalues.

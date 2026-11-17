@@ -81,6 +81,8 @@
 .essay-library { max-width:49rem; margin-bottom:4rem; border-top:1px solid var(--line) }
 .essay-library .essay-card { padding:2rem 0; border-bottom:1px solid var(--line) }
 .essay-library .essay-card h2,.essay-library .essay-card h3 { font-size:2.4rem }
+.essay-index-actions,.essay-download-actions { display:flex; flex-wrap:wrap; align-items:center; column-gap:1.3rem; row-gap:.35rem }
+.essay-card .essay-index-actions { margin-top:1rem; font-size:.85rem }
 .essay-group { padding-top:1.8rem }
 .essay-group + .essay-group { margin-top:1.6rem }
 .essay-group-label { font:500 .75rem/1.6 var(--sans); letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin:0 }
@@ -89,7 +91,8 @@
 .essay-deck { color:var(--muted); font:italic 1.4rem/1.5 var(--serif); margin:0 0 1.2rem }
 .essay-heading .byline { margin:0 }
 .essay-heading .essay-notice { font:.875rem/1.65 var(--sans); color:var(--muted); margin:1.2rem 0 0 }
-.essay-heading .text-links { font-size:.82rem; margin-top:.75rem }
+.essay-heading .text-links,.essay-end .essay-download-actions { font:.85rem/1.6 var(--sans); margin-top:.75rem }
+.essay-download-label { color:var(--muted); font-size:.78rem }
 .essay-layout { display:grid; grid-template-columns:14rem minmax(0,44rem); gap:3rem; margin-bottom:4rem; align-items:start }
 .essay-sidebar { position:sticky; top:2rem; max-height:calc(100vh - 4rem); overflow-y:auto; padding-right:1rem; font-size:.8rem }
 .essay-sidebar h2 { font:500 .75rem var(--sans); letter-spacing:.1em; text-transform:uppercase; margin:0 0 1.2rem; color:var(--muted) }

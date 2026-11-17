@@ -6,7 +6,7 @@
     "orcid": "https://orcid.org/0009-0000-6453-6865",
     "github": "https://github.com/Refacte",
     "mathematicsStackExchange": "https://math.stackexchange.com/users/268083/henry-shin",
-    "youtube": "https://www.youtube.com/@hkshin",
+    "youtube": "https://www.youtube.com/@refactorpress",
     "interests": [
       "Mathematical refactoring",
       "Algorithmic group theory",
@@ -369,18 +369,19 @@
       "pdf": "/pdfs/algebra/When_a_Formal_Logarithm_Fails.pdf",
       "page": "/notes/when-a-formal-logarithm-fails",
       "source": null,
-      "edition": "Revised November 3, 2026",
-      "revision": "Revised November 3, 2026: the coefficient repair now precedes the framework, and the closing section gives an explicit finite correction procedure with its free-choice qualification. The web, PDF, Markdown and TeX editions agree.",
+      "edition": "Revised November 6, 2026",
+      "revision": "November 6, 2026: derived the Hasse substitution and compatibility equations, made the lifting repair constructive, and motivated the pair and ghost coordinates with a worked order-nine example and explicit information-loss audit.",
       "readingGuide": "/expositions#working-notes",
-      "pageCount": 13,
-      "pdfSha256": "f058b2ea08fbf0cc1b7160dcdc171b1a9b0b29addb23f2ab23629dad64d08427",
-      "manuscriptSha256": "bfb10e413eb8eecd9ededdb740d220bb398e3638576741d612279c93abeabf27",
+      "pageCount": 14,
+      "pdfSha256": "cca0387a9e7d3c125cb06c7c4c3a90f9d8905e5f0f1f8c3e29d986471a1a85bb",
+      "manuscriptSha256": "9a6b502ee8667871d6e26b8a49088d990fb01df3d96c9ec657c38bc4ecda798f",
       "revisionDates": [
-        "2026-11-03"
+        "2026-11-03",
+        "2026-11-06"
       ],
       "readingRole": "mechanism-note",
       "collection": "refactor",
-      "editorialRevision": "November 3, 2026: introductory and concluding prose tightened; mathematical statements and calculations retained."
+      "editorialRevision": "November 6, 2026: derived the Hasse substitution and compatibility equations, made the lifting repair constructive, and motivated the pair and ghost coordinates with a worked order-nine example and explicit information-loss audit."
     },
     {
       "slug": "quotients-and-reconstruction",
@@ -549,11 +550,12 @@
       "pdf": "/pdfs/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.pdf",
       "page": "/notes/separated-polynomial-divisibility",
       "kind": "Exposition",
-      "revision": "Revised November 4, 2026: added a complete numerical extraction and rejection example. The theorem statements, proofs, hypotheses and numbering are retained; the complete browser edition and PDF agree.",
+      "revision": "Revised November 4, 2026: added a complete numerical extraction and rejection example. The theorem statements, proofs, hypotheses and numbering are retained; the complete browser edition and PDF agree. Revised November 10, 2026: made the regular-function scope of the coordinate-ring interpretation explicit.",
       "pageCount": 16,
       "revisionDates": [
         "2026-09-22",
-        "2026-11-04"
+        "2026-11-04",
+        "2026-11-10"
       ],
       "readingRole": "mechanism-note",
       "collection": "refactor",
@@ -562,8 +564,8 @@
       "readingBody": "content/expositions/separated-polynomial-divisibility.html",
       "readingSource": "public/tex/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.tex",
       "readingFormat": "complete",
-      "pdfSha256": "6b6c352205bbfa09e2e86020cb4c32d7d514bba81057bf3ae6e96748e7139f86",
-      "edition": "Revised November 4, 2026",
+      "pdfSha256": "7d695cb39b6655713d748ea95e866ba939c361acc67efcbad4e0c4dd5ad2c999",
+      "edition": "Revised November 10, 2026",
       "currentReadingLinks": [
         {
           "url": "#a-worked-extraction-and-a-failed-test",
@@ -628,10 +630,11 @@
       "pdf": "/pdfs/number-theory/Extracting_the_First_Prime_Greater_than_m.pdf",
       "page": "/notes/extracting-first-prime",
       "kind": "Exposition",
-      "revision": "Revised October 7, 2026: clarified the introduction while preserving the problem’s IRC provenance. The theorem, proof, and appendix are unchanged.",
-      "pageCount": 7,
+      "revision": "Revised October 7, 2026: clarified the introduction while preserving the problem’s IRC provenance. The theorem, proof, and appendix are unchanged. Revised November 10, 2026: clarified the real-to-integer reduction in the primorial bound. The bound and prime selector are unchanged.",
+      "pageCount": 8,
       "revisionDates": [
-        "2026-10-07"
+        "2026-10-07",
+        "2026-11-10"
       ],
       "readingRole": "mechanism-note",
       "collection": "refactor",
@@ -639,9 +642,9 @@
       "readingBody": "content/expositions/extracting-first-prime.html",
       "readingSource": "content/expositions/extracting-first-prime.md",
       "readingFormat": "complete",
-      "pdfSha256": "93e683738e2d548322042862346503c4cd4fc47fb9b39743fce886b93a0d0956",
+      "pdfSha256": "f8807673b0046ccc9f8b1d5da1d835f9c71fd4ce4e970d7d5a2307c50a7a4a37",
       "manuscript": "/assets/expositions/extracting-first-prime.md",
-      "manuscriptSha256": "8aa658d205f15c88df1e2d2894ed4603cbcc32cee6c59014b35b028ee383f0a9",
+      "manuscriptSha256": "f4a453727d58f74d8c05ca69f14cb115574f746682624ad3862e4c62e893de08",
       "edition": "May 1, 2026"
     },
     {
@@ -770,15 +773,15 @@
       "readingRole": "mechanism-note",
       "collection": "refactor",
       "readingFormat": "complete",
-      "edition": "November 4, 2026",
+      "edition": "Revised November 6, 2026",
       "page": "/notes/when-a-nonlinear-law-becomes-additive",
       "readingBody": "content/expositions/when-a-nonlinear-law-becomes-additive.html",
       "readingSource": "public/tex/algebra/When_a_Nonlinear_Law_Becomes_Additive.tex",
       "tex": "/tex/algebra/When_a_Nonlinear_Law_Becomes_Additive.tex",
       "sourceArchive": "/tex/algebra/When_a_Nonlinear_Law_Becomes_Additive_sources.zip",
       "pdf": "/pdfs/algebra/When_a_Nonlinear_Law_Becomes_Additive.pdf",
-      "pdfSha256": "2d23b64dbf9fbe5a82d770ffecf24de4a078dc35f8c27dcc43cca1ebdfdaac9d",
-      "pageCount": 18,
+      "pdfSha256": "0e599b41d9b0e188f6d74fdcb45049c0cecc6e2827e21439178f385e9bc3140b",
+      "pageCount": 20,
       "readingGuide": "/expositions#coordinate-repair-path",
       "currentReadingLinks": [
         {
@@ -801,6 +804,9 @@
           "label": "Check the degree-nine obstruction",
           "description": "An exact example that passes the cubic test."
         }
+      ],
+      "revisionDates": [
+        "2026-11-06"
       ]
     }
   ],
@@ -836,47 +842,47 @@
     {
       "id": "hidden-cubic",
       "title": "Make a hidden cubic appear",
-      "subject": "Elimination · Higher operations",
+      "subject": "Elimination · Infinitesimal motion",
       "question": "How can quadratic equations force a cubic obstruction?",
-      "operation": "Change variables, eliminate a relation, and carry the residual through successive coefficients.",
-      "result": "The residual x³ and a finite coefficient test: every nonzero first-order direction fails at third order.",
+      "operation": "Measure a solved equation's error, eliminate it, and test every possible correction to a motion.",
+      "result": "An exact continuation criterion, the cubic obstruction, and a reusable graph-elimination rule.",
       "url": "/calculi/hidden-cubic",
       "sourceNote": "what-a-derivative-retains",
       "sourceAnchor": "nonlinear-elimination",
       "body": "content/calculi/hidden-cubic.html",
       "prerequisites": "Polynomial expansion and coefficients of a power series.",
-      "minutes": 11,
-      "revised": "November 5, 2026"
+      "minutes": 18,
+      "revised": "November 6, 2026"
     },
     {
       "id": "coupled-operators",
       "title": "Classify compatible couplings",
       "subject": "Linear algebra · Representation theory",
-      "question": "Which couplings of two commuting operations are genuine, and which disappear after a change of lift?",
-      "operation": "Multiply block matrices, derive the compatibility map and the allowed gauge map, then row-reduce.",
-      "result": "Parameters for the couplings, their automorphisms, and a coordinate-change certificate when two inputs agree.",
+      "question": "When can two commuting operations be separated by the same change of coordinates?",
+      "operation": "Describe an invariant complement as a graph, classify the shared-coordinate couplings, and derive reusable correction formulas.",
+      "result": "Complete class parameters, equivalence and obstruction certificates, and a stronger criterion for simultaneous splitting.",
       "url": "/calculi/coupled-operators",
       "sourceNote": "quotients-and-reconstruction",
       "sourceAnchor": "t:commuting-calculus",
       "body": "content/calculi/coupled-operators.html",
       "prerequisites": "Block matrices and solving linear equations over a field.",
-      "minutes": 14,
-      "revised": "November 5, 2026"
+      "minutes": 30,
+      "revised": "November 6, 2026"
     },
     {
       "id": "tensor-chains",
       "title": "Construct every tensor chain",
       "subject": "Finite algebra · Operators",
       "question": "How can we construct every chain for the combined operator?",
-      "operation": "Build a lowering operator, solve its coefficient recurrence, and construct chains of every required length.",
+      "operation": "Derive a backward move from local cancellation and degree, solve for chain starts, and construct the change of basis.",
       "result": "A chain basis and Jordan block sizes for a Kronecker sum, with ranks of all powers, in characteristic zero.",
       "url": "/calculi/tensor-chains",
       "sourceNote": "fourier-symmetry-and-reconstruction",
       "sourceAnchor": "jordan-tensor-calculus",
       "body": "content/calculi/tensor-chains.html",
       "prerequisites": "Finite-dimensional linear algebra and polynomial arithmetic; characteristic zero is explicit.",
-      "minutes": 18,
-      "revised": "November 5, 2026"
+      "minutes": 27,
+      "revised": "November 6, 2026"
     },
     {
       "id": "broken-circuits",
@@ -1008,7 +1014,6 @@
       "pdf": "https://arxiv.org/pdf/2607.01716v1",
       "version": "1",
       "versionDate": "2026-07-02",
-      "statusDetail": "Under consideration at Groups, Geometry, and Dynamics.",
       "collection": "refactor",
       "featured": true
     },
@@ -1091,62 +1096,67 @@
     {
       "slug": "ai-research-and-reliable-numerical-computation",
       "published": true,
-      "title": "AI research and the remaining human advantage",
-      "subtitle": "Why abstraction is no refuge, and where sparse numerical computation offers a stronger research bet",
+      "title": "Abstraction is no refuge from AI",
+      "subtitle": "Reliable computation and the test of specialist advantage",
       "subject": "AI and research strategy",
-      "summary": "The old refuge in abstraction is over. I argue for discovering better diagnostic and repair rules where spectral graph algorithms, matrix analysis, and numerical analysis meet, and explain how a specialist must earn an advantage beyond strong AI.",
+      "summary": "AI reaches the conceptual work once treated as a human refuge. The positive case concerns economical numerical representations, useful guarantees, and a separate test of what specialists add.",
       "date": "2026-11-04",
       "manuscript": "content/essays/ai-research-and-reliable-numerical-computation.json",
       "body": "content/essays/ai-research-and-reliable-numerical-computation.html",
       "page": "/essays/ai-research-and-reliable-numerical-computation",
       "staticMath": true,
-      "pdf": "/assets/essays/ai-research-and-reliable-numerical-computation.28364071cf51dc7f.pdf",
-      "source": "/assets/essays/ai-research-and-reliable-numerical-computation.446d6a4b9b43129a.txt",
+      "pdf": "/assets/essays/ai-research-and-reliable-numerical-computation.5fa20aabedc33f48.pdf",
+      "source": "/assets/essays/ai-research-and-reliable-numerical-computation.d5802969bc93437a.txt",
       "sourceLabel": "Reading text",
       "sections": [
         {
           "id": "a-rapidly-changing-advantage",
           "number": "1",
-          "title": "A rapidly changing research advantage"
+          "title": "What the evidence changes"
         },
         {
           "id": "beyond-verbal-imitation",
           "number": "2",
-          "title": "Beyond verbal imitation"
+          "title": "Conceptual work is already being automated"
         },
         {
           "id": "which-work-remains-scarce",
           "number": "3",
-          "title": "Where does human expertise still matter?"
+          "title": "A contribution has to earn its value"
+        },
+        {
+          "id": "why-compression-still-matters",
+          "number": "4",
+          "title": "Why compression still matters"
         },
         {
           "id": "structure-under-computation",
-          "number": "4",
-          "title": "Finite structure under computation"
+          "number": "5",
+          "title": "What a sparse representation must preserve"
         },
         {
           "id": "a-concrete-research-direction",
-          "number": "5",
-          "title": "Diagnosing and repairing sparse representations"
+          "number": "6",
+          "title": "Constructing, diagnosing, and repairing"
         },
         {
           "id": "automation-in-numerical-research",
-          "number": "6",
-          "title": "Automation already reaches numerical research"
+          "number": "7",
+          "title": "Agents already take part in this programme"
         },
         {
           "id": "earning-reliability",
-          "number": "7",
-          "title": "From a promising method to a reliable solver"
+          "number": "8",
+          "title": "Guarantees at the cost of the complete calculation"
         },
         {
           "id": "testing-the-proposed-advantage",
-          "number": "8",
-          "title": "Testing the proposed advantage"
+          "number": "9",
+          "title": "Test the method, then the specialist contribution"
         },
         {
           "id": "where-to-concentrate",
-          "number": "9",
+          "number": "10",
           "title": "Where to concentrate research effort"
         }
       ],
@@ -1155,26 +1165,31 @@
       "related": [
         {
           "slug": "what-a-new-proof-makes-possible",
-          "description": "What a proof reveals beyond its conclusion, and how a new construction changes what can be done."
+          "description": "What remains worth comparing when proof generation becomes abundant, including dependencies, procedures and explanatory gain.",
+          "anchor": "when-proofs-become-more-abundant"
         },
         {
           "slug": "when-a-description-becomes-a-verdict",
-          "description": "When a description or a reported quantity actually supports the conclusion drawn from it."
+          "description": "Why an unchanged spectrum or a reassuring summary may omit the information a numerical decision needs.",
+          "anchor": "enough-for-which-question"
         },
         {
           "slug": "mathematical-life-in-the-age-of-ai",
-          "description": "The wider questions of learning, judgment, assistance, and intellectual life."
+          "description": "How assistance can become a learner’s capacity to check, adapt and continue an argument.",
+          "anchor": "becoming-capable"
         },
         {
           "slug": "what-sustains-mathematical-expertise",
-          "description": "How technical contribution, paid roles, and the maintenance of independent mathematical capability differ."
+          "description": "The training and shared resources behind the expertise taken as available in the research comparison.",
+          "anchor": "sustaining-independent-capability"
         }
       ],
-      "revised": "2026-11-04",
+      "revised": "2026-11-15",
       "edition": {
-        "revision": "01408da66e29",
-        "manifest": "/assets/essays/ai-research-and-reliable-numerical-computation.edition-3c98b8c92650ff86.json"
-      }
+        "revision": "5d1569af4214",
+        "manifest": "/assets/essays/ai-research-and-reliable-numerical-computation.edition-609bf969f1d0b8ea.json"
+      },
+      "readingContextSha256": "c525963315dd10ffa52923dfca7bb2ce94789ba9174b63f3761713d4654e7ae1"
     },
     {
       "slug": "mathematical-life-in-the-age-of-ai",
@@ -1188,8 +1203,8 @@
       "body": "content/essays/mathematical-life-in-the-age-of-ai.html",
       "page": "/essays/mathematical-life-in-the-age-of-ai",
       "staticMath": true,
-      "pdf": "/assets/essays/mathematical-life-in-the-age-of-ai.pdf",
-      "source": "/assets/essays/mathematical-life-in-the-age-of-ai.md",
+      "pdf": "/assets/essays/mathematical-life-in-the-age-of-ai.ef71774f3c17d4b8.pdf",
+      "source": "/assets/essays/mathematical-life-in-the-age-of-ai.12a628c839eb824c.md",
       "sourceLabel": "Markdown source",
       "parts": [
         {
@@ -1273,23 +1288,28 @@
       "related": [
         {
           "slug": "what-sustains-mathematical-expertise",
-          "description": "What the value of mathematical understanding establishes about paid expertise, and how institutions can sustain independent capability."
+          "description": "How teaching, shared resources and independent checking are sustained beyond one successful encounter.",
+          "anchor": "sustaining-independent-capability"
         },
         {
           "slug": "when-a-description-becomes-a-verdict",
-          "description": "A test for what a description determines, and a worked distinction between recovering groups and recovering their induced maps."
+          "description": "A worked distinction between recovering mathematical objects and recovering the maps that connect them.",
+          "anchor": "what-the-arrangement-does"
         },
         {
           "slug": "what-a-new-proof-makes-possible",
-          "description": "How different arguments reveal mechanisms, quantitative information, and connections beyond establishing the same conclusion."
+          "description": "How comparing arguments turns a known conclusion into an approximation and an error calculation.",
+          "anchor": "what-the-connection-between-proofs-reveals"
         },
         {
           "slug": "when-accountability-stops-being-reciprocal",
-          "description": "How institutions can keep moral judgments open to scrutiny, correction, and proportionate review."
+          "description": "What makes a consequential judgment open to challenge, review and effective correction.",
+          "anchor": "making-judgment-answerable"
         },
         {
           "slug": "the-authority-of-a-vision",
-          "description": "Knowledge, political command, and the freedom to reconsider allegiance in Villeneuve’s Dune."
+          "description": "Chani’s refusal in Dune gives an independent treatment of knowledge, allegiance and the freedom to leave.",
+          "anchor": "a-person-beyond-the-prophecy"
         },
         {
           "kind": "exposition",
@@ -1299,16 +1319,24 @@
         },
         {
           "slug": "the-performance-of-depth",
-          "description": "A historical account of how evaluation, prestige, and research incentives reproduce professional authority and can strengthen intellectual conformity."
+          "description": "How evaluation and accumulated recognition shape who can afford an independent agenda.",
+          "anchor": "how-recognition-reproduces-itself"
         },
         {
           "slug": "ai-research-and-reliable-numerical-computation",
-          "description": "A current assessment of AI research capability and a proposed numerical research direction, distinct from the value of learning and participation."
+          "description": "A specific test of what specialist participation contributes to research, alongside the wider value of learning.",
+          "anchor": "testing-the-proposed-advantage"
+        },
+        {
+          "slug": "purity-prestige-and-pettiness",
+          "anchor": "precision-as-performance",
+          "description": "Nathanson and Zeilberger on practices that make asking for explanation costly, and on scrutiny applied to one’s own work."
         }
       ],
       "group": "mathematics-and-intellectual-life",
       "order": 4,
-      "revised": "2026-11-03"
+      "revised": "2026-11-09",
+      "readingContextSha256": "d8db5296dc6bac5409896164123598a65b9443b3d41832bb138f97a3afb764dc"
     },
     {
       "slug": "when-accountability-stops-being-reciprocal",
@@ -1323,8 +1351,8 @@
       "manuscript": "content/essays/when-accountability-stops-being-reciprocal.md",
       "body": "content/essays/when-accountability-stops-being-reciprocal.html",
       "page": "/essays/when-accountability-stops-being-reciprocal",
-      "pdf": "/assets/essays/when-accountability-stops-being-reciprocal.pdf",
-      "source": "/assets/essays/when-accountability-stops-being-reciprocal.md",
+      "pdf": "/assets/essays/when-accountability-stops-being-reciprocal.3306e6bf795ce2c1.pdf",
+      "source": "/assets/essays/when-accountability-stops-being-reciprocal.4354c37b7513d7d6.md",
       "sourceLabel": "Markdown source",
       "sections": [
         {
@@ -1355,18 +1383,27 @@
       "related": [
         {
           "slug": "when-a-description-becomes-a-verdict",
-          "description": "What a description or comparison must preserve to support a judgment about a contribution."
+          "description": "The difference between ending an inquiry and establishing a claim about the work being judged.",
+          "anchor": "reasons-for-stopping"
         },
         {
           "slug": "mathematical-life-in-the-age-of-ai",
-          "description": "How understanding, assistance, judgment, credit, and participation sustain an inquiry."
+          "description": "How a judgment about someone’s work shapes their opportunity to develop and explain it.",
+          "anchor": "a-hearing-before-a-verdict"
         },
         {
           "slug": "the-performance-of-depth",
-          "description": "A historical account of how evaluation, prestige, and research incentives reproduce professional authority and can strengthen intellectual conformity."
+          "description": "How the institutions that judge work also shape the evidence of success they later rely on.",
+          "anchor": "how-recognition-reproduces-itself"
+        },
+        {
+          "slug": "purity-prestige-and-pettiness",
+          "description": "Published editorial exchanges make the distinction between an adverse decision and its stated justification concrete.",
+          "anchor": "the-rejection-and-the-reason"
         }
       ],
-      "revised": "2026-11-03"
+      "revised": "2026-11-10",
+      "readingContextSha256": "8840ba497ec7bcb2bceb1779a22105b946450b5ff64ab307a0297ab82243d42e"
     },
     {
       "slug": "the-performance-of-depth",
@@ -1381,7 +1418,7 @@
       "manuscript": "content/essays/the-performance-of-depth.md",
       "body": "content/essays/the-performance-of-depth.html",
       "page": "/essays/the-performance-of-depth",
-      "source": "/assets/essays/the-performance-of-depth.md",
+      "source": "/assets/essays/the-performance-of-depth.ec482d52566415a2.md",
       "sourceLabel": "Markdown source",
       "sections": [
         {
@@ -1416,23 +1453,33 @@
       "related": [
         {
           "slug": "mathematical-life-in-the-age-of-ai",
-          "description": "How understanding and the means to pursue it develop through assistance, recognition, credit, and shared work."
+          "description": "What an independent inquiry needs from people, institutions and shared resources.",
+          "anchor": "the-means-to-continue"
         },
         {
           "slug": "what-sustains-mathematical-expertise",
-          "description": "What the value of mathematical understanding establishes about paid expertise, and how institutions can sustain independent capability."
+          "description": "How to support the ability to teach, investigate and check work independently of any one provider.",
+          "anchor": "sustaining-independent-capability"
         },
         {
           "slug": "when-accountability-stops-being-reciprocal",
-          "description": "How consequential institutional judgments remain open to challenge, review, and correction."
+          "description": "How consequential institutional decisions can be challenged and corrected.",
+          "anchor": "making-judgment-answerable"
         },
         {
           "slug": "when-a-description-becomes-a-verdict",
-          "description": "What an abbreviated description establishes, and where a further judgment needs substantive comparison."
+          "description": "When recognition carries relevant expertise, and when a further comparison still has to be made.",
+          "anchor": "what-recognition-knows"
+        },
+        {
+          "slug": "purity-prestige-and-pettiness",
+          "description": "Specific cases of disciplinary taste becoming authority over attention, credit and opportunity.",
+          "anchor": "preferences-with-material-consequences"
         }
       ],
-      "pdf": "/assets/essays/the-performance-of-depth.pdf",
-      "revised": "2026-11-03"
+      "pdf": "/assets/essays/the-performance-of-depth.ba86eecccd6c8d97.pdf",
+      "revised": "2026-11-09",
+      "readingContextSha256": "8101414da671d227ef544cdcdb22886969a286a012a12b5b83c508be771355c9"
     },
     {
       "slug": "what-a-new-proof-makes-possible",
@@ -1479,11 +1526,13 @@
       "related": [
         {
           "slug": "when-a-description-becomes-a-verdict",
-          "description": "What a comparison must preserve before familiar ingredients or known conclusions can support a verdict about a contribution."
+          "description": "Why agreement on a conclusion can leave important differences between constructions unresolved.",
+          "anchor": "what-the-arrangement-does"
         },
         {
           "slug": "mathematical-life-in-the-age-of-ai",
-          "description": "How people acquire the means to understand and pursue mathematics, and how AI changes the responsibilities of institutions that cultivate and judge those capacities."
+          "description": "How an inspectable argument becomes a learner’s ability to perform and explain a new operation.",
+          "anchor": "a-comparison-worth-understanding"
         },
         {
           "kind": "exposition",
@@ -1505,12 +1554,17 @@
         },
         {
           "slug": "ai-research-and-reliable-numerical-computation",
-          "description": "Where increasingly capable proof generation changes research strategy, and what it takes to make a numerical method reliable."
+          "description": "What changes when the useful representation must also meet numerical accuracy and computational-cost requirements.",
+          "anchor": "a-concrete-research-direction"
         }
       ],
       "group": "mathematics-and-intellectual-life",
       "order": 2,
-      "revised": "2026-11-03"
+      "revised": "2026-11-09",
+      "source": "/assets/essays/what-a-new-proof-makes-possible.31e317ae22720c4a.md",
+      "sourceLabel": "Markdown source",
+      "readingContextSha256": "3bd49ac2c923cc6841aa2527d80d9ab6814ffde7a577ccc2f4f50953e387ecb1",
+      "pdf": "/assets/essays/what-a-new-proof-makes-possible.9b19b4a9be61834e.pdf"
     },
     {
       "slug": "when-a-description-becomes-a-verdict",
@@ -1526,7 +1580,7 @@
       "body": "content/essays/when-a-description-becomes-a-verdict.html",
       "page": "/essays/when-a-description-becomes-a-verdict",
       "staticMath": true,
-      "source": "/assets/essays/when-a-description-becomes-a-verdict.md",
+      "source": "/assets/essays/when-a-description-becomes-a-verdict.b5304145c9ee1b44.md",
       "sourceLabel": "Markdown source",
       "sections": [
         {
@@ -1563,15 +1617,18 @@
       "related": [
         {
           "slug": "what-a-new-proof-makes-possible",
-          "description": "How different arguments reveal mechanisms and connections beyond establishing the same conclusion."
+          "description": "A comparison of two proofs that identifies an approximation, its error and the conditions for equality.",
+          "anchor": "what-the-connection-between-proofs-reveals"
         },
         {
           "slug": "mathematical-life-in-the-age-of-ai",
-          "description": "How judgments about understanding shape attention, support, credit, and the means to continue an inquiry."
+          "description": "The consequences of allowing an early assessment to decide how much of a contribution will be heard.",
+          "anchor": "a-hearing-before-a-verdict"
         },
         {
           "slug": "when-accountability-stops-being-reciprocal",
-          "description": "From what warrants a judgment to how people can challenge its consequential use."
+          "description": "From what warrants a judgment to the conditions under which people can contest its use.",
+          "anchor": "making-judgment-answerable"
         },
         {
           "kind": "exposition",
@@ -1581,10 +1638,101 @@
         },
         {
           "slug": "ai-research-and-reliable-numerical-computation",
-          "description": "How the distinction between evidence and inference applies to AI capability and comparisons of research methods."
+          "description": "Why a computed residual, a learned approximation and an error guarantee answer different questions.",
+          "anchor": "earning-reliability"
+        },
+        {
+          "slug": "purity-prestige-and-pettiness",
+          "description": "Premature triviality and the cost of letting professional standing outrun the comparison actually made.",
+          "anchor": "triviality-before-understanding"
         }
       ],
-      "revised": "2026-11-03"
+      "revised": "2026-11-09",
+      "readingContextSha256": "7ead889b34f4444808ed13f96fcfa6cd3e1e2463d90daca3beb91f8e2e0ec798",
+      "pdf": "/assets/essays/when-a-description-becomes-a-verdict.b22cf3e19578db56.pdf"
+    },
+    {
+      "slug": "continuity-as-organized-discrete-data",
+      "published": true,
+      "title": "Continuity as Organized Discrete Data",
+      "subtitle": "The finitary work behind infinity",
+      "subject": "Analysis and computation",
+      "summary": "How controlled approximations define exact objects, what makes their accuracy executable, and how finite numerical calculations answer questions about a continuum.",
+      "date": "2026-11-15",
+      "revised": "2026-11-15",
+      "manuscript": "content/essays/continuity-as-organized-discrete-data.md",
+      "body": "content/essays/continuity-as-organized-discrete-data.html",
+      "page": "/essays/continuity-as-organized-discrete-data",
+      "staticMath": true,
+      "pdf": "/assets/essays/continuity-as-organized-discrete-data.986fea81448bc7b2.pdf",
+      "source": "/assets/essays/continuity-as-organized-discrete-data.40b6e045ce06aa85.md",
+      "sourceLabel": "Markdown source",
+      "sections": [
+        {
+          "title": "Choosing how far to look",
+          "id": "choosing-how-far-to-look"
+        },
+        {
+          "title": "What a finite description promises",
+          "id": "what-a-finite-description-promises"
+        },
+        {
+          "title": "A computable sequence with an inaccessible rate",
+          "id": "a-computable-sequence-with-an-inaccessible-rate"
+        },
+        {
+          "title": "How accuracy passes through a function",
+          "id": "how-accuracy-passes-through-a-function"
+        },
+        {
+          "title": "What it takes to find a zero",
+          "id": "what-it-takes-to-find-a-zero"
+        },
+        {
+          "title": "A continuum problem inside finite systems",
+          "id": "a-continuum-problem-inside-finite-systems"
+        },
+        {
+          "title": "Making the error affordable to measure",
+          "id": "making-the-error-affordable-to-measure"
+        },
+        {
+          "title": "Finite proofs of infinite obligations",
+          "id": "finite-proofs-of-infinite-obligations"
+        },
+        {
+          "title": "The numerical research bet",
+          "id": "the-numerical-research-bet"
+        },
+        {
+          "title": "Returning from infinity",
+          "id": "returning-from-infinity"
+        },
+        {
+          "title": "Notes and sources",
+          "id": "notes-and-sources"
+        }
+      ],
+      "group": "mathematics-and-intellectual-life",
+      "order": 9,
+      "related": [
+        {
+          "slug": "ai-research-and-reliable-numerical-computation",
+          "anchor": "earning-reliability",
+          "description": "How accuracy, representation, and total cost enter the numerical research programme and its test of specialist contribution."
+        },
+        {
+          "slug": "what-a-new-proof-makes-possible",
+          "anchor": "what-the-connection-between-proofs-reveals",
+          "description": "How another proof can expose a procedure, an error estimate, or a useful change of representation."
+        },
+        {
+          "slug": "when-a-description-becomes-a-verdict",
+          "anchor": "enough-for-which-question",
+          "description": "How the question determines which information a representation must retain."
+        }
+      ],
+      "readingContextSha256": "341520eaa9567044adfd292d430f17998d3775981c59f02b43b85be7f59f97e4"
     },
     {
       "slug": "the-authority-of-a-vision",
@@ -1601,11 +1749,13 @@
       "related": [
         {
           "slug": "mathematical-life-in-the-age-of-ai",
-          "description": "How people acquire the means to understand and pursue mathematics, and how AI changes the responsibilities of institutions that cultivate and judge those capacities."
+          "description": "A different setting for the distinction between receiving an answer and acquiring the capacity to judge and act.",
+          "anchor": "becoming-capable"
         },
         {
           "slug": "when-a-description-becomes-a-verdict",
-          "description": "When genuine knowledge supports a further judgment, and what that judgment still needs to establish."
+          "description": "How genuine information can be made to support a further conclusion it has not established.",
+          "anchor": "the-extra-conclusion"
         }
       ],
       "sections": [
@@ -1639,7 +1789,12 @@
         }
       ],
       "group": "film-and-interpretation",
-      "order": 1
+      "order": 1,
+      "revised": "2026-11-09",
+      "source": "/assets/essays/the-authority-of-a-vision.3c671dfc6fcb2d57.md",
+      "sourceLabel": "Markdown source",
+      "readingContextSha256": "42236e20764f863f0097051ef89ef90e9d3033b13bf6535e4846ea7610a1172e",
+      "pdf": "/assets/essays/the-authority-of-a-vision.31488bce01fb9446.pdf"
     },
     {
       "slug": "what-sustains-mathematical-expertise",
@@ -1652,8 +1807,8 @@
       "manuscript": "content/essays/what-sustains-mathematical-expertise.md",
       "body": "content/essays/what-sustains-mathematical-expertise.html",
       "page": "/essays/what-sustains-mathematical-expertise",
-      "pdf": "/assets/essays/what-sustains-mathematical-expertise.pdf",
-      "source": "/assets/essays/what-sustains-mathematical-expertise.md",
+      "pdf": "/assets/essays/what-sustains-mathematical-expertise.198506955c3911bc.pdf",
+      "source": "/assets/essays/what-sustains-mathematical-expertise.b0c63524582e730b.md",
       "sourceLabel": "Markdown source",
       "group": "mathematics-and-intellectual-life",
       "order": 5,
@@ -1690,18 +1845,184 @@
       "related": [
         {
           "slug": "ai-research-and-reliable-numerical-computation",
-          "description": "A specific research choice and proposed tests of what specialist knowledge adds to the strongest available AI."
+          "description": "A test of what a specialist adds to an assisted research project, given the available training and tools.",
+          "anchor": "testing-the-proposed-advantage"
         },
         {
           "slug": "mathematical-life-in-the-age-of-ai",
-          "description": "How understanding develops through assistance, shared work, and the institutional means to continue an inquiry."
+          "description": "What it takes for assistance to leave a person able to understand and continue mathematical work.",
+          "anchor": "becoming-capable"
         },
         {
           "slug": "the-performance-of-depth",
-          "description": "How credentials, performance measures, prestige, and research incentives can reproduce academic authority while weakening independent judgment."
+          "description": "Why the conditions of employment matter to a researcher’s ability to pursue uncertain work.",
+          "anchor": "the-cost-of-an-independent-agenda"
         }
       ],
-      "revised": "2026-11-03"
+      "revised": "2026-11-09",
+      "readingContextSha256": "7ac09ea8f2cc7c9e8b1c5b42ace5f30044ed66f18c1f35b080ff57a31009d67f"
+    },
+    {
+      "slug": "purity-prestige-and-pettiness",
+      "published": true,
+      "title": "Purity, Prestige, and Pettiness",
+      "subtitle": "How pure mathematicians turn taste into rank",
+      "subject": "Mathematical culture and authority",
+      "summary": "A critical essay and 126-work annotated collection on pure mathematicians’ snobbery, the devaluation of computation, and the conversion of intellectual taste into institutional power.",
+      "date": "2026-11-09",
+      "body": "content/essays/purity-prestige-and-pettiness.html",
+      "page": "/essays/purity-prestige-and-pettiness",
+      "pdf": "/assets/essays/purity-prestige-and-pettiness.7162170adfa3.pdf",
+      "source": "/assets/essays/purity-prestige-and-pettiness.7162170adfa3.txt",
+      "sourceLabel": "Reading text",
+      "collectionPage": "/collections/purity-prestige-and-pettiness",
+      "collectionLabel": "126 annotated works",
+      "group": "mathematics-and-intellectual-life",
+      "order": 8,
+      "parts": [
+        {
+          "id": "part-i",
+          "number": "I",
+          "title": "How taste becomes rank"
+        },
+        {
+          "id": "part-ii",
+          "number": "II",
+          "title": "The work the ranking conceals"
+        },
+        {
+          "id": "part-iii",
+          "number": "III",
+          "title": "How the hierarchy reproduces itself"
+        },
+        {
+          "id": "part-iv",
+          "number": "IV",
+          "title": "Making authority answer for itself"
+        }
+      ],
+      "sections": [
+        {
+          "id": "purity-as-rank",
+          "title": "When purity becomes a title of rank",
+          "number": "1",
+          "part": "part-i"
+        },
+        {
+          "id": "precision-as-performance",
+          "title": "Precision performed at someone else's expense",
+          "number": "2",
+          "part": "part-i"
+        },
+        {
+          "id": "triviality-before-understanding",
+          "title": "Calling it trivial before doing the work",
+          "number": "3",
+          "part": "part-i"
+        },
+        {
+          "id": "what-computation-demands",
+          "title": "What the dismissal of computation leaves out",
+          "number": "4",
+          "part": "part-ii"
+        },
+        {
+          "id": "craft-and-intellectual-authority",
+          "title": "The intellectual work that gets called craft",
+          "number": "5",
+          "part": "part-ii"
+        },
+        {
+          "id": "abstraction-and-its-debts",
+          "title": "Abstraction and the debts it forgets",
+          "number": "6",
+          "part": "part-ii"
+        },
+        {
+          "id": "the-cost-of-being-hard-to-place",
+          "title": "The cost of being hard to place",
+          "number": "7",
+          "part": "part-iii"
+        },
+        {
+          "id": "preferences-with-material-consequences",
+          "title": "How preference comes to look necessary",
+          "number": "8",
+          "part": "part-iii"
+        },
+        {
+          "id": "what-the-credit-system-teaches",
+          "title": "What the credit system teaches",
+          "number": "9",
+          "part": "part-iii"
+        },
+        {
+          "id": "the-rejection-and-the-reason",
+          "title": "The rejection and the reason",
+          "number": "10",
+          "part": "part-iii"
+        },
+        {
+          "id": "gowers-and-the-limits-of-revolt",
+          "title": "Gowers and the limits of revolt within the hierarchy",
+          "number": "11",
+          "part": "part-iii"
+        },
+        {
+          "id": "criticism-has-to-name-its-charge",
+          "title": "Reform and the authority it leaves intact",
+          "number": "12",
+          "part": "part-iii"
+        },
+        {
+          "id": "a-dispute-that-exposes-the-method",
+          "title": "Putting an entire field in its place",
+          "number": "13",
+          "part": "part-iv"
+        },
+        {
+          "id": "the-critics-have-to-read",
+          "title": "When a solution is denied its name",
+          "number": "14",
+          "part": "part-iv"
+        },
+        {
+          "id": "rigor-and-access",
+          "title": "Rigor and access",
+          "number": "15",
+          "part": "part-iv"
+        },
+        {
+          "id": "authority-that-can-answer",
+          "title": "Authority that can answer",
+          "number": "16",
+          "part": "part-iv"
+        }
+      ],
+      "related": [
+        {
+          "slug": "the-performance-of-depth",
+          "anchor": "how-recognition-reproduces-itself",
+          "description": "How the institutions that recognize achievement also shape the conditions under which it becomes possible."
+        },
+        {
+          "slug": "when-accountability-stops-being-reciprocal",
+          "anchor": "making-judgment-answerable",
+          "description": "What makes a consequential judgment open to challenge and effective correction."
+        },
+        {
+          "slug": "when-a-description-becomes-a-verdict",
+          "anchor": "enough-for-which-question",
+          "description": "A precise test for what an account preserves and which conclusions it supports."
+        },
+        {
+          "slug": "what-a-new-proof-makes-possible",
+          "anchor": "what-the-connection-between-proofs-reveals",
+          "description": "How a different proof earns its value through the operations and error estimates it makes available."
+        }
+      ],
+      "revised": "2026-11-11",
+      "readingContextSha256": "619948c36f07824fa922405284a1d7f404ef14413d6fd72627c6889f4a2e06c8"
     }
   ],
   "gaming": [],
@@ -1748,7 +2069,7 @@
   "personalInterests": {
     "youtube": {
       "published": true,
-      "url": "https://www.youtube.com/@hkshin",
+      "url": "https://www.youtube.com/@refactorpress",
       "label": "Refactor on YouTube · cube patterns and game recordings"
     },
     "broodWar": {

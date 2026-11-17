@@ -1,10 +1,36 @@
 (() => {
   const byId=id=>document.getElementById(id);
-  document.querySelectorAll('a[href^="#"]:not(.subsection-link)').forEach(link=>link.addEventListener('click',event=>{const target=byId(link.getAttribute('href').slice(1));if(!target)return;event.preventDefault();target.scrollIntoView({block:'start',behavior:'instant'});}));
+  const targetForHash=hash=>{
+    if(!hash || hash==='#')return null;
+    try{return byId(decodeURIComponent(hash.slice(1)));}catch{return null;}
+  };
+  const focusHashTarget=()=>{
+    const target=targetForHash(window.location.hash);
+    if(!target)return;
+    if(!target.matches('a[href],button,input,select,textarea,[tabindex]')){
+      target.setAttribute('tabindex','-1');
+      target.addEventListener('blur',()=>target.removeAttribute('tabindex'),{once:true});
+    }
+    target.focus({preventScroll:true});
+  };
+  // Native anchors own scrolling, the address and history. Move keyboard focus
+  // to the destination without replacing any of those browser behaviors.
+  window.addEventListener('hashchange',focusHashTarget);
+  document.addEventListener('click',event=>{
+    if(event.defaultPrevented || event.button!==0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey)return;
+    const link=event.target.closest?.('a[href]');
+    if(!link || link.hasAttribute('download') || (link.target && link.target!=='_self'))return;
+    const url=new URL(link.href,window.location.href);
+    if(url.origin!==window.location.origin || url.pathname!==window.location.pathname || url.search!==window.location.search || !targetForHash(url.hash))return;
+    // Reusing the current fragment does not emit hashchange.
+    if(url.hash===window.location.hash)requestAnimationFrame(()=>{
+      if(!event.defaultPrevented && window.location.hash===url.hash)focusHashTarget();
+    });
+  });
   // Align a shared subsection URL after the initial page layout has settled.
   (() => {
     const initialHash=window.location.hash;
-    const target=byId(initialHash.slice(1));
+    const target=targetForHash(initialHash);
     const link=target?.matches('h3')?target.querySelector(':scope > a.subsection-link'):null;
     if(!initialHash || link?.getAttribute('href')!==initialHash)return;
     let cancelled=false;
@@ -14,13 +40,15 @@
     events.forEach(type=>window.addEventListener(type,cancel,{capture:true,passive:true}));
     const settle=()=>Promise.resolve(document.fonts?.ready).then(()=>
       requestAnimationFrame(()=>requestAnimationFrame(()=>{
-        if(!cancelled && window.location.hash===initialHash && target.isConnected)target.scrollIntoView({block:'start',behavior:'instant'});
+        if(!cancelled && window.location.hash===initialHash && target.isConnected){
+          target.scrollIntoView({block:'start',behavior:'instant'});
+          focusHashTarget();
+        }
         cleanup();
       })));
     if(document.readyState==='complete')settle();
     else window.addEventListener('load',settle,{once:true});
   })();
-  document.querySelectorAll('[data-jump]').forEach(button=>button.addEventListener('click',()=>{const target=byId(button.dataset.jump);if(target)target.scrollIntoView({block:'start',behavior:'instant'});if(button.dataset.jump==='top'){const contents=document.querySelector('.exposition-sidebar');if(contents)contents.scrollTop=0;}}));
   const listen=(id,fn)=>{const el=byId(id);if(el){el.addEventListener('input',fn);fn();}};
   listen('rectangle-h',()=>{const h=Number(byId('rectangle-h').value),n=100*h;byId('rectangle-h-value').textContent=h.toFixed(2);byId('rect-strip-a').setAttribute('width',n);byId('rect-strip-b').setAttribute('y',115-n);byId('rect-strip-b').setAttribute('height',n);byId('rect-corner').setAttribute('y',115-n);byId('rect-corner').setAttribute('height',n);byId('rect-corner').setAttribute('width',n);byId('rect-top-label').setAttribute('y',115-n/2+5);byId('rect-top-label').style.display=h>.12?'':'none';byId('rect-right-label').setAttribute('x',405+n);byId('rect-right-label').style.display=h>.02?'':'none';byId('rect-corner-label').setAttribute('x',405+n);byId('rect-corner-label').setAttribute('y',115-n/2+5);byId('rect-corner-label').style.display=h>.02?'':'none';byId('rect-linear').textContent=(5*h).toFixed(2);byId('rect-error').textContent=(h*h).toFixed(4);byId('rect-exact').textContent=(5*h+h*h).toFixed(4);});
   const toggle=byId('boundary-toggle');if(toggle)toggle.addEventListener('click',()=>{const show=toggle.getAttribute('aria-pressed')!=='true';toggle.setAttribute('aria-pressed',String(show));byId('boundary-signs').style.display=show?'':'none';toggle.textContent=show?'Hide endpoint signs':'Show endpoint signs';});

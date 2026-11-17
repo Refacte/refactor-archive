@@ -2,7 +2,7 @@
 
 Return to arithmetic modulo three, still allowing explicitly retained coefficient symbols. The quadratic interaction forced a cubic error in \(F_a\). Could a cubic term already present in the operation cancel that error? We now allow both coefficients to vary and calculate which combinations a coordinate change can remove.
 
-For the next three sections, retain all input terms of total degree at most three. Thus
+From here through Section~\ref{sec:three-series}, comparisons marked \(\equiv\) retain all input terms of total degree at most three. Thus
 \[
  x^2y\text{ is retained},\qquad
  x^3y\text{ and }x^2y^2\text{ are discarded}.
@@ -157,6 +157,21 @@ Setting \(a'=0\) leaves \(b'=\lambda\), giving \eqref{eq:normal-jet}. Since \(\l
 
 This gives both a test and a construction. Calculate the two values \(b-a^2\). If they differ, no permitted coordinate exists. If they agree, \eqref{eq:all-witnesses} supplies all the choices through degree three. In particular, the retained terms can be made additive exactly when \(b=a^2\). Higher coordinate coefficients cannot affect that test; later equations may constrain the free coefficient \(v\).
 
+\textbf{Use the test on two concrete cubic truncations.} With ordinary coefficients modulo three, compare
+\[
+ F(x,y)\equiv x+y+xy+2C(x,y),\qquad
+ G(x,y)\equiv x+y+2xy+2C(x,y).
+\]
+Their surviving coefficients are \(2-1^2=1\) and \(2-2^2=1\). The required quadratic coordinate coefficient is \(u=1-2=2\). Choose the free cubic coefficient to be zero:
+\[
+ H(t)\equiv t+2t^2,\qquad H^{-1}(t)\equiv t+t^2+2t^3.
+\]
+Direct substitution makes both \(H(F(x,y))\) and \(G(H(x),H(y))\) equal to
+\[
+ x+y+2(x^2+y^2)+2xy
+\]
+through degree three: their mixed cubic coefficients are both zero. This constructs the comparison, although neither operation is equivalent to addition through this degree because its surviving coefficient is one. If the source instead had \((a,b)=(1,0)\), its surviving coefficient would be two, and the same target would fail the test. These conclusions concern the retained cubic operations, not unspecified higher terms.
+
 \subsection{Allow a different linear coefficient}
 
 Suppose the linear coefficient \(c\) has a multiplicative inverse in the chosen arithmetic. Scaling by \(H(t)=ct\) changes the operation to
@@ -195,7 +210,7 @@ Therefore
  \boxed{\;F_{a,b}(F_{a,b}(t,t),t)
  \equiv(a^2-b)t^3=-\lambda t^3.\;}
 \end{equation}
-The coefficient left after coordinate repair is the coefficient produced by actually repeating the operation.
+Repeating the operation recovers the negative of the coefficient left after coordinate repair.
 
 This also checks its change under a linear scaling. Any coordinate preserving the operation preserves its repetition:
 \[
@@ -207,7 +222,7 @@ For \(F_a=x+y+a xy\), the cubic coefficient \(b\) is zero, so \(\lambda=-a^2\). 
 
 \subsection{Keep the same quadratic term and change the outcome}
 
-With ordinary numbers modulo three, \(x+y+xy\) has \((a,b)=(1,0)\), so \(\lambda=-1\). It cannot be made additive. To construct an exactly repairable comparison, take \(H(t)=t+t^2\), construct its inverse coefficient by coefficient as in Section~\ref{sec:coordinate-action}, and define
+With ordinary numbers modulo three, \(x+y+xy\) has \((a,b)=(1,0)\), so \(\lambda=-1\). It cannot be made additive. To construct an exactly repairable comparison with the same quadratic coefficient \(a=1\), the coordinate equations for an additive target force \(u=1\) and \(b=1\). Choose the free cubic coefficient to be zero and take \(H(t)=t+t^2\). Its inverse is a formal series, constructed coefficient by coefficient as in Section~\ref{sec:coordinate-action}. Define
 \begin{equation}\label{eq:pullback-example}
  G(x,y)=H^{-1}(H(x)+H(y)).
 \end{equation}
@@ -229,9 +244,15 @@ From now on, the displayed identities are exact unless a degree cutoff is stated
 
 Use coefficients of the form \(r+s\eta\), with numerical coefficients modulo three. Multiply as in \eqref{eq:two-coefficients}: retain \(\eta\ne0\) and set \(\eta^2=0\). The symbol \(\eta\) is part of the coefficient; the input powers remain unrestricted.
 
-To postpone the earlier cubic pattern, replace each input in \(C(x,y)=x^2y+xy^2\) by its cube. The first terms then have degree nine. Multiplying by \(\eta\) makes any product of two corrections vanish, while keeping the correction itself. Try
+The purpose of this example is to test the limit of the cubic comparison. We need an exactly associative operation with no visible cubic defect, but with a later obstruction. The earlier expansion with \(a=0,b=1\) shows that the cubic pattern satisfies
 \[
- D(x,y)=x^6y^3+x^3y^6,
+ C(x,y)+C(x+y,z)=C(y,z)+C(x,y+z).
+\]
+This is an exact polynomial identity: every displayed term has degree three. To reuse it at a higher degree, look for a substitution that preserves addition. Squaring leaves the mixed term \(2xy\), whereas \((x+y)^3=x^3+y^3\) modulo three. Thus cubing is the first nonlinear monomial substitution that works. Replacing each input by its cube preserves the identity and moves this construction from degree three to \(3\cdot3=9\).
+
+Multiplying by a nonzero square-zero coefficient \(\eta\) keeps the correction while making products of corrections vanish. These choices give the candidate
+\[
+ D(x,y)=C(x^3,y^3)=x^6y^3+x^3y^6,
  \qquad Q(x,y)=x+y+\eta D(x,y).
 \]
 We must check that the new operation really does combine three inputs consistently in every degree.

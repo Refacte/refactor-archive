@@ -1,6 +1,6 @@
 \section{Retain two coefficients}\label{sec:parameter}
 
-Begin with arithmetic modulo three: \(3=0\), \(2=-1\), and \(2\cdot2=1\). Now retain two coefficients at a time. Write the pair \((r,s)\) as
+We will vary the coefficient of an interaction. A first test keeps its constant and linear dependence on a parameter; a second test will keep its quadratic dependence as well. Begin with arithmetic modulo three: \(3=0\), \(2=-1\), and \(2\cdot2=1\). Retain two coefficients at a time, writing the pair \((r,s)\) as
 \[
  r+s\epsilon.
 \]
@@ -26,11 +26,11 @@ We will use \(x,y,t\) as input placeholders. They are separate from \(\epsilon\)
 
 \section{Let the interaction determine its correction}\label{sec:repair}
 
-Consider
+Which quadratic interaction should we study? Start with a polynomial operation of total degree at most two and require zero to be its identity. The conditions \(F(x,0)=x\) and \(F(0,y)=y\) remove the constant and pure-square terms and fix both linear coefficients. Only the coefficient of \(xy\) remains. Thus every such quadratic operation has the form
 \begin{equation}\label{eq:family}
  F_a(x,y)=x+y+a xy.
 \end{equation}
-The coefficient \(a\) may be an ordinary number modulo three or an expression handled by the rules above. At \(a=0\) we have addition. At \(a=1\),
+The coefficient \(a\) may be an ordinary number modulo three or an expression handled by the rules above. We first study this as an exact polynomial law: higher input terms are set to zero. Later we will allow cubic and higher terms and see which conclusions survive. At \(a=0\) we have addition. At \(a=1\),
 \[
  (1+x)(1+y)=1+F_1(x,y),
 \]
@@ -44,7 +44,9 @@ The rule combines three inputs consistently. Expanding either grouping gives
 \end{align*}
 Interchanging the inputs does not change it, and \(F_a(x,0)=x\). These facts follow by multiplication and do not require cancelling \(a\).
 
-We want a coordinate beginning with \(t\),
+A coordinate is a formal series with zero constant term and an invertible linear coefficient. Here invertible means that the coefficient has a multiplicative inverse in the chosen arithmetic. Such a series has a compositional inverse: the next unknown inverse coefficient occurs multiplied by that invertible linear coefficient, so successive coefficient equations determine it. Section~\ref{sec:coordinate-action} gives the recursion explicitly.
+
+We want the coordinate to turn \(F_a\) into addition. Dividing all its coefficients by its linear coefficient preserves that identity, so we lose no eligible coordinate by making its first coefficient one. The complete normalized search is therefore
 \begin{equation}\label{eq:log-identity}
  L(t)=t+c t^2+d t^3+\cdots,
  \qquad L(F_a(x,y))=L(x)+L(y).
@@ -120,6 +122,12 @@ The rule is \(\epsilon^3=0\), while \(\epsilon^2\) is the retained triple \((0,0
  (1+\epsilon)(1-\epsilon)=1-\epsilon^2.
 \]
 
+The two arithmetics are related by forgetting the last coefficient:
+\[
+ \pi(r+s\epsilon+w\epsilon^2)=r+s\epsilon.
+\]
+The multiplication formulas show that \(\pi\) preserves sums and products, but it sends the nonzero coefficient \(\epsilon^2\) to zero. The successful coordinate in the two-coefficient arithmetic is invertible within that arithmetic; it does not recover the coefficient that \(\pi\) discarded.
+
 With this arithmetic, the same attempted coordinate has error
 \begin{equation}\label{eq:next-defect}
  L_{\epsilon,2}(F_\epsilon)-L_{\epsilon,2}(x)-L_{\epsilon,2}(y)
@@ -143,7 +151,9 @@ The calculation distinguishes two counts. The error uses two copies of the coeff
 
 \section{Count repeated addition}\label{sec:repeated}
 
-Now let \(p\) be any prime. Use ordinary arithmetic modulo \(p\), possibly with retained coefficient symbols as above. The coefficient rules obey the usual associative, commutative, and distributive rules, with \(p=0\). Fractions with denominator \(1,2,\ldots,p-1\) mean multiplication by the corresponding modular inverse. We never divide by the parameter \(a\).
+Now let \(p\) be any prime. More precisely, the coefficient arithmetic is a commutative ring \(R\) with identity in which \(p=0\). The retained-coefficient examples above are such rings. Inputs remain independent formal placeholders, and all identities are coefficient identities. Fractions with denominator \(1,2,\ldots,p-1\) mean multiplication by the corresponding modular inverse; these inverses remain valid in \(R\), even when it has zero divisors. We never divide by the parameter \(a\).
+
+Repeated addition gives a necessary test before we solve for a coordinate. Ordinary addition of \(p\) copies gives zero in this arithmetic. Any coordinate that turns \(F_a\) into addition must preserve that outcome.
 
 Write \([m]_{F_a}(t)\) for the result of combining \(m\) copies of \(t\) using \(F_a\), starting with \([0]_{F_a}(t)=0\). Direct induction gives
 \begin{equation}\label{eq:m-series}
@@ -199,10 +209,10 @@ For \(n\ge2\), the coefficient of \(s^{n-1}h\) is \(ne_n\) on the left and \(ae_
 \[
  ne_n=ae_{n-1},\qquad e_n=\frac{a^{n-1}}{n!}\quad(1\le n<p).
 \]
-Assume now that \(a^{p-1}=0\). Use these forced coefficients below degree \(p\) and set the later coefficients to zero. This gives two finite candidates. The coefficient equations explain how to find them; the following proof checks their complete identities and that they are mutual inverses.
+Assume now that \(a^{p-1}=0\). Use these forced coefficients below degree \(p\) and choose the later coefficients to be zero. The recurrence does not force that choice: it gives candidates, not yet a proof of the identities. We choose finite candidates because their terms carry increasing powers of \(a\); the proof will show that every high input degree disappears under the assumed parameter relation. It then checks every remaining coefficient and both inverse identities. The appendix returns to the higher coefficients we have left at zero.
 
 \begin{theorem}[Exact repair for the parameter family]\label{thm:family}
-In commutative coefficient arithmetic modulo a prime \(p\), the operation \(F_a(x,y)=x+y+a xy\) can be made additive by an invertible coordinate if and only if \(a^{p-1}=0\). When this holds, define
+Let \(R\) be a commutative ring with identity and \(p=0\), where \(p\) is prime, and let \(a\in R\). The operation \(F_a(x,y)=x+y+a xy\) can be made additive by an invertible formal coordinate if and only if \(a^{p-1}=0\). When this holds, define
 \begin{align}
  L_a(t)&=\sum_{n=1}^{p-1}\frac{(-1)^{n+1}a^{n-1}}n\,t^n,
  \label{eq:finite-log}\\
@@ -217,6 +227,8 @@ These finite polynomials satisfy
 \end{theorem}
 
 The coefficients in these formulas use only divisions by numbers smaller than \(p\). For example, modulo five \(1/2=3\), since \(2\cdot3=1\). When \(p=2\), the condition is \(a=0\) and both coordinates are the identity.
+
+Over a field the condition forces \(a=0\). The nonzero examples require coefficient arithmetic with nilpotents, elements whose powers can vanish without the elements themselves being zero. Nilpotence alone is not enough: the specified power \(a^{p-1}\) must vanish. The three-coefficient example modulo three exhibits this distinction.
 
 \begin{proof}
 Necessity was proved by repeated addition. For sufficiency, assume \(a^{p-1}=0\).
@@ -296,6 +308,17 @@ For example, keep \(1,\epsilon,\epsilon^2,\epsilon^3\) modulo five and discard \
  +\frac{\epsilon^2}{3}t^3-\frac{\epsilon^3}{4}t^4
  =t+2\epsilon t^2+2\epsilon^2t^3+\epsilon^3t^4.
 \]
+Its polynomial inverse is
+\[
+ E_\epsilon(s)=s+3\epsilon s^2+\epsilon^2s^3+4\epsilon^3s^4.
+\]
+For a concrete composition check, the coefficients of \(s^2,s^3,s^4\) in \(L_\epsilon(E_\epsilon(s))\) are respectively
+\[
+ (3+2)\epsilon=0,\qquad
+ (1+2+2)\epsilon^2=0,\qquad
+ (4+2+8+1)\epsilon^3=0.
+\]
+Terms of degree at least five contain \(\epsilon^4\) and vanish, by the parameter-power count in the proof. Thus the complete composition is \(s\), not merely a low-degree approximation.
 If we instead retain \(\epsilon^4\) and discard \(\epsilon^5\), the test \([5]_{F_\epsilon}(t)=\epsilon^4t^5\) rules out every coordinate. The input powers have not been truncated in either example; it is the retained coefficient list that changed.
 
 \section{Find the first failed coefficient}\label{sec:first-obstruction}

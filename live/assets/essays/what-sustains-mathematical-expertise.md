@@ -16,7 +16,7 @@ The academic occupation combines research, problem selection, explanation, asses
 
 Separating services may lower costs and widen access. It may also destroy useful coordination. A research-active teacher might notice a misconception that a generic tutor misses; a community might transmit judgment that an isolated explanation cannot. Those benefits belong in the comparison, alongside the costs of verification, supervision, infrastructure and failure recovery. So does the work of renewing the expertise on which each arrangement depends.
 
-Compare the alternatives by first holding the desired outcome fixed. For a lesson, producing a fluent solution is not enough: can the learner transfer a method to an unfamiliar problem, recognize when it fails, and explain why it applies? Apply that test to a researcher with AI, an independent scholar with AI, a facilitator with AI, peers with AI, and AI alone.
+Begin by fixing what the learner should gain. Can the learner transfer a method to an unfamiliar problem, recognize when it fails, and explain why it applies? Apply that test to a researcher with AI, an independent scholar with AI, a facilitator with AI, peers with AI, and AI alone. The outcome is the learner's acquired capacity to proceed, developed more fully in [Mathematical Life in the Age of AI](https://refactor.press/essays/mathematical-life-in-the-age-of-ai#becoming-capable).
 
 Then ask where an arrangement falls short and who repairs the failure. If a research mathematician contributes an indispensable correction, that work belongs in the cost and capability comparison. If another arrangement develops the same understanding reliably, the value of understanding alone cannot identify the occupation needed to supply it. Comparing job titles before making this test would assume the conclusion.
 
@@ -28,13 +28,13 @@ The same reasoning applies to problem selection, taste and interdisciplinary con
 
 Intermediate arrangements can change which human skills matter. Kasparov's account of freestyle chess illustrates the importance of coordinating people and computers.[^3] Krakowski, Luger and Raisch's observational comparison of conventional, centaur and engine chess likewise associates AI adoption with changes in the capabilities linked to competitive advantage.[^4] These examples suggest that effective decomposition, checking and coordination can alter the value of prior expertise; they do not establish that amateurs generally outperform experts.
 
-Educational evidence supplies a closer, limited example. In the randomized Tutor CoPilot study, students whose tutors received AI guidance were more likely to pass lesson exit tickets, with larger gains among students assigned to lower-rated tutors.[^5] This measures immediate topic mastery, rather than the durable transfer described above, and does not settle advanced mathematics. It does show why the distribution of gains matters: assistance can change who delivers a service effectively.
+The randomized Tutor CoPilot study shows a change in who can deliver an immediate learning outcome. Students whose tutors received AI guidance were more likely to pass lesson exit tickets, with larger gains among students assigned to lower-rated tutors.[^5] Those exit tickets measure immediate topic mastery. Durable transfer and advanced mathematical learning require further tests. The result gives a concrete reason to compare the performance of different arrangements instead of inferring it from their participants' credentials.
 
 A mature system could reduce the contribution of human orchestration as well. Richard Borcherds discusses this possibility in an Epoch AI interview.[^6] The relevant economic question is the benefit of adding a paid expert relative to the cost. An ideal human–AI combination can always defer to its AI, so AI alone need not strictly outperform every conceivable team. Human presence can remain possible after its former technical premium disappears.
 
 ## What human participation adds
 
-People may nevertheless want company while learning. Attention, encouragement and a shared sense of discovery matter. The Koberda–Kontorovich dialogue, The Dialectical Theorem, makes social learning central to a defense of paid human expertise under unusually strong AI assumptions.[^7] It already allows institutions and hiring standards to change. The unresolved step is narrower: why does a demand for human social learning require advanced mathematical expertise in the person supplying the social relationship?
+People may also want company while learning. Attention, encouragement and a shared sense of discovery matter. The Koberda–Kontorovich dialogue, The Dialectical Theorem, makes social learning central to a defense of paid human expertise under unusually strong AI assumptions.[^7] It already allows institutions and hiring standards to change. Evaluating that defense requires distinguishing social support for learning from shared work with someone who personally understands the mathematics. The two demands can require different qualifications and forms of support.
 
 Consider a small group learning geometry. AI handles explanations, examples and checks of proposed arguments. Participants supply continuity, conversation and motivation. A facilitator keeps the group functioning and follows independently tested procedures for escalating uncertainty. The arrangement requires a defined level of mathematical competence; if reliable escalation needs advanced expertise, its cost must be included. If the group achieves the desired understanding and social experience, its social needs alone do not establish the need for a research mathematician in that role.
 
@@ -56,7 +56,7 @@ Finite awards and in-kind resources do not constitute recurring salaries, just a
 
 ## Sustaining independent capability
 
-The cost of a lesson is only part of this comparison. An AI-supported group may draw on curricula, libraries, verification tools and standards developed by people elsewhere. If fewer experts are needed in direct encounters, the remaining work could move to maintaining those shared resources. A cheaper service may reorganize expert employment rather than eliminate it. The comparison must include how each arrangement trains the people and renews the knowledge on which its future performance depends.
+An AI-supported group may draw on curricula, libraries, verification tools and standards developed elsewhere. The immediate saving can therefore shift expert work into shared resources. The [research comparison in Abstraction is no refuge from AI](https://refactor.press/essays/ai-research-and-reliable-numerical-computation#testing-the-proposed-advantage) asks what a specialist adds while such resources are available. A complete institutional comparison also asks who maintains them, how successors are trained, and whether the resulting community can judge the tools it uses independently.
 
 Consider a seminar studying an AI-generated proof. A formal checker may verify a derivation without establishing that its statement captures the intended question. If the aim is independent judgment, participants must learn to examine assumptions, relate the result to the literature and test nearby examples, even when AI guidance is unreliable. The cost comparison therefore includes the work of developing that ability.
 
@@ -70,13 +70,13 @@ The network should be able to demonstrate the independence for which it is suppo
 
 Open tools, public compute, independent verification and diverse providers can complement human expertise or reduce particular needs for it. Different providers may nevertheless share errors, and open weights may remain costly to use. Human specialists also share errors and cannot be assumed to reproduce every capability of a lost superhuman system. The objective must be a specified degree of independence and resilience.
 
-Arrow's analysis of invention explains why uncertainty and imperfect capture of social benefits can justify public support.[^16] It supplies a general rationale, rather than a workforce estimate. Where probabilities are unknown, explicit scenarios and sensitivity tests can inform comparison without inventing precise expected losses. Funding decisions should consider the ordinary scientific and cultural contribution of a community alongside the option of drawing on its independent expertise. An institution supported to provide that expertise should be able to explain its costs, demonstrate its capabilities and remain sufficiently independent from the systems it evaluates.
+Arrow's analysis of invention explains why uncertainty and imperfect capture of social benefits can justify public support.[^16] It supplies a general rationale, rather than a workforce estimate. Where probabilities are unknown, explicit scenarios and sensitivity tests can inform comparison without inventing precise expected losses. Funding decisions should consider the ordinary scientific and cultural contribution of a community alongside the option of drawing on its independent expertise. An institution supported to provide that expertise should be able to explain its costs, demonstrate its capabilities and remain sufficiently independent from the systems it evaluates. Its claims to expertise should remain [open to the scrutiny it applies to others](https://refactor.press/essays/purity-prestige-and-pettiness#authority-that-can-answer).
 
 ## A larger mathematical life
 
-More people could acquire substantial understanding outside established institutions, and established experts could undertake more ambitious work. Those gains would matter even without a corresponding expansion of academic careers.
+More people could acquire substantial understanding outside established institutions, and established experts could undertake more ambitious work. The intellectual gain would remain real even if academic employment contracted.
 
-The comparison therefore has three parts: expertise needed in direct teaching and research, relationships people choose to support, and shared capabilities that need collective provision. An alternative to the present occupation must account for all three, including how its experts are trained and its resources maintained.
+An account of mathematical expertise must show how useful teaching and research, valued relationships, and shared capabilities for independent judgment will be sustained. These are distinct reasons to support mathematical work. Making each explicit allows institutions and alternatives to be compared on what they actually sustain.
 
 ## Notes and sources
 
@@ -111,3 +111,17 @@ The comparison therefore has three parts: expertise needed in direct teaching an
 [^15]: Lisanne Bainbridge. [Ironies of automation.](https://doi.org/10.1016/0005-1098%2883%2990046-8) Automatica 19(6), 1983, pp. 775–779, especially pp. 775 and 777. DOI: 10.1016/0005-1098(83)90046-8.
 
 [^16]: Kenneth J. Arrow. [Economic Welfare and the Allocation of Resources for Invention.](https://www.nber.org/books-and-chapters/rate-and-direction-inventive-activity-economic-and-social-factors/economic-welfare-and-allocation-resources-invention) In The Rate and Direction of Inventive Activity: Economic and Social Factors. Princeton University Press, 1962, pp. 609–626, especially pp. 619 and 623–625.
+
+## Related essays
+
+### [Abstraction is no refuge from AI](https://refactor.press/essays/ai-research-and-reliable-numerical-computation.html#testing-the-proposed-advantage)
+
+A test of what a specialist adds to an assisted research project, given the available training and tools.
+
+### [Mathematical Life in the Age of AI](https://refactor.press/essays/mathematical-life-in-the-age-of-ai.html#becoming-capable)
+
+What it takes for assistance to leave a person able to understand and continue mathematical work.
+
+### [The Performance of Depth](https://refactor.press/essays/the-performance-of-depth.html#the-cost-of-an-independent-agenda)
+
+Why the conditions of employment matter to a researcher’s ability to pursue uncertain work.

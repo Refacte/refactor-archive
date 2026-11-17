@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "revision": "64d5301d7d24",
+  "label": "Text revision 64d5301d7d24",
+  "source_sha256": "64d5301d7d2492507b001185f0c71a01dddaac1822b3518f32d2c54a11eee871",
+  "renderer_sha256": "af7cf2f74b254c1ba35f258688582e9d122ff444045787f87e28760b61e4ff6b",
+  "html_sha256": "4b2779b826534ce546a05ce0149944ebd7d1f749c3cc1948701fe76fdeb76f43",
+  "title": "Abstraction is no refuge from AI",
+  "artifacts": {
+    "pdf": {
+      "path": "/assets/essays/ai-research-and-reliable-numerical-computation.c0321a08a678e893.pdf",
+      "sha256": "c0321a08a678e8937756c49944a9fa49829eef11102c1645999cdf3653b6c1de",
+      "bytes": 283638,
+      "alias": "/assets/essays/ai-research-and-reliable-numerical-computation.pdf"
+    },
+    "txt": {
+      "path": "/assets/essays/ai-research-and-reliable-numerical-computation.a63d130f6416a9da.txt",
+      "sha256": "a63d130f6416a9da4e66dc64cb1bd0d141e2bbf547401a3992e6f463d6102f71",
+      "bytes": 138543,
+      "alias": "/assets/essays/ai-research-and-reliable-numerical-computation.txt"
+    }
+  }
+}

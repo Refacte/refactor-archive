@@ -196,7 +196,7 @@ The first edge was not uniquely determined: every edge satisfying the stated con
 
 ### Sources and scope
 
-The spanning-tree convention for Ψ_{G}, its contraction–deletion identity, and the study of successive integrations belong to the established theory of graph periods. See Francis Brown, [On the Periods of Some Feynman Integrals](https://arxiv.org/abs/0910.0114v2), arXiv:0910.0114v2, especially §0.1, §2.2, Lemma 14, and §11.2.1 for the first elimination. The changes of variables and two-factor integral used here are derived above. Brown’s general convergence and linear-reducibility results have additional hypotheses; the calculation here assumes finiteness and makes no claim that every graph permits a complete sequence of these elementary integrations.
+The spanning-tree convention for Ψ_{G}, its contraction–deletion identity, and the study of successive integrations belong to the established theory of graph periods. See Francis Brown, [On the Periods of Some Feynman Integrals](https://arxiv.org/abs/0910.0114v2), arXiv:0910.0114v2, especially §0.1, §2.2 and Lemma 14 for the graph polynomial, Example 59 and §11.2.2 for the first elimination, and §11.2.1 for the subsequent two-factor reduction. The changes of variables and two-factor integral used here are derived above. Brown’s general convergence and linear-reducibility results have additional hypotheses; the calculation here assumes finiteness and makes no claim that every graph permits a complete sequence of these elementary integrations.
 
 
 

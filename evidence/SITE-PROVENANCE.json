@@ -3,36 +3,38 @@
   "canonical_origin": "https://refactor.press",
   "site_title": "Refactor",
   "author": "Henry Shin",
-  "site_version": 219,
-  "source_commit": "c9e227c7464654ecb8b82d11473d85a20363f867",
+  "site_version": 287,
+  "source_commit": "ee4cfe272f253e3d8beaf72caa9fd246bd7fb289",
   "project_id": "appgprj_6ab2c08f72348191b765b533c2970132",
-  "version_id": "appgprj_6ab2c08f72348191b765b533c2970132~appgver_94a7fcc3f408819183a36fd266c9f12f",
-  "deployment_id": "appgdep_6aecd2ec987081919fbe76f733ed92bf",
-  "provider_publication_at": "2026-11-05T19:03:39.927688Z",
+  "version_id": "appgprj_6ab2c08f72348191b765b533c2970132~appgver_d233b6f3dbb481918b294754fa448754",
+  "deployment_id": "appgdep_6afb435c0d20819195480252832939c5",
+  "provider_publication_at": "2026-11-16T17:54:45.087146Z",
   "provider_deployment_status": "succeeded",
-  "capture_started_at": "2026-11-06T03:08:59.510Z",
-  "capture_completed_at": "2026-11-06T03:09:05.363Z",
-  "public_files": 292,
-  "source_files_private": 458,
+  "capture_started_at": "2026-11-17T00:52:06.263Z",
+  "capture_completed_at": "2026-11-17T00:52:22.460Z",
+  "capture_local_date": "2026-11-16",
+  "capture_timezone": "America/Los_Angeles",
+  "public_files": 497,
   "retained_deployment_artifact": {
-    "name": "refactor-deployment-v219-2026-11-06.tar.gz",
-    "sha256": "d0ef6f870f3da13c0204201b85a6a0519bbdc12ae25c60c0546da1f5045ecdf5",
-    "bytes": 30284725,
-    "file_count": 315,
-    "description": "Retained local pre-upload build artifact. 314/315 extracted files exactly match local dist; hosting.json differs only by CRLF/LF."
+    "sha256": "3586beec78e8b29627eed554a20ff6efae317262c307d6e8a1982da7d56387bf",
+    "bytes": 47420798,
+    "file_count": 520,
+    "description": "The deployment archive is retained privately. Its 497 public asset files are copied byte for byte into site/ and compared with freshly fetched public responses."
   },
   "provider_stored_archive_metadata": {
     "format": "tar",
-    "sha256": "c776830190953b6fe67556c76a8d5b7be3ed5146fd691bd876c4943b5ac82f74",
-    "bytes": 68679680,
-    "file_count": 315,
-    "note": "Provider metadata only; stored TAR bytes were not retrieved. Do not equate with retained local TAR."
+    "sha256": "d1d17c012007c97ba14f64fcccfd42231db225fd22e6787624b46a05c1a458be",
+    "bytes": 98426880,
+    "file_count": 520,
+    "note": "Provider metadata only. Stored TAR bytes were not retrieved. The local gzip container has its own independently recorded hash."
   },
+  "release_tag": "snapshot-2026-11-17T005206Z-v287",
+  "timestamp_target": "The release asset SHA256SUMS-public.txt binds the explicit public ZIP. Its OpenTimestamps receipt is supplied as a separate release asset.",
   "exclusions": [
-    "unpublished raw source and drafts (private backup)",
+    "unpublished editable source and drafts, retained privately",
     "credentials and runtime secrets",
-    "analytics database and visitor data",
-    "third-party external resources not hosted by the site"
+    "analytics database and visitor records",
+    "external resources hosted by third parties"
   ],
-  "chronology_limit": "Capture times are client observations; GitHub immutable release attestation provides the external archival record. This archive does not establish novelty, priority, authorship or correctness by itself."
+  "chronology": "Capture times are local observations. GitHub immutable-release attestation and the OpenTimestamps receipt are separately verifiable archival evidence. Consult their recorded verification status for the available proof."
 }

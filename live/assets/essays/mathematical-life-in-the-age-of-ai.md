@@ -94,7 +94,7 @@ Private study can fulfill its purpose without an audience. Organized mathematics
 
 ### 4 A hearing before a verdict
 
-Doron Zeilberger once interrupted a lecture by Hyman Bass to announce that its result essentially rediscovered a classical theorem. His colleagues were impressed. Later that day he discovered that the hypotheses differed; he and Dominique Foata subsequently spent two summers establishing the connection properly. Public assurance had received its reward before the mathematical relationship had been understood. The episode identifies a danger wherever the appearance of mastery can settle whose work deserves further attention. [^18]
+Doron Zeilberger's public self-correction provides a model for handling premature judgment. In *Opinion 29*, he revisits an apparent connection he had announced during Hyman Bass's lecture. Checking the hypotheses showed that establishing the connection required substantial further work, which he and Dominique Foata completed over two summers. He made the difference between his initial confidence and the work actually required public. That willingness to expose and correct one's own judgment belongs to the practice of serious scrutiny. [^18]
 
 Attention is a demanding resource. A reader may need unfamiliar definitions, years of background, or a difficult translation between frameworks. Reputation can legitimately guide the first investment of time. A record of reliable work or a knowledgeable colleague’s recommendation supplies information that a title and abstract do not. The difficulty arises when a decision about where to begin acquires the force of a verdict about what a work contains.
 
@@ -120,7 +120,7 @@ Personal accounts show that such routes can change. Caroline Series contrasts ac
 
 ### 5 What performed mastery costs
 
-The most immediate cost of a status contest can be a loss of information. A seminar needs decisive criticism, but it also needs people to disclose a gap. When uncertainty is treated as inferiority, a question remains unasked because it would reveal insufficient familiarity. A prominent person’s objection can settle the discussion without being examined. The room conveys information about rank while losing information about the mathematics.
+The most immediate cost of a status contest can be a loss of information. A seminar needs decisive criticism, but it also needs people to disclose a gap. When uncertainty is treated as inferiority, a question remains unasked because it would reveal insufficient familiarity. A prominent person’s objection can settle the discussion without being examined. [Nathanson’s account of intimidating replies and Gel’fand’s elementary questions](https://refactor.press/essays/purity-prestige-and-pettiness.html#precision-as-performance) locates the choice inside an ordinary seminar. The room can clarify an argument or teach its audience to remain silent.
 
 Knowledge is distributed in ways that make this loss consequential. The speaker may know the construction; a listener may know a counterexample; a newcomer may notice an assumption others have ceased to articulate. Gathering capable people creates an opportunity to combine these resources. Humiliation and performed mastery make some of them harder to use. The harm lies partly in the competence that participants cannot exercise together.
 
@@ -146,7 +146,7 @@ Institutions concentrate resources that are often difficult to assemble separate
 
 Fifteenth-century European monasteries bought printed books and commissioned editions from secular workshops; some operated presses themselves. Johannes Trithemius, abbot of Sponheim, kept manuscripts and printed books in his library and praised printing for making learning more widely available. His defence of copying by hand, written in 1492, appeared in print in 1494. He valued copying as religious discipline, as a means of transmitting works that remained unprinted, and for the scribe’s freedom to choose and correct a text independently of a printer’s program. [^73]
 
-The parallel for present-day study is a question about access: how much help does a particular inquiry need, and who can supply it? Someone may need enough help to enter a literature, develop a reduction, test an example, or understand an objection. AI changes both what institutions can provide and what people can assemble outside them. Its effect on dependence turns on that comparison. When the available help suffices for the question at hand, access to a particular department or network becomes less decisive. A university can become more productive while becoming less necessary to that person. No individual needs to match the strongest laboratory across all of mathematics for many such thresholds to be crossed. [^42]
+The freedom at stake is to pursue an inquiry that an institution has not chosen to support. For present-day study, the practical question is how much help that inquiry needs and who can supply it. Someone may need enough help to enter a literature, develop a reduction, test an example, or understand an objection. AI changes both what institutions can provide and what people can assemble outside them. Its effect on dependence turns on that comparison. When the available help suffices for the question at hand, access to a particular department or network becomes less decisive. A university can become more productive while becoming less necessary to that person. No individual needs to match the strongest laboratory across all of mathematics for many such thresholds to be crossed. [^42]
 
 An alternative source of help becomes useful through gains the reader can examine. A difficult argument may be reduced, through checkable steps, to a particular unresolved lemma; a cited theorem can be checked in its original text and its hypotheses compared; a calculation can be reproduced by another method, with the assumptions varied. The remaining need for expert help becomes more definite and easier to take to another reader. Progress consists in a clearer account of what has been established and where uncertainty remains. A person can acquire greater command of an inquiry before becoming able to settle every question within it.
 
@@ -180,7 +180,7 @@ A barrier defended by the cost of examining unfamiliar work needs renewed justif
 
 The obligation works in both directions. Cheaper candidate arguments can make interpretation and review relatively scarcer, increasing reliance on familiar names. New requirements and additional resources may be justified when the burden rises. Reader assistance may make an initial examination easier without making complete verification cheap. Procedures should track the actual work required, rather than treating either technological enthusiasm or an inherited practice as sufficient justification.
 
-Scarcity at the point of assessment also has a history. When a subject depends on a few people able to explain or check its arguments, new questions return to the same bottleneck. An exposition that makes a decisive reduction teachable, or a maintained library that makes its dependencies inspectable, can enable additional readers to undertake that work. Such an investment uses resources that could serve the present queue; its effects take time. Institutions influence whether it is sustainable through what they reward and whom they support. Future review capacity depends partly on support for exposition, library maintenance, and the training of new reviewers.
+Review capacity has to be developed. When only a few people can explain or check a subject’s arguments, each new contribution returns to them. An exposition that makes a decisive reduction teachable, or a maintained library that exposes its dependencies, can prepare additional readers to undertake that work. The investment competes with the present queue and takes time to repay. Whether it remains viable depends partly on how institutions [sustain independent mathematical capability](https://refactor.press/essays/what-sustains-mathematical-expertise.html#sustaining-independent-capability).
 
 There is a reciprocal test for the standards invoked. If understanding is used to resist a theorem-only conception of AI achievement, explanation and maintainable tools should receive recognition in human careers too. If authors must disclose assistance and accept checking, evaluators should take responsibility for their own judgments and tool use. If a company claims a machine achievement, its account should preserve the human mathematics, libraries, scaffolding, and revision on which the result depends. Greater capability makes the organization of responsibility more consequential.
 
@@ -208,7 +208,7 @@ Understanding itself need not be divided like a prize. Another person’s learni
 
 ### 9 Making participation substantial
 
-A route into shared work needs a defined demand on scarce attention. A project can state the questions it is prepared to examine and reserve review for bounded contributions: a reproducible example, a missing argument supplied, or a result meeting specified conditions. Clear prerequisites and examples let an unfamiliar contributor prepare work whose relevance can be assessed without reconstructing an entire private theory. A first assessment can determine what warrants deeper examination, while distinguishing a defect in the work from a shortage of review capacity. Someone must undertake that assessment and integrate what proves useful. The arrangement gives evidence from an unfamiliar participant a way to affect the decision to invest further attention.
+A route into shared work needs an entrance that a newcomer can prepare for. A project can state which questions it is equipped to examine and request a reproducible example, a missing argument, or a result meeting specified conditions. Someone must assess and integrate these contributions, distinguishing a defect in the work from a shortage of review capacity. Clear demands let an unfamiliar participant supply evidence that can change the decision to invest further attention.
 
 Polymath16 illustrates how examination can gather around inspectable work. In 2018, de Grey presented a finite graph establishing that the chromatic number of the plane is at least five. Independent checks exposed an error in a proposed smaller graph while confirming a larger construction. He corrected his code; participants shared checks and developed simplifications. The initial contribution gave people a reason to cooperate, and visible correction strengthened the grounds for continuing. Public availability became an exchange through particular people’s work. [^60] [^61]
 
@@ -254,11 +254,11 @@ The rows correspond to the interval and circle. Integrating the differential of 
 
 A concrete attempt is to replace the path class by itself plus a rational multiple of the circle class. This keeps its boundary and changes its logarithmic period only by a purely imaginary number, so the positive real part cannot disappear. The restriction to rational coefficients and compatibility with the Hodge filtration matter: a valid identification of complex vector spaces need not identify the structured objects. Assistance now has a definite job: explain those restrictions, work through the allowable changes, and locate the exact step where a tempting simplification fails.
 
-The failed change leaves a specific fact: adding any allowed loop correction cannot remove the real part of the path integral. It also locates the assumption on which that conclusion depends. If arbitrary complex multiples were allowed, the upper-right entry could be removed; the obstruction belongs to the structured comparison, not to an unqualified matrix problem.
+Allowing arbitrary complex multiples would remove the upper-right entry. The obstruction therefore belongs to the structured comparison and its restricted coordinate changes.
 
 That suggests a comparison with the [coordinate-repair example](https://refactor.press/refactors/coordinate-repair.html). There, polynomial coefficients specify the allowed corrections. Here, the path boundary and the realization data restrict them. In each case one can first list the admissible changes and then ask whether any of them removes the residual.
 
-A reading group can begin at any of these steps: check an admissible change, test a different example, or explain why relaxing a condition changes the answer. The resulting notes give the next reader a definite claim to examine and a place to continue.
+A reading group can start by checking an admissible change, testing an example, or explaining why relaxing a condition changes the answer. Its notes give the next reader a question, a way to test it, and a place to continue.
 
 ## Notes and sources
 
@@ -296,7 +296,7 @@ A reading group can begin at any of these steps: check an admissible change, tes
 
 [^17]: F. William Lawvere, [“Explicit Foundational Concepts in the Teaching of Mathematics”](https://lawverearchives.com/wp-content/uploads/2024/12/2001-explicit-foundational-concepts-in-the-teaching-of-mathematics.pdf), English scan, pp. 621–626, especially pp. 621–622. The family archive attributes the English publication to Fabio Minazzi’s edited volume (Rome, 2007); the 2001 date concerns earlier Italian conference context.
 
-[^18]: Doron Zeilberger, [Opinion 29](https://sites.math.rutgers.edu/~zeilberg/Opinion29.html), 24 September 1998. Autobiographical account of the Bass interruption, differing hypotheses, and subsequent work with Dominique Foata.
+[^18]: Doron Zeilberger, [Opinion 29](https://sites.math.rutgers.edu/~zeilberg/Opinion29.html), 24 September 1998. Zeilberger's published self-critical account of the Bass comparison, differing hypotheses, and subsequent work with Dominique Foata.
 
 [^19]: Évariste Galois, unfinished preface written at Sainte-Pélagie, December 1831, [English text at MacTutor](https://mathshistory.st-andrews.ac.uk/Extras/Galois_Sainte_Pelagie_preface/). [French text in Tannery’s 1908 edition](https://fr.wikisource.org/wiki/Manuscrits,_%C3%A9dition_Tannery,_1908/Papier_in%C3%A9dits_de_Galois), pp. 25–27. His polemical account is attributed, not treated as an impartial finding.
 
@@ -404,4 +404,52 @@ A reading group can begin at any of these steps: check an admissible change, tes
 
 ## Publication history
 
-This essay develops and combines [*Mathematical Understanding in the Age of AI*](https://refactor.press/essays/mathematical-understanding-in-the-age-of-ai), first published 7 October 2026, and [*The Culture of Mathematical Judgment*](https://refactor.press/essays/the-culture-of-mathematical-judgment.html), first published 12 October 2026. Their former addresses retain links to the corresponding sections and earlier editions. Revised 3 November 2026 to make the coordinate choices, allowable operations, and questions opened by the mathematical examples explicit.
+This essay develops and combines [*Mathematical Understanding in the Age of AI*](https://refactor.press/essays/mathematical-understanding-in-the-age-of-ai), first published 7 October 2026, and [*The Culture of Mathematical Judgment*](https://refactor.press/essays/the-culture-of-mathematical-judgment.html), first published 12 October 2026. Their former addresses retain links to the corresponding sections and earlier editions. Revised 3 November 2026 to make the coordinate choices, allowable operations, and questions opened by the mathematical examples explicit. Revised 9 November 2026 to present Zeilberger's public self-correction as an example of scrutiny applied to one's own judgment. A further 9 November revision tightens the links among learning, review capacity and the work of sustaining an inquiry.
+
+## Related mathematical example
+
+### [A matrix identity by cycle exchange](https://refactor.press/refactors/cayley-hamilton.html)
+
+Invent a walk with reserved cycles, derive the reversible exchange, and see every term of the Cayley–Hamilton identity cancel.
+
+## Related essays
+
+### [What Sustains Mathematical Expertise](https://refactor.press/essays/what-sustains-mathematical-expertise.html#sustaining-independent-capability)
+
+How teaching, shared resources and independent checking are sustained beyond one successful encounter.
+
+### [When a Description Becomes a Verdict](https://refactor.press/essays/when-a-description-becomes-a-verdict.html#what-the-arrangement-does)
+
+A worked distinction between recovering mathematical objects and recovering the maps that connect them.
+
+### [What a New Proof Makes Possible](https://refactor.press/essays/what-a-new-proof-makes-possible.html#what-the-connection-between-proofs-reveals)
+
+How comparing arguments turns a known conclusion into an approximation and an error calculation.
+
+### [When Accountability Stops Being Reciprocal](https://refactor.press/essays/when-accountability-stops-being-reciprocal.html#making-judgment-answerable)
+
+What makes a consequential judgment open to challenge, review and effective correction.
+
+### [The Authority of a Vision](https://refactor.press/essays/the-authority-of-a-vision.html#a-person-beyond-the-prophecy)
+
+Chani’s refusal in Dune gives an independent treatment of knowledge, allegiance and the freedom to leave.
+
+### [The Performance of Depth](https://refactor.press/essays/the-performance-of-depth.html#how-recognition-reproduces-itself)
+
+How evaluation and accumulated recognition shape who can afford an independent agenda.
+
+### [Abstraction is no refuge from AI](https://refactor.press/essays/ai-research-and-reliable-numerical-computation.html#testing-the-proposed-advantage)
+
+A specific test of what specialist participation contributes to research, alongside the wider value of learning.
+
+### [Purity, Prestige, and Pettiness](https://refactor.press/essays/purity-prestige-and-pettiness.html#precision-as-performance)
+
+Nathanson and Zeilberger on practices that make asking for explanation costly, and on scrutiny applied to one’s own work.
+
+## Further mathematical reading
+
+Tensorgami archive · optional further reading
+
+### [What a Boundary Map Can Prove](https://refactor.press/notes/what-a-boundary-map-can-prove.html#the-attachment-point-changes-the-motivic-symmetry-group)
+
+An optional comparison with §10: calculate how changing an elliptic attachment changes its symmetry. The entry states the additional geometry and motivic hypotheses; it is a different problem, not a prerequisite for the logarithm calculation.

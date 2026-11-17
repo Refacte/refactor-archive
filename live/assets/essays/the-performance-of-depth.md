@@ -10,7 +10,7 @@ This essay asks how reliance on those signals can affect independent judgment: t
 
 Researchers rely on questions, methods, and standards received from others. Independent judgment includes recognizing when those resources apply and when they need revision. A new theory, a careful replication, an improved instrument, or a counterexample can each require that judgment.
 
-Institutions can favor the absence of such judgment. They can also constrain people who possess it. A researcher who sees the weakness of an established agenda but cannot afford to leave it occupies a different position from someone unable to examine that agenda. The historical problem concerns both the selection of intellectual habits and the conditions under which independent judgment can affect the work.
+Institutions can reward work that leaves the purposes and assumptions of an established agenda unexamined. They can also constrain people who have examined them. A researcher who sees an agenda’s weakness but cannot afford to leave it faces a different problem from someone who has yet to recognize that weakness. The institutional problem concerns both the habits favored by evaluation and the conditions under which independent judgment can affect the work.
 
 Following an evaluation through three steps makes the problem more precise. Which signs are used to allocate an opportunity? How do candidates adapt their work to those signs? Once successful candidates become evaluators, what keeps the signs from becoming the standard itself? These questions distinguish an individual misuse of reputation from a process through which a standard reproduces itself.
 
@@ -51,7 +51,7 @@ The language of successful research changed too. Among 901,717 successful NIH gr
 
 These observations describe different aspects of an increasingly consequential evaluation environment: more effort devoted to securing approval, stronger connections between assessment and resources, less protected employment across much of the workforce, adaptation to numerical thresholds, and a more promotional language of achievement.
 
-They do not become evidence of intellectual decline merely by being placed together. More demanding research can require longer training, greater specialization, larger teams, and more careful verification. Benjamin Jones’s work on the growing burden of knowledge supplies a substantial account of why some of these changes can arise from intellectual accumulation itself.<sup id="citation-9-1"><a href="#note-9" role="doc-noteref" aria-label="Note 9">[9]</a></sup>
+Intellectual accumulation also creates real demands. More demanding research can require longer training, greater specialization, larger teams and more careful verification. Benjamin Jones’s work on the growing burden of knowledge explains how some of these changes can arise from the development of knowledge itself.<sup id="citation-9-1"><a href="#note-9" role="doc-noteref" aria-label="Note 9">[9]</a></sup> The question is how much of the increased demand helps researchers acquire and check knowledge, and how much mainly satisfies an evaluative convention.
 
 The criticism concerns an additional development: satisfying evaluative demands acquiring rewards partly independent of examining the work’s purposes and grounds. To establish that concern, we need to look at how institutions judge, allocate opportunity, and reproduce their standards.
 
@@ -121,7 +121,7 @@ A system may celebrate originality while making that interval financially or pro
 
 There are genuine counterweights. A study of submissions to 49 life-science and physics journals found that more novel manuscripts were more likely to be accepted, especially when combined with conventional foundations. Publication incentives can reward exploration and partly compensate for risks elsewhere in the process.<sup id="citation-19-1"><a href="#note-19" role="doc-noteref" aria-label="Note 19">[19]</a></sup>
 
-Publishing a completed result and financing an uncertain attempt remain different decisions. A journal may welcome a surprising discovery once the evidence exists, while a researcher had difficulty securing the resources needed to produce it. Whether later rewards adequately compensate for earlier risks depends on the funding system, the field, and the researcher’s position. The journal study rules out a general claim that peer review inherently punishes novelty; it leaves the distribution of risk as a substantive institutional question.
+Publishing a completed result and financing an uncertain attempt are different decisions. A journal may welcome a surprising discovery once the evidence exists, although its author struggled to secure the resources needed to produce it. The journal study shows that measured novelty can be rewarded at publication. Whether that prospect adequately compensates for earlier risks depends on the funding system, the field and the researcher’s position.
 
 Other findings show why familiar measures of academic success cannot simply be added together as if they identified the same contribution. Li, Tessone, and Zeng found that greater publication productivity was associated with higher average citations but lower average citation disruption, including during particularly productive years within researchers’ careers. Wu, Wang, and Evans, analyzing more than 65 million papers, patents, and software products, found that smaller teams tended toward more disruptive citation patterns, while larger teams tended toward developing existing trajectories.<sup id="citation-20-1"><a href="#note-20" role="doc-noteref" aria-label="Note 20">[20]</a></sup><sup id="citation-21-1"><a href="#note-21" role="doc-noteref" aria-label="Note 21">[21]</a></sup>
 
@@ -180,7 +180,7 @@ The same discipline applies to criticism of academia. A claim of originality req
 
 What gives the institutional problem its force is the capacity of recognition to reproduce the evidence supporting its own judgments. Publications justify appointments; appointments lend credibility to evaluations; evaluations allocate resources; resources make further publications possible. The sequence can sustain excellent work. It can also make an inherited standard increasingly difficult to examine, because each successful passage through it supplies another reason to trust those who administer it.
 
-One way to examine this process is to follow a decision through the cycle: what was assessed, which evidence counted, what resources followed, and whether later success was used to justify the original assessment. That would test the proposed mechanism more directly than a general judgment about academia’s depth.
+Follow a decision through the cycle. Identify what was assessed, which evidence counted, what resources followed, and whether later success was used to vindicate the original assessment. This makes the institutional claim testable. It also makes the critic’s task more demanding than declaring academia shallow.
 
 <a id="notes-and-sources"></a>
 ## Sources and notes
@@ -248,3 +248,25 @@ The historical argument distinguishes dated institutional changes, studies of me
 30. <a id="note-30"></a>Patrick Hsu, Silvana Konermann, and Patrick Collison. [Introducing Arc Institute](https://arcinstitute.org/news/introducing-arc-institute). Arc Institute, 15 December 2021. Founding statement describing renewable eight-year funding, university partnerships, and technology centers. It also identifies an excessive premium on novelty relative to robustness and reproducibility. Used as evidence of an organizational design and its stated rationale. <span class="citation-backlinks"><a href="#citation-30-1" role="doc-backlink" aria-label="Return to citation 30, occurrence 1">↩</a></span>
 
 31. <a id="note-31"></a>Convergent Research. [About FROs](https://www.convergentresearch.org/about-fros) (undated institutional account; accessed 19 October 2026). Describes nonprofit teams building public tools, datasets, and scientific infrastructure over defined periods, with specified technical milestones and external review. These organizations address coordination and infrastructure bottlenecks, rather than offering unrestricted research support. <span class="citation-backlinks"><a href="#citation-31-1" role="doc-backlink" aria-label="Return to citation 31, occurrence 1">↩</a></span>
+
+## Related essays
+
+### [Mathematical Life in the Age of AI](https://refactor.press/essays/mathematical-life-in-the-age-of-ai.html#the-means-to-continue)
+
+What an independent inquiry needs from people, institutions and shared resources.
+
+### [What Sustains Mathematical Expertise](https://refactor.press/essays/what-sustains-mathematical-expertise.html#sustaining-independent-capability)
+
+How to support the ability to teach, investigate and check work independently of any one provider.
+
+### [When Accountability Stops Being Reciprocal](https://refactor.press/essays/when-accountability-stops-being-reciprocal.html#making-judgment-answerable)
+
+How consequential institutional decisions can be challenged and corrected.
+
+### [When a Description Becomes a Verdict](https://refactor.press/essays/when-a-description-becomes-a-verdict.html#what-recognition-knows)
+
+When recognition carries relevant expertise, and when a further comparison still has to be made.
+
+### [Purity, Prestige, and Pettiness](https://refactor.press/essays/purity-prestige-and-pettiness.html#preferences-with-material-consequences)
+
+Specific cases of disciplinary taste becoming authority over attention, credit and opportunity.

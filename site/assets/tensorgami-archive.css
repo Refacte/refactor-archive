@@ -1,4 +1,5 @@
 /* Current navigation, distinct archival context, and a progressively enhanced catalogue. */
+.archive-results-heading{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .archive-context{display:flex;flex-wrap:wrap;align-items:baseline;gap:.6rem 1.25rem;margin:1.6rem 0 0;padding:.85rem 1rem;border:1px solid var(--line);border-left:3px solid #c7b799;background:var(--surface);font-size:.82rem;line-height:1.55}
 .archive-context>a:first-child{font-weight:600;color:#e5d8bc}.archive-context>span{color:var(--muted)}.archive-context>a:last-child{margin-left:auto}
 .archive-introduction{max-width:55rem;margin-bottom:2rem}.archive-introduction p{line-height:1.75}.archive-introduction p:last-child{color:var(--muted);font-size:.85rem}

@@ -10,7 +10,7 @@ The opening requires polynomial expansion and arithmetic in characteristic three
 
 ## 1 The identity and its obstruction {#identity-and-obstruction}
 
-Let \(k\) be a field. Write a unit near \(1\) as \(1+t\). Multiplication gives the law
+Let \(k\) be a field. The inputs \(x,y,t\) are formal variables, and equality means equality of every coefficient, including when \(k\) is finite. Write a unit near \(1\) as \(1+t\). Multiplication gives the law
 
 \[
 F(x,y)=(1+x)(1+y)-1=x+y+xy.
@@ -28,7 +28,7 @@ such that
 L(F(x,y))=L(x)+L(y).
 \]
 
-The coefficient of \(t\) is prescribed to be \(1\). Such a series would be an invertible change of formal coordinate, turning the multiplicative law into the additive law.
+Dividing a putative additive coordinate by its nonzero linear coefficient preserves the required identity. Thus prescribing the coefficient of \(t\) to be \(1\) loses no invertible coordinate. Such a series has a compositional inverse: in an unknown inverse \(K(t)=t+k_2t^2+\cdots\), the coefficient of degree \(n\) in \(L(K(t))\) contains \(k_n\) once, and its other terms use earlier coefficients. Recursion constructs the inverse. The same construction on the other side gives an inverse that must agree with it. A successful \(L\) would therefore turn the multiplicative law into the additive law.
 
 ### Calculate the first two repairs {#coefficient-repair}
 
@@ -96,7 +96,7 @@ Substitution \(t\mapsto t^3\) is injective on \(k[[t]]\), so \(L=0\). In particu
 
 This independently checks the nonexistence found in the coefficient repair. We now organise the successful quadratic step and the failed cubic step so that the residual has a well-defined place and is independent of choices. From now on, \(\operatorname{char}k=3\).
 
-## 2 Turn substitution into an operation on functions {#substitution-and-coproduct}
+## 2 Record every coefficient of substitution {#substitution-and-coproduct}
 
 The repair used coefficients of substitutions, including coefficients that ordinary differentiation can miss. To calculate them directly, define the Hasse coefficients by
 
@@ -108,13 +108,33 @@ D^{[n]}(x^m)=\binom mn x^{m-n}.
 
 This definition works in every characteristic, for polynomials or formal power series. For example, \(D^{[3]}(x^3)=1\), although the ordinary derivative of \(x^3\) vanishes. The [Frobenius calculation in *What a Derivative Retains*](https://refactor.press/notes/what-a-derivative-retains.html#frobenius-and-artin-schreier) explains this distinction; [*Divisibility of Separated Polynomials*](https://refactor.press/notes/separated-polynomial-divisibility.html) uses these coefficients to retain multiplicities in a fiber.
 
-The diagonal gives a geometric setting for these coefficients. Put \(A=k[[t]]\). The completed tensor product is
+For our law, \(F(x,y)=x+(1+x)y\). Applying the defining expansion with displacement \(h=(1+x)y\) gives an exact record of the substitution:
+
+\[
+f(F(x,y))=\sum_{n\ge0}D^{[n]}f(x)(1+x)^n y^n.
+\]
+
+If \(L(t)=\sum_{n\ge1}\ell_n t^n\), its additive identity would require
+
+\[
+(1+x)^nD^{[n]}L(x)=\ell_n\qquad(n\ge1).
+\]
+
+These are all the coefficient equations in the second input. For a worked example, take \(f(t)=t^3\) in characteristic three. Its only nonzero Hasse coefficients are \(D^{[0]}f(x)=x^3\) and \(D^{[3]}f(x)=1\). Hence
+
+\[
+f(F(x,y))=x^3+(1+x)^3y^3=x^3+y^3+x^3y^3.
+\]
+
+The cubic correction changes the full defect in degree six, while leaving degree three untouched, exactly as in section 1. The Hasse coefficients give a complete substitution record; the nonexistence proof did not require all of them.
+
+There is also a geometric interpretation of the displacement coefficients. Put \(A=k[[t]]\). The completed tensor product is
 
 \[
 A\widehat\otimes_k A=k[[x,y]].
 \]
 
-The diagonal pullback \(k[[x,y]]\to k[[t]]\) sends both \(x\) and \(y\) to \(t\). Its kernel is \((y-x)\). Writing \(h=y-x\), the successive quotients by powers of that ideal retain successive powers of displacement. The first quotient by \(h^2\) gives the usual first-order differential; the entire completion retains every Hasse coefficient.
+The diagonal pullback \(k[[x,y]]\to k[[t]]\) sends both \(x\) and \(y\) to \(t\). Its kernel is \((y-x)\). Writing \(h=y-x\), the successive quotients by powers of that ideal retain successive powers of displacement. Modulo \(h^2\), the coefficient of \(h\) gives the usual differential; the entire completion retains every Hasse coefficient. The calculations below use their explicit substitution formulas.
 
 Our identity asks for another compatibility as well: the coefficients must respect a group law. That law pulls functions in the other direction:
 
@@ -156,7 +176,7 @@ The same multiplicative law already occurs in the [line-bundle calculation in *W
 
 ## 3 Organise defects and available corrections {#cobar-complex}
 
-The direct calculation tells us to compare the defect of a trial coordinate with the changes another coefficient can produce. We now build a linear bookkeeping system for those two jobs. Let \(\mathfrak m=tk[[t]]\), and remove the two terms forced by the identity element:
+The direct calculation tells us to compare the defect of a trial coordinate with the changes another coefficient can produce. A coordinate is a function of one input; its defect has two inputs; associativity compares three inputs. We now build a linear bookkeeping system for these successive compatibility equations. Let \(\mathfrak m=tk[[t]]\), and remove the two terms forced by the identity element:
 
 \[
 \overline\Delta f=\Delta f-f\otimes1-1\otimes f,
@@ -196,7 +216,14 @@ Dh(x,y,z)
 =h(y,z)-h(F(x,y),z)+h(x,F(y,z))-h(x,y).
 \]
 
-The four terms compare the two ways of grouping three inputs. Coassociativity gives \(D^2=0\): when the reduced coproduct is inserted twice, disjoint insertions cancel with opposite signs, and the two insertions in a single original slot agree by coassociativity and cancel as well. Thus every defect \(Df\) is automatically a two-cocycle.
+The four terms compare the two ways of grouping three inputs. Substitute \(h=Df\) into them. The single-input and pair-input terms cancel, leaving
+
+\[
+D(Df)(x,y,z)
+=f(F(F(x,y),z))-f(F(x,F(y,z)))=0.
+\]
+
+Thus associativity forces the compatibility equation for every coordinate defect. The same cancellation gives \(D^2=0\) in every cohomological degree: disjoint insertions of the reduced coproduct cancel with opposite signs, and the two insertions in a single original slot agree by coassociativity and cancel as well. A cochain killed by \(D\) is called a cocycle; every defect \(Df\) is automatically a two-cocycle.
 
 Cochains can also be concatenated. If \(u\in C^r\) and \(v\in C^s\), place the slots of \(v\) after those of \(u\). This associative product satisfies
 
@@ -232,7 +259,7 @@ Substitution by \(x+y+xy\) cannot lower total degree. Consequently
 D(F^sC)\subseteq F^sC.
 \]
 
-The quotient \(C/F^{s+1}C\) turns “ignore terms above degree \(s\)” into an exact finite operation. A series is a cocycle there when its identity holds through that order. Lifting it to the next quotient means choosing the next coefficient so that one further order also holds. Thus each quotient records a solution of the identity through a specified order.
+The quotient \(C/F^{s+1}C\) turns “ignore terms above degree \(s\)” into an exact finite operation. For a one-cochain \(L\), being a cocycle there means that its logarithm identity holds through that order. Lifting it to the next quotient means choosing the next coefficient so that one further order also holds. Thus the one-cocycles record solutions of the identity through a specified order.
 
 The part of the coproduct that preserves weight is
 
@@ -247,6 +274,8 @@ D=D_0+D_1+D_2+\cdots.
 \]
 
 Here \(D_0\) is the additive cobar differential. This decomposition uses the chosen coordinate and its homogeneous monomials; the filtration itself is the sequence of order cutoffs just defined.
+
+This explains why cohomology enters the repair problem. Suppose \(DL\) first appears in weight \(N\), with homogeneous term \(r_N\). Taking that weight in \(D^2L=0\) gives \(D_0r_N=0\). Adding a correction \(q_Nt^N\) changes the residual by \(D_0(q_Nt^N)\). The residual therefore satisfies the additive compatibility equation, and the available repairs change it by additive boundaries. Its class in \(H^2(\operatorname{gr}_F^N C)\) vanishes exactly when the prescribed partial coordinate can be extended one more order. Here a boundary means an element in the image of the preceding differential, and cohomology is the space of cocycles modulo those boundaries.
 
 Three gradings or indices now have separate roles. Cohomological degree counts input slots. Weight counts powers of the formal coordinates. The index of a spectral-sequence differential will measure how far the first remaining defect raises weight.
 
@@ -423,23 +452,16 @@ Let \(K_s=C/F^sC\). Successive truncations fit into short exact sequences of com
 \longrightarrow0.
 \]
 
-They give exact triangles in the derived category of \(k\)-vector spaces,
-
-\[
-\operatorname{gr}_F^s C
-\longrightarrow K_{s+1}
-\longrightarrow K_s
-\longrightarrow\operatorname{gr}_F^s C[1],
-\]
-
-and connecting maps
+The corresponding connecting maps are
 
 \[
 \partial_s:H^1(K_s)\longrightarrow
 H^2(\operatorname{gr}_F^s C).
 \]
 
-To compute \(\partial_s\), choose a representative lift to \(K_{s+1}\) and apply \(D\). Its differential lies in the kernel, which is the new weight layer. Another lift differs by a cochain in that layer, so its differential changes by a \(D_0\)-boundary. This proves that the obstruction class is independent of the chosen lift. Its vanishing is equivalent to the existence of a correction making the lift a cocycle.
+To compute \(\partial_s\), start with a cocycle \(z\) in \(K_s\), choose a lift \(\widetilde z\) to \(K_{s+1}\), and apply \(D\). Its differential lies in the kernel, which is the new weight layer. It is \(D_0\)-closed because \(D^2\widetilde z=0\). Another lift differs by a cochain in that layer, so its differential changes by a \(D_0\)-boundary. Changing the representative of \([z]\) by a boundary also leaves the class unchanged: lift the cochain whose differential is that boundary and use \(D^2=0\).
+
+This proves that the obstruction is well-defined. If \(D\widetilde z=D_0b\) in the new layer, then \(\widetilde z-b\) is the corrected cocycle. Conversely, any successful correction expresses the residual as such a boundary. Vanishing of the class is therefore exactly the condition for a lift, and the equation supplies the repair.
 
 Our calculation follows two consecutive stages:
 
@@ -456,22 +478,34 @@ Formal-group obstruction calculations have long used degree filtrations in this 
 
 ## 8 The obstruction becomes an addition law {#witt-extension}
 
-The failed logarithm supplied a polynomial we know how to calculate. We can now reverse its job: use that polynomial as the correction in a new binary operation, and use its compatibility equation to check associativity. Its additive cocycle identity is
+The scalar logarithm cannot absorb the cubic residual. We can ask a different question: can a second coordinate retain that residual while the first coordinate still adds? Require translating the second coordinate of either input by an independent formal amount to translate the second output by the same amount. Under these requirements the general pair law has the form
+
+\[
+(x,u)\star(y,v)=(x+y,\ u+v+B(x,y)).
+\]
+
+The unknown is now the interaction \(B\). The second coordinates of the two bracketings of three inputs are
+
+\[
+\begin{aligned}
+u+v+w+B(x,y)+B(x+y,z),\\
+u+v+w+B(y,z)+B(x,y+z).
+\end{aligned}
+\]
+
+Associativity therefore asks for exactly the additive cocycle equation. Our residual already satisfies it:
 
 \[
 c(x,y)+c(x+y,z)=c(y,z)+c(x,y+z).
 \]
 
-This is exactly \(D_0c=0\), already proved in the weight-three complex. Define an operation on pairs by
+This is \(D_0c=0\), proved in the weight-three complex. Any scalar multiple of \(c\) passes this compatibility test. To choose the normalization, temporarily work over the integers. The cubic function has additivity defect
 
 \[
-(x,u)+(y,v)
-=\bigl(x+y,\ u+v-c(x,y)\bigr).
+(X+Y)^3-X^3-Y^3=3(X^2Y+XY^2).
 \]
 
-The two bracketings of a threefold sum have equal first coordinates. Their second coordinates differ by the two sides of the cocycle identity. They are therefore equal. Symmetry of \(c\) proves commutativity, \(c(x,0)=0\) gives the identity \((0,0)\), and \(c(x,-x)=0\) gives inverse \((-x,-u)\).
-
-This is the addition law of length-two, \(3\)-typical Witt vectors over \(k\). To see the coefficient directly, first work over the integers with the two ghost polynomials
+Introduce a second coordinate \(U\) to compensate for that defect, and record the two quantities
 
 \[
 w_0(X,U)=X,
@@ -479,14 +513,30 @@ w_0(X,U)=X,
 w_1(X,U)=X^3+3U.
 \]
 
-Requiring both ghost coordinates to add forces the second coordinate of a sum to be
+These are called ghost coordinates. The coefficient three matches the factor in the cubic defect. Requiring both quantities to add, with first output \(X+Y\), forces the second output to be
 
 \[
 U+V-\frac{(X+Y)^3-X^3-Y^3}{3}
 =U+V-X^2Y-XY^2.
 \]
 
-The quotient is an integer polynomial. Reducing it modulo three gives the displayed addition law; no division by three is performed in \(k\).[^witt]
+This calculation takes place in the integer polynomial ring, where the quotient is an integer polynomial. It selects \(B=-c\). Reduce that polynomial modulo three to obtain
+
+\[
+(x,u)+(y,v)
+=\bigl(x+y,\ u+v-c(x,y)\bigr).
+\]
+
+The bracket calculation and the cocycle identity prove associativity in every degree. Symmetry of \(c\) proves commutativity, \(c(x,0)=0\) gives the identity \((0,0)\), and \(c(x,-x)=0\) gives inverse \((-x,-u)\). This is the addition law of length-two, \(3\)-typical Witt vectors over \(k\). No division by three is performed in \(k\).[^witt]
+
+The ghost coordinates explain the construction over the integers, but reduction loses information:
+
+\[
+(x,u)\longmapsto(x,x^3+3u)=(x,x^3)
+\qquad\text{in characteristic three}.
+\]
+
+This map forgets \(u\). It preserves addition for the new law, but it is not an invertible change of coordinates. We must compute the group operation with the pair law itself.
 
 The mixed term changes an operation we can test directly. The threefold sum in the new law is
 
@@ -496,7 +546,19 @@ The mixed term changes an operation we can test directly. The threefold sum in t
 
 Indeed, \(c(x,x)=2x^3=-x^3\) and \(c(2x,x)=0\), so the second coordinate of three copies is \(3u-c(x,x)-c(2x,x)=x^3\). Componentwise addition on \(\mathbf G_a^2\) would have zero three-series. The cubic correction changes the group structure even though the underlying space remains the affine plane.
 
-The projection \((x,u)\mapsto x\) is a homomorphism to \(\mathbf G_a\), with kernel the additive second coordinate. Thus \(c\) supplies the data of an extension. This construction gives a different group law; it does not produce the scalar logarithm ruled out in section 1. A polynomial that obstructed one compatibility problem now enforces associativity in another.
+For a numerical example over \(\mathbf F_3\), put \(e=(1,0)\). Since \(c(1,1)=2\) and \(c(2,1)=0\),
+
+\[
+2e=(2,-2)=(2,1),\qquad
+3e=(0,1),\qquad
+9e=3(0,1)=(0,0).
+\]
+
+The element \(e\) has order nine. There are nine pairs in \(\mathbf F_3^2\), so repeated addition of this one element reaches every pair. Under componentwise addition every nonzero pair instead has order three.
+
+The projection \((x,u)\mapsto x\) is a homomorphism to \(\mathbf G_a\), with kernel the additive second coordinate. It has no homomorphic section: a section would send \(1\) to some \((1,u)\), whose threefold sum is \((0,1)\), whereas three copies of \(1\) in the source sum to zero. Thus the extension cannot be split by a compatible choice of the second coordinate.
+
+This construction gives a different group law; it does not produce the scalar logarithm ruled out in section 1. A polynomial that obstructed one compatibility problem now enforces associativity in another.
 
 ## 9 The finite correction procedure {#retained-structure}
 
@@ -531,4 +593,4 @@ Two formal disks with the same first-order tangent space can have different resi
 
 [^rezk]: Charles Rezk, [Notes on the Hopkins–Miller Theorem](https://www.sas.rochester.edu/mth/sites/doug-ravenel/otherpapers/hopkins-miller-thm.pdf), §§5.1–5.8, printed pp. 7–10. The discussion constructs the formal-group symmetric-cocycle complex, filters it by polynomial degree, and computes its associated spectral sequence. The full normalized cobar complex and its particular characteristic-three calculation are presented directly here.
 
-[^witt]: Lars Hesselholt, [Lecture notes on Witt vectors](https://math.mit.edu/~larsh/papers/s03/wittsurvey.pdf), opening construction of the Witt polynomials and their addition operations. For the first two \(3\)-typical coordinates, the integer ghost-coordinate calculation in section 8 gives the required polynomial explicitly; the cocycle identity independently proves its associativity after reduction.
+[^witt]: Lars Hesselholt, [Lecture notes on Witt vectors](https://math.mit.edu/~larsh/papers/s03/wittsurvey.pdf), printed pp. 1–3, especially Proposition 2 for the integral construction, and printed p. 8 for the \(p\)-typical ghost coordinates. For the first two \(3\)-typical coordinates, the integer calculation in section 8 gives the required addition polynomial explicitly; the cocycle identity independently proves its associativity after reduction.
