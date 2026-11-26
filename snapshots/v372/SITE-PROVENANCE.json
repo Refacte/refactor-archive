@@ -1,0 +1,15 @@
+{
+  "site": "https://refactor.press",
+  "version": 372,
+  "source_commit": "e09859531f77e8e8e013eb27e1737572269e2cd7",
+  "captured_from_utc": "2026-11-26T05:26:57.465Z",
+  "captured_to_utc": "2026-11-26T05:27:04.451Z",
+  "captured_urls": 734,
+  "distinct_response_bodies": 696,
+  "sitemap_urls": 66,
+  "staged_files": 727,
+  "exact_live_matches": 654,
+  "normalized_html_matches": 73,
+  "parsed_json_responses": 104,
+  "capture_manifest_sha256": "2756bb6c3afa9dd3e3a96ca2a38863ed14acee48c11927eeff11574d69ae0a83"
+}

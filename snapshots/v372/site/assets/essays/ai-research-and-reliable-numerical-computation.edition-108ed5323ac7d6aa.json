@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "revision": "99d2baf61691",
+  "label": "Text revision 99d2baf61691",
+  "source_sha256": "99d2baf616919b9531ad8e827a8159f0de53d7a8cbf5aca1e77d0540bd4990e4",
+  "renderer_sha256": "b65e5c90f2f6d2b2155b397d1807b4584f4cde1a25009413bae4280a0cc20600",
+  "html_sha256": "7395a63d566e8e34a9ff046cb34b973ac8692aac6c51855f87b2d26e31268121",
+  "title": "AI research and reliable numerical computation",
+  "artifacts": {
+    "pdf": {
+      "path": "/assets/essays/ai-research-and-reliable-numerical-computation.c83407b7b54842ac.pdf",
+      "sha256": "c83407b7b54842ac16c9b54598fea6213c9a04a020fabd89ca533b62a34298d5",
+      "bytes": 248164,
+      "alias": "/assets/essays/ai-research-and-reliable-numerical-computation.pdf"
+    },
+    "txt": {
+      "path": "/assets/essays/ai-research-and-reliable-numerical-computation.1f19e1a304b00c96.txt",
+      "sha256": "1f19e1a304b00c96b84a07fb19310e59635dd7bb4c0c39fde74eadbde85ea6a1",
+      "bytes": 116118,
+      "alias": "/assets/essays/ai-research-and-reliable-numerical-computation.txt"
+    }
+  }
+}

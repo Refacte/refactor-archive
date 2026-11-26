@@ -1,0 +1,559 @@
+.refactor-prose .refactor-matching-experiment {
+  margin-block: 2rem 2.6rem;
+  padding: clamp(.8rem, 3vw, 1.6rem);
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--accent);
+  background: var(--surface);
+}
+.refactor-prose .refactor-matching-experiment h2 { margin-top: 0; padding-top: 0; border-top: 0; }
+.refactor-matching-experiment :is(#refactor-s6-matching, #refactor-s6-outer, #refactor-bochert-overlap, #refactor-signed-splicing) {
+  --background: var(--surface);
+  --foreground: var(--ink);
+  --border: var(--line);
+  --primary: var(--refactor-mint);
+  --primary-foreground: var(--paper);
+  --accent: var(--selection);
+  --accent-foreground: var(--ink);
+  --viz-series-1: var(--refactor-mint);
+  --ring: var(--refactor-mint);
+  --red: #f6a69c;
+  --blue: #9ccbfb;
+  --font-size-base: 1rem;
+  font: 1rem/1.45 var(--sans);
+}
+.refactor-matching-experiment :is(.viz-controls, .viz-row) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .65rem 1rem;
+}
+.refactor-matching-experiment .form-label { display: grid; gap: .25rem; }
+.refactor-matching-experiment :is(.form-select, .btn) {
+  max-width: 100%;
+  min-height: 2.75rem;
+  padding: .35rem .6rem;
+  border: 1px solid var(--frame);
+  border-radius: .35rem;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+}
+.refactor-matching-experiment .btn[aria-pressed="true"] {
+  background: var(--refactor-mint);
+  color: var(--paper);
+}
+.refactor-matching-experiment :is(.btn, .form-select):focus-visible {
+  outline: 2px solid var(--refactor-mint);
+  outline-offset: 3px;
+}
+.refactor-matching-experiment .tabular-nums { font-variant-numeric: tabular-nums; }
+.refactor-matching-experiment :is(.sr-only, #refactor-s6-heading, #refactor-s6-outer-heading, #refactor-bochert-heading, #refactor-signed-splicing-heading) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+.refactor-prose .refactor-matching-experiment .table {
+  width: auto;
+  max-width: 100%;
+  margin: 0;
+}
+.refactor-prose .refactor-matching-experiment :is(td, th) { padding: .4rem .55rem; }
+.refactor-prose :is(.cycle, .static-paths code) { white-space: nowrap; }
+.refactor-prose .static-paths { display: flex; flex-wrap: wrap; gap: .3rem 1.6rem; }
+.refactor-prose .static-paths .red { color: #f6a69c; }
+.refactor-prose .static-paths .blue { color: #9ccbfb; }
+.refactor-prose .theorem {
+  padding-inline-start: 1rem;
+  border-inline-start: 2px solid var(--accent);
+}
+.refactor-prose .prism-table table { width: auto; }
+@media (max-width: 30rem) {
+  .refactor-prose .refactor-matching-experiment :is(td, th) { padding: .35rem .3rem; }
+  .refactor-prose .refactor-matching-experiment .table { font-size: .83rem; }
+  .refactor-prose .prism-table :is(td, th) { padding: .35rem .3rem; }
+  .refactor-matching-experiment #refactor-s6-outer .s6-outer-exchanges { column-gap: .5rem; }
+  .refactor-matching-experiment [data-common-for] { font-size: .83rem; }
+}
+
+#refactor-s6-matching {
+    --matching-gap: var(--font-size-base, 1rem);
+    display: grid;
+    gap: var(--matching-gap);
+    min-inline-size: 0;
+  }
+
+  #refactor-s6-matching h3,
+  #refactor-s6-matching p {
+    margin: 0;
+  }
+
+  #refactor-s6-matching strong {
+    font-weight: 500;
+  }
+
+  #refactor-s6-matching .matching-paths {
+    display: grid;
+    gap: calc(var(--matching-gap) * .7);
+    max-inline-size: 25rem;
+  }
+
+  #refactor-s6-matching .matching-path {
+    display: flex;
+    align-items: center;
+    inline-size: 100%;
+  }
+
+  #refactor-s6-matching .matching-path[data-path="0"] {
+    inline-size: max(5rem, calc((100% + 3.8rem) / 3));
+  }
+
+  #refactor-s6-matching .matching-node {
+    display: grid;
+    flex: 0 0 1.9rem;
+    block-size: 1.9rem;
+    place-items: center;
+    border: 1px solid var(--border, CanvasText);
+    border-radius: 50%;
+    background: var(--background, Canvas);
+    color: var(--foreground, CanvasText);
+    font-variant-numeric: tabular-nums;
+  }
+
+  #refactor-s6-matching .matching-node[data-trace="start"] {
+    background: var(--primary, CanvasText);
+    color: var(--primary-foreground, Canvas);
+  }
+
+  #refactor-s6-matching .matching-node[data-trace="result"] {
+    background: var(--accent, Canvas);
+    color: var(--accent-foreground, CanvasText);
+    box-shadow: inset 0 0 0 1px var(--ring, CanvasText);
+  }
+
+  #refactor-s6-matching .matching-node[data-trace="via"] {
+    box-shadow: inset 0 0 0 1px var(--ring, CanvasText);
+  }
+
+  #refactor-s6-matching .matching-edge {
+    position: relative;
+    display: grid;
+    flex: 1 1 0;
+    align-items: center;
+    min-inline-size: 1.2rem;
+    justify-items: center;
+  }
+
+  #refactor-s6-matching .matching-edge::before {
+    position: absolute;
+    inset-inline: 0;
+    border-block-start: 2px solid var(--edge-color);
+    content: "";
+  }
+
+  #refactor-s6-matching .matching-edge[data-color="red"] {
+    --edge-color: var(--red, var(--viz-series-2, CanvasText));
+  }
+
+  #refactor-s6-matching .matching-edge[data-color="blue"] {
+    --edge-color: var(--blue, var(--viz-series-3, CanvasText));
+  }
+
+  #refactor-s6-matching .matching-edge[data-color="blue"]::before {
+    border-block-start-style: dashed;
+  }
+
+  #refactor-s6-matching .matching-edge span {
+    position: relative;
+    padding-inline: .22rem;
+    background: var(--background, Canvas);
+    color: var(--foreground, CanvasText);
+  }
+
+  #refactor-s6-matching .matching-totals,
+  #refactor-s6-matching .matching-equations {
+    column-gap: var(--matching-gap);
+    row-gap: calc(var(--matching-gap) * .25);
+  }
+
+  #refactor-s6-matching [data-certificate] {
+    display: grid;
+    gap: calc(var(--matching-gap) * .25);
+    margin-block-start: calc(var(--matching-gap) * .35);
+  }
+
+  #refactor-s6-matching [data-certificate][hidden] {
+    display: none;
+  }
+
+#refactor-s6-outer {
+    --s6-gap: var(--font-size-base, 1rem);
+    display: grid;
+    gap: var(--s6-gap);
+    min-inline-size: 0;
+  }
+
+  #refactor-s6-outer h3,
+  #refactor-s6-outer p,
+  #refactor-s6-outer table {
+    margin: 0;
+  }
+
+  #refactor-s6-outer .s6-outer-points {
+    --link-start: calc(100% / 12);
+    --link-end: 25%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    max-inline-size: 23rem;
+    padding-block-start: calc(var(--s6-gap) * .8);
+  }
+
+  #refactor-s6-outer .s6-outer-link {
+    position: absolute;
+    inset-inline-start: var(--link-start);
+    inset-inline-end: calc(100% - var(--link-end));
+    inset-block-start: 0;
+    block-size: calc(var(--s6-gap) * .85);
+    border: 1px solid var(--viz-series-1, currentColor);
+    border-block-end: 0;
+    border-start-start-radius: .4rem;
+    border-start-end-radius: .4rem;
+    pointer-events: none;
+  }
+
+  #refactor-s6-outer .s6-outer-point {
+    position: relative;
+    display: grid;
+    justify-items: center;
+  }
+
+  #refactor-s6-outer [data-vertex] {
+    display: grid;
+    inline-size: 1.9rem;
+    block-size: 1.9rem;
+    place-items: center;
+    box-sizing: border-box;
+    border: 1px solid var(--border, currentColor);
+    border-radius: 50%;
+    background: var(--background, Canvas);
+    color: var(--foreground, CanvasText);
+  }
+
+  #refactor-s6-outer [data-vertex][data-moving] {
+    border-color: var(--viz-series-1, currentColor);
+    background: color-mix(in srgb, var(--viz-series-1, currentColor) 22%, var(--background, Canvas));
+    font-weight: 500;
+  }
+
+  #refactor-s6-outer .s6-outer-pairs {
+    display: grid;
+    gap: calc(var(--s6-gap) * .55);
+  }
+
+  #refactor-s6-outer .s6-outer-exchanges {
+    gap: calc(var(--s6-gap) * .5) var(--s6-gap);
+  }
+
+  #refactor-s6-outer .s6-outer-pair {
+    display: grid;
+    gap: calc(var(--s6-gap) * .3);
+    justify-items: center;
+  }
+
+  #refactor-s6-outer [data-image] {
+    margin-inline-start: calc(var(--s6-gap) * .35);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  #refactor-s6-outer [data-source],
+  #refactor-s6-outer [data-target],
+  #refactor-s6-outer [data-common-for] {
+    white-space: nowrap;
+  }
+
+  #refactor-s6-outer [data-fixed] > td {
+    background: color-mix(in srgb, var(--viz-series-1, currentColor) 20%, var(--background, Canvas));
+    color: var(--foreground, CanvasText);
+    font-weight: 500;
+  }
+
+#refactor-bochert-overlap {
+    --bochert-gap: var(--font-size-base, 1rem);
+    --bochert-red: var(--red, currentColor);
+    --bochert-blue: var(--blue, currentColor);
+    display: grid;
+    gap: var(--bochert-gap);
+    min-inline-size: 0;
+  }
+
+  #refactor-bochert-overlap h3,
+  #refactor-bochert-overlap p {
+    margin: 0;
+  }
+
+  #refactor-bochert-overlap strong {
+    font-weight: 500;
+  }
+
+  #refactor-bochert-overlap .bochert-key,
+  #refactor-bochert-overlap .bochert-summary {
+    column-gap: var(--bochert-gap);
+    row-gap: calc(var(--bochert-gap) * .25);
+  }
+
+  #refactor-bochert-overlap .bochert-swatch {
+    display: inline-block;
+    inline-size: .9rem;
+    margin-inline-end: .3rem;
+    border-block-start: 2px solid var(--bochert-red);
+    vertical-align: middle;
+  }
+
+  #refactor-bochert-overlap .bochert-swatch[data-color="blue"] {
+    border-block-start: 2px dashed var(--bochert-blue);
+  }
+
+  #refactor-bochert-overlap .bochert-graph {
+    position: relative;
+    max-inline-size: 29rem;
+    padding-block: 1.55rem;
+  }
+
+  #refactor-bochert-overlap .bochert-vertices {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    justify-items: center;
+  }
+
+  #refactor-bochert-overlap [data-vertex] {
+    display: grid;
+    inline-size: 1.65rem;
+    block-size: 1.65rem;
+    box-sizing: border-box;
+    border: 1px solid var(--border, CanvasText);
+    border-radius: 50%;
+    place-items: center;
+    background: var(--background, Canvas);
+    color: var(--foreground, CanvasText);
+  }
+
+  #refactor-bochert-overlap [data-membership="both"] {
+    background: var(--accent, Canvas);
+    color: var(--accent-foreground, CanvasText);
+    border-color: var(--ring, CanvasText);
+    box-shadow: 0 0 0 1px var(--ring, CanvasText);
+    font-weight: 500;
+  }
+
+  #refactor-bochert-overlap .bochert-arc {
+    position: absolute;
+    inset-inline-start: var(--arc-start);
+    inset-inline-end: calc(100% - var(--arc-end));
+    block-size: var(--arc-height);
+    pointer-events: none;
+  }
+
+  #refactor-bochert-overlap [data-edge="red"] {
+    inset-block-end: 50%;
+    border: 2px solid var(--bochert-red);
+    border-block-end: 0;
+    border-start-start-radius: .45rem;
+    border-start-end-radius: .45rem;
+  }
+
+  #refactor-bochert-overlap [data-edge="blue"] {
+    inset-block-start: 50%;
+    border: 2px dashed var(--bochert-blue);
+    border-block-start: 0;
+    border-end-start-radius: .45rem;
+    border-end-end-radius: .45rem;
+  }
+
+  #refactor-bochert-overlap .bochert-trace {
+    display: grid;
+    gap: calc(var(--bochert-gap) * .2);
+  }
+
+  #refactor-bochert-overlap .bochert-steps {
+    gap: calc(var(--bochert-gap) * .25);
+  }
+
+  #refactor-bochert-overlap .bochert-steps span {
+    white-space: nowrap;
+  }
+
+.refactor-prose .bochert-result { padding-inline-start: 1rem; border-inline-start: 2px solid var(--accent); }
+.refactor-prose .bochert-steps { padding-inline-start: 1.6rem; }
+.refactor-prose .bochert-steps li + li { margin-block-start: .6rem; }
+.refactor-prose .bochert-result math { font-size: clamp(.86rem, 3.6vw, 1.22rem); }
+
+#refactor-signed-splicing {
+    --splicing-gap: var(--font-size-base, 1rem);
+    display: grid;
+    gap: var(--splicing-gap);
+    min-inline-size: 0;
+  }
+
+  #refactor-signed-splicing h3,
+  #refactor-signed-splicing p {
+    margin: 0;
+  }
+
+  #refactor-signed-splicing .signed-splicing-visual,
+  #refactor-signed-splicing .signed-splicing-values {
+    display: grid;
+    gap: calc(var(--splicing-gap) * .45);
+  }
+
+  #refactor-signed-splicing .signed-splicing-matching {
+    --matching-red: var(--red, currentColor);
+    --matching-blue: var(--blue, currentColor);
+  }
+
+  #refactor-signed-splicing .signed-splicing-paths {
+    gap: .18rem .68rem;
+  }
+
+  #refactor-signed-splicing .signed-splicing-path {
+    display: inline-flex;
+    align-items: center;
+    padding-block-start: 1.12rem;
+  }
+
+  #refactor-signed-splicing .signed-matching-vertex {
+    position: relative;
+    display: grid;
+    place-items: center;
+    inline-size: 1.28rem;
+    block-size: 1.5rem;
+    box-sizing: border-box;
+    border: 1px solid var(--border, currentColor);
+    border-radius: 50%;
+  }
+
+  #refactor-signed-splicing .signed-fixed-mark {
+    position: absolute;
+    inset-block-end: calc(100% - .13rem);
+    inset-inline-start: 50%;
+    transform: translateX(-50%);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  #refactor-signed-splicing [data-negative-fixed="red"] {
+    text-decoration: underline solid var(--matching-red);
+  }
+
+  #refactor-signed-splicing [data-negative-fixed="blue"] {
+    text-decoration: underline dashed var(--matching-blue);
+  }
+
+  #refactor-signed-splicing .signed-matching-edge {
+    position: relative;
+    display: grid;
+    inline-size: 1.55rem;
+    place-items: center;
+  }
+
+  #refactor-signed-splicing .signed-matching-edge::before {
+    position: absolute;
+    inset-inline: 0;
+    border-block-start: 2px solid var(--matching-red);
+    content: "";
+  }
+
+  #refactor-signed-splicing [data-matching-color="blue"]::before {
+    border-block-start: 2px dashed var(--matching-blue);
+  }
+
+  #refactor-signed-splicing .signed-matching-edge > span {
+    position: relative;
+    padding-inline: .12rem;
+    background: var(--background, Canvas);
+    color: var(--foreground, CanvasText);
+    font-weight: 500;
+  }
+
+  #refactor-signed-splicing .signed-splicing-cycles {
+    column-gap: var(--splicing-gap);
+    row-gap: calc(var(--splicing-gap) * .35);
+  }
+
+  #refactor-signed-splicing .signed-splicing-cycle {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .1rem;
+    max-inline-size: 100%;
+  }
+
+  #refactor-signed-splicing .signed-splicing-cycle-sign {
+    font-weight: 500;
+    color: var(--muted-foreground, currentColor);
+    margin-inline-end: .12rem;
+  }
+
+  #refactor-signed-splicing [data-sign="negative"] .signed-splicing-cycle-sign {
+    color: var(--foreground, CanvasText);
+  }
+
+  #refactor-signed-splicing .signed-splicing-step {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+
+  #refactor-signed-splicing [data-vertex] {
+    display: grid;
+    inline-size: 1.28rem;
+    min-block-size: 1.5rem;
+    box-sizing: border-box;
+    place-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--border, currentColor);
+    color: var(--foreground, CanvasText);
+  }
+
+  #refactor-signed-splicing [data-pair-mark="red"] {
+    background: color-mix(in srgb, var(--red, currentColor) 15%, transparent);
+  }
+
+  #refactor-signed-splicing [data-pair-mark="fixed"] {
+    border-radius: .22rem;
+    background: color-mix(in srgb, var(--blue, currentColor) 15%, transparent);
+  }
+
+  #refactor-signed-splicing .signed-splicing-arrow {
+    padding-inline: .04rem;
+    color: var(--muted-foreground, currentColor);
+  }
+
+  #refactor-signed-splicing [data-negative-edge] {
+    color: var(--foreground, CanvasText);
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: .12em;
+  }
+
+  #refactor-signed-splicing .signed-splicing-values p {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    column-gap: calc(var(--splicing-gap) * .45);
+  }
+
+  #refactor-signed-splicing .signed-splicing-values output {
+    font-weight: 500;
+  }
+
+.refactor-matching-experiment #refactor-signed-splicing .btn:disabled { opacity: .5; }
+.refactor-matching-experiment #refactor-signed-splicing .text-small { font-size: .82em; }
+.refactor-prose .refactor-matching-experiment .experiment-note { margin-top: 1.25rem; }

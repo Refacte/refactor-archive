@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" role="img" aria-labelledby="four-cycle-title four-cycle-description">
+  <title id="four-cycle-title">Changed edge weights defeat a retained coarse space</title>
+  <desc id="four-cycle-description">Two drawings of the same four-cycle. Vertex 1 is at the top left, 2 at the top right, 3 at the bottom right, and 4 at the bottom left. Initially edges 1–2 and 3–4 have weight one, while edges 2–3 and 4–1 have weight epsilon. After the change these weights are exchanged. Shading in both panels marks the retained aggregates {1,2} and {3,4}. The changed panel shows the missed vector with signs plus, minus, minus, plus at vertices 1, 2, 3, 4. It sums to zero on each retained aggregate.</desc>
+  <rect width="760" height="400" rx="12" fill="#10212a"/>
+  <g fill="#142832" stroke="#354f5e" stroke-width="1">
+    <rect x="16" y="16" width="352" height="342" rx="10"/>
+    <rect x="392" y="16" width="352" height="342" rx="10"/>
+  </g>
+  <g font-family="Georgia, 'Times New Roman', serif" text-anchor="middle">
+    <g fill="#f0eee5" font-size="22" font-weight="bold">
+      <text x="192" y="43">Initial weights</text>
+      <text x="568" y="43">Changed weights</text>
+    </g>
+    <g fill="#c8d5dc" font-size="14">
+      <text x="192" y="68">Strong edges lie inside the retained pairs</text>
+      <text x="568" y="68">Strong edges now join different pairs</text>
+    </g>
+  </g>
+  <g fill="#243d4b" stroke="#7692a3" stroke-width="1.2">
+    <rect x="63" y="110" width="258" height="56" rx="24"/>
+    <rect x="63" y="242" width="258" height="56" rx="24"/>
+    <rect x="439" y="110" width="258" height="56" rx="24"/>
+    <rect x="439" y="242" width="258" height="56" rx="24"/>
+  </g>
+  <g fill="#c8d5dc" font-family="Georgia, 'Times New Roman', serif" font-size="14" text-anchor="middle">
+    <text x="192" y="99">Retained aggregate {1,2}</text>
+    <text x="192" y="321">Retained aggregate {3,4}</text>
+    <text x="568" y="99">Retained aggregate {1,2}</text>
+    <text x="568" y="321">Retained aggregate {3,4}</text>
+  </g>
+  <g fill="none" stroke-linecap="round">
+    <g stroke="#9aadb7" stroke-width="2" stroke-dasharray="7 5">
+      <path d="M94 138V270 M290 138V270"/>
+      <path d="M470 138H666 M470 270H666"/>
+    </g>
+    <g stroke="#c8edb3" stroke-width="5">
+      <path d="M94 138H290 M94 270H290"/>
+      <path d="M470 138V270 M666 138V270"/>
+    </g>
+  </g>
+  <g fill="#f0eee5" font-family="Georgia, 'Times New Roman', serif" font-size="18" text-anchor="middle">
+    <text x="192" y="130">1</text>
+    <text x="192" y="262">1</text>
+    <text x="73" y="209">ε</text>
+    <text x="311" y="209">ε</text>
+    <text x="568" y="130">ε</text>
+    <text x="568" y="262">ε</text>
+    <text x="449" y="209">1</text>
+    <text x="687" y="209">1</text>
+  </g>
+  <g fill="#10212a" stroke="#e3e6df" stroke-width="1.7">
+    <circle cx="94" cy="138" r="18"/><circle cx="290" cy="138" r="18"/>
+    <circle cx="290" cy="270" r="18"/><circle cx="94" cy="270" r="18"/>
+    <circle cx="470" cy="138" r="18"/><circle cx="666" cy="138" r="18"/>
+    <circle cx="666" cy="270" r="18"/><circle cx="470" cy="270" r="18"/>
+  </g>
+  <g fill="#f0eee5" font-family="Georgia, 'Times New Roman', serif" font-size="18" text-anchor="middle">
+    <text x="94" y="144">1</text><text x="290" y="144">2</text>
+    <text x="290" y="276">3</text><text x="94" y="276">4</text>
+    <text x="470" y="144">1</text><text x="666" y="144">2</text>
+    <text x="666" y="276">3</text><text x="470" y="276">4</text>
+  </g>
+  <g fill="#c8edb3" font-family="Georgia, 'Times New Roman', serif" font-size="24" font-weight="bold" text-anchor="middle">
+    <text x="430" y="146">+</text><text x="706" y="146">−</text>
+    <text x="706" y="278">−</text><text x="430" y="278">+</text>
+  </g>
+  <g fill="#f0eee5" font-family="Georgia, 'Times New Roman', serif" font-size="14" text-anchor="middle">
+    <text x="192" y="346">Coarse vectors are constant on each pair</text>
+    <text x="568" y="346">Missed mode v = (+, −, −, +)</text>
+  </g>
+  <g font-family="Georgia, 'Times New Roman', serif" font-size="14" fill="#c8d5dc">
+    <path d="M59 382H103" fill="none" stroke="#c8edb3" stroke-width="5" stroke-linecap="round"/>
+    <text x="116" y="387">Weight 1</text>
+    <path d="M273 382H317" fill="none" stroke="#9aadb7" stroke-width="2" stroke-dasharray="7 5" stroke-linecap="round"/>
+    <text x="330" y="387">Weight ε</text>
+    <rect x="496" y="374" width="24" height="16" rx="5" fill="#243d4b" stroke="#7692a3" stroke-width="1.2"/>
+    <text x="533" y="387">Retained aggregates</text>
+  </g>
+</svg>

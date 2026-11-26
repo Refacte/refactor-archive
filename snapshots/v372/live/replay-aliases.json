@@ -1,0 +1,270 @@
+{
+  "version": 1,
+  "scope": "Legacy first-party URL aliases referenced by captured public PDFs",
+  "aliases": {
+    "https://refacte.com/assets/essays/liu-coarse-space-formulation-check.txt": {
+      "status": 301,
+      "location": "https://refactor.press/assets/essays/liu-coarse-space-formulation-check.txt",
+      "final_url": "https://refactor.press/assets/essays/liu-coarse-space-formulation-check.txt",
+      "hops": [
+        {
+          "status": 301,
+          "url": "https://refactor.press/assets/essays/liu-coarse-space-formulation-check.txt"
+        }
+      ]
+    },
+    "https://refacte.com/papers/taiko-girth-obstruction": {
+      "status": 301,
+      "location": "https://refactor.press/papers/taiko-girth-obstruction",
+      "final_url": "https://refactor.press/papers/taiko-girth-obstruction",
+      "hops": [
+        {
+          "status": 301,
+          "url": "https://refactor.press/papers/taiko-girth-obstruction"
+        }
+      ]
+    },
+    "https://refactor.press/essays/ai-research-and-reliable-numerical-computation.html": {
+      "status": 307,
+      "location": "https://refactor.press/essays/ai-research-and-reliable-numerical-computation",
+      "final_url": "https://refactor.press/essays/ai-research-and-reliable-numerical-computation",
+      "hops": [
+        {
+          "status": 307,
+          "url": "https://refactor.press/essays/ai-research-and-reliable-numerical-computation"
+        }
+      ]
+    },
+    "https://refactor.press/essays/continuity-as-organized-discrete-data.html": {
+      "status": 307,
+      "location": "https://refactor.press/essays/continuity-as-organized-discrete-data",
+      "final_url": "https://refactor.press/essays/continuity-as-organized-discrete-data",
+      "hops": [
+        {
+          "status": 307,
+          "url": "https://refactor.press/essays/continuity-as-organized-discrete-data"
+        }
+      ]
+    },
+    "https://refactor.press/essays/mathematical-life-in-the-age-of-ai.html": {
+      "status": 307,
+      "location": "https://refactor.press/essays/mathematical-life-in-the-age-of-ai",
+      "final_url": "https://refactor.press/essays/mathematical-life-in-the-age-of-ai",
+      "hops": [
+        {
+          "status": 307,
+          "url": "https://refactor.press/essays/mathematical-life-in-the-age-of-ai"
+        }
+      ]
+    },
+    "https://refactor.press/essays/purity-prestige-and-pettiness.html": {
+      "status": 307,
+      "location": "https://refactor.press/essays/purity-prestige-and-pettiness",
+      "final_url": "https://refactor.press/essays/purity-prestige-and-pettiness",
+      "hops": [
+        {
+          "status": 307,
+          "url": "https://refactor.press/essays/purity-prestige-and-pettiness"
+        }
+      ]
+    },
+    "https://refactor.press/essays/the-authority-of-a-vision.html": {
+      "status": 307,
+      "location": "https://refactor.press/essays/the-authority-of-a-vision",
+      "final_url": "https://refactor.press/essays/the-authority-of-a-vision",
+      "hops": [
+        {
+          "status": 307,
+          "url": "https://refactor.press/essays/the-authority-of-a-vision"
+        }
+      ]
+    },
+    "https://refactor.press/essays/the-culture-of-mathematical-judgment.html": {
+      "status": 307,
+      "location": "https://refactor.press/essays/the-culture-of-mathematical-judgment",
+      "final_url": "https://refactor.press/essays/the-culture-of-mathematical-judgment",
+      "hops": [
+        {
+          "status": 307,
+          "url": "https://refactor.press/essays/the-culture-of-mathematical-judgment"
+        }
+      ]
+    },
+    "https://refactor.press/essays/the-performance-of-depth.html": {
+      "status": 307,
+      "location": "https://refactor.press/essays/the-performance-of-depth",
+      "final_url": "https://refactor.press/essays/the-performance-of-depth",
+      "hops": [
+        {
+          "status": 307,
+          "url": "https://refactor.press/essays/the-performance-of-depth"
+        }
+      ]
+    },
+    "https://refactor.press/essays/what-a-new-proof-makes-possible.html": {
+      "status": 307,
+      "location": "https://refactor.press/essays/what-a-new-proof-makes-possible",
+      "final_url": "https://refactor.press/essays/what-a-new-proof-makes-possible",
+      "hops": [
+        {
+          "status": 307,
+          "url": "https://refactor.press/essays/what-a-new-proof-makes-possible"
+        }
+      ]
+    },
+    "https://refactor.press/essays/what-sustains-mathematical-expertise.html": {
+      "status": 307,
+      "location": "https://refactor.press/essays/what-sustains-mathematical-expertise",
+      "final_url": "https://refactor.press/essays/what-sustains-mathematical-expertise",
+      "hops": [
+        {
+          "status": 307,
+          "url": "https://refactor.press/essays/what-sustains-mathematical-expertise"
+        }
+      ]
+    },
+    "https://refactor.press/essays/when-a-description-becomes-a-verdict.html": {
+      "status": 307,
+      "location": "https://refactor.press/essays/when-a-description-becomes-a-verdict",
+      "final_url": "https://refactor.press/essays/when-a-description-becomes-a-verdict",
+      "hops": [
+        {
+          "status": 307,
+          "url": "https://refactor.press/essays/when-a-description-becomes-a-verdict"
+        }
+      ]
+    },
+    "https://refactor.press/essays/when-accountability-stops-being-reciprocal.html": {
+      "status": 307,
+      "location": "https://refactor.press/essays/when-accountability-stops-being-reciprocal",
+      "final_url": "https://refactor.press/essays/when-accountability-stops-being-reciprocal",
+      "hops": [
+        {
+          "status": 307,
+          "url": "https://refactor.press/essays/when-accountability-stops-being-reciprocal"
+        }
+      ]
+    },
+    "https://refactor.press/notes/extracting-first-prime.html": {
+      "status": 307,
+      "location": "https://refactor.press/notes/extracting-first-prime",
+      "final_url": "https://refactor.press/notes/extracting-first-prime",
+      "hops": [
+        {
+          "status": 307,
+          "url": "https://refactor.press/notes/extracting-first-prime"
+        }
+      ]
+    },
+    "https://refactor.press/notes/fourier-symmetry-and-reconstruction.html": {
+      "status": 307,
+      "location": "https://refactor.press/notes/fourier-symmetry-and-reconstruction",
+      "final_url": "https://refactor.press/notes/fourier-symmetry-and-reconstruction",
+      "hops": [
+        {
+          "status": 307,
+          "url": "https://refactor.press/notes/fourier-symmetry-and-reconstruction"
+        }
+      ]
+    },
+    "https://refactor.press/notes/quotients-and-reconstruction-audit.html": {
+      "status": 307,
+      "location": "https://refactor.press/notes/quotients-and-reconstruction-audit",
+      "final_url": "https://refactor.press/notes/quotients-and-reconstruction-audit",
+      "hops": [
+        {
+          "status": 307,
+          "url": "https://refactor.press/notes/quotients-and-reconstruction-audit"
+        }
+      ]
+    },
+    "https://refactor.press/notes/quotients-and-reconstruction.html": {
+      "status": 307,
+      "location": "https://refactor.press/notes/quotients-and-reconstruction",
+      "final_url": "https://refactor.press/notes/quotients-and-reconstruction",
+      "hops": [
+        {
+          "status": 307,
+          "url": "https://refactor.press/notes/quotients-and-reconstruction"
+        }
+      ]
+    },
+    "https://refactor.press/notes/separated-polynomial-divisibility.html": {
+      "status": 307,
+      "location": "https://refactor.press/notes/separated-polynomial-divisibility",
+      "final_url": "https://refactor.press/notes/separated-polynomial-divisibility",
+      "hops": [
+        {
+          "status": 307,
+          "url": "https://refactor.press/notes/separated-polynomial-divisibility"
+        }
+      ]
+    },
+    "https://refactor.press/notes/what-a-boundary-map-can-prove.html": {
+      "status": 307,
+      "location": "https://refactor.press/notes/what-a-boundary-map-can-prove",
+      "final_url": "https://refactor.press/notes/what-a-boundary-map-can-prove",
+      "hops": [
+        {
+          "status": 307,
+          "url": "https://refactor.press/notes/what-a-boundary-map-can-prove"
+        }
+      ]
+    },
+    "https://refactor.press/notes/what-a-derivative-retains.html": {
+      "status": 307,
+      "location": "https://refactor.press/notes/what-a-derivative-retains",
+      "final_url": "https://refactor.press/notes/what-a-derivative-retains",
+      "hops": [
+        {
+          "status": 307,
+          "url": "https://refactor.press/notes/what-a-derivative-retains"
+        }
+      ]
+    },
+    "https://refactor.press/notes/when-a-formal-logarithm-fails.html": {
+      "status": 307,
+      "location": "https://refactor.press/notes/when-a-formal-logarithm-fails",
+      "final_url": "https://refactor.press/notes/when-a-formal-logarithm-fails",
+      "hops": [
+        {
+          "status": 307,
+          "url": "https://refactor.press/notes/when-a-formal-logarithm-fails"
+        }
+      ]
+    },
+    "https://refactor.press/refactors/cayley-hamilton.html": {
+      "status": 307,
+      "location": "https://refactor.press/refactors/cayley-hamilton",
+      "final_url": "https://refactor.press/refactors/cayley-hamilton",
+      "hops": [
+        {
+          "status": 307,
+          "url": "https://refactor.press/refactors/cayley-hamilton"
+        }
+      ]
+    },
+    "https://refactor.press/refactors/coordinate-repair.html": {
+      "status": 307,
+      "location": "https://refactor.press/refactors/coordinate-repair",
+      "final_url": "https://refactor.press/refactors/coordinate-repair",
+      "hops": [
+        {
+          "status": 307,
+          "url": "https://refactor.press/refactors/coordinate-repair"
+        }
+      ]
+    },
+    "https://tensorgami.com/essays/mathematical-understanding-in-the-age-of-ai": {
+      "status": 301,
+      "location": "https://refactor.press/essays/mathematical-understanding-in-the-age-of-ai",
+      "final_url": "https://refactor.press/essays/mathematical-understanding-in-the-age-of-ai",
+      "hops": [
+        {
+          "status": 301,
+          "url": "https://refactor.press/essays/mathematical-understanding-in-the-age-of-ai"
+        }
+      ]
+    }
+  }
+}

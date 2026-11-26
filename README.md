@@ -2,6 +2,8 @@
 
 Mathematical writing by Henry Shin at [refactor.press](https://refactor.press).
 
+The [November 25, 2026 capture of version 372](https://github.com/Refacte/refactor-archive/releases/tag/snapshot-2026-11-26T052657Z-v372) is available as an immutable release. Its versioned files are in [`snapshots/v372/`](snapshots/v372/). The original archive files documented below are the November 16 capture of version 287.
+
 This snapshot preserves the published file tree of site version **287**, source commit **ee4cfe272f253e3d8beaf72caa9fd246bd7fb289**. The fresh capture ran from **2026-11-17T00:52:06.263Z** through **2026-11-17T00:52:22.460Z**, on **16 November 2026** in America/Los_Angeles.
 
 ## Contents

@@ -1,0 +1,57 @@
+\section{Which coefficients remain free}\label{app:freedom}
+
+Throughout this appendix let \(p\) be prime. The coefficients lie in a commutative ring \(R\) with identity and \(p=0\), and \(a^{p-1}=0\). All series are formal coefficient lists, interpreted coefficient by coefficient. The finite formula for \(L_a\) gives one working coordinate, but it did not establish uniqueness. Which freedom remains after its coefficients below degree \(p\) have been forced?
+
+Compare any other normalized coordinate \(M\) that makes \(F_a\) additive with the one already constructed. First move from additive coordinates back through \(E_a\), then apply \(M\):
+\[
+ P=M\circ E_a,\qquad M=P\circ L_a.
+\]
+The inverse identities give \(E_a(x+y)=F_a(E_a(x),E_a(y))\). Applying \(M\) shows that \(P\) preserves ordinary addition. Conversely, composing any normalized addition-preserving series \(P\) with \(L_a\) gives a working \(M\). Thus the exact remaining task is to find the series \(P(t)\), with no constant term, satisfying
+\[
+ P(x+y)=P(x)+P(y)
+\]
+in arithmetic modulo \(p\). Write \(P(t)=\sum_{n\ge1}q_nt^n\). Comparing a mixed coefficient gives
+\begin{equation}\label{eq:additive-coefficients}
+ q_n\binom ni=0\qquad(0<i<n).
+\end{equation}
+If any interior binomial coefficient is nonzero modulo \(p\), its inverse in the prime field is still an inverse in \(R\), so it forces \(q_n=0\). This step is valid even when \(R\) has zero divisors.
+
+The indices with no such mixed coefficient are precisely powers of \(p\). Here is a direct check. Write the base-\(p\) digits of \(n\) as
+\[
+ n=n_0+n_1p+n_2p^2+\cdots,\qquad0\le n_j<p.
+\]
+Repeatedly using \((u+v)^p=u^p+v^p\) gives the polynomial identity
+\[
+ (1+z)^n=\prod_j(1+z^{p^j})^{n_j}
+\]
+modulo \(p\). Let \(r\) be the least index with \(n_r\ne0\). The coefficient of \(z^{p^r}\) on the right is \(n_r\ne0\): it comes from choosing the linear term of \((1+z^{p^r})^{n_r}\). All other nonconstant choices have larger degree. Unless \(n=p^r\), this is an interior term, so \eqref{eq:additive-coefficients} forces \(q_n=0\). When \(n=p^r\), repeated cubing or, more generally, taking \(p\)-th powers shows that no mixed terms occur.
+
+Consequently all the expressions that preserve addition are exactly
+\[
+ P(t)=b_0t+b_1t^p+b_2t^{p^2}+\cdots.
+\]
+These are formal series; they are polynomials exactly when only finitely many coefficients are nonzero. They begin with \(t\) when \(b_0=1\). The comparison at the start of the appendix therefore gives every possible normalized \(M\) by following \(L_a\) with one of these series.
+
+The resulting formula simplifies. In each nonlinear term of \(L_a(t)\), the coefficient contains \(a^{n-1}\) with \(n\ge2\). Raising it to the \(p^r\)-th power gives a factor \(a^{(n-1)p^r}=0\), because \((n-1)p^r\ge p-1\). Thus
+\[
+ L_a(t)^{p^r}=t^{p^r}\qquad(r\ge1),
+\]
+and all the working coordinates beginning with \(t\) are
+\begin{equation}\label{eq:all-logarithms}
+ \boxed{\;M(t)=L_a(t)+b_1t^p+b_2t^{p^2}+\cdots,\;}
+\end{equation}
+with the \(b_r\) freely chosen in the coefficient arithmetic. Conversely, each expression in \eqref{eq:all-logarithms} works. For the added powers, expand directly:
+\[
+ F_a(x,y)^{p^r}
+ =x^{p^r}+y^{p^r}+a^{p^r}x^{p^r}y^{p^r}
+ =x^{p^r}+y^{p^r}.
+\]
+The last term vanishes because \(a^{p-1}=0\) and \(p^r\ge p-1\). Each added term therefore has zero error for this particular operation.
+
+An expression beginning with \(t\) always has an inverse as a series, by the recursive coefficient construction in Section~\ref{sec:coordinate-action}. That inverse need not stop after finitely many terms. For example, \(t+t^p\) over ordinary numbers modulo \(p\) cannot have a polynomial inverse: composing it with a nonconstant polynomial of degree \(d\) gives degree \(pd\), which cannot be one. The particular pair \(L_a,E_a\) has the stronger property that both expressions are finite polynomials.
+
+The inverse in that example can nevertheless be written explicitly:
+\[
+ N(t)=t-t^p+t^{p^2}-t^{p^3}+\cdots.
+\]
+Successive terms cancel in \(N(t)+N(t)^p=t\), and also in \(N(t+t^p)=t\). Each fixed degree uses only finitely many terms, so both identities are formal coefficient identities. The formula also works for \(p=2\), where the displayed plus and minus signs coincide.

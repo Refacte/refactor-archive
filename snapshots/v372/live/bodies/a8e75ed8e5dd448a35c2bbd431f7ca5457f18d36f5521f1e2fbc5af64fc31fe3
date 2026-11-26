@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>When one swap becomes three — Refactor</title><meta name="description" content="Build a second six-point set from perfect matchings and recover the original points. One swap becomes three, giving an outer automorphism of S₆."><meta name="refactor-page-path" content="/refactors/one-swap-becomes-three.html"><meta name="refactor-collection" content="refactor"><meta name="robots" content="index,follow"><meta name="theme-color" content="#08141b"><link rel="canonical" href="https://refactor.press/refactors/one-swap-becomes-three"><meta property="og:title" content="When one swap becomes three — Refactor"><meta property="og:description" content="Build a second six-point set from perfect matchings and recover the original points. One swap becomes three, giving an outer automorphism of S₆."><meta property="og:type" content="website"><meta property="og:url" content="https://refactor.press/refactors/one-swap-becomes-three"><meta property="og:image" content="https://refactor.press/assets/brand/refactor-social.png?v=8be7135d0d95"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Refactor — changing what becomes elementary"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://refactor.press/assets/brand/refactor-social.png?v=8be7135d0d95"><link rel="icon" type="image/png" sizes="48x48" href="/assets/brand/favicon-48.png?v=8be7135d0d95"><link rel="icon" type="image/svg+xml" href="/favicon.svg?v=8be7135d0d95"><link rel="apple-touch-icon" sizes="180x180" href="/assets/brand/apple-touch-icon.png?v=8be7135d0d95"><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/assets/personal.css"><link rel="stylesheet" href="/assets/interests.css"><link rel="stylesheet" href="/assets/expositions.css"><link rel="stylesheet" href="/assets/navy-metal.css"><link rel="stylesheet" href="/assets/calculi.css"><link rel="stylesheet" href="/assets/refactor.css"><link rel="stylesheet" href="/assets/refactor-matchings.css"><script defer src="/assets/one-swap-becomes-three.js"></script><script defer src="/assets/analytics.js" data-tensorgami-analytics="v1"></script></head><body><a class="skip" href="#main">Skip to content</a><div class="wrap"><header class="masthead"><a class="brand" href="/" aria-label="Refactor home"><img class="brand-emblem" src="/assets/brand/refactor-mark.svg?v=8be7135d0d95" width="48" height="48" alt="Refactor monogram" fetchpriority="high">Refactor</a><nav class="nav" aria-label="Main navigation"><a href="/papers">Research</a><a href="/expositions" aria-current="true">Mathematics</a><a href="/essays">Essays</a><a href="/about">About</a></nav></header><main id="main"><header class="refactor-article-heading"><p class="eyebrow"><a href="/expositions">Mathematics</a> / Groups · Incidence</p><h1>When one swap becomes three</h1><p class="lead">Build a second six-point set from perfect matchings and recover the original points. One swap becomes three, giving an outer automorphism of S₆.</p><p class="byline">Henry Shin · November 21, 2026 · 12 min read</p><p class="reader-background"><strong>Begin with:</strong> Permutation cycles and composition. The commutator article introduces the matching picture.</p><div class="text-links"><a href="/assets/refactor/one-swap-becomes-three.md" download>Download reading text</a><a href="/expositions">All mathematics</a></div></header><div class="refactor-reading-layout"><aside class="refactor-reading-sidebar"><nav aria-label="Article contents"><a href="#experiment-title">See one swap become three</a><a href="#design">What could take the place of a point?</a><a href="#build">Build a second set of six</a><a href="#return">Recover the original points</a><a href="#outer">Why a swap moves all six new points</a><a href="#stabilizers">A different copy of S5</a><a href="#sources">Sources</a></nav><a href="/refactor">The Refactor approach</a></aside><article class="refactor-prose"><p class="article-lead">Exchange 1 and 2 among six numbered points. Four points stay put. Now let the same exchange act on six <em>decompositions</em> of the complete graph on those points. All six decompositions move, in three exchanged pairs.</p>
+<p>In <a href="/refactors/build-a-commutator">the preceding article</a>, a matching encoded a permutation made of disjoint swaps. Here we use perfect matchings, which pair off <em>all</em> six vertices. A <strong>factorization</strong> is an unordered set of five perfect matchings that uses each edge exactly once. There happen to be six. Call them A through F. A swap of the original labels moves a whole factorization by replacing the labels in each of its five matchings.</p>
+
+      <section class="refactor-matching-experiment" id="try-it" aria-labelledby="experiment-title">
+<h2 id="experiment-title">See one swap become three</h2>
+<p>Choose two original labels to exchange. Inspect one pair of exchanged factorizations to see what happens to its five matchings. A row such as <span class="cycle">12 | 34 | 56</span> lists three edges, and the shared row stays in place even as the factorizations change places.</p>
+<section id="refactor-s6-outer" aria-labelledby="refactor-s6-outer-heading">
+  <h3 id="refactor-s6-outer-heading">One swap on six points</h3>
+  <div class="viz-controls">
+    <label class="form-label">
+      Swap two labels
+      <select class="form-select" data-swap>
+        <option value="12" selected>1 ↔ 2</option>
+        <option value="13">1 ↔ 3</option>
+        <option value="14">1 ↔ 4</option>
+        <option value="15">1 ↔ 5</option>
+        <option value="16">1 ↔ 6</option>
+        <option value="23">2 ↔ 3</option>
+        <option value="24">2 ↔ 4</option>
+        <option value="25">2 ↔ 5</option>
+        <option value="26">2 ↔ 6</option>
+        <option value="34">3 ↔ 4</option>
+        <option value="35">3 ↔ 5</option>
+        <option value="36">3 ↔ 6</option>
+        <option value="45">4 ↔ 5</option>
+        <option value="46">4 ↔ 6</option>
+        <option value="56">5 ↔ 6</option>
+      </select>
+    </label>
+  </div>
+  <div class="s6-outer-points tabular-nums" data-points role="img" aria-label="Six original points. Swap 1 and 2.">
+    <span class="s6-outer-link" aria-hidden="true"></span>
+    <span class="s6-outer-point"><span data-vertex="1" data-moving>1</span></span>
+    <span class="s6-outer-point"><span data-vertex="2" data-moving>2</span></span>
+    <span class="s6-outer-point"><span data-vertex="3">3</span></span>
+    <span class="s6-outer-point"><span data-vertex="4">4</span></span>
+    <span class="s6-outer-point"><span data-vertex="5">5</span></span>
+    <span class="s6-outer-point"><span data-vertex="6">6</span></span>
+  </div>
+  <div class="s6-outer-pairs">
+    <p>On the six factorizations <output data-image aria-live="polite">(A B)(C D)(E F)</output></p>
+    <div class="viz-row s6-outer-exchanges" role="group" aria-label="Inspect one exchanged pair">
+      <div class="s6-outer-pair">
+        <button type="button" class="btn" data-pair="AB" aria-pressed="true" aria-controls="refactor-s6-outer-map" aria-label="A and B exchange. Shared matching 12, 34, 56.">A ↔ B</button>
+        <span class="tabular-nums" data-common-for="AB">12 | 34 | 56</span>
+      </div>
+      <div class="s6-outer-pair">
+        <button type="button" class="btn" data-pair="CD" aria-pressed="false" aria-controls="refactor-s6-outer-map" aria-label="C and D exchange. Shared matching 12, 35, 46.">C ↔ D</button>
+        <span class="tabular-nums" data-common-for="CD">12 | 35 | 46</span>
+      </div>
+      <div class="s6-outer-pair">
+        <button type="button" class="btn" data-pair="EF" aria-pressed="false" aria-controls="refactor-s6-outer-map" aria-label="E and F exchange. Shared matching 12, 36, 45.">E ↔ F</button>
+        <span class="tabular-nums" data-common-for="EF">12 | 36 | 45</span>
+      </div>
+    </div>
+  </div>
+  <div id="refactor-s6-outer-map">
+    <p class="sr-only" data-announcement aria-live="polite">Relabeling A to B. The shared matching is 12, 34, 56.</p>
+    <table class="table table-sm tabular-nums">
+      <caption class="sr-only">Relabeling of the five matchings</caption>
+      <thead>
+        <tr><th scope="col" data-from>In A</th><th scope="col" data-to>Image in B</th><th scope="col"><span class="sr-only">Shared matching</span></th></tr>
+      </thead>
+      <tbody data-mapping>
+        <tr data-fixed><td data-source>12 | 34 | 56</td><td data-target>12 | 34 | 56</td><td>Shared</td></tr>
+        <tr><td data-source>13 | 25 | 46</td><td data-target>15 | 23 | 46</td><td></td></tr>
+        <tr><td data-source>14 | 26 | 35</td><td data-target>16 | 24 | 35</td><td></td></tr>
+        <tr><td data-source>15 | 24 | 36</td><td data-target>14 | 25 | 36</td><td></td></tr>
+        <tr><td data-source>16 | 23 | 45</td><td data-target>13 | 26 | 45</td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<noscript><p>For the swap (1 2), the exchanges are A ↔ B, C ↔ D and E ↔ F. The proof below explains the pairings.</p></noscript>
+      </section>
+
+<section aria-labelledby="design">
+  <h2 id="design">What could take the place of a point?</h2>
+  <p>Imagine trying to build an automorphism that sends one swap to three disjoint swaps. The natural working object for an image is a perfect matching. A point in the original graph has five incident edges, and the swaps along any two of those edges fail to commute. Their images must also fail to commute.</p>
+  <p>Two perfect matchings that share an edge commute as permutations. They agree on that edge, and on the other four vertices the three possible pairings are the commuting double transpositions. So the five images of the swaps through a point would have to be edge-disjoint. Five perfect matchings with three edges apiece use all fifteen edges. This is where the candidate for a new point comes from: <em>one whole factorization</em>.</p>
+</section>
+
+<section aria-labelledby="build">
+  <h2 id="build">Build a second set of six</h2>
+  <p>Start with the six original points, a set we’ll call <var>X</var>. Join every pair. A perfect matching chooses a partner for one point in five ways, then a partner for the first unused point in three ways. The last pair is forced, giving fifteen perfect matchings.</p>
+  <p>To count the factorizations, pick any two perfect matchings that share no edge. Their union alternates between the two matchings. Every vertex has degree two, and every cycle has even length at least four. On six vertices the union therefore has to be one hexagon.</p>
+  <p>Number the vertices around that hexagon from 1 to 6. The unused edges form a triangular prism. There’s a triangle on <span class="cycle">{1, 3, 5}</span>, a triangle on <span class="cycle">{2, 4, 6}</span>, and three edges joining opposite vertices of the hexagon. A perfect matching of the prism uses one or three joining edges, since each triangle has three vertices. Using all three leaves two triangles, each with an odd number of vertices. In a decomposition of the prism, each matching must therefore use exactly one joining edge. Once that edge is picked, the remaining pair on each triangle is forced.</p>
+  <div class="prism-table">
+    <table aria-label="The three perfect matchings in the prism decomposition">
+      <thead><tr><th scope="col">Joining edge</th><th scope="col">Odd triangle</th><th scope="col">Even triangle</th></tr></thead>
+      <tbody>
+        <tr><td>1–4</td><td>3–5</td><td>2–6</td></tr>
+        <tr><td>2–5</td><td>1–3</td><td>4–6</td></tr>
+        <tr><td>3–6</td><td>1–5</td><td>2–4</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>These three matchings use each remaining edge exactly once. So <strong>two edge-disjoint perfect matchings extend to exactly one factorization</strong>.</p>
+  <p>Fix a matching <var>M</var>. Each of its three edges belongs to two other matchings, and an alternative matching can share at most one edge with <var>M</var>, since the third edge is forced by the first two. Thus <var>M</var> has <span class="cycle">15 − 1 − 3·2 = 8</span> disjoint partners. Each factorization through <var>M</var> accounts for four of these, and the extension rule assigns each partner to just one factorization. So <var>M</var> belongs to exactly two. Counting matching–factorization incidences gives <span class="cycle">15·2/5 = 6</span> factorizations. Call their set <var>Y</var>.</p>
+</section>
+
+<section aria-labelledby="return">
+  <h2 id="return">Recover the original points</h2>
+  <p>Relabeling <var>X</var> permutes the matchings and therefore the factorizations in <var>Y</var>. Successive relabelings act in the same order on both sets. This gives a homomorphism from the permutations of <var>X</var> to the permutations of <var>Y</var>. To see why this is a new action of the whole group, we need to recover the old action from the new one.</p>
+  <ol class="return-steps">
+    <li><strong>An old matching becomes an edge on <var>Y</var>.</strong> Take the pair of factorizations containing it. Two distinct factorizations share at most one matching, by the unique extension rule. There are fifteen old matchings and fifteen pairs of new points, so every new edge comes from exactly one old matching.</li>
+    <li><strong>An old edge becomes a matching on <var>Y</var>.</strong> Exactly three old matchings contain a given edge <var>e</var>. The three corresponding edges on <var>Y</var> form a perfect matching, since every factorization contains exactly one matching through <var>e</var>. Distinct old edges give different new matchings. Two old edges sharing a vertex lie together in zero perfect matchings, and two disjoint old edges lie together in exactly one. So their lists of three matchings differ. The fifteen old edges therefore give all fifteen new matchings.</li>
+    <li><strong>An old point becomes a factorization on <var>Y</var>.</strong> Take the five old edges incident with that point and convert them into five matchings on <var>Y</var>. Every edge on <var>Y</var> occurs in exactly one of these, because the old matching it represents contains exactly one edge through the old point. The five new matchings form a factorization. Distinct old points have distinct sets of incident edges, so the six old points give all six factorizations on <var>Y</var>.</li>
+  </ol>
+  <p>Apply the construction twice and it recovers <var>X</var>. Each step uses membership or incidence, so it commutes with relabeling. If a permutation acts trivially on <var>Y</var>, it acts trivially on the recovered points of <var>X</var>. The action is faithful. Both permutation groups have <span class="cycle">6! = 720</span> elements, so the homomorphism is an isomorphism. Choosing labels for <var>Y</var> makes it an automorphism of <i>S</i><sub>6</sub>.</p>
+</section>
+
+<section aria-labelledby="outer">
+  <h2 id="outer">Why a swap moves all six new points</h2>
+  <p>Take the swap <span class="cycle">(1 2)</span> and suppose it fixes a factorization. Choose any of the four matchings in that factorization that omit the edge 1–2. In this matching, 1 and 2 have different partners. Exchanging 1 and 2 changes those two edges and keeps the third. For example, <span class="cycle">13 | 25 | 46</span> goes to <span class="cycle">15 | 23 | 46</span>. The two matchings share the edge 4–6. A factorization uses each edge just once, so it cannot contain both. The swap therefore fixes no factorization.</p>
+  <p>To find the three exchanges, look at the three matchings that <em>do</em> contain 1–2. Each is fixed by the swap. Its two factorizations must then be exchanged. These are the three pairs you see in the figure. In the language of the reverse construction, the old edge 1–2 has become a perfect matching on <var>Y</var>, and its three edges are exactly the three swaps of the induced permutation.</p>
+  <p class="theorem"><strong>The automorphism is outer.</strong> Conjugating a permutation by a relabeling changes its labels and preserves its cycle lengths. The map we have constructed sends a single transposition to a product of three disjoint transpositions.</p>
+</section>
+
+<section aria-labelledby="stabilizers">
+  <h2 id="stabilizers">A different copy of <i>S</i><sub>5</sub></h2>
+  <p>On the new six points, the permutations fixing one factorization form its point stabilizer, a copy of <i>S</i><sub>5</sub>. Bring that subgroup back to the old six points. It has order 120 and contains no single transposition, since every single transposition moves every factorization. If it fixed an old point it would equal that point’s stabilizer by order, which would give it single transpositions. So all its orbits on the old points have size at least two. If there were several orbits, the largest possible order would be <span class="cycle">4!·2! = 48</span>, from preserving a partition into four points and two. Hence this copy of <i>S</i><sub>5</sub> is transitive on the old six points. The incidence construction gives two nonconjugate ways for <i>S</i><sub>5</sub> to sit inside <i>S</i><sub>6</sub>.</p>
+</section>
+
+<section class="sources" aria-labelledby="sources">
+  <h2 id="sources">Sources</h2>
+  <ul>
+    <li>The matching construction is the classical construction with Sylvester’s <em>synthemes</em> and <em>totals</em>, the fifteen perfect matchings and the six factorizations used here. Hölder described the outer automorphism in 1895. See §1.4 of Ben Howard, John Millson, Andrew Snowden, and Ravi Vakil for historical context and several related constructions. <a href="https://arxiv.org/abs/0710.5916"><cite>A description of the outer automorphism of S₆, and the invariants of six points in projective space</cite></a></li>
+    <li>The unique completion of two disjoint matchings is treated in §7.1 of Donald L. Kreher’s group theory notes. <a href="https://pages.mtu.edu/~kreher/ABOUTME/syllabus/GTN.pdf"><cite>Group Theory Notes</cite>, Lemma 7.1.6</a></li>
+    <li>For the derivation from noncommuting swaps, see §2 of Jacques Labelle’s <a href="https://www.researchgate.net/publication/358415432_The_outer-automorphisms_of_the_symmetric_group_S_6_and_1-_factorisations_of_K_6"><cite>The outer-automorphisms of the symmetric group S₆ and 1-factorisations of K₆</cite></a>.</li>
+  </ul>
+</section>
+<footer class="refactor-article-footer"><p>Henry Shin · Refactor</p><a href="/expositions">More mathematics →</a></footer></article></div></main><footer class="footer"><p>© 2026 Henry Shin · Refactor</p><div><a href="/papers">Research</a><a href="/expositions">Mathematics</a><a href="/essays">Essays</a><a href="/refactor">The approach</a><a href="/archive">Tensorgami archive</a><a href="/about#dated-snapshot">Dated snapshot</a><a href="/site-map">Site map</a><a href="/interests">Interests</a><a href="mailto:hkshin@gmail.com">Email</a><a href="/privacy">Privacy</a><a href="/license">Reuse</a></div></footer></div><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a6067b5b580d1950',t:'MTc5NTY3MDgyNA=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a6067b5b580d1950',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>

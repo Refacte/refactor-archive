@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>From one shared point to a factorial bound — Refactor</title><meta name="description" content="Force two supports to meet in a single point, read off a 3-cycle, and count the possible images of a base."><meta name="refactor-page-path" content="/refactors/bochert-bound.html"><meta name="refactor-collection" content="refactor"><meta name="robots" content="index,follow"><meta name="theme-color" content="#08141b"><link rel="canonical" href="https://refactor.press/refactors/bochert-bound"><meta property="og:title" content="From one shared point to a factorial bound — Refactor"><meta property="og:description" content="Force two supports to meet in a single point, read off a 3-cycle, and count the possible images of a base."><meta property="og:type" content="website"><meta property="og:url" content="https://refactor.press/refactors/bochert-bound"><meta property="og:image" content="https://refactor.press/assets/brand/refactor-social.png?v=8be7135d0d95"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Refactor — changing what becomes elementary"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://refactor.press/assets/brand/refactor-social.png?v=8be7135d0d95"><link rel="icon" type="image/png" sizes="48x48" href="/assets/brand/favicon-48.png?v=8be7135d0d95"><link rel="icon" type="image/svg+xml" href="/favicon.svg?v=8be7135d0d95"><link rel="apple-touch-icon" sizes="180x180" href="/assets/brand/apple-touch-icon.png?v=8be7135d0d95"><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/assets/personal.css"><link rel="stylesheet" href="/assets/interests.css"><link rel="stylesheet" href="/assets/expositions.css"><link rel="stylesheet" href="/assets/navy-metal.css"><link rel="stylesheet" href="/assets/calculi.css"><link rel="stylesheet" href="/assets/refactor.css"><link rel="stylesheet" href="/assets/refactor-matchings.css"><script defer src="/assets/bochert-bound.js"></script><script defer src="/assets/analytics.js" data-tensorgami-analytics="v1"></script></head><body><a class="skip" href="#main">Skip to content</a><div class="wrap"><header class="masthead"><a class="brand" href="/" aria-label="Refactor home"><img class="brand-emblem" src="/assets/brand/refactor-mark.svg?v=8be7135d0d95" width="48" height="48" alt="Refactor monogram" fetchpriority="high">Refactor</a><nav class="nav" aria-label="Main navigation"><a href="/papers">Research</a><a href="/expositions" aria-current="true">Mathematics</a><a href="/essays">Essays</a><a href="/about">About</a></nav></header><main id="main"><header class="refactor-article-heading"><p class="eyebrow"><a href="/expositions">Mathematics</a> / Groups · Permutation supports</p><h1>From one shared point to a factorial bound</h1><p class="lead">Force two supports to meet in a single point, read off a 3-cycle, and count the possible images of a base.</p><p class="byline">Henry Shin · November 21, 2026 · 12 min read</p><p class="reader-background"><strong>Begin with:</strong> Permutation cycles and composition. Bases and primitivity are defined in the article.</p><div class="text-links"><a href="/assets/refactor/bochert-bound.md" download>Download reading text</a><a href="/expositions">All mathematics</a></div></header><div class="refactor-reading-layout"><aside class="refactor-reading-sidebar"><nav aria-label="Article contents"><a href="#experiment-title">Slide one support past the other</a><a href="#three-moved-points">Why just three points move</a><a href="#propagate">Grow a 3-cycle into the alternating group</a><a href="#force-overlap">Force the overlap with a smallest base</a><a href="#factorial">Count the possible images of a base</a><a href="#equality">The six-point action that attains the bound</a><a href="#sources">Sources</a></nav><a href="/refactor">The Refactor approach</a></aside><article class="refactor-prose"><p class="article-lead">Two permutations can each move a great many points. If their moved sets meet in exactly one point, their commutator moves exactly three. Bochert’s theorem turns that local calculation into a bound on the order of a primitive permutation group.</p>
+
+<p>There are two tasks. First, force a one-point overlap using only information about which points group elements move. Then use the 3-cycle it produces to recover information about the whole group.</p>
+
+<section class="refactor-matching-experiment" id="try-it" aria-labelledby="experiment-title">
+  <h2 id="experiment-title">Slide one support past the other</h2>
+  <p>Keep <span class="cycle"><var>u</var> = (1 2)(4 6)</span> fixed in red. The blue permutation <var>v</var> is a copy of <var>u</var> shifted around the eight points. At shift 1 their moved sets meet only at 2. Change the shift, or pick a starting point to trace the four operations in the commutator.</p>
+  <section id="refactor-bochert-overlap" aria-labelledby="refactor-bochert-heading">
+  <h3 id="refactor-bochert-heading">Shift the blue swaps</h3>
+  <div class="viz-controls">
+    <label class="form-label">
+      Shift r
+      <select class="form-select" data-shift>
+        <option value="0">0</option>
+        <option value="1" selected>1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+      </select>
+    </label>
+    <label class="form-label">
+      Start vertex
+      <select class="form-select" data-start>
+        <option value="1">1</option>
+        <option value="2" selected>2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+      </select>
+    </label>
+  </div>
+  <div class="viz-row bochert-key tabular-nums">
+    <span><span class="bochert-swatch" data-color="red" aria-hidden="true"></span>Red u <strong>(1 2)(4 6)</strong></span>
+    <span><span class="bochert-swatch" data-color="blue" aria-hidden="true"></span>Blue v <strong data-blue-permutation>(2 3)(5 7)</strong></span>
+  </div>
+  <div class="bochert-graph" data-graph role="img" aria-label="Red edges 1–2 and 4–6. Blue edges 2–3 and 5–7. Shared vertex 2.">
+    <span class="bochert-arc" data-edge="red" data-endpoints="1 2" style="--arc-start:6.25%;--arc-end:18.75%;--arc-height:.83rem" aria-hidden="true"></span>
+    <span class="bochert-arc" data-edge="red" data-endpoints="4 6" style="--arc-start:43.75%;--arc-end:68.75%;--arc-height:.99rem" aria-hidden="true"></span>
+    <span class="bochert-arc" data-edge="blue" data-endpoints="2 3" style="--arc-start:18.75%;--arc-end:31.25%;--arc-height:.83rem" aria-hidden="true"></span>
+    <span class="bochert-arc" data-edge="blue" data-endpoints="5 7" style="--arc-start:56.25%;--arc-end:81.25%;--arc-height:.99rem" aria-hidden="true"></span>
+    <div class="bochert-vertices tabular-nums">
+      <span data-vertex="1" data-membership="red">1</span>
+      <span data-vertex="2" data-membership="both">2</span>
+      <span data-vertex="3" data-membership="blue">3</span>
+      <span data-vertex="4" data-membership="red">4</span>
+      <span data-vertex="5" data-membership="blue">5</span>
+      <span data-vertex="6" data-membership="red">6</span>
+      <span data-vertex="7" data-membership="blue">7</span>
+      <span data-vertex="8" data-membership="neither">8</span>
+    </div>
+  </div>
+  <div class="viz-row bochert-summary tabular-nums" aria-live="polite">
+    <span>Shared support <strong data-overlap data-size="1">{2}</strong> <span data-overlap-count>(1 point)</span></span>
+    <span>Commutator [u, v] <strong data-commutator>(1 3 2)</strong></span>
+  </div>
+  <div class="bochert-trace">
+    <p>Rightmost-first trace</p>
+    <output class="viz-row bochert-steps tabular-nums" data-trace aria-live="polite">
+      <strong data-visit="0">2</strong>
+      <span>→ <strong data-visit="1">3</strong> (v⁻¹)</span>
+      <span>→ <strong data-visit="2">3</strong> (u⁻¹)</span>
+      <span>→ <strong data-visit="3">2</strong> (v)</span>
+      <span>→ <strong data-visit="4">1</strong> (u)</span>
+    </output>
+  </div>
+</section>
+
+  <noscript><p>At shift 1 the commutator takes 2 to 1, 1 to 3, and 3 back to 2. It fixes the other points.</p></noscript>
+</section>
+
+<section aria-labelledby="three-moved-points">
+  <h2 id="three-moved-points">Why just three points move</h2>
+  <p>The <strong>support</strong> of a permutation is the set of points it moves. Suppose the supports of <var>u</var> and <var>v</var> meet in the single point <var>p</var>. Write <var>a</var> = <var>u</var>(<var>p</var>) and <var>b</var> = <var>v</var>(<var>p</var>). These are three distinct points, since <var>a</var> is moved only by <var>u</var> and <var>b</var> only by <var>v</var>.</p>
+  <p>Apply products rightmost first, and write <span class="cycle">[<var>u</var>, <var>v</var>] = <var>u</var><var>v</var><var>u</var><sup>−1</sup><var>v</var><sup>−1</sup></span>. Conjugating <var>v</var> by <var>u</var> relabels its cycles. On the support of <var>v</var>, the only label changed is <var>p</var>, which becomes <var>a</var>. Think of lifting <var>p</var> out of its cycle and inserting <var>a</var> in the same place.</p>
+  <p>Now apply <var>v</var><sup>−1</sup> followed by that edited <var>v</var>. Every arrow cancels except at the edit. Starting at <var>p</var>, the backward step reaches the predecessor of <var>p</var>, whose new successor is <var>a</var>. Starting at <var>a</var>, the backward step stays there and the new forward step goes to <var>b</var>. Starting at <var>b</var>, the backward step takes you to <var>p</var>, which the edited <var>v</var> now fixes. Thus</p>
+  <div class="math-display" data-tex="[u,v]=(p\ \ u(p)\ \ v(p)).">
+    <math display="block" aria-label="The commutator of u and v is the three-cycle p, u of p, v of p">
+      <mo>[</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo>]</mo><mo>=</mo><mo>(</mo><mi>p</mi><mspace width=".5em"></mspace><mi>u</mi><mo>(</mo><mi>p</mi><mo>)</mo><mspace width=".5em"></mspace><mi>v</mi><mo>(</mo><mi>p</mi><mo>)</mo><mo>)</mo><mo>.</mo>
+    </math>
+  </div>
+  <p>The overlap identifies where to look. The original permutations still supply the successors <var>u</var>(<var>p</var>) and <var>v</var>(<var>p</var>) and hence the actual cycle in the group.</p>
+</section>
+
+<section aria-labelledby="propagate">
+  <h2 id="propagate">Grow a 3-cycle into the alternating group</h2>
+  <p>Suppose <var>G</var> contains a 3-cycle. Take its conjugates by every element of <var>G</var> and draw their supports as triples. The connected components, where triples connect by sharing a point, form a partition that <var>G</var> preserves. A <strong>primitive</strong> action is transitive and preserves only the partition into singletons and the partition with one part. Since a triple already puts three points together, primitivity forces the triples to connect the whole point set.</p>
+  <p>Here is why connectivity suffices. Start with one triple, whose cycle generates the alternating group on those three points. Suppose we have obtained all even permutations on a set <var>W</var>, fixing everything outside <var>W</var>, and a new triple meets <var>W</var>.</p>
+  <ul>
+    <li><strong>Two shared points.</strong> If the third point is <var>x</var>, conjugate the new cycle by even permutations of <var>W</var> and use its inverse as needed. Even permutations of a set of size at least three act transitively on unordered pairs, so this gives all 3-cycles involving <var>x</var> and two points of <var>W</var>. Together with the cycles already in <var>W</var> these generate the alternating group on <var>W</var> ∪ {<var>x</var>}.</li>
+    <li><strong>One shared point.</strong> Write the new cycle as <span class="cycle">(<var>a</var> <var>x</var> <var>y</var>)</span> with <var>a</var> ∈ <var>W</var>. Move <var>a</var> to a different point <var>b</var> of <var>W</var> by conjugation. The product <span class="cycle">(<var>a</var> <var>x</var> <var>y</var>)(<var>b</var> <var>x</var> <var>y</var>)<sup>−1</sup> = (<var>a</var> <var>x</var> <var>b</var>)</span> gives the two-point case and adds <var>x</var>. The original triple then adds <var>y</var>.</li>
+  </ul>
+  <p>To see the generation fact used here, write an even permutation as pairs of swaps. Two identical swaps cancel. A pair with one shared point is a 3-cycle. A disjoint pair splits as <span class="cycle">(a b)(c d) = (a c b)(a c d)</span>. Thus 3-cycles generate every alternating group. Repeating the growth step along the connected triples shows that a primitive subgroup of <i>S</i><sub><i>n</i></sub> containing one 3-cycle contains <i>A</i><sub><i>n</i></sub>.</p>
+  <p>In the eight-point example, let <var>c</var> be the cycle that shifts every point one place. The group generated by <var>u</var> and <var>c</var> contains the blue copy <span class="cycle"><var>v</var> = <var>cuc</var><sup>−1</sup></span>, hence the 3-cycle at shift 1. Its translates under <var>c</var> have supports on consecutive triples around the circle, so we can see connectivity directly. They generate <i>A</i><sub>8</sub>. The shift <var>c</var> is an odd permutation, so the two original generators give all of <i>S</i><sub>8</sub>.</p>
+</section>
+
+<section aria-labelledby="force-overlap">
+  <h2 id="force-overlap">Force the overlap with a smallest base</h2>
+  <p>A <strong>base</strong> is a set of points whose pointwise stabilizer consists only of the identity. Equivalently, it meets the support of every nonidentity permutation in <var>G</var>. This lets us work with the supports as a family of subsets. Choose a base <var>B</var> of minimum size and suppose it has more than half the points.</p>
+  <ol class="bochert-steps">
+    <li>The complement <var>C</var> is smaller than <var>B</var>, so it misses the support of some nonidentity <var>u</var>. All points moved by <var>u</var> lie in <var>B</var>. Choose one of them, <var>p</var>.</li>
+    <li>The set <var>B</var> with <var>p</var> removed also falls below the minimum base size. Some nonidentity <var>v</var> fixes each of its points. The support of <var>v</var> lies in <var>C</var> ∪ {<var>p</var>} and must include <var>p</var>, since it meets <var>B</var>.</li>
+  </ol>
+  <p>So the supports meet exactly at <var>p</var>. The commutator yields a 3-cycle in <var>G</var> itself, and primitivity propagates it to all of <i>A</i><sub><i>n</i></sub>. Therefore a primitive group that does not contain <i>A</i><sub><i>n</i></sub> has a base of at most <span class="cycle">⌊<var>n</var>/2⌋</span> points.</p>
+</section>
+
+<section aria-labelledby="factorial">
+  <h2 id="factorial">Count the possible images of a base</h2>
+  <p>Order the <var>b</var> points of a smallest base. If two group elements agree on those points, applying one and then the inverse of the other fixes the base pointwise, so the two elements are equal. There are at most <span class="cycle"><var>n</var>!/(<var>n</var> − <var>b</var>)!</span> ordered lists of distinct images. Insert the base bound.</p>
+  <div class="bochert-result"><p><strong>Bochert’s bound.</strong> If <var>G</var> ≤ <i>S</i><sub><i>n</i></sub> is primitive and does not contain <i>A</i><sub><i>n</i></sub>, then</p>
+    <div class="math-display" data-tex="|G|\le\frac{n!}{\lceil n/2\rceil!},\qquad [S_n:G]\ge\lceil n/2\rceil!.">
+      <math display="block" aria-label="The order of G is at most n factorial divided by ceiling n over two factorial. The index is at least ceiling n over two factorial.">
+        <mo>|</mo><mi>G</mi><mo>|</mo><mo>≤</mo><mfrac><mrow><mi>n</mi><mo>!</mo></mrow><mrow><mo>⌈</mo><mi>n</mi><mo>/</mo><mn>2</mn><mo>⌉</mo><mo>!</mo></mrow></mfrac><mo>,</mo>
+        <mspace width=".75em"></mspace><mo>[</mo><msub><mi>S</mi><mi>n</mi></msub><mo>:</mo><mi>G</mi><mo>]</mo><mo>≥</mo><mo>⌈</mo><mi>n</mi><mo>/</mo><mn>2</mn><mo>⌉</mo><mo>!</mo><mo>.</mo>
+      </math>
+    </div>
+  </div>
+  <p>In degree 20, the index is at least <span class="cycle">10! = 3,628,800</span>. The factorial comes from the points left over after the images of a base have been specified.</p>
+</section>
+
+<section aria-labelledby="equality">
+  <h2 id="equality">The six-point action that attains the bound</h2>
+  <p>In <a href="/refactors/one-swap-becomes-three">When one swap becomes three</a>, the stabilizer of one perfect-matching factorization is a copy of <i>S</i><sub>5</sub> acting transitively on the original six points. Its order is 120. A nontrivial invariant partition would have three blocks of size two or two blocks of size three. The full groups preserving those partitions have orders <span class="cycle">(2!)³·3! = 48</span> and <span class="cycle">(3!)²·2! = 72</span>, respectively. Both are too small, so the action is primitive.</p>
+  <p>This subgroup has index <span class="cycle">6!/120 = 6 = 3!</span>. It attains Bochert’s bound. Its smallest base has size three: the theorem supplies a base of at most three, and two points have only <span class="cycle">6·5 = 30</span> possible ordered images, too few to distinguish 120 elements.</p>
+</section>
+
+<section aria-labelledby="sources">
+  <h2 id="sources">Sources</h2>
+  <ul>
+    <li>Alfred Bochert, <a href="https://doi.org/10.1007/BF01444035"><cite>Ueber die Zahl der verschiedenen Werthe, die eine Function gegebener Buchstaben durch Vertauschung derselben erlangen kann</cite></a>, <cite>Mathematische Annalen</cite> 33 (1889), 584–590.</li>
+    <li>Timothy C. Burness presents the minimum-base argument in <a href="https://seis.bristol.ac.uk/~tb13602/docs/padova_lecture_1.pdf"><cite>Bases for permutation groups</cite>, Lecture 1</a>. The use of a 3-cycle in a primitive group is the three-cycle case of Jordan’s theorem. <a href="https://www.numdam.org/item/JMPA_1871_2_16__383_0/">Jordan’s 1871 paper</a></li>
+  </ul>
+</section>
+<footer class="refactor-article-footer"><p>Henry Shin · Refactor</p><a href="/expositions">More mathematics →</a></footer></article></div></main><footer class="footer"><p>© 2026 Henry Shin · Refactor</p><div><a href="/papers">Research</a><a href="/expositions">Mathematics</a><a href="/essays">Essays</a><a href="/refactor">The approach</a><a href="/archive">Tensorgami archive</a><a href="/about#dated-snapshot">Dated snapshot</a><a href="/site-map">Site map</a><a href="/interests">Interests</a><a href="mailto:hkshin@gmail.com">Email</a><a href="/privacy">Privacy</a><a href="/license">Reuse</a></div></footer></div><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a6067b5aba2ab103',t:'MTc5NTY3MDgyNA=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a6067b5aba2ab103',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>

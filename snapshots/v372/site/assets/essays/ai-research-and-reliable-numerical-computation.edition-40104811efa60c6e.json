@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "revision": "c0a2d8f5ff80",
+  "label": "Text revision c0a2d8f5ff80",
+  "source_sha256": "c0a2d8f5ff809f8ceca574ce715d8e88b098da78a06cf36dea1abf922674b6ca",
+  "renderer_sha256": "0c01a949c0df5bfd770d91afb5e689c683c767ac787f6bd07cc7d84e2458765d",
+  "html_sha256": "6e2ac6882f87295e18af1386585a29dd9cf402daee51976b6444862e804e3eb5",
+  "title": "AI research and the remaining human advantage",
+  "artifacts": {
+    "pdf": {
+      "path": "/assets/essays/ai-research-and-reliable-numerical-computation.62c56c80521b43a8.pdf",
+      "sha256": "62c56c80521b43a86231bce25c05cd501a877580e6e9f44ebfc6adbbdf7780d0",
+      "bytes": 246447,
+      "alias": "/assets/essays/ai-research-and-reliable-numerical-computation.pdf"
+    },
+    "txt": {
+      "path": "/assets/essays/ai-research-and-reliable-numerical-computation.c3b0c91b92e62ce7.txt",
+      "sha256": "c3b0c91b92e62ce7238e607dba07125fd97664cb4902bfe2f03871321ab526a6",
+      "bytes": 117517,
+      "alias": "/assets/essays/ai-research-and-reliable-numerical-computation.txt"
+    }
+  }
+}

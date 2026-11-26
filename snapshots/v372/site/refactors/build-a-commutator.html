@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Build a commutator from two matchings — Refactor</title><meta name="description" content="Turn a group equation into a balance of red and blue edges. Recover a commutator and find the fewest swaps needed in its first, involutive factor."><meta name="refactor-page-path" content="/refactors/build-a-commutator.html"><meta name="refactor-collection" content="refactor"><meta name="robots" content="index,follow"><meta name="theme-color" content="#08141b"><link rel="canonical" href="https://refactor.press/refactors/build-a-commutator"><meta property="og:title" content="Build a commutator from two matchings — Refactor"><meta property="og:description" content="Turn a group equation into a balance of red and blue edges. Recover a commutator and find the fewest swaps needed in its first, involutive factor."><meta property="og:type" content="website"><meta property="og:url" content="https://refactor.press/refactors/build-a-commutator"><meta property="og:image" content="https://refactor.press/assets/brand/refactor-social.png?v=8be7135d0d95"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Refactor — changing what becomes elementary"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://refactor.press/assets/brand/refactor-social.png?v=8be7135d0d95"><link rel="icon" type="image/png" sizes="48x48" href="/assets/brand/favicon-48.png?v=8be7135d0d95"><link rel="icon" type="image/svg+xml" href="/favicon.svg?v=8be7135d0d95"><link rel="apple-touch-icon" sizes="180x180" href="/assets/brand/apple-touch-icon.png?v=8be7135d0d95"><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/assets/personal.css"><link rel="stylesheet" href="/assets/interests.css"><link rel="stylesheet" href="/assets/expositions.css"><link rel="stylesheet" href="/assets/navy-metal.css"><link rel="stylesheet" href="/assets/calculi.css"><link rel="stylesheet" href="/assets/refactor.css"><link rel="stylesheet" href="/assets/refactor-matchings.css"><script defer src="/assets/build-a-commutator.js"></script><script defer src="/assets/analytics.js" data-tensorgami-analytics="v1"></script></head><body><a class="skip" href="#main">Skip to content</a><div class="wrap"><header class="masthead"><a class="brand" href="/" aria-label="Refactor home"><img class="brand-emblem" src="/assets/brand/refactor-mark.svg?v=8be7135d0d95" width="48" height="48" alt="Refactor monogram" fetchpriority="high">Refactor</a><nav class="nav" aria-label="Main navigation"><a href="/papers">Research</a><a href="/expositions" aria-current="true">Mathematics</a><a href="/essays">Essays</a><a href="/about">About</a></nav></header><main id="main"><header class="refactor-article-heading"><p class="eyebrow"><a href="/expositions">Mathematics</a> / Groups · Matchings</p><h1>Build a commutator from two matchings</h1><p class="lead">Turn a group equation into a balance of red and blue edges. Recover a commutator and find the fewest swaps needed in its first, involutive factor.</p><p class="byline">Henry Shin · November 21, 2026 · 11 min read</p><p class="reader-background"><strong>Begin with:</strong> Permutation cycles and composition. Commutators and matchings are introduced in the article.</p><div class="text-links"><a href="/assets/refactor/build-a-commutator.md" download>Download reading text</a><a href="/expositions">All mathematics</a></div></header><div class="refactor-reading-layout"><aside class="refactor-reading-sidebar"><nav aria-label="Article contents"><a href="#experiment-title">Balance two cycles in S6</a><a href="#return">Read the relabeling back into the group</a><a href="#move">Change the factors while holding the product fixed</a><a href="#theorem">Balance every even permutation</a><a href="#what-transfers">What has to come back</a><a href="#matching-sequel">Continue with perfect matchings</a><a href="#sources">Sources</a></nav><a href="/refactor">The Refactor approach</a></aside><article class="refactor-prose"><p class="article-lead">Take the permutation <span class="cycle">(1 2)(3 4 5 6)</span>. Applying it is easy. Taking it apart is harder. Can it be written as a single commutator, the product of two moves followed by their inverses in the same order?</p>
+<p>We write <span class="cycle">[<var>α</var>, <var>τ</var>] = <var>α</var><var>τ</var><var>α</var><sup>−1</sup><var>τ</var><sup>−1</sup></span> and apply the rightmost permutation first. Try asking for a little more. Require <span class="cycle"><var>α</var><sup>2</sup> = 1</span>, allowing the identity as the empty matching. Then the equation for the target <var>π</var> becomes</p>
+<div class="math-display" data-tex="\pi=\alpha\beta,\qquad\beta=\tau\alpha\tau^{-1}.">
+<math display="block" aria-label="pi equals alpha beta, where beta equals tau alpha tau inverse">
+    <mi>π</mi><mo>=</mo><mi>α</mi><mi>β</mi><mo>,</mo><mspace width="1.1em"></mspace>
+    <mi>β</mi><mo>=</mo><mi>τ</mi><mi>α</mi><msup><mi>τ</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>.</mo>
+  </math>
+</div>
+<p>An involution swaps disjoint pairs and fixes the remaining points. Draw its swaps as edges, one per pair. This is a matching. Conjugating it by <var>τ</var> sends every edge <span class="cycle">{<var>u</var>, <var>v</var>}</span> to <span class="cycle">{<var>τ</var>(<var>u</var>), <var>τ</var>(<var>v</var>)}</span>. So here is the problem on the other side of the bridge. Find two matchings whose product is <var>π</var> and whose edge counts agree. Equal counts let us pair up the edges and then pair up the isolated vertices. Those pairings supply the vertex bijection <var>τ</var>.</p>
+
+      <section class="refactor-matching-experiment" id="try-it" aria-labelledby="experiment-title">
+<h2 id="experiment-title">Balance two cycles in <i>S</i><sub>6</sub></h2>
+<p>Both paths start with one extra red edge. Give one cycle an extra blue edge instead. Pick a starting vertex to see the blue step followed by the red step. At a missing edge, stay at the same vertex.</p>
+<section id="refactor-s6-matching" aria-labelledby="refactor-s6-heading">
+  <h3 id="refactor-s6-heading">Balance the red and blue matchings</h3>
+  <div class="viz-controls matching-controls">
+    <label class="form-label">
+      Cycle (1 2)
+      <select class="form-select" data-surplus="0">
+        <option value="red" selected>Red surplus</option>
+        <option value="blue">Blue surplus</option>
+      </select>
+    </label>
+    <label class="form-label">
+      Cycle (3 4 5 6)
+      <select class="form-select" data-surplus="1">
+        <option value="red" selected>Red surplus</option>
+        <option value="blue">Blue surplus</option>
+      </select>
+    </label>
+  </div>
+  <div class="matching-paths">
+    <div class="matching-path" role="img" data-path="0" aria-label="Path 1, red edge, 2">
+      <span class="matching-node" data-trace="start">1</span>
+      <span class="matching-edge" data-color="red"><span>R</span></span>
+      <span class="matching-node" data-trace="result">2</span>
+    </div>
+    <div class="matching-path" role="img" data-path="1" aria-label="Path 3, red edge, 4, blue edge, 6, red edge, 5">
+      <span class="matching-node">3</span>
+      <span class="matching-edge" data-color="red"><span>R</span></span>
+      <span class="matching-node">4</span>
+      <span class="matching-edge" data-color="blue"><span>B</span></span>
+      <span class="matching-node">6</span>
+      <span class="matching-edge" data-color="red"><span>R</span></span>
+      <span class="matching-node">5</span>
+    </div>
+  </div>
+  <div class="viz-row tabular-nums matching-totals" aria-live="polite">
+    <span>Red edges <strong data-total="red">3</strong></span>
+    <span>Blue edges <strong data-total="blue">1</strong></span>
+    <span>Product <strong data-product>(1 2)(3 4 5 6)</strong></span>
+  </div>
+  <div class="viz-controls matching-trace">
+    <label class="form-label">
+      Start vertex
+      <select class="form-select" data-start>
+        <option value="1" selected>1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+    </label>
+    <output class="tabular-nums" data-walk aria-live="polite">1 → 1 (blue, stay) → 2 (red)</output>
+  </div>
+  <div class="matching-certificate" aria-live="polite">
+    <p data-status>The counts differ. Give one cycle a blue surplus to make them agree.</p>
+    <div class="tabular-nums" data-certificate hidden>
+      <p data-edge-pairs></p>
+      <p data-fixed-pairs></p>
+      <div class="viz-row matching-equations">
+        <span data-relabeling></span>
+        <span data-conjugacy></span>
+        <strong data-commutator></strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<noscript><p>The worked relabeling below gives the full calculation without the controls.</p></noscript>
+      </section>
+
+<section aria-labelledby="return">
+  <h2 id="return">Read the relabeling back into the group</h2>
+  <p>Give <span class="cycle">(1 2)</span> the extra red edge and <span class="cycle">(3 4 5 6)</span> the extra blue edge. Here are the paths in that choice.</p>
+  <p class="static-paths" aria-label="First path 1 red 2. Second path 4 blue 3 red 5 blue 6.">
+    <code aria-hidden="true">1 <span class="red">─R─</span> 2</code>
+    <code aria-hidden="true">4 <span class="blue">─B─</span> 3 <span class="red">─R─</span> 5 <span class="blue">─B─</span> 6</code>
+  </p>
+  <p>Starting at 4, blue takes you to 3 and red takes you to 5. Starting at 3, blue takes you to 4 and red leaves you there. Reading the product at all six vertices gives <span class="cycle">(1 2)(3 4 5 6)</span>. The red factor is <span class="cycle"><var>α</var> = (1 2)(3 5)</span> and the blue factor is <span class="cycle"><var>β</var> = (3 4)(5 6)</span>.</p>
+  <p>Pair red edge <span class="cycle">{1, 2}</span> with blue edge <span class="cycle">{3, 4}</span> and red edge <span class="cycle">{3, 5}</span> with blue edge <span class="cycle">{5, 6}</span>. Send the red isolated vertices 4 and 6 to the blue isolated vertices 1 and 2 in that order. Taking endpoints in increasing order on each paired edge gives <span class="cycle"><var>τ</var> = (1 3 5 6 2 4)</span>. Now <span class="cycle"><var>τ</var><var>α</var><var>τ</var><sup>−1</sup> = <var>β</var></span>, so the two calculated permutations really do satisfy <span class="cycle">[<var>α</var>, <var>τ</var>] = (1 2)(3 4 5 6)</span>.</p>
+  <p>The edge count settled one question, whether a relabeling exists. The shared labels did the rest. They determined the product and gave the actual relabeling to substitute in the group equation.</p>
+  <p>Add a seventh coordinate and two sign marks to these same matchings. In <a href="/refactors/splice-a-signed-cycle">Splice a signed cycle</a>, exchanging arrow destinations joins the relabeling into one cycle while the signed commutator stays fixed.</p>
+</section>
+
+<section aria-labelledby="move">
+  <h2 id="move">Change the factors while holding the product fixed</h2>
+  <p>To derive the move in the figure, take a cycle of length <var>L</var> and number its vertices in cycle order from 0 to <var>L</var> − 1. The cycle itself adds 1 modulo <var>L</var>. Look for two reflections whose composition adds 1. If the first is <span class="cycle"><var>x</var> ↦ <var>j</var> − <var>x</var></span>, the second must be <span class="cycle"><var>x</var> ↦ <var>j</var> + 1 − <var>x</var></span>. Use the first for blue and the second for red.</p>
+  <div class="math-display" data-tex="x\xrightarrow{\text{blue}}j-x\xrightarrow{\text{red}}x+1\pmod L.">
+<math display="block" aria-label="x maps by blue to j minus x, then by red to x plus one, modulo L">
+      <mi>x</mi><mover><mo>⟶</mo><mtext>blue</mtext></mover><mi>j</mi><mo>−</mo><mi>x</mi>
+      <mover><mo>⟶</mo><mtext>red</mtext></mover><mi>x</mi><mo>+</mo><mn>1</mn>
+      <mspace width=".6em"></mspace><mo>(</mo><mtext>mod</mtext><mspace width=".25em"></mspace><mi>L</mi><mo>)</mo><mo>.</mo>
+    </math>
+</div>
+  <p>The product is independent of <var>j</var>. Yet each reflection draws an edge at every swapped pair, so its number of fixed vertices controls its edge count. A reflection <span class="cycle"><var>x</var> ↦ <var>k</var> − <var>x</var></span> fixes the solutions of <span class="cycle">2<var>x</var> ≡ <var>k</var> mod <var>L</var></span>.</p>
+  <ul>
+    <li>For odd <var>L</var>, there is one solution for each reflection. Each color has <span class="cycle">(<var>L</var> − 1)/2</span> edges.</li>
+    <li>For even <var>L</var>, the even value of <var>k</var> gives two fixed vertices and the odd value gives none. The reflection with no fixed vertices has one more edge. Increase <var>j</var> by one and the surplus changes color.</li>
+  </ul>
+  <p>The two colors form a single alternating path on this cycle. Following either color stays in the same connected component, and the product visits every vertex of the cycle, so the overlay is connected. Each vertex has at most one edge of each color. A vertex fixed by one color is an endpoint, with a single isolated vertex when <var>L</var> = 1.</p>
+  <p>In the example, the red-heavy four-cycle is the path <span class="cycle">3 —R— 4 —B— 6 —R— 5</span>. The blue-heavy choice is <span class="cycle">4 —B— 3 —R— 5 —B— 6</span>. Compare the labeled paths as you change the choice. Both send 3 to 4 and continue around the same four-cycle.</p>
+</section>
+
+<section aria-labelledby="theorem">
+  <h2 id="theorem">Balance every even permutation</h2>
+  <p>A cycle of length <var>L</var> can be written as <var>L</var> − 1 transpositions, so it contributes a minus sign exactly when <var>L</var> is even. An even permutation therefore has an even number of even-length cycles. Pair those cycles and choose a red surplus on one and a blue surplus on the other. The odd-length cycles already balance on their own.</p>
+  <p>Take the union of the red edges and the union of the blue edges. The blue-then-red rule agrees with the prescribed permutation on every cycle. The two matchings have equally many edges, so the relabeling construction applies to the whole vertex set. In the other direction, multiplicativity of sign makes every commutator even.</p>
+  <p class="theorem"><strong>Every even permutation in <i>S</i><sub><i>n</i></sub> is one commutator with an involutive first entry.</strong> In particular, the subgroup generated by commutators is <i>A</i><sub><i>n</i></sub>.</p>
+  <p>The calculation also gives the cheapest first matching, measured by its number of swaps. On a cycle of length <var>L</var>, the two colors together contribute <var>L</var> − 1 edges. If <var>c</var> is the number of cycles of <var>π</var>, including fixed points, global balance therefore uses <span class="cycle">(<var>n</var> − <var>c</var>)/2</span> swaps per color. A first matching with <var>t</var> swaps supplies another <var>t</var> through conjugation. Multiplication by a single swap merges two cycles or splits one cycle, changing the cycle count by one. Going from the identity, which has <var>n</var> cycles, to <var>π</var> therefore requires at least <var>n</var> − <var>c</var> swaps. That forces <span class="cycle">2<var>t</var> ≥ <var>n</var> − <var>c</var></span>, and the construction attains equality.</p>
+</section>
+
+<section aria-labelledby="what-transfers">
+  <h2 id="what-transfers">What has to come back</h2>
+  <p>The group equation told us what to design. The involution ansatz made the factors into matchings. Affine arithmetic on a cycle gave a choice that changes the local incidence counts while preserving the product. The resulting equality mattered because it could be decoded as a vertex bijection, and every such bijection belongs to <i>S</i><sub><i>n</i></sub>.</p>
+  <p>For a question inside a smaller group, that last requirement can change the answer. The permutation <span class="cycle">(1 2 3)</span> is a commutator in <i>S</i><sub>3</sub>. Inside the cyclic subgroup it generates, all commutators are the identity. A representation for a subgroup question must tell us how to recover the required elements <em>inside that subgroup</em>.</p>
+  <p>Sometimes the bridge gives an entire interval in a subgroup lattice. For a split affine group <span class="cycle"><var>G</var> = <var>V</var> ⋊ <var>L</var></span>, let <var>V</var> be a nonzero finite vector space of translations over a prime field and let <var>L</var> be a group of linear transformations. A subgroup <span class="cycle"><var>L</var> ≤ <var>K</var> ≤ <var>G</var></span> gives the invariant subspace <span class="cycle"><var>W</var> = <var>K</var> ∩ <var>V</var></span>. In the other direction, <var>W</var> gives <span class="cycle"><var>W</var> ⋊ <var>L</var></span>. To see why the two operations undo each other, take any element of <var>K</var> and strip off its linear part using an element of <var>L</var> already in <var>K</var>. Thus the point stabilizer <var>L</var> is maximal exactly when its action on <var>V</var> is irreducible.</p>
+  <p>The same standard applies when the result is deeper. For finitely generated subgroups of a free group, folded labeled graphs encode subgroup membership. In a product of two such graphs over the generator labels, components recover intersections with conjugates. A rank inequality in that setting returns as the strengthened Hanna Neumann inequality, a bound on the total reduced rank of those intersections. The bridge specifies exactly which graph ranks count toward the group-theoretic result. <a href="https://refactor.press/refactors/words-to-machine">A subgroup becomes a machine</a> · <a href="https://annals.math.princeton.edu/2012/175-1/p11">Mineyev, <cite>Submultiplicativity and the Hanna Neumann Conjecture</cite></a></p>
+</section>
+
+<section aria-labelledby="matching-sequel"><h2 id="matching-sequel">Continue with perfect matchings</h2><p>On the same six points, perfect matchings give a second action of the symmetric group. <a href="/refactors/one-swap-becomes-three">Read the sequel, When one swap becomes three</a>.</p></section>
+
+<section class="sources" aria-labelledby="sources">
+  <h2 id="sources">Sources</h2>
+  <ul>
+    <li>Øystein Ore proves the single-commutator result using equal-cycle-type factors and pairing even cycles. <a href="https://maths.dur.ac.uk/users/alexander.stasinski/Student%20projects/2013-2014/Ore%20-%20Some%20remarks%20on%20commutators.pdf"><cite>Some Remarks on Commutators</cite> (1951), §§1–2</a></li>
+    <li>T. Kyle Petersen and Bridget Eileen Tenner develop the two-colored graphs for products of involutions. <a href="https://arxiv.org/abs/1202.5319"><cite>How to write a permutation as a product of involutions (and why you might care)</cite>, §2</a></li>
+    <li>Gadi Moran gives criteria for products of two prescribed involution classes. <a href="https://doi.org/10.1016/0012-365X(76)90110-2"><cite>The product of two reflection classes of the symmetric group</cite> (1976)</a></li>
+    <li>The six-point construction and the choice of alternating paths come from §4.1 of <cite>Graph-Theoretic Schemata for the Symmetric Group</cite>, the working manuscript behind this exposition.</li>
+  </ul>
+</section>
+<footer class="refactor-article-footer"><p>Henry Shin · Refactor</p><a href="/expositions">More mathematics →</a></footer></article></div></main><footer class="footer"><p>© 2026 Henry Shin · Refactor</p><div><a href="/papers">Research</a><a href="/expositions">Mathematics</a><a href="/essays">Essays</a><a href="/refactor">The approach</a><a href="/archive">Tensorgami archive</a><a href="/about#dated-snapshot">Dated snapshot</a><a href="/site-map">Site map</a><a href="/interests">Interests</a><a href="mailto:hkshin@gmail.com">Email</a><a href="/privacy">Privacy</a><a href="/license">Reuse</a></div></footer></div></body></html>
